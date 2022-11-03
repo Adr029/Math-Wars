@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Touchscreen Prototype.unity
     guid: 70c60b6fd03e2b249a16692af78d58a2
+  - enabled: 1
+    path: Assets/Scenes/Math Town.unity
+    guid: a3e8b0884be32aa448fc992bce1de6aa
+  - enabled: 1
+    path: Assets/Scenes/Arena.unity
+    guid: f1aa489d14eea564baed253e71e1f66a
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: cb1304b8e21527a419c6b8572759cd64
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 6003f66b236bce743bd94bb0a2d747ba
   m_configObjects: {}
