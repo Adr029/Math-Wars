@@ -8,17 +8,17 @@ public class Buildings : MonoBehaviour
    public void Library()
     {
         //StartCoroutine(Fade());
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Library");
     }
      public void Arena()
     {
         //StartCoroutine(Fade());
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Arena");
     }
      public void Home()
     {
         //StartCoroutine(Fade());   
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Home");
     }
     
       /*  IEnumerator Fade()
