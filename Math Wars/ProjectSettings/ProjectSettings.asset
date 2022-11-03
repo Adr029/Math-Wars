@@ -143,8 +143,8 @@ PlayerSettings:
   m_ColorGamuts: 00000000
   targetPixelDensity: 30
   resolutionScalingMode: 0
-  androidSupportedAspectRatio: 2
-  androidMaxAspectRatio: 18.9
+  androidSupportedAspectRatio: 1
+  androidMaxAspectRatio: 20.9
   applicationIdentifier:
     Android: com.DefaultCompany.MathWars
   buildNumber:
