@@ -6,26 +6,21 @@ using UnityEngine.UI;
 public enum BattleState
 {
 START, PLAYERTURN, ENEMYTURN, WIN, LOSE
-
 }
 public class BattleManager : MonoBehaviour
 {
-//ui and buttons
-    [SerializeField]GameObject attack;
-    [SerializeField]GameObject heal;
-    [SerializeField]GameObject arithmetic;
-    [SerializeField]GameObject algebra;
-    [SerializeField]GameObject calculus;
-    [SerializeField]GameObject welcome;
     public Text EnemyNameUI;
     public Text PlayerNameUI;
     public Text EnemyHealthUI;
     public Text PlayerHealthUI;
+
+    string playerchoice;
 //player and enemy future switch to read instantiated prefab    
     [SerializeField]GameObject player;
     [SerializeField]GameObject enemy;
+    [SerializeField]GameObject UIManager;
    
-
+    UIManagement UI;
     public BattleState state;
     
     string topic;
@@ -35,20 +30,16 @@ public class BattleManager : MonoBehaviour
 
 void Start()
 {
-
     state = BattleState.START;
     StartCoroutine(SetupBattle());
- 
-    //skip muna test lang muna attack and damage
- 
+    //skip muna test lang muna attack and damage, future spawning mechanic
 }
 
 IEnumerator SetupBattle()
 {
-
     enemy1 = enemy.GetComponent<EnemyUnit>();
     player1 = player.GetComponent<PlayerUnit>();
-
+    UI = UIManager.GetComponent<UIManagement>();
     PlayerNameUI.text = player1.PlayerName;
     EnemyNameUI.text = enemy1.EnemyName;
     PlayerHealthUI.text = player1.CurrentHealth.ToString();
@@ -62,59 +53,70 @@ IEnumerator SetupBattle()
 
 void PlayerTurn()
 {
-   ChooseAction();
+   UI.ChooseAction();
 }
 
  public void Attack()
  {
-   Attacking();
+   playerchoice = "Attack";
+   UI.SelectTopic();
  }
 
  public void Heal()
  {
-   Attacking();
+   playerchoice = "Heal";
+   UI.SelectTopic();
  }
 
 public void AttackType(Button button)
 {
 
 topic = button.name;
-switch (topic)
+
+switch (playerchoice)
 {
+case "Attack":
+    switch (topic)
+    {
     case "Arithmetic":
-        enemy1.TakeDamage(10);
-        break;
+        enemy1.TakeDamage(Random.Range(7,10));
+    break;
     case "Algebra":
-        enemy1.TakeDamage(15);
-        break;
-
+        enemy1.TakeDamage(Random.Range(12,15));
+    break;
     case "Calculus":
-        enemy1.TakeDamage(20);
-        break;
-}
-    ChooseAction();
-    StartCoroutine(SetupBattle());
-}
+        enemy1.TakeDamage(Random.Range(17,20));
+    break;
+    }
+break; 
 
-void ChooseAction()
-{
-    //set attack and heal visible
-    welcome.SetActive(false);
-    attack.SetActive(true);
-    heal.SetActive(true);  
-    arithmetic.SetActive(false);
-    algebra.SetActive(false);
-    calculus.SetActive(false);
+case "Heal":
+    switch (topic)
+    {
+    case "Arithmetic":
+        player1.HealPlayer(Random.Range(7,10));
+    break;
+    case "Algebra":
+       player1.HealPlayer(Random.Range(12,15));
+    break;
+    case "Calculus":
+        player1.HealPlayer(Random.Range(17,20));
+    break;
+    }
+break;
 }
-
-void Attacking()
+    
+    StartCoroutine(EnemyTurn());
+    PlayerHealthUI.text = player1.CurrentHealth.ToString();
+    EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
+}
+IEnumerator EnemyTurn()
 {
-//set both attack and heal buttons invisible
-//set choose question visible
-    attack.SetActive(false);
-    heal.SetActive(false);  
-    arithmetic.SetActive(true);
-    algebra.SetActive(true);
-    calculus.SetActive(true);
+ state = BattleState.ENEMYTURN;
+UI.EnemyTurn();
+yield return new WaitForSeconds(2f);
+player1.TakeDamage(Random.Range(7,20));
+StartCoroutine(SetupBattle());
+
 }
 }

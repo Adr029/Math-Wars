@@ -9,4 +9,14 @@ public class PlayerUnit : MonoBehaviour
    public int MaxHealth;
 
    public int CurrentHealth;
+
+   public void HealPlayer(int heal)
+   {
+    CurrentHealth += heal;
+   }
+
+   public void TakeDamage (int dmg)
+   {
+    CurrentHealth -= dmg;
+   }
 }
