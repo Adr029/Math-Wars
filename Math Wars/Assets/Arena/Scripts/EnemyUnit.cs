@@ -6,26 +6,26 @@ public class EnemyUnit : MonoBehaviour
 {
    public string EnemyName;
 
-   public int Damage;
-
    public int MaxHealth;
 
    public int CurrentHealth;
 
-   public bool TakeDamage(int dmg)
+    public void HealEnemy(int heal)
+   {
+    CurrentHealth += heal;
+
+    if (CurrentHealth > 100)
+    {
+        CurrentHealth = 100;
+    }
+   }
+   public void TakeDamage(int dmg)
    {
     CurrentHealth -= dmg;
 
-    if (CurrentHealth <= 0)
-
+    if (CurrentHealth < 0)
     {
-        return true;
+        CurrentHealth = 0;
     }
-
-    else
-    {
-        return false;
-    }
-    
    }
 }
