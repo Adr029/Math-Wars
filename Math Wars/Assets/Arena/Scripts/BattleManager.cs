@@ -181,7 +181,6 @@ void PlayerLose()
     UI.status.text = "YOU LOSE!";
     runTimer = false;
     ReturnToTown.SetActive(true);
-
 }
 
 void PlayerWin()

@@ -28,8 +28,6 @@ public void ChooseDifficulty(Button button)
     difficulty = button.name;
 }
 
-
-
 public void Confirm()
 {
 if (difficulty.Length != 0)
