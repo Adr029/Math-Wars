@@ -9,22 +9,27 @@ public class BattleManager : MonoBehaviour
     public Text PlayerNameUI;
     public Text EnemyHealthUI;
     public Text PlayerHealthUI;
+    public float timer;
+    public bool runTimer = false;
+    public int winCount;
     string playerchoice;
 //player and enemy future switch to read instantiated prefab    
     [SerializeField]GameObject player;
     [SerializeField]GameObject enemy;
     [SerializeField]GameObject UIManager;
+    [SerializeField]GameObject ReturnToTown;
     [SerializeField]GameObject QuestionManager;
+    [SerializeField]GameObject ArenaMenu;
+    [SerializeField]Text TimerUI;
     UIManagement UI;
-
     QuestionManagement questions;
+    ArenaMenu menu;
     int dice;
     string topic;
-
     EnemyUnit enemy1;
     PlayerUnit player1;
 
-void Start()
+public void BeginBattle()
 {
     StartCoroutine(SetupBattle());
     //skip muna test lang muna attack and damage, future spawning mechanic
@@ -55,7 +60,7 @@ IEnumerator SetupBattle()
     {
         PlayerTurn();
     }
-    
+    Timer();
 }
 
 void PlayerTurn()
@@ -81,7 +86,6 @@ void PlayerTurn()
 
     UI.status.text = "HEALTH ALREADY FULL!";        
     }
-
  }
 
 public void AttackType(Button button)
@@ -89,12 +93,15 @@ public void AttackType(Button button)
 
 topic = button.name;
 
-
 UI.ChooseAnswer();
+    
+    Timer();
+    runTimer = true;
+
     switch (topic)
     {
     case "Arithmetic":
-    questions.Arithmetic();
+        questions.Arithmetic();
     break;
     case "Algebra":
         questions.Arithmetic();
@@ -107,10 +114,9 @@ UI.ChooseAnswer();
     EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
 }
     
-
- 
 IEnumerator EnemyTurn()
 {
+runTimer = false;
 if (enemy1.CurrentHealth < 100)
     {
      dice = Random.Range(0,5);
@@ -133,25 +139,22 @@ case 2:
 case 3:
 //enemy attack
     dice = Random.Range(0,3);
+     UI.status.text = "ENEMY USED "+topic.ToUpper();
     switch (dice)
     {
     case 0:
         player1.TakeDamage(Random.Range(7,11));
-        UI.status.text = "ENEMY USED ARITHMETIC!";
     break;
 
     case 1:
         player1.TakeDamage(Random.Range(12,16));
-        UI.status.text = "ENEMY USED ALGEBRA!";
     break;
 
     case 2:
         player1.TakeDamage(Random.Range(17,21));
-        UI.status.text = "ENEMY USED CALCULUS!";
     break;
     }
 break;
-// di pa gumagana yung heal or malas lang sa chance
 case 4:
 //enemy heal
 dice = Random.Range(0,3);
@@ -176,20 +179,29 @@ StartCoroutine(SetupBattle());
 void PlayerLose()
 {
     UI.status.text = "YOU LOSE!";
+    runTimer = false;
+    ReturnToTown.SetActive(true);
+
 }
 
 void PlayerWin()
 {
     UI.EnemyTurn();
     UI.status.text = "YOU WIN!";
+    runTimer = false;
+    winCount += 1;
+    PlayerPrefs.SetInt("wins", winCount);
+    ReturnToTown.SetActive(true);
 }
 
 public void CheckAnswer()
 {
+runTimer = false;
+Timer();
 if (questions.correct)
     {
      questions.question.text = "";
-  
+    
         switch (playerchoice)
         {
         case "Attack":
@@ -212,6 +224,8 @@ if (questions.correct)
             }
             else 
             {
+                questions.question.text = "CORRECT";
+
                 StartCoroutine(EnemyTurn());
             }
         break;
@@ -242,7 +256,33 @@ if (questions.correct)
         questions.question.text = "INCORRECT";
         StartCoroutine(EnemyTurn());
     }
-
 }
 
+public void Timer()
+{
+menu = ArenaMenu.GetComponent<ArenaMenu>();
+string difficulty = menu.difficulty;
+switch (difficulty)
+{
+case "Easy":
+    timer = 90f;
+break;
+
+case "Normal":
+    timer = 60f;
+break;
+
+case "Hard":
+    timer = 30f;
+break;
+}
+}
+void FixedUpdate()
+{
+    if (runTimer)
+    {
+    timer -= Time.deltaTime;
+    TimerUI.text = timer.ToString("N0"); 
+    }
+}
 }

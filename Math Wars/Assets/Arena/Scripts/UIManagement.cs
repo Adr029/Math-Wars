@@ -15,7 +15,7 @@ public class UIManagement : MonoBehaviour
     [SerializeField]GameObject choice3;
     [SerializeField]GameObject choice4;
     [SerializeField]GameObject confirm;
-    
+    [SerializeField]GameObject timer;
     public Text question;
     public Text status;
  
@@ -33,6 +33,7 @@ public void ChooseAction()
     choice3.SetActive(false);
     choice4.SetActive(false);
     confirm.SetActive(false);
+    timer.SetActive(false);
     question.text = "";
 }
 
@@ -51,6 +52,7 @@ public void SelectTopic()
     choice3.SetActive(false);
     choice4.SetActive(false);
     confirm.SetActive(false);
+    timer.SetActive(false);
     question.text = "";
 }
 
@@ -67,7 +69,7 @@ public void ChooseAnswer()
     choice3.SetActive(true);
     choice4.SetActive(true);
     confirm.SetActive(true);
-
+    timer.SetActive(true);
 }
 
 public void EnemyTurn()
@@ -82,7 +84,7 @@ public void EnemyTurn()
     choice3.SetActive(false);
     choice4.SetActive(false);
     confirm.SetActive(false);
-   
+    timer.SetActive(false);
 }
 
 }
