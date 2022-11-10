@@ -47,19 +47,7 @@ IEnumerator SetupBattle()
     EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
 
     yield return new WaitForSeconds(2f);
-
-    if (player1.CurrentHealth <= 0)
-    {
-        PlayerLose();
-    }
-    else if (enemy1.CurrentHealth <= 0)
-    {
-        PlayerWin();
-    }
-     else 
-    {
-        PlayerTurn();
-    }
+    PlayerTurn();
     Timer();
 }
 
@@ -110,6 +98,7 @@ UI.ChooseAnswer();
         questions.Arithmetic();
     break;
     }
+  
     PlayerHealthUI.text = player1.CurrentHealth.ToString();
     EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
 }
@@ -282,6 +271,12 @@ void FixedUpdate()
     {
     timer -= Time.deltaTime;
     TimerUI.text = timer.ToString("N0"); 
+      if (timer <= 0.5f)
+    {
+        questions.question.text = "";
+
+        StartCoroutine(EnemyTurn());
+    }
     }
 }
 }

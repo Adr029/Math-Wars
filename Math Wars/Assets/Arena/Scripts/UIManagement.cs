@@ -85,6 +85,7 @@ public void EnemyTurn()
     choice4.SetActive(false);
     confirm.SetActive(false);
     timer.SetActive(false);
+    
 }
 
 }
