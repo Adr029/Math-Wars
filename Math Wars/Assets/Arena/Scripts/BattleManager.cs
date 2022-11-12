@@ -12,6 +12,8 @@ public class BattleManager : MonoBehaviour
     public float timer;
     public bool runTimer = false;
     public int winCount;
+    public int experience;
+    public string difficulty;
     string playerchoice;
 //player and enemy future switch to read instantiated prefab    
     [SerializeField]GameObject player;
@@ -29,6 +31,11 @@ public class BattleManager : MonoBehaviour
     EnemyUnit enemy1;
     PlayerUnit player1;
 
+void Start()
+{
+    experience = PlayerPrefs.GetInt("XP");
+    winCount = PlayerPrefs.GetInt("wins");
+}
 public void BeginBattle()
 {
     StartCoroutine(SetupBattle());
@@ -45,7 +52,8 @@ IEnumerator SetupBattle()
     EnemyNameUI.text = enemy1.EnemyName;
     PlayerHealthUI.text = player1.CurrentHealth.ToString();
     EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
-
+    menu = ArenaMenu.GetComponent<ArenaMenu>();
+    difficulty = menu.difficulty;
     yield return new WaitForSeconds(2f);
     PlayerTurn();
     Timer();
@@ -182,6 +190,22 @@ void PlayerWin()
     runTimer = false;
     winCount += 1;
     PlayerPrefs.SetInt("wins", winCount);
+
+    switch (difficulty)
+    {
+    case "Easy":
+        experience += 15;
+    break;
+
+    case "Normal":
+        experience += 30;
+    break;
+
+    case "Hard":
+        experience += 45;
+    break;
+    }
+    PlayerPrefs.SetInt("XP", experience);
     ReturnToTown.SetActive(true);
 }
 
@@ -251,8 +275,7 @@ if (questions.correct)
 
 public void Timer()
 {
-menu = ArenaMenu.GetComponent<ArenaMenu>();
-string difficulty = menu.difficulty;
+
 switch (difficulty)
 {
 case "Easy":

@@ -12,16 +12,25 @@ public string difficulty;
 [SerializeField]GameObject BattleManagement;
 [SerializeField]Text StatusText;
 [SerializeField]Text Wins;
+[SerializeField]Text XP;
+[SerializeField]Text Level;
 public int winCount;
+public int experience;
+public int playerLevel;
 
 BattleManager battle;
 
 
 // button onclick get name chuchu
 void Start()
-{
+{   
+    experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
+    playerLevel = PlayerPrefs.GetInt("Level");
     Wins.text = winCount.ToString() + " WINS";
+    XP.text = "XP: " + experience.ToString()+ "/100";
+    Level.text = "Level "+ playerLevel.ToString();
+    // convert sa leveling system later on
 }
 public void ChooseDifficulty(Button button)
 {
