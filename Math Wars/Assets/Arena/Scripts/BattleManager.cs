@@ -125,7 +125,7 @@ switch (dice)
 case 0:
 case 1:
 case 2:
-case 3:
+
 //enemy attack
     dice = Random.Range(0,3);
      UI.status.text = "ENEMY USED "+topic.ToUpper();
@@ -143,6 +143,9 @@ case 3:
         player1.TakeDamage(Random.Range(17,21));
     break;
     }
+break;
+case 3:
+    UI.status.text = "ENEMY MISSED";
 break;
 case 4:
 //enemy heal
@@ -213,7 +216,6 @@ if (questions.correct)
             else 
             {
                 questions.question.text = "CORRECT";
-
                 StartCoroutine(EnemyTurn());
             }
         break;
@@ -231,6 +233,7 @@ if (questions.correct)
                 player1.HealPlayer(Random.Range(17,21));
             break;
             }
+            questions.question.text = "CORRECT";
             PlayerHealthUI.text = player1.CurrentHealth.ToString();
             StartCoroutine(EnemyTurn());
 
