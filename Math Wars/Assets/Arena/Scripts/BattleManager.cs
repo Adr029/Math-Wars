@@ -54,10 +54,18 @@ IEnumerator SetupBattle()
     EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
     menu = ArenaMenu.GetComponent<ArenaMenu>();
     difficulty = menu.difficulty;
-    yield return new WaitForSeconds(2f);
-    PlayerTurn();
-    Timer();
+    if (player1.CurrentHealth <= 0)
+    {
+        PlayerLose();
+    }
+    else
+    {
+        yield return new WaitForSeconds(2f);
+        PlayerTurn();
+        Timer();
+    }
 }
+   
 
 void PlayerTurn()
 {
@@ -136,19 +144,24 @@ case 2:
 
 //enemy attack
     dice = Random.Range(0,3);
-     UI.status.text = "ENEMY USED "+topic.ToUpper();
     switch (dice)
     {
     case 0:
         player1.TakeDamage(Random.Range(7,11));
+        UI.status.text = "ENEMY USED ARITHMETIC";
+
     break;
 
     case 1:
         player1.TakeDamage(Random.Range(12,16));
+        UI.status.text = "ENEMY USED ALGEBRA";
+
     break;
 
     case 2:
         player1.TakeDamage(Random.Range(17,21));
+        UI.status.text = "ENEMY USED CALCULUS";
+
     break;
     }
 break;
@@ -173,7 +186,9 @@ UI.status.text = "ENEMY HEALED";
     }
 break;
 }
+
 StartCoroutine(SetupBattle());
+
 }
 
 void PlayerLose()
