@@ -49,7 +49,7 @@ if (difficulty.Length != 0)
 }
 else
 {
-StatusText.text = "PLEASE SELECT DIFFICULTY";
+//StatusText.text = "PLEASE SELECT DIFFICULTY";
 }
 }
 }
