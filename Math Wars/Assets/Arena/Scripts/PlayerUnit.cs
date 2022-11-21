@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerUnit : MonoBehaviour
 {
-public string PlayerName;
 
-   public int MaxHealth;
+   public int MaxHealth = 100;
 
-   public int CurrentHealth;
+   public int CurrentHealth = 100;
 
    public void HealPlayer(int heal)
    {

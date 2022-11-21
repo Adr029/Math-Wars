@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class EnemyUnit : MonoBehaviour
 {
-   public string EnemyName;
-
    public int MaxHealth;
-
    public int CurrentHealth;
-
     public void HealEnemy(int heal)
    {
     CurrentHealth += heal;

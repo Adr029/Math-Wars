@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class BattleManager : MonoBehaviour
 {
@@ -21,6 +23,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject QuestionManager;
     [SerializeField]GameObject ArenaMenu;
     [SerializeField]Text TimerUI;
+    GameObject playerClone;
+    GameObject enemyClone;
     UIManagement UI;
     QuestionManagement questions;
     ArenaMenu menu;
@@ -28,16 +32,25 @@ public class BattleManager : MonoBehaviour
     string topic;
     EnemyUnit enemy1;
     PlayerUnit player1;
+    List<GameObject> prefabList = new List<GameObject>();
+    public GameObject Enemy1;
+    public GameObject Enemy2;
+    int prefabIndex;
 
 void Start()
 {
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
+        prefabList.Add(Enemy1);
+        prefabList.Add(Enemy2);
+        prefabIndex = UnityEngine.Random.Range(0,2);
+
 }
 public void BeginBattle()
 {
     StartCoroutine(SetupBattle());
-    //skip muna test lang muna attack and damage, future spawning mechanic
+    playerClone = (GameObject)Instantiate(player, new Vector3(-3, 0, 0), Quaternion.identity);
+    enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
 }
 
 IEnumerator SetupBattle()
@@ -316,4 +329,10 @@ void FixedUpdate()
     }
     }
 }
+public void Back()
+    {
+        Destroy(playerClone);
+        Destroy(enemyClone);
+        SceneManager.LoadScene("Math Town");
+    }
 }
