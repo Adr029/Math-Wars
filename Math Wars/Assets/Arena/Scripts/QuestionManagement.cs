@@ -8,20 +8,54 @@ public class QuestionManagement : MonoBehaviour
     public Button choiceB;
     public Button choiceC;
     public Button choiceD;
-    public Text question;
     public int dice;
     public string answer;
     public bool correct;
+    public Text correctText;
+    public Image question;
 
+    public Sprite calq1;
+    public Sprite calq2;
+    public Sprite calq3;
+    public Sprite calq4;
+    public Sprite calq5;
+    public Sprite calq6;
+    public Sprite calq7;
 
-//future naming convention
-//algebra1 2 3 4
-//arithmetic 1 2 3 4
-//calculus 1 2 3 4
-    public Sprite ans1;
-    public Sprite ans2;
-    public Sprite ans3;
-    public Sprite ans4;
+    public Sprite cal1;
+    public Sprite cal2;
+    public Sprite cal3;
+    public Sprite cal4;
+
+    public Sprite cal5;
+    public Sprite cal6;
+    public Sprite cal7;
+    public Sprite cal8;
+    
+    public Sprite cal9;
+    public Sprite cal10;
+    public Sprite cal11;
+    public Sprite cal12;
+
+    public Sprite cal13;
+    public Sprite cal14;
+    public Sprite cal15;
+    public Sprite cal16;
+
+    public Sprite cal17;
+    public Sprite cal18;
+    public Sprite cal19;
+    public Sprite cal20;
+
+    public Sprite cal21;
+    public Sprite cal22;
+    public Sprite cal23;
+    public Sprite cal24;
+
+    public Sprite cal25;
+    public Sprite cal26;
+    public Sprite cal27;
+    public Sprite cal28;
 public void Arithmetic()
 {
 
@@ -30,69 +64,40 @@ dice = Random.Range(0,4);
 switch (dice)
 {
 case 0:
-question.text = "1+1?";
-
-    choiceA.GetComponentInChildren<Text>().text = "1";
-    choiceB.GetComponentInChildren<Text>().text = "2";
-    choiceC.GetComponentInChildren<Text>().text = "infinity";
-    choiceD.GetComponentInChildren<Text>().text = "5";
-  
-    /*
-    choiceA.GetComponent<Image>().sprite = ans1;
-    choiceB.GetComponent<Image>().sprite = ans2;
-    choiceC.GetComponent<Image>().sprite = ans3;
-    choiceD.GetComponent<Image>().sprite = ans4;
-    */
-    answer = "B";
+    question.GetComponent<Image>().sprite = calq1;
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal1;
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal2;
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal3;
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal4;
+    answer = "A";
 break;
 
 case 1:
-question.text = "2+1?";
-    choiceA.GetComponentInChildren<Text>().text = "2";
-    choiceB.GetComponentInChildren<Text>().text = "3";
-    choiceC.GetComponentInChildren<Text>().text = "infinity";
-    choiceD.GetComponentInChildren<Text>().text = "8888";
-    
-    /*
-    choiceA.GetComponent<Image>().sprite = ans2;
-    choiceB.GetComponent<Image>().sprite = ans4;
-    choiceC.GetComponent<Image>().sprite = ans1;
-    choiceD.GetComponent<Image>().sprite = ans3;
-    */
-    answer = "B";
+    question.GetComponent<Image>().sprite = calq2;
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal5;
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal6;
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal7;
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal8;
+    answer = "D";
 break;
 
 case 2:
-question.text = "3+1?";
-    choiceA.GetComponentInChildren<Text>().text = "4";
-    choiceB.GetComponentInChildren<Text>().text = "99";
-    choiceC.GetComponentInChildren<Text>().text = "51521";
-    choiceD.GetComponentInChildren<Text>().text = "8213";
-   
-    /*
-    choiceA.GetComponent<Image>().sprite = ans1;
-    choiceB.GetComponent<Image>().sprite = ans3;
-    choiceC.GetComponent<Image>().sprite = ans2;
-    choiceD.GetComponent<Image>().sprite = ans4;
-    */
+    question.GetComponent<Image>().sprite = calq3;
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal9;
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal10;
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal11;
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal12;
     answer = "A";
-    
+
 break;
 
 case 3:
-question.text = "5x5?";
-    choiceA.GetComponentInChildren<Text>().text = "1";
-    choiceB.GetComponentInChildren<Text>().text = "55";
-    choiceC.GetComponentInChildren<Text>().text = "25";
-    choiceD.GetComponentInChildren<Text>().text = "10";
-    
-    /*
-    choiceA.GetComponent<Image>().sprite = ans3;
-    choiceB.GetComponent<Image>().sprite = ans4;
-    choiceC.GetComponent<Image>().sprite = ans2;
-    choiceD.GetComponent<Image>().sprite = ans1;
-    */
-    answer = "C";
+    question.GetComponent<Image>().sprite = calq4;
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal13;
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal14;
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal15;
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal16;
+    answer = "B";
 break;
 
 }

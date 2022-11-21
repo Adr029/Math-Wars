@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
-    public Text EnemyNameUI;
-    public Text PlayerNameUI;
     public Text EnemyHealthUI;
     public Text PlayerHealthUI;
     public float timer;
@@ -48,8 +46,6 @@ IEnumerator SetupBattle()
     player1 = player.GetComponent<PlayerUnit>();
     UI = UIManager.GetComponent<UIManagement>();
     questions = QuestionManager.GetComponent<QuestionManagement>();
-    PlayerNameUI.text = player1.PlayerName;
-    EnemyNameUI.text = enemy1.EnemyName;
     PlayerHealthUI.text = player1.CurrentHealth.ToString();
     EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
     menu = ArenaMenu.GetComponent<ArenaMenu>();
@@ -133,7 +129,7 @@ if (enemy1.CurrentHealth < 100)
     UI.EnemyTurn();
 yield return new WaitForSeconds(1f);
 UI.status.text = "ENEMY TURN...";    
-questions.question.text = "";
+questions.correctText.text = "";
 yield return new WaitForSeconds(2f);
 
 switch (dice)
@@ -230,7 +226,7 @@ runTimer = false;
 Timer();
 if (questions.correct)
     {
-     questions.question.text = "";
+     questions.correctText.text = "";
     
         switch (playerchoice)
         {
@@ -254,7 +250,7 @@ if (questions.correct)
             }
             else 
             {
-                questions.question.text = "CORRECT";
+                questions.correctText.text = "CORRECT";
                 StartCoroutine(EnemyTurn());
             }
         break;
@@ -272,7 +268,7 @@ if (questions.correct)
                 player1.HealPlayer(Random.Range(17,21));
             break;
             }
-            questions.question.text = "CORRECT";
+            questions.correctText.text = "CORRECT";
             PlayerHealthUI.text = player1.CurrentHealth.ToString();
             StartCoroutine(EnemyTurn());
 
@@ -283,7 +279,7 @@ if (questions.correct)
     }
     else
     {
-        questions.question.text = "INCORRECT";
+        questions.correctText.text = "INCORRECT";
         StartCoroutine(EnemyTurn());
     }
 }
@@ -314,7 +310,7 @@ void FixedUpdate()
     TimerUI.text = timer.ToString("N0"); 
       if (timer <= 0.5f)
     {
-        questions.question.text = "";
+        questions.correctText.text = "";
 
         StartCoroutine(EnemyTurn());
     }
