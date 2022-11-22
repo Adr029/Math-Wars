@@ -35,6 +35,7 @@ public class BattleManager : MonoBehaviour
     List<GameObject> prefabList = new List<GameObject>();
     public GameObject Enemy1;
     public GameObject Enemy2;
+
     int prefabIndex;
 
 void Start()

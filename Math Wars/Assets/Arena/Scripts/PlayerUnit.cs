@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerUnit : MonoBehaviour
-{
+{    
 
+    int CharSprite;
+    [Header("Player Sprite")]
+
+    public SpriteRenderer bodyPart;
+    public List<Sprite> options = new List<Sprite>();
    public int MaxHealth = 100;
-
    public int CurrentHealth = 100;
+public void Start()
 
-   public void HealPlayer(int heal)
+{
+    CharSprite = PlayerPrefs.GetInt("character");
+    bodyPart.sprite = options[CharSprite];
+}   
+
+public void HealPlayer(int heal)
    {
     CurrentHealth += heal;
 
