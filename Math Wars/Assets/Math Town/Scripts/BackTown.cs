@@ -10,4 +10,9 @@ public class BackTown : MonoBehaviour
         //StartCoroutine(Fade());
         SceneManager.LoadScene("Math Town");
     }
+   public void ReturnPrevious()
+    {
+        //StartCoroutine(Fade());
+        SceneManager.LoadScene("Story Mode Map");
+    }
 }
