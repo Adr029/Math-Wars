@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ArenaMenu : MonoBehaviour
+public class StoryDifficulty : MonoBehaviour
 {
     //eto muna starting scene
 public string difficulty;
@@ -18,7 +18,7 @@ public int winCount;
 public int experience;
 public int playerLevel;
 
-BattleManager battle;
+StoryBattle battle;
 
 
 // button onclick get name chuchu
@@ -43,7 +43,7 @@ if (difficulty.Length != 0)
 {
     Menu.SetActive(false);
     CombatUI.SetActive(true);
-    battle = BattleManagement.GetComponent<BattleManager>();
+    battle = BattleManagement.GetComponent<StoryBattle>();
     battle.BeginBattle();
 }
 else
