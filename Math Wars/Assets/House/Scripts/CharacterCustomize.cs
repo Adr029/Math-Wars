@@ -8,11 +8,17 @@ public class CharacterCustomize : MonoBehaviour
     [Header("Sprite to Change")]
     public SpriteRenderer bodyPart;
     public SpriteRenderer partThumbnail;
-
     public GameObject character;
     public List<Sprite> options = new List<Sprite>();
-    
-    int currentOption = 0;
+    public int CharSprite;    
+    public int currentOption = 0;
+
+    private void Awake() {
+        CharSprite = PlayerPrefs.GetInt("character", 0);
+        currentOption = CharSprite;
+        bodyPart.sprite = options[currentOption];
+        partThumbnail.sprite = options[currentOption];
+    }
     public void NextOption()
     {
         currentOption++;
@@ -26,7 +32,7 @@ public class CharacterCustomize : MonoBehaviour
     public void PreviousOption()
     {
         currentOption--;
-        if (currentOption <= 0)
+        if (currentOption < 0)
         {
             currentOption = options.Count -1;
         }
@@ -36,6 +42,6 @@ public class CharacterCustomize : MonoBehaviour
 
     public void Save()
     {
-        PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefabs/player.prefab");
+        PlayerPrefs.SetInt("character", currentOption);
     }
 }
