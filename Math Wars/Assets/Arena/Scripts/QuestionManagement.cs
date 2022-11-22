@@ -13,6 +13,7 @@ public class QuestionManagement : MonoBehaviour
     public bool correct;
     public Text correctText;
     public Image question;
+    [Header("Calculus Questions")]
 
     public Sprite calq1;
     public Sprite calq2;
@@ -22,6 +23,7 @@ public class QuestionManagement : MonoBehaviour
     public Sprite calq6;
     public Sprite calq7;
 
+    [Header("Calculus Answers")]
     public Sprite cal1;
     public Sprite cal2;
     public Sprite cal3;
@@ -56,10 +58,24 @@ public class QuestionManagement : MonoBehaviour
     public Sprite cal26;
     public Sprite cal27;
     public Sprite cal28;
+
 public void Arithmetic()
 {
 
-dice = Random.Range(0,4);
+
+
+}
+
+
+public void Algebra()
+{
+
+
+}
+public void Calculus()
+{
+
+dice = Random.Range(0,7);
 
 switch (dice)
 {
@@ -88,7 +104,6 @@ case 2:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal11;
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal12;
     answer = "A";
-
 break;
 
 case 3:
@@ -100,6 +115,32 @@ case 3:
     answer = "B";
 break;
 
+case 4:
+    question.GetComponent<Image>().sprite = calq5;
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal17;
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal18;
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal19;
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal20;
+    answer = "C";
+break;
+
+case 5:
+    question.GetComponent<Image>().sprite = calq6;
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal21;
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal22;
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal23;
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal24;
+    answer = "D";
+break;
+
+case 6:
+    question.GetComponent<Image>().sprite = calq7;
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal25;
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal26;
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal27;
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal28;
+    answer = "A";
+break;
 }
 
 }

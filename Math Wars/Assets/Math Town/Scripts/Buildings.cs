@@ -15,10 +15,14 @@ public class Buildings : MonoBehaviour
         //StartCoroutine(Fade());
         SceneManager.LoadScene("Arena");
     }
-     public void Home()
+     public void House()
     {
         //StartCoroutine(Fade());   
         SceneManager.LoadScene("Home");
+    }
+    public void StoryMode()
+    {
+        SceneManager.LoadScene("Story Mode Map");
     }
     
       /*  IEnumerator Fade()

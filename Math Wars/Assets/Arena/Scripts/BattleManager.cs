@@ -41,10 +41,9 @@ void Start()
 {
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
-        prefabList.Add(Enemy1);
-        prefabList.Add(Enemy2);
-        prefabIndex = UnityEngine.Random.Range(0,2);
-
+    prefabList.Add(Enemy1);
+    prefabList.Add(Enemy2);
+    prefabIndex = UnityEngine.Random.Range(0,2);
 }
 public void BeginBattle()
 {
@@ -75,7 +74,6 @@ IEnumerator SetupBattle()
     }
 }
    
-
 void PlayerTurn()
 {
    UI.ChooseAction();
@@ -114,13 +112,13 @@ UI.ChooseAnswer();
     switch (topic)
     {
     case "Arithmetic":
-        questions.Arithmetic();
+        questions.Calculus();
     break;
     case "Algebra":
-        questions.Arithmetic();
+        questions.Calculus();
     break;
     case "Calculus":
-        questions.Arithmetic();
+        questions.Calculus();
     break;
     }
   
@@ -299,7 +297,6 @@ if (questions.correct)
 
 public void Timer()
 {
-
 switch (difficulty)
 {
 case "Easy":
@@ -324,7 +321,6 @@ void FixedUpdate()
       if (timer <= 0.5f)
     {
         questions.correctText.text = "";
-
         StartCoroutine(EnemyTurn());
     }
     }
