@@ -20,6 +20,7 @@ public class Kingdom1: MonoBehaviour
     public Button button8;
     public Button button9;
     public Button button10;
+    public Button button11;
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -65,6 +66,9 @@ public class Kingdom1: MonoBehaviour
 
             case 10:
                 button10.interactable = true;
+            break;
+             case 11:
+                button11.interactable = true;
             break;
         }
     }
