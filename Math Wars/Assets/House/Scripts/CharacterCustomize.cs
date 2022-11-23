@@ -22,13 +22,21 @@ public class CharacterCustomize : MonoBehaviour
         partThumbnail.sprite = options[currentOption];
         if (currentOption != 2)
         {
-        partThumbnailnext.sprite = options[currentOption + 1];
+            partThumbnailnext.sprite = options[currentOption + 1];
         }
         else
         {
-        partThumbnailnext.sprite = options[0];
+            partThumbnailnext.sprite = options[0];
         }
-        partThumbnailprevious.sprite = options[Mathf.Abs(currentOption - 1)];
+        if(currentOption != 0)
+        {
+            partThumbnailprevious.sprite = options[Mathf.Abs(currentOption - 1)];
+
+        }
+        else
+        {
+            partThumbnailprevious.sprite = options[2];
+        }    
     }
     public void NextOption()
     {
@@ -55,7 +63,6 @@ public class CharacterCustomize : MonoBehaviour
     else
     {
         partThumbnailprevious.sprite = options[2];
-
     }    
     }
     public void PreviousOption()
