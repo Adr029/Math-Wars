@@ -14,6 +14,16 @@ public class QuestionManagement : MonoBehaviour
     public Text correctText;
     public Image question;
 
+    //try gumawa ng list
+
+        public List<Sprite> calquestions = new List<Sprite>();
+        public List<Sprite> calanswers = new List<Sprite>();
+        public List<Sprite> algequestions = new List<Sprite>();
+        public List<Sprite> algeanswers = new List<Sprite>();
+        public List<Sprite> artquestions = new List<Sprite>();
+        public List<Sprite> artanswers = new List<Sprite>();
+
+
     [Header("Calculus Questions")]
     public Sprite calq1;    public Sprite calq2;    public Sprite calq3;    public Sprite calq4;    public Sprite calq5;
     public Sprite calq6;    public Sprite calq7;    public Sprite calq8;    public Sprite calq9;    public Sprite calq10;    
@@ -382,9 +392,9 @@ public void Arithmetic()
 {
 dice = Random.Range(0,14);
 
-switch (dice)
+/*switch (dice)
 {
-/*case 0:
+case 0:
     question.GetComponent<Image>().sprite = artq1;
     choiceA.transform.GetChild(1).GetComponent<Image>().sprite = art1;
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = art2;
@@ -519,7 +529,7 @@ case 14:
     answer = "";
 break;*/
 }
-}
+
 
 
 public void AnswerA()

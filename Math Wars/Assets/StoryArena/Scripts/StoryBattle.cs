@@ -36,7 +36,6 @@ public class StoryBattle : MonoBehaviour
     List<GameObject> prefabList = new List<GameObject>();
     public GameObject Enemy1;
     public GameObject Enemy2;
-
     int prefabIndex;
 
 void Start()
@@ -54,7 +53,18 @@ public void BeginBattle()
 {
     StartCoroutine(SetupBattle());
     playerClone = (GameObject)Instantiate(player, new Vector3(-3, 0, 0), Quaternion.identity);
-    enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
+
+    if (selectedLevel == "10")
+    {
+        //king prefab
+    }
+
+    else
+    {
+        //normal enemy
+        enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
+
+    }
 }
 
 IEnumerator SetupBattle()
@@ -134,7 +144,7 @@ UI.ChooseAnswer();
 IEnumerator EnemyTurn()
 {
 runTimer = false;
-if (enemy1.CurrentHealth < 100)
+if (enemy1.CurrentHealth < enemy1.MaxHealth)
     {
      dice = Random.Range(0,5);
     }

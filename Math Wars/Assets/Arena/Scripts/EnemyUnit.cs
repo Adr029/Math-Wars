@@ -10,9 +10,9 @@ public class EnemyUnit : MonoBehaviour
    {
     CurrentHealth += heal;
 
-    if (CurrentHealth > 100)
+    if (CurrentHealth > MaxHealth)
     {
-        CurrentHealth = 100;
+        CurrentHealth = MaxHealth;
     }
    }
    public void TakeDamage(int dmg)
