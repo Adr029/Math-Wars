@@ -87,7 +87,7 @@ public class QuestionManagement : MonoBehaviour
 public void Calculus()
 {
 
-dice = Random.Range(0,14);
+dice = Random.Range(0,7);
 
 switch (dice)
 {

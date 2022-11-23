@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 53746623}
   - component: {fileID: 53746622}
   m_Layer: 5
-  m_Name: Button (9)
+  m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,10 +157,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278.49997, y: -217.34998}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1441.08, y: -244.25}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &53746622
 MonoBehaviour:
@@ -209,10 +209,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 53746622}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 173744447}
   - component: {fileID: 173744446}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,10 +290,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -269.19003, y: 41.170025}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 872.82, y: 23.98}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173744446
 MonoBehaviour:
@@ -342,10 +342,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 173744446}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 250275507}
   - component: {fileID: 250275506}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,10 +504,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -682.59, y: 265.68002}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 443.9, y: 256.92}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250275506
 MonoBehaviour:
@@ -556,10 +556,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 250275506}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 386505170}
   - component: {fileID: 386505169}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,10 +637,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -31.720024, y: -83.06998}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1119.21, y: -104.92}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386505169
 MonoBehaviour:
@@ -689,10 +689,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 386505169}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 435687074}
   - component: {fileID: 435687073}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,10 +770,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137.61002, y: -24.669975}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1009.34, y: -44.33}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435687073
 MonoBehaviour:
@@ -822,10 +822,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 435687073}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 579087078}
   - component: {fileID: 579087077}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -903,10 +903,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -390.08002, y: 104.85002}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 747.39, y: 90.05}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579087077
 MonoBehaviour:
@@ -955,10 +955,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 579087077}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1193,7 +1193,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2017767717}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 864221517}
   - component: {fileID: 864221516}
   m_Layer: 5
-  m_Name: Button (8)
+  m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1523,10 +1523,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140.98997, y: -151.17998}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1298.4, y: -175.59}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864221516
 MonoBehaviour:
@@ -1575,10 +1575,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 864221516}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 1022740286}
   - component: {fileID: 1022740285}
   m_Layer: 5
-  m_Name: Button
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1656,10 +1656,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -963.24005, y: 398.45}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 152.71, y: 394.67}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1022740285
 MonoBehaviour:
@@ -1708,10 +1708,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1022740285}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1879,6 +1879,7 @@ MonoBehaviour:
   button9: {fileID: 864221516}
   button10: {fileID: 53746622}
   button11: {fileID: 1952062306}
+  selectedLevel: 
 --- !u!114 &1269886318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2322,7 +2323,7 @@ GameObject:
   - component: {fileID: 1710783066}
   - component: {fileID: 1710783065}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2343,10 +2344,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -824, y: 338}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 297.18, y: 331.95}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710783065
 MonoBehaviour:
@@ -2395,10 +2396,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1710783065}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2615,7 +2616,7 @@ GameObject:
   - component: {fileID: 1913840131}
   - component: {fileID: 1913840130}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2636,10 +2637,10 @@ RectTransform:
   m_Father: {fileID: 2017767717}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -531.48004, y: 176.09003}
-  m_SizeDelta: {x: 172.7, y: 32.38}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 600.68, y: 163.97}
+  m_SizeDelta: {x: 179.18, y: 33.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913840130
 MonoBehaviour:
@@ -2688,10 +2689,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1913840130}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2748,7 +2749,7 @@ GameObject:
   - component: {fileID: 1952062307}
   - component: {fileID: 1952062306}
   m_Layer: 5
-  m_Name: Button (10)
+  m_Name: 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2767,12 +2768,12 @@ RectTransform:
   m_Children:
   - {fileID: 623679552}
   m_Father: {fileID: 2017767717}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 465, y: -315.15}
-  m_SizeDelta: {x: 217.74, y: 163.22}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 1634.58, y: -345.72}
+  m_SizeDelta: {x: 225.92, y: 169.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952062306
 MonoBehaviour:
@@ -2821,10 +2822,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1269886317}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1952062306}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2900,12 +2901,12 @@ RectTransform:
   m_Children:
   - {fileID: 1854642975}
   m_Father: {fileID: 2017767717}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1029, y: 484.00003}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 84.48001, y: 483.44}
+  m_SizeDelta: {x: 166.01, y: 31.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963951899
 MonoBehaviour:
@@ -3183,9 +3184,9 @@ RectTransform:
   - {fileID: 386505168}
   - {fileID: 864221515}
   - {fileID: 53746621}
+  - {fileID: 1952062305}
   - {fileID: 676005593}
   - {fileID: 1963951898}
-  - {fileID: 1952062305}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

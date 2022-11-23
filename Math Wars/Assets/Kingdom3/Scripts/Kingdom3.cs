@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Kingdom3 : MonoBehaviour
 {
-   public int level = 1;
+    public int level = 1;
     Scene currentScene;
     string sceneName;
     public Button button1;
@@ -19,62 +19,109 @@ public class Kingdom3 : MonoBehaviour
     public Button button9;
     public Button button10;
     public Button button11;
+    public string selectedLevel;
+
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
         level = PlayerPrefs.GetInt("kingdom3Level");
-        switch (level)
+        Debug.Log(level);
+
+         switch (level)
         {
+
             case 1:
-                button1.interactable = true;
+                button2.interactable = true;
             break;
 
             case 2:
                 button2.interactable = true;
-            break;
-
-            case 3:
                 button3.interactable = true;
             break;
 
-            case 4:
+            case 3:
+                button2.interactable = true;
+                button3.interactable = true;
                 button4.interactable = true;
             break;
 
-            case 5:
+            case 4:
+                button2.interactable = true;
+                button3.interactable = true;
+                button4.interactable = true;
                 button5.interactable = true;
             break;
 
-            case 6:
+            case 5:
+                button2.interactable = true;
+                button3.interactable = true;
+                button4.interactable = true;
+                button5.interactable = true;
                 button6.interactable = true;
             break;
 
-            case 7:
+            case 6:
+                button2.interactable = true;
+                button3.interactable = true;
+                button4.interactable = true;
+                button5.interactable = true;
+                button6.interactable = true;
                 button7.interactable = true;
             break;
 
-            case 8:
+            case 7:
+                button2.interactable = true;
+                button3.interactable = true;
+                button4.interactable = true;
+                button5.interactable = true;
+                button6.interactable = true;
+                button7.interactable = true;
                 button8.interactable = true;
             break;
             
-            case 9:
+            case 8:
+                button2.interactable = true;
+                button3.interactable = true;
+                button4.interactable = true;
+                button5.interactable = true;
+                button6.interactable = true;
+                button7.interactable = true;
+                button8.interactable = true;
                 button9.interactable = true;
             break;
 
-            case 10:
+            case 9:
+                button2.interactable = true;
+                button3.interactable = true;
+                button4.interactable = true;
+                button5.interactable = true;
+                button6.interactable = true;
+                button7.interactable = true;
+                button8.interactable = true;
+                button9.interactable = true;
                 button10.interactable = true;
             break;
-            
-            case 11:
+             case 10:
+                button2.interactable = true;
+                button3.interactable = true;
+                button4.interactable = true;
+                button5.interactable = true;
+                button6.interactable = true;
+                button7.interactable = true;
+                button8.interactable = true;
+                button9.interactable = true;
+                button10.interactable = true;
                 button11.interactable = true;
             break;
         }
     }
-    public void BeginBattle()
+    public void BeginBattle(Button button)
     {
+        selectedLevel = button.name;
         SceneManager.LoadScene("StoryArena");
         PlayerPrefs.SetString("storyKingdom", sceneName);
+        PlayerPrefs.SetString("selectedLevel", selectedLevel);
     }
 
 

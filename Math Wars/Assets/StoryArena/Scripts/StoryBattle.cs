@@ -32,6 +32,7 @@ public class StoryBattle : MonoBehaviour
     string topic;
     EnemyUnit enemy1;
     PlayerUnit player1;
+    string selectedLevel;
     List<GameObject> prefabList = new List<GameObject>();
     public GameObject Enemy1;
     public GameObject Enemy2;
@@ -43,9 +44,11 @@ void Start()
     chosenKingdom = PlayerPrefs.GetString("storyKingdom");
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
+    selectedLevel = PlayerPrefs.GetString("selectedLevel");
     prefabList.Add(Enemy1);
     prefabList.Add(Enemy2);
     prefabIndex = UnityEngine.Random.Range(0,2);
+    Debug.Log("Level" + selectedLevel);
 }
 public void BeginBattle()
 {
@@ -235,21 +238,33 @@ void PlayerWin()
     switch (chosenKingdom)
     {
         case "Kingdom1":
+
         int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level");
-        kingdom1lvl++;
-        PlayerPrefs.SetInt("kingdom1Level", kingdom1lvl);
+        if (int.Parse(selectedLevel) == kingdom1lvl)
+        {
+            kingdom1lvl++;
+            PlayerPrefs.SetInt("kingdom1Level", kingdom1lvl);
+        }
         break;
 
         case "Kingdom2":
         int kingdom2lvl = PlayerPrefs.GetInt("kingdom2Level");
-        kingdom2lvl++;
-        PlayerPrefs.SetInt("kingdom2Level", kingdom2lvl);
+         if (int.Parse(selectedLevel) == kingdom2lvl)
+        {
+            kingdom2lvl++;
+            PlayerPrefs.SetInt("kingdom2Level", kingdom2lvl);
+        }
+      
         break;
 
         case "Kingdom3":
         int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level");
-        kingdom3lvl++;
-        PlayerPrefs.SetInt("kingdom3Level", kingdom3lvl);
+         if (int.Parse(selectedLevel) == kingdom3lvl)
+        {
+            kingdom3lvl++;
+            PlayerPrefs.SetInt("kingdom3Level", kingdom3lvl);
+        }
+      
         break;
     }
 }
