@@ -2,101 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 
 public class CharacterCustomize : MonoBehaviour
 {
     [Header("Sprite to Change")]
     public SpriteRenderer bodyPart;
-    public SpriteRenderer partThumbnail;
-    public SpriteRenderer partThumbnailprevious;
-    public SpriteRenderer partThumbnailnext;
     public GameObject character;
     public List<Sprite> options = new List<Sprite>();
+    public List<Button> choices = new List<Button>();
     public int CharSprite;    
-    public int currentOption = 0;
+    public int characterOption = 0;
+    public int playerLevel = 0;
 
     private void Awake() {
+        playerLevel = PlayerPrefs.GetInt("Level");
+
         CharSprite = PlayerPrefs.GetInt("character", 0);
-        currentOption = CharSprite;
-        bodyPart.sprite = options[currentOption];
-        partThumbnail.sprite = options[currentOption];
-        if (currentOption != 2)
-        {
-            partThumbnailnext.sprite = options[currentOption + 1];
-        }
-        else
-        {
-            partThumbnailnext.sprite = options[0];
-        }
-        if(currentOption != 0)
-        {
-            partThumbnailprevious.sprite = options[Mathf.Abs(currentOption - 1)];
+        characterOption = CharSprite;
+        bodyPart.sprite = options[characterOption];
+       
+            if (playerLevel >= 1)
+            {
+                choices[1].interactable = true;
 
-        }
-        else
-        {
-            partThumbnailprevious.sprite = options[2];
-        }    
-    }
-    public void NextOption()
-    {
-        currentOption++;
-        if (currentOption >= options.Count)
-        {
-            currentOption = 0;
-        }
-    bodyPart.sprite = options[currentOption];
-    partThumbnail.sprite = options[currentOption];
-     if (currentOption != 2)
-        {
-        partThumbnailnext.sprite = options[currentOption + 1];
-        }
-        else
-        {
-        partThumbnailnext.sprite = options[0];
-        }
-        if(currentOption != 0)
-    {
-        partThumbnailprevious.sprite = options[Mathf.Abs(currentOption - 1)];
+            }
+            if (playerLevel >= 2)
+            {
+                choices[2].interactable = true;
 
+            }
     }
-    else
-    {
-        partThumbnailprevious.sprite = options[2];
-    }    
-    }
-    public void PreviousOption()
-    {
-        currentOption--;
-        if (currentOption < 0)
-        {
-            currentOption = options.Count -1;
-        }
-    bodyPart.sprite = options[currentOption];
-    partThumbnail.sprite = options[currentOption];
-     if (currentOption != 2)
-        {
-        partThumbnailnext.sprite = options[currentOption + 1];
-        }
-        else
-        {
-        partThumbnailnext.sprite = options[0];
-        }
 
-    if(currentOption != 0)
+    public void Customize (Button button)
     {
-        partThumbnailprevious.sprite = options[Mathf.Abs(currentOption - 1)];
+        characterOption = int.Parse(button.name);
+        bodyPart.sprite = options[characterOption];
 
-    }
-    else
-    {
-        partThumbnailprevious.sprite = options[2];
-
-    }
     }
 
     public void Save()
     {
-        PlayerPrefs.SetInt("character", currentOption);
+        PlayerPrefs.SetInt("character", characterOption);
     }
 }

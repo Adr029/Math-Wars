@@ -1868,17 +1868,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  button1: {fileID: 1022740285}
-  button2: {fileID: 1710783065}
-  button3: {fileID: 250275506}
-  button4: {fileID: 1913840130}
-  button5: {fileID: 579087077}
-  button6: {fileID: 173744446}
-  button7: {fileID: 435687073}
-  button8: {fileID: 386505169}
-  button9: {fileID: 864221516}
-  button10: {fileID: 53746622}
-  button11: {fileID: 1952062306}
+  levels:
+  - {fileID: 1022740285}
+  - {fileID: 1710783065}
+  - {fileID: 250275506}
+  - {fileID: 1913840130}
+  - {fileID: 579087077}
+  - {fileID: 173744446}
+  - {fileID: 435687073}
+  - {fileID: 386505169}
+  - {fileID: 864221516}
+  - {fileID: 53746622}
+  - {fileID: 1952062306}
   selectedLevel: 
 --- !u!114 &1269886318
 MonoBehaviour:
