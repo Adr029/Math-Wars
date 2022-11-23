@@ -24,29 +24,6 @@ public class QuestionManagement : MonoBehaviour
         public List<Sprite> artanswers = new List<Sprite>();
 
 
-    [Header("Calculus Questions")]
-    public Sprite calq1;    public Sprite calq2;    public Sprite calq3;    public Sprite calq4;    public Sprite calq5;
-    public Sprite calq6;    public Sprite calq7;    public Sprite calq8;    public Sprite calq9;    public Sprite calq10;    
-    public Sprite calq11;    public Sprite calq12;    public Sprite calq13;    public Sprite calq14;    public Sprite calq15;
-
-    [Header("Calculus Answers")]
-    public Sprite cal1;    public Sprite cal2;    public Sprite cal3;    public Sprite cal4;
-    public Sprite cal5;    public Sprite cal6;    public Sprite cal7;    public Sprite cal8;    
-    public Sprite cal9;    public Sprite cal10;    public Sprite cal11;    public Sprite cal12;
-    public Sprite cal13;    public Sprite cal14;    public Sprite cal15;    public Sprite cal16;
-    public Sprite cal17;    public Sprite cal18;    public Sprite cal19;    public Sprite cal20;
-    public Sprite cal21;    public Sprite cal22;    public Sprite cal23;    public Sprite cal24;
-    public Sprite cal25;    public Sprite cal26;    public Sprite cal27;    public Sprite cal28;
-    public Sprite cal29;    public Sprite cal30;    public Sprite cal31;    public Sprite cal32;
-    public Sprite cal33;    public Sprite cal34;    public Sprite cal35;    public Sprite cal36;
-    public Sprite cal37;    public Sprite cal38;    public Sprite cal39;    public Sprite cal40;
-    public Sprite cal41;    public Sprite cal42;    public Sprite cal43;    public Sprite cal44;
-    public Sprite cal45;    public Sprite cal46;    public Sprite cal47;    public Sprite cal48;
-    public Sprite cal49;    public Sprite cal50;    public Sprite cal51;    public Sprite cal52;
-    public Sprite cal53;    public Sprite cal54;    public Sprite cal55;    public Sprite cal56;
-    public Sprite cal57;    public Sprite cal58;    public Sprite cal59;    public Sprite cal60;
-
-
     [Header("Algebra Questions")]
     public Sprite alq1;    public Sprite alq2;    public Sprite alq3;    public Sprite alq4;    public Sprite alq5;
     public Sprite alq6;    public Sprite alq7;    public Sprite alq8;    public Sprite alq9;    public Sprite alq10;
@@ -102,137 +79,137 @@ dice = Random.Range(0,7);
 switch (dice)
 {
 case 0:
-    question.GetComponent<Image>().sprite = calq1;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal1;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal2;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal3;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal4;
+    question.GetComponent<Image>().sprite = calquestions[0];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[0];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[1];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[2];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[3];
     answer = "A";
 break;
 
 case 1:
-    question.GetComponent<Image>().sprite = calq2;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal5;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal6;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal7;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal8;
+    question.GetComponent<Image>().sprite = calquestions[1];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[4];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[5];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[6];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[7];
     answer = "D";
 break;
 
 case 2:
-    question.GetComponent<Image>().sprite = calq3;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal9;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal10;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal11;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal12;
+    question.GetComponent<Image>().sprite = calquestions[2];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[8];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[9];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[10];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[11];
     answer = "A";
 break;
 
 case 3:
-    question.GetComponent<Image>().sprite = calq4;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal13;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal14;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal15;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal16;
+    question.GetComponent<Image>().sprite = calquestions[3];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[12];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[13];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[14];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[15];
     answer = "B";
 break;
 
 case 4:
-    question.GetComponent<Image>().sprite = calq5;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal17;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal18;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal19;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal20;
+    question.GetComponent<Image>().sprite = calquestions[4];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[16];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[17];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[18];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[19];
     answer = "C";
 break;
 
 case 5:
-    question.GetComponent<Image>().sprite = calq6;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal21;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal22;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal23;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal24;
+    question.GetComponent<Image>().sprite = calquestions[5];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[20];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[21];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[22];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[23];
     answer = "D";
 break;
 
 case 6:
-    question.GetComponent<Image>().sprite = calq7;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal25;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = cal26;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = cal27;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = cal28;
+    question.GetComponent<Image>().sprite = calquestions[6];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[24];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[25];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[26];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[27];
     answer = "A";
 break;
 
 /*case 7:
-    question.GetComponent<Image>().sprite = calq8;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal29;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal30;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal31;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal32;
+    question.GetComponent<Image>().sprite = calquestions[7];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[28];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[29];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[30];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[31];
     answer = "";
 break;
 
 case 8:
-    question.GetComponent<Image>().sprite = calq9;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal33;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal34;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal35;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal36;
+    question.GetComponent<Image>().sprite = calquestions[8];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[32];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[33];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[34];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[35];
     answer = "";
 break;
 
 case 9:
-    question.GetComponent<Image>().sprite = calq10;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal37;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal38;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal39;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal40;
+    question.GetComponent<Image>().sprite = calquestions[9];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[36];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[37];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[38];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[39];
     answer = "";
 break;
 
 case 10:
-    question.GetComponent<Image>().sprite = calq11;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal41;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal42;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal43;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal44;
+    question.GetComponent<Image>().sprite = calquestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[43];
     answer = "";
 break;
 
 case 11:
-    question.GetComponent<Image>().sprite = calq12;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal45;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal46;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal47;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal48;
+    question.GetComponent<Image>().sprite = calquestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[47];
     answer = "";
 break;
 
 case 12:
-    question.GetComponent<Image>().sprite = calq13;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal49;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal50;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal51;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal52;
+    question.GetComponent<Image>().sprite = calquestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[51];
     answer = "";
 break;
 
 case 13:
-    question.GetComponent<Image>().sprite = calq14;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal53;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal54;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal55;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal60;
+    question.GetComponent<Image>().sprite = calquestions[13];
+ choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[55];
     answer = "";
 break;
 
 case 14:
-    question.GetComponent<Image>().sprite = calq15;
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = cal53;
-    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = cal54;
-    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = cal55;
-    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = cal60;
+    question.GetComponent<Image>().sprite = calquestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = calanswers[59];
     answer = "";
 break;*/
 }

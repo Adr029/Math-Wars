@@ -4346,7 +4346,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a0841dd632d3d154c916c26110ecbb67, type: 3}
   - {fileID: 21300000, guid: b71e5494adc62e445b5acc4bbeba4915, type: 3}
   - {fileID: 21300000, guid: ddefcc6c78853ab4495537e5ad90ddbf, type: 3}
-  algequestions: []
+  algequestions:
+  - {fileID: 21300000, guid: 3c51a5024660f7f4cad0b71b490fefbf, type: 3}
+  - {fileID: 21300000, guid: 4c19bee60026d704eaedad426db61735, type: 3}
+  - {fileID: 21300000, guid: 0e8d1f7f677722142a2139ba06a90efd, type: 3}
+  - {fileID: 21300000, guid: dd72a47d5b62f384aaf0e893b9e9b3d2, type: 3}
+  - {fileID: 21300000, guid: c193943ec446c964da7313d9752e983b, type: 3}
+  - {fileID: 21300000, guid: 1c852a0150e01934a877601e61170d70, type: 3}
+  - {fileID: 21300000, guid: 6fc96099aaf8beb41afb138eea5fd199, type: 3}
+  - {fileID: 21300000, guid: b1222674388a3754f89003709c026f95, type: 3}
+  - {fileID: 21300000, guid: 58413351963f2f345aefb27dbbd7c2c1, type: 3}
+  - {fileID: 21300000, guid: feb1fe34f61241c4591d1016155b365a, type: 3}
+  - {fileID: 21300000, guid: b574008bc59358748a44fcd3c9e8b422, type: 3}
+  - {fileID: 21300000, guid: 93c4d90735c03f7419d974b2c5e87b75, type: 3}
+  - {fileID: 21300000, guid: 70b5f1e6be69f8e4896fdb1408cf5a5a, type: 3}
   algeanswers: []
   artquestions: []
   artanswers: []
