@@ -18,16 +18,8 @@ public class Kingdom1: MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
-        if(!PlayerPrefs.HasKey("kingdom1evel")) 
-        {
-            level = PlayerPrefs.GetInt("kingdom1Level", 1);
-        }
-        else
-        {
+       
         level = PlayerPrefs.GetInt("kingdom1Level");
-
-        }
-        Debug.Log(level);
 
         if (level >= 1)
         {

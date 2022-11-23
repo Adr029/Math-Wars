@@ -763,6 +763,7 @@ MonoBehaviour:
   - {fileID: 2039748906}
   CharSprite: 0
   characterOption: 0
+  playerLevel: 0
 --- !u!1 &972959026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,7 +1629,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1860153782}
   m_OnClick:
     m_PersistentCalls:
