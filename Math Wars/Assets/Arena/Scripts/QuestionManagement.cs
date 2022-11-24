@@ -18,8 +18,10 @@ public class QuestionManagement : MonoBehaviour
 
         public List<Sprite> calquestions = new List<Sprite>();
         public List<Sprite> calanswers = new List<Sprite>();
-        public List<Sprite> algeanswers = new List<Sprite>();
+     
         public List<Sprite> algequestions = new List<Sprite>();
+        public List<Sprite> algeanswers = new List<Sprite>();
+        
         public List<Sprite> artquestions = new List<Sprite>();
         public List<Sprite> artanswers = new List<Sprite>();
 
