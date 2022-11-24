@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIManagement : MonoBehaviour
 {
-    [SerializeField]GameObject attack;
-    [SerializeField]GameObject heal;
+    public GameObject attack;
+    public GameObject heal;
     [SerializeField]GameObject arithmetic;
     [SerializeField]GameObject algebra;
     [SerializeField]GameObject calculus;
@@ -17,12 +17,14 @@ public class UIManagement : MonoBehaviour
     [SerializeField]GameObject confirm;
     [SerializeField]GameObject timer;
     [SerializeField]GameObject question;
+    public GameObject statusScroll;
     public Text status;
  
 public void ChooseAction()
 {
 //set attack and heal visible
     status.text = "";
+    statusScroll.SetActive(false);
     attack.SetActive(true);
     heal.SetActive(true);  
     arithmetic.SetActive(false);
@@ -41,7 +43,8 @@ public void SelectTopic()
 {
 //set both attack and heal buttons invisible
 //set choose question visible
-    status.text = "";
+    status.text = "";  
+    statusScroll.SetActive(false);
     attack.SetActive(false);
     heal.SetActive(false);  
     arithmetic.SetActive(true);
@@ -60,6 +63,7 @@ public void SelectTopic()
 public void ChooseAnswer()
 {
     status.text = "";
+    statusScroll.SetActive(false);
     attack.SetActive(false);
     heal.SetActive(false);  
     arithmetic.SetActive(false);

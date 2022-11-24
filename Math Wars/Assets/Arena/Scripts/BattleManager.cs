@@ -45,6 +45,7 @@ void Start()
     prefabList.Add(Enemy1);
     prefabList.Add(Enemy2);
     prefabIndex = UnityEngine.Random.Range(0,2);
+    
 }
 public void BeginBattle()
 {
@@ -96,7 +97,10 @@ void PlayerTurn()
     else
     {
 
-    UI.status.text = "HEALTH ALREADY FULL!";        
+    UI.status.text = "HEALTH ALREADY FULL!";
+    UI.statusScroll.SetActive(true);
+    UI.attack.SetActive(false);
+    UI.heal.SetActive(false);
     }
  }
 
@@ -140,7 +144,8 @@ if (enemy1.CurrentHealth < 100)
     }
     UI.EnemyTurn();
 yield return new WaitForSeconds(1f);
-UI.status.text = "ENEMY TURN...";    
+UI.status.text = "ENEMY TURN...";
+UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
 yield return new WaitForSeconds(2f);
 
@@ -157,18 +162,21 @@ case 2:
     case 0:
         player1.TakeDamage(Random.Range(7,11));
         UI.status.text = "ENEMY USED ARITHMETIC";
+        UI.statusScroll.SetActive(true);  
 
     break;
 
     case 1:
         player1.TakeDamage(Random.Range(12,16));
         UI.status.text = "ENEMY USED ALGEBRA";
+        UI.statusScroll.SetActive(true); 
 
     break;
 
     case 2:
         player1.TakeDamage(Random.Range(17,21));
         UI.status.text = "ENEMY USED CALCULUS";
+        UI.statusScroll.SetActive(true); 
     break;
     }
 enemy1.AttackAnimate();
@@ -176,11 +184,13 @@ enemy1.AttackAnimate();
 break;
 case 3:
     UI.status.text = "ENEMY MISSED";
+    UI.statusScroll.SetActive(true);  
 break;
 case 4:
 //enemy heal
 dice = Random.Range(0,3);
 UI.status.text = "ENEMY HEALED";
+UI.statusScroll.SetActive(true); 
     switch (dice)
     {
     case 0:
@@ -266,6 +276,7 @@ if (questions.correct)
             else 
             {
                 questions.correctText.text = "CORRECT";
+                UI.statusScroll.SetActive(true);  
                 StartCoroutine(EnemyTurn());
             }
         break;
@@ -283,7 +294,8 @@ if (questions.correct)
                 player1.HealPlayer(Random.Range(17,21));
             break;
             }
-            questions.correctText.text = "CORRECT";
+            questions.correctText.text = "CORRECT";                      
+            UI.statusScroll.SetActive(true);  
             UpdateHealth();
 
 
@@ -297,6 +309,7 @@ if (questions.correct)
     else
     {
         questions.correctText.text = "INCORRECT";
+        UI.statusScroll.SetActive(true);  
         StartCoroutine(EnemyTurn());
     }
 }
