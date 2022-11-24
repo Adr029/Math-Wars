@@ -30,5 +30,17 @@ public class EnemyUnit : MonoBehaviour
     {
         animate.SetTrigger("Attacking");
     }
+    public void HealAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
+    public void LoseAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
+    public void WinAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
   
 }
