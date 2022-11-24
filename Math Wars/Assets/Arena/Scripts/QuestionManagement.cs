@@ -21,7 +21,7 @@ public class QuestionManagement : MonoBehaviour
      
         public List<Sprite> algequestions = new List<Sprite>();
         public List<Sprite> algeanswers = new List<Sprite>();
-        
+
         public List<Sprite> artquestions = new List<Sprite>();
         public List<Sprite> artanswers = new List<Sprite>();
 
@@ -175,7 +175,7 @@ break;*/
 
 public void Algebra()
 {
-dice = Random.Range(0,15);
+dice = Random.Range(0,14);
 
 switch (dice)
 {
@@ -319,10 +319,9 @@ break;
 
 
 
-
 public void Arithmetic()
 {
-dice = Random.Range(0,15);
+dice = Random.Range(0,14);
 
 switch (dice)
 {
