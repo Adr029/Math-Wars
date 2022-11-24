@@ -175,7 +175,7 @@ break;*/
 
 public void Algebra()
 {
-dice = Random.Range(0,14);
+dice = Random.Range(0,15);
 
 switch (dice)
 {
@@ -322,7 +322,7 @@ break;
 
 public void Arithmetic()
 {
-dice = Random.Range(0,14);
+dice = Random.Range(0,15);
 
 switch (dice)
 {

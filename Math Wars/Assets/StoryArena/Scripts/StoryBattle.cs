@@ -128,10 +128,10 @@ UI.ChooseAnswer();
     switch (topic)
     {
     case "Arithmetic":
-        questions.Calculus();
+        questions.Arithmetic();
     break;
     case "Algebra":
-        questions.Calculus();
+        questions.Algebra();
     break;
     case "Calculus":
         questions.Calculus();
