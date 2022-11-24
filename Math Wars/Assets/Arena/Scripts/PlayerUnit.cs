@@ -8,8 +8,8 @@ public class PlayerUnit : MonoBehaviour
     int CharSprite;
     [Header("Player Sprite")]
 
-    public SpriteRenderer bodyPart;
-    public List<Sprite> options = new List<Sprite>();
+public SpriteRenderer bodyPart;
+public List<Sprite> options = new List<Sprite>();
    public int MaxHealth = 100;
    public int CurrentHealth = 100;
 public void Start()

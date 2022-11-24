@@ -15,14 +15,14 @@ public class BattleManager : MonoBehaviour
     public int experience;
     public string difficulty;
     string playerchoice;
-//player and enemy future switch to read instantiated prefab    
     [SerializeField]GameObject player;
-    [SerializeField]GameObject enemy;
     [SerializeField]GameObject UIManager;
     [SerializeField]GameObject ReturnToTown;
     [SerializeField]GameObject QuestionManager;
     [SerializeField]GameObject ArenaMenu;
     [SerializeField]Text TimerUI;
+    [SerializeField]Slider PlayerHP;
+    [SerializeField]Slider EnemyHP;
     GameObject playerClone;
     GameObject enemyClone;
     UIManagement UI;
@@ -48,20 +48,20 @@ void Start()
 }
 public void BeginBattle()
 {
-    StartCoroutine(SetupBattle());
     playerClone = (GameObject)Instantiate(player, new Vector3(-3, 0, 0), Quaternion.identity);
     enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
+    StartCoroutine(SetupBattle());
+
 }
 
 IEnumerator SetupBattle()
 {
-    enemy1 = enemy.GetComponent<EnemyUnit>();
+    enemy1 = enemyClone.GetComponent<EnemyUnit>();
     player1 = player.GetComponent<PlayerUnit>();
     UI = UIManager.GetComponent<UIManagement>();
     questions = QuestionManager.GetComponent<QuestionManagement>();
-    PlayerHealthUI.text = player1.CurrentHealth.ToString();
-    EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
     menu = ArenaMenu.GetComponent<ArenaMenu>();
+    UpdateHealth();
     difficulty = menu.difficulty;
     if (player1.CurrentHealth <= 0)
     {
@@ -123,8 +123,8 @@ UI.ChooseAnswer();
     break;
     }
   
-    PlayerHealthUI.text = player1.CurrentHealth.ToString();
-    EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
+    UpdateHealth();
+
 }
     
 IEnumerator EnemyTurn()
@@ -169,9 +169,10 @@ case 2:
     case 2:
         player1.TakeDamage(Random.Range(17,21));
         UI.status.text = "ENEMY USED CALCULUS";
-
     break;
     }
+enemy1.AttackAnimate();
+
 break;
 case 3:
     UI.status.text = "ENEMY MISSED";
@@ -255,7 +256,9 @@ if (questions.correct)
                 enemy1.TakeDamage(Random.Range(17,21));
             break;
             }
-             EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
+            
+            UpdateHealth();
+
             if (enemy1.CurrentHealth <= 0)
             {
                 PlayerWin();
@@ -281,7 +284,9 @@ if (questions.correct)
             break;
             }
             questions.correctText.text = "CORRECT";
-            PlayerHealthUI.text = player1.CurrentHealth.ToString();
+            UpdateHealth();
+
+
             StartCoroutine(EnemyTurn());
 
         break;
@@ -312,6 +317,14 @@ case "Hard":
     timer = 30f;
 break;
 }
+}
+
+public void UpdateHealth()
+{
+    PlayerHealthUI.text = player1.CurrentHealth.ToString();
+    EnemyHealthUI.text = enemy1.CurrentHealth.ToString();
+    EnemyHP.value = enemy1.CurrentHealth;
+    PlayerHP.value = player1.CurrentHealth;
 }
 void FixedUpdate()
 {

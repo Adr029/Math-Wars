@@ -6,6 +6,8 @@ public class EnemyUnit : MonoBehaviour
 {
    public int MaxHealth;
    public int CurrentHealth;
+   [SerializeField] Animator animate;
+   
     public void HealEnemy(int heal)
    {
     CurrentHealth += heal;
@@ -24,4 +26,9 @@ public class EnemyUnit : MonoBehaviour
         CurrentHealth = 0;
     }
    }
+    public void AttackAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
+  
 }
