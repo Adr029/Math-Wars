@@ -25,12 +25,10 @@ public class CharacterCustomize : MonoBehaviour
             if (playerLevel >= 1)
             {
                 choices[1].interactable = true;
-
             }
             if (playerLevel >= 2)
             {
                 choices[2].interactable = true;
-
             }
     }
 

@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerUnit : MonoBehaviour
 {    
 
-    int CharSprite;
-    [Header("Player Sprite")]
+int CharSprite;
+[Header("Player Sprite")]
 
-    public SpriteRenderer bodyPart;
-    public List<Sprite> options = new List<Sprite>();
-   public int MaxHealth = 100;
-   public int CurrentHealth = 100;
+public SpriteRenderer bodyPart;
+public List<Sprite> options = new List<Sprite>();
+public int MaxHealth = 100;
+public int CurrentHealth = 100;
+[SerializeField] Animator animate;
+
 public void Start()
 
 {
@@ -38,4 +40,20 @@ public void HealPlayer(int heal)
         CurrentHealth = 0;
     }
    }
+    public void AttackAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
+    public void HealAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
+    public void LoseAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
+    public void WinAnimate()
+    {
+        animate.SetTrigger("Attacking");
+    }
 }
