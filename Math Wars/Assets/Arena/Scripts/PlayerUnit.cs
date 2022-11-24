@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerUnit : MonoBehaviour
 {    
 
-int CharSprite;
+int bodySprite;
+int headSprite;
 [Header("Player Sprite")]
 
-public SpriteRenderer bodyPart;
-public List<Sprite> options = new List<Sprite>();
+public SpriteRenderer head;
+public SpriteRenderer body;
+public List<Sprite> headOptions = new List<Sprite>();
+public List<Sprite> bodyOptions = new List<Sprite>();
 public int MaxHealth = 100;
 public int CurrentHealth = 100;
 [SerializeField] Animator animate;
@@ -17,8 +20,10 @@ public int CurrentHealth = 100;
 public void Start()
 
 {
-    CharSprite = PlayerPrefs.GetInt("character");
-    bodyPart.sprite = options[CharSprite];
+        headSprite = PlayerPrefs.GetInt("head");
+        bodySprite = PlayerPrefs.GetInt("body");
+        head.sprite = headOptions[headSprite];
+        body.sprite = bodyOptions[bodySprite];
 }   
 
 public void HealPlayer(int heal)
