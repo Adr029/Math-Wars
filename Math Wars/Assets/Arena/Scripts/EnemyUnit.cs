@@ -34,9 +34,9 @@ public class EnemyUnit : MonoBehaviour
     {
         animate.SetTrigger("Attacking");
     }
-    public void LoseAnimate()
+    public void DeadAnimate()
     {
-        animate.SetTrigger("Attacking");
+        animate.SetTrigger("Dead");
     }
     public void WinAnimate()
     {

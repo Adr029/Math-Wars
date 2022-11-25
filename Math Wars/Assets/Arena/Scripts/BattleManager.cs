@@ -221,6 +221,8 @@ void PlayerWin()
 {
     UI.EnemyTurn();
     UI.status.text = "YOU WIN!";
+    enemy1.DeadAnimate();
+
     runTimer = false;
     winCount += 1;
     PlayerPrefs.SetInt("wins", winCount);
