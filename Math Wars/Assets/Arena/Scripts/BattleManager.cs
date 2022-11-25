@@ -15,6 +15,12 @@ public class BattleManager : MonoBehaviour
     public int experience;
     public string difficulty;
     string playerchoice;
+
+    // story mode variables
+    string chosenKingdom;
+    string selectedLevel;
+    public int levelUnlocked;
+//end of story mode variables
     [SerializeField]GameObject player;
     [SerializeField]GameObject UIManager;
     [SerializeField]GameObject ReturnToTown;
@@ -23,6 +29,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Text TimerUI;
     [SerializeField]Slider PlayerHP;
     [SerializeField]Slider EnemyHP;
+    [SerializeField]Button Confirm;
     GameObject playerClone;
     GameObject enemyClone;
     UIManagement UI;
@@ -35,8 +42,8 @@ public class BattleManager : MonoBehaviour
     List<GameObject> prefabList = new List<GameObject>();
     public GameObject Enemy1;
     public GameObject Enemy2;
-
     int prefabIndex;
+    bool storyMode = false;
 
 void Start()
 {
@@ -45,12 +52,42 @@ void Start()
     prefabList.Add(Enemy1);
     prefabList.Add(Enemy2);
     prefabIndex = UnityEngine.Random.Range(0,2);
-    
+
+    Scene currentScene = SceneManager.GetActiveScene();
+
+    if (currentScene.name == "StoryArena")
+    {
+        storyMode = true;
+        chosenKingdom = PlayerPrefs.GetString("storyKingdom");
+        selectedLevel = PlayerPrefs.GetString("selectedLevel");
+        Debug.Log("Level" + selectedLevel);
+
+    }
 }
 public void BeginBattle()
 {
     playerClone = (GameObject)Instantiate(player, new Vector3(-3, 0, 0), Quaternion.identity);
-    enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
+    
+    if (storyMode)
+    {
+
+        if (selectedLevel == "10")
+            {
+                //king prefab
+            }
+
+        else
+            {
+                //normal enemy
+                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
+
+            }
+    }
+    else
+    {
+        enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
+    }
+
     StartCoroutine(SetupBattle());
 
 }
@@ -79,6 +116,7 @@ IEnumerator SetupBattle()
 void PlayerTurn()
 {
    UI.ChooseAction();
+   Confirm.interactable = false;
 }
 
  public void Attack()
@@ -221,6 +259,8 @@ void PlayerWin()
 {
     UI.EnemyTurn();
     UI.status.text = "YOU WIN!";
+    enemy1.DeadAnimate();
+
     runTimer = false;
     winCount += 1;
     PlayerPrefs.SetInt("wins", winCount);
@@ -241,6 +281,47 @@ void PlayerWin()
     }
     PlayerPrefs.SetInt("XP", experience);
     ReturnToTown.SetActive(true);
+
+    if (storyMode)
+    {
+        switch (chosenKingdom)
+        {
+            case "Kingdom1":
+
+            int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level");
+            if (int.Parse(selectedLevel) == kingdom1lvl)
+            {
+                kingdom1lvl++;
+                PlayerPrefs.SetInt("kingdom1Level", kingdom1lvl);
+            }
+        break;
+
+            case "Kingdom2":
+            int kingdom2lvl = PlayerPrefs.GetInt("kingdom2Level");
+            if (int.Parse(selectedLevel) == kingdom2lvl)
+            {
+                kingdom2lvl++;
+                PlayerPrefs.SetInt("kingdom2Level", kingdom2lvl);
+            }
+        break;
+
+            case "Kingdom3":
+            int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level");
+            if (int.Parse(selectedLevel) == kingdom3lvl)
+            {
+                kingdom3lvl++;
+                PlayerPrefs.SetInt("kingdom3Level", kingdom3lvl);
+            }
+        break;
+        }
+    }
+}
+
+public void ShowConfirm()
+{
+
+    Confirm.interactable = true;
+
 }
 
 public void CheckAnswer()
@@ -304,7 +385,6 @@ if (questions.correct)
         break;
 
         }
-       
     }
     else
     {
