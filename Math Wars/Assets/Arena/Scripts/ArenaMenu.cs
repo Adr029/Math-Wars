@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ArenaMenu : MonoBehaviour
 {
-    //eto muna starting scene
 public string difficulty;
 [SerializeField]GameObject Menu;
 [SerializeField]GameObject CombatUI;
@@ -20,8 +19,6 @@ public int playerLevel;
 
 BattleManager battle;
 
-
-// button onclick get name chuchu
 void Start()
 {   
     experience = PlayerPrefs.GetInt("XP");
@@ -30,7 +27,6 @@ void Start()
     Wins.text = winCount.ToString() + " WINS";
     XP.text = "XP: " + experience.ToString()+ "/100";
     Level.text = "Level "+ playerLevel.ToString();
-    // convert sa leveling system later on
 }
 public void ChooseDifficulty(Button button)
 {
