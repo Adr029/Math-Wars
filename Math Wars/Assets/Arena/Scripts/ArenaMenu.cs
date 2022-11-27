@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class ArenaMenu : MonoBehaviour
 {
 public string difficulty;
-[SerializeField]GameObject Menu;
-[SerializeField]GameObject CombatUI;
-[SerializeField]GameObject BattleManagement;
-[SerializeField]Text StatusText;
 [SerializeField]Text Wins;
 [SerializeField]Text XP;
 [SerializeField]Text Level;
+[SerializeField]Button confirm;
 public int winCount;
 public int experience;
 public int playerLevel;
@@ -31,20 +30,19 @@ void Start()
 public void ChooseDifficulty(Button button)
 {
     difficulty = button.name;
+    confirm.interactable = true;
 }
 
 public void Confirm()
 {
 if (difficulty.Length != 0)
 {
-    Menu.SetActive(false);
-    CombatUI.SetActive(true);
-    battle = BattleManagement.GetComponent<BattleManager>();
-    battle.BeginBattle();
+    PlayerPrefs.SetString("difficulty", difficulty);
+    SceneManager.LoadScene("Arena");
 }
 else
 {
-StatusText.text = "PLEASE SELECT DIFFICULTY";
+
 }
 }
 }

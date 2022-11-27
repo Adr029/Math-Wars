@@ -13,7 +13,8 @@ public class Buildings : MonoBehaviour
      public void Arena()
     {
         //StartCoroutine(Fade());
-        SceneManager.LoadScene("Arena");
+        PlayerPrefs.SetInt("storymode", 0);
+        SceneManager.LoadScene("SelectDifficulty");
     }
      public void House()
     {
@@ -22,7 +23,9 @@ public class Buildings : MonoBehaviour
     }
     public void StoryMode()
     {
+        PlayerPrefs.SetInt("storymode", 1);
         SceneManager.LoadScene("Story Mode Map");
+        
     }
     
       /*  IEnumerator Fade()

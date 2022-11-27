@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class Kingdom2 : MonoBehaviour
+public class KingdomManager : MonoBehaviour
 {
-   public int level = 1;
+    public int level = 1;
     Scene currentScene;
     string sceneName;
     public List<Button> levels = new List<Button>();
@@ -15,8 +15,22 @@ public class Kingdom2 : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
-        level = PlayerPrefs.GetInt("kingdom2Level");
-        Debug.Log(level);
+
+        switch (sceneName)
+        {
+            case "Kingdom1":
+                level = PlayerPrefs.GetInt("kingdom1Level");
+            break;
+            
+            case "Kingdom2":
+                level = PlayerPrefs.GetInt("kingdom2Level");
+            break;
+
+            case "Kingdom3":
+                level = PlayerPrefs.GetInt("kingdom3Level");
+            break;
+
+        }
 
         if (level >= 1)
         {
@@ -72,10 +86,8 @@ public class Kingdom2 : MonoBehaviour
     public void BeginBattle(Button button)
     {
         selectedLevel = button.name;
-        SceneManager.LoadScene("StoryArena");
+        SceneManager.LoadScene("SelectDifficulty");
         PlayerPrefs.SetString("storyKingdom", sceneName);
         PlayerPrefs.SetString("selectedLevel", selectedLevel);
     }
-
-
 }

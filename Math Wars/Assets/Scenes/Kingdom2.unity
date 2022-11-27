@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -1572,7 +1572,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -1846,7 +1846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269886319}
   - component: {fileID: 1269886318}
-  - component: {fileID: 1269886317}
+  - component: {fileID: 1269886321}
   - component: {fileID: 1269886320}
   m_Layer: 0
   m_Name: Kingdom2Manager
@@ -1855,32 +1855,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1269886317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269886316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 083418246f6040345bcd40c8d4f3421f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 1
-  levels:
-  - {fileID: 1022740285}
-  - {fileID: 1710783065}
-  - {fileID: 250275506}
-  - {fileID: 1913840130}
-  - {fileID: 579087077}
-  - {fileID: 173744446}
-  - {fileID: 435687073}
-  - {fileID: 386505169}
-  - {fileID: 864221516}
-  - {fileID: 53746622}
-  - {fileID: 1952062306}
-  selectedLevel: 
 --- !u!114 &1269886318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1921,6 +1895,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ec3df84bfe0a24985429a9786325a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1269886321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269886316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841fc596df594cb4db0d9e28400e5687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  levels:
+  - {fileID: 1022740285}
+  - {fileID: 1710783065}
+  - {fileID: 250275506}
+  - {fileID: 1913840130}
+  - {fileID: 579087077}
+  - {fileID: 173744446}
+  - {fileID: 435687073}
+  - {fileID: 386505169}
+  - {fileID: 864221516}
+  - {fileID: 53746622}
+  - {fileID: 1952062306}
+  selectedLevel: 
 --- !u!1 &1352879103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -2687,7 +2687,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2
@@ -2820,7 +2820,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1269886317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Kingdom2, Assembly-CSharp
         m_MethodName: BeginBattle
         m_Mode: 2

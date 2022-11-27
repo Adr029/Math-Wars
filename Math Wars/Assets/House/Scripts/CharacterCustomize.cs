@@ -14,7 +14,7 @@ public class CharacterCustomize : MonoBehaviour
     public List<Button> headChoices = new List<Button>();
     public int headSprite;    
     public int headChosen = 0;
-     public List<Sprite> bodyOptions = new List<Sprite>();
+    public List<Sprite> bodyOptions = new List<Sprite>();
     public List<Button> bodyChoices = new List<Button>();
     public int bodySprite;    
     public int bodyChosen = 0;

@@ -20,21 +20,23 @@ public class BattleManager : MonoBehaviour
     string chosenKingdom;
     string selectedLevel;
     public int levelUnlocked;
+    public List<Sprite> bgOptions = new List<Sprite>();
+
 //end of story mode variables
+    public SpriteRenderer background;
     [SerializeField]GameObject player;
     [SerializeField]GameObject UIManager;
     [SerializeField]GameObject ReturnToTown;
     [SerializeField]GameObject QuestionManager;
-    [SerializeField]GameObject ArenaMenu;
     [SerializeField]Text TimerUI;
     [SerializeField]Slider PlayerHP;
     [SerializeField]Slider EnemyHP;
     [SerializeField]Button Confirm;
+
     GameObject playerClone;
     GameObject enemyClone;
     UIManagement UI;
     QuestionManagement questions;
-    ArenaMenu menu;
     int dice;
     string topic;
     EnemyUnit enemy1;
@@ -43,10 +45,13 @@ public class BattleManager : MonoBehaviour
     public GameObject Enemy1;
     public GameObject Enemy2;
     int prefabIndex;
+    int storyStatus;
     bool storyMode = false;
 
 void Start()
 {
+    difficulty = PlayerPrefs.GetString("difficulty");
+    storyStatus = PlayerPrefs.GetInt("storymode");
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
     prefabList.Add(Enemy1);
@@ -55,14 +60,32 @@ void Start()
 
     Scene currentScene = SceneManager.GetActiveScene();
 
-    if (currentScene.name == "StoryArena")
+    if (storyStatus > 0)
     {
         storyMode = true;
         chosenKingdom = PlayerPrefs.GetString("storyKingdom");
         selectedLevel = PlayerPrefs.GetString("selectedLevel");
-        Debug.Log("Level" + selectedLevel);
+        switch (chosenKingdom)
+        {
+            //change to custom bg for finalization
+            case "Kingdom1":
+                background.sprite = bgOptions[0];
+            break;
+            case "Kingdom2":
+                background.sprite = bgOptions[0];
+            break;
+            case "Kingdom3":
+                background.sprite = bgOptions[0];
+            break;
+        }
 
     }
+    else
+    {
+     background.sprite = bgOptions[0];
+    }
+
+    BeginBattle();
 }
 public void BeginBattle()
 {
@@ -98,9 +121,7 @@ IEnumerator SetupBattle()
     player1 = player.GetComponent<PlayerUnit>();
     UI = UIManager.GetComponent<UIManagement>();
     questions = QuestionManager.GetComponent<QuestionManagement>();
-    menu = ArenaMenu.GetComponent<ArenaMenu>();
     UpdateHealth();
-    difficulty = menu.difficulty;
     if (player1.CurrentHealth <= 0)
     {
         PlayerLose();
