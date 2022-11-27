@@ -5,21 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class StoryModeMap : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+public string kingdomName;
    public void Kingdom1()
    {
-    SceneManager.LoadScene("Kingdom1");
+    kingdomName = "Kingdom1";    
+    PlayerPrefs.SetString("kingdomName", kingdomName);
+    SceneManager.LoadScene("Kingdom");
+
    }
 
   public void Kingdom2()
    {
-    SceneManager.LoadScene("Kingdom2");
+    kingdomName = "Kingdom2";    
+    PlayerPrefs.SetString("kingdomName", kingdomName);
+    SceneManager.LoadScene("Kingdom");
 
    }
 
    public void Kingdom3()
    {
-    SceneManager.LoadScene("Kingdom3");
+    kingdomName = "Kingdom3";    
+    PlayerPrefs.SetString("kingdomName", kingdomName);
+    SceneManager.LoadScene("Kingdom");
 
    }
 

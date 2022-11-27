@@ -7,27 +7,32 @@ public class KingdomManager : MonoBehaviour
 {
     public int level = 1;
     Scene currentScene;
-    string sceneName;
+    string kingdomName;
     public List<Button> levels = new List<Button>();
+    public List<Sprite> bgOptions = new List<Sprite>();
+    public SpriteRenderer background;
+
     public string selectedLevel;
 
     void Start()
     {
-        currentScene = SceneManager.GetActiveScene();
-        sceneName = currentScene.name;
+       kingdomName = PlayerPrefs.GetString("kingdomName");
 
-        switch (sceneName)
+        switch (kingdomName)
         {
             case "Kingdom1":
                 level = PlayerPrefs.GetInt("kingdom1Level");
+                background.sprite = bgOptions[0];
             break;
             
             case "Kingdom2":
                 level = PlayerPrefs.GetInt("kingdom2Level");
+                background.sprite = bgOptions[0];
             break;
 
             case "Kingdom3":
                 level = PlayerPrefs.GetInt("kingdom3Level");
+                background.sprite = bgOptions[0];
             break;
 
         }
@@ -87,7 +92,7 @@ public class KingdomManager : MonoBehaviour
     {
         selectedLevel = button.name;
         SceneManager.LoadScene("SelectDifficulty");
-        PlayerPrefs.SetString("storyKingdom", sceneName);
+        PlayerPrefs.SetString("storyKingdom", kingdomName);
         PlayerPrefs.SetString("selectedLevel", selectedLevel);
     }
 }
