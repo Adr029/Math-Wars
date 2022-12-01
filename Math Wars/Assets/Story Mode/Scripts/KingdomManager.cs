@@ -39,52 +39,33 @@ public class KingdomManager : MonoBehaviour
 
         if (level >= 1)
         {
-            levels[1].interactable = true;
+            levels[0].interactable = true;
 
         }
          if (level >= 2)
         {
-            levels[2].interactable = true;
+            levels[1].interactable = true;
 
         }
          if (level >= 3)
         {
-            levels[3].interactable = true;
+            levels[2].interactable = true;
 
         }
          if (level >= 4)
         {
-            levels[4].interactable = true;
+            levels[3].interactable = true;
 
         }
          if (level >= 5)
         {
-            levels[5].interactable = true;
+            levels[4].interactable = true;
 
         }
+        
          if (level >= 6)
         {
-            levels[6].interactable = true;
-
-        }
-         if (level >= 7)
-        {
-            levels[7].interactable = true;
-
-        }
-         if (level >= 8)
-        {
-            levels[8].interactable = true;
-
-        }
-         if (level >= 9)
-        {
-            levels[9].interactable = true;
-
-        }
-         if (level >= 10)
-        {
-            levels[10].interactable = true;
+            levels[5].interactable = true;
 
         }
     }
