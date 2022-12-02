@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEditor;
 using UnityEngine.UI;
 using UnityEngine.Experimental.U2D.Animation;
@@ -8,9 +9,7 @@ using UnityEngine.Experimental.U2D.Animation;
 public class CharacterCustomize : MonoBehaviour
 {
     [Header("Sprite to Change")]
-    public SpriteRenderer head;
-    public SpriteRenderer body;
-    public GameObject character;
+    public GameObject playerPreview;
     public List<Sprite> headOptions = new List<Sprite>();
     public List<Button> headChoices = new List<Button>();
     public int headSprite;    
@@ -21,20 +20,21 @@ public class CharacterCustomize : MonoBehaviour
     public int bodyChosen = 0;
     public int playerLevel = 0;
 
-[SerializeField]SpriteLibrary spritelibrary = default;
-[SerializeField]SpriteResolver targetResolver = default;
-[SerializeField]string targetCategory = default;
-[SerializeField]SpriteLibraryAsset LibraryAsset => spritelibrary.spriteLibraryAsset;
+    PlayerUnit player;
+
+[SerializeField]SpriteLibrary spritelibrary;
+[SerializeField]SpriteResolver Head;
 
     private void Awake() {
+
+        
         playerLevel = PlayerPrefs.GetInt("Level");
 
         headSprite = PlayerPrefs.GetInt("head", 0);
         bodySprite = PlayerPrefs.GetInt("body", 0);
         headChosen = headSprite;
         bodyChosen = bodySprite;
-        head.sprite = headOptions[headChosen];
-        body.sprite = bodyOptions[bodyChosen];
+     
        
             if (playerLevel >= 1)
             {
@@ -44,7 +44,6 @@ public class CharacterCustomize : MonoBehaviour
             {
                 headChoices[2].interactable = true;
             }
-        body.sprite = bodyOptions[bodyChosen];
        
             if (playerLevel >= 1)
             {
@@ -55,12 +54,13 @@ public class CharacterCustomize : MonoBehaviour
     public void SelectHead (Button button)
     {
         headChosen = int.Parse(button.name);
-        head.sprite = headOptions[headChosen];  
+        Head.SetCategoryAndLabel(Head.GetCategory(), headChosen.ToString());
+        Head.ResolveSpriteToSpriteRenderer();
     }
+
    public void SelectBody (Button button)
     {
         bodyChosen = int.Parse(button.name);
-        body.sprite = bodyOptions[bodyChosen];
     }
     public void Save()
     {
@@ -68,12 +68,6 @@ public class CharacterCustomize : MonoBehaviour
         PlayerPrefs.SetInt("body", bodyChosen);
     }
 
-    /*public void SelectRandom ()
-    {
-        string[]labels = LibraryAsset.GetCategoryLabelNames(targetCategory).ToArray();
-        int index = Random. Range(0, labels.Length ) ;
-        string label = labels[index] ;
-        targetResolver.SetCategoryAndLabel (targetCategory, label);
-    }
-    */
+
+    
 }

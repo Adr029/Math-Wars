@@ -116,7 +116,7 @@ ScriptedImporter:
     spriteBone:
     - name: bone_3
       position: {x: 150.41986, y: 0.0000056835097, z: 0}
-      rotation: {x: 0, y: 0, z: -0.015113956, w: 0.9998858}
+      rotation: {x: 0, y: 0, z: -0.015113917, w: 0.9998858}
       length: 457.3203
       parentId: 1
     - name: bone_2
@@ -2541,14 +2541,14 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: bone_17
-      position: {x: 144.79955, y: -0.00015213608, z: 0}
-      rotation: {x: 0, y: 0, z: 0.07097124, w: 0.9974784}
-      length: 84.08463
+      position: {x: 144.79927, y: 0.00023296701, z: 0}
+      rotation: {x: 0, y: 0, z: 0.07097102, w: 0.99747837}
+      length: 84.08462
       parentId: 1
     - name: bone_16
       position: {x: -12.599487, y: 146.33826, z: 0}
-      rotation: {x: 0, y: 0, z: -0.16332485, w: 0.9865724}
-      length: 144.7994
+      rotation: {x: 0, y: 0, z: -0.16332468, w: 0.9865724}
+      length: 144.79938
       parentId: -1
     spriteOutline: []
     vertices:
@@ -3425,14 +3425,14 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: bone_21
-      position: {x: 153.6375, y: -0.000028896784, z: 0}
+      position: {x: 153.63737, y: -0.00003903417, z: 0}
       rotation: {x: 0, y: 0, z: -0.009272534, w: 0.999957}
       length: 69.82602
       parentId: 1
     - name: bone_20
       position: {x: 107.8396, y: 250.90283, z: 0}
       rotation: {x: 0, y: 0, z: 0.7358823, w: -0.67710954}
-      length: 153.63757
+      length: 153.63748
       parentId: -1
     spriteOutline: []
     vertices:
@@ -4654,7 +4654,7 @@ ScriptedImporter:
       parentId: 0
     - name: bone_3
       position: {x: 150.41972, y: -0.000015615584, z: 0}
-      rotation: {x: 0, y: 0, z: -0.015113956, w: 0.9998858}
+      rotation: {x: 0, y: 0, z: -0.015113919, w: 0.9998858}
       length: 457.3203
       parentId: 1
     spriteOutline: []
@@ -5310,13 +5310,46 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 274, y: -980}
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 2048
-  importedTextureHeight: 2048
+  importedTextureWidth: 512
+  importedTextureHeight: 512
   documentSize: {x: 1577, y: 2048}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
@@ -5324,9 +5357,9 @@ ScriptedImporter:
     categories:
     - name: Head
       labels:
-      - name: head male hoodie
+      - name: 1
         spriteId: a9b76c5606c5cbd42a90826d8bdc9f04
-      - name: Layer 1
+      - name: 0
         spriteId: 6200478f315c2804ca7566c1bd5dcc8a
   textureActualWidth: 2048
   textureActualHeight: 2048
@@ -5412,17 +5445,17 @@ ScriptedImporter:
       parentId: 0
     - name: bone_3
       position: {x: 150.41988, y: 0.000031015275, z: 0}
-      rotation: {x: 0, y: 0, z: -0.0151139265, w: 0.9998858}
+      rotation: {x: 0, y: 0, z: -0.015113889, w: 0.9998858}
       length: 457.3203
       parentId: 1
     - name: bone_16
       position: {x: 0.720497, y: -183.74345, z: 0}
-      rotation: {x: 0, y: -0, z: -0.8600012, w: 0.51029205}
+      rotation: {x: 0, y: -0, z: -0.8600011, w: 0.51029223}
       length: 144.79938
       parentId: 1
     - name: bone_17
-      position: {x: 144.79942, y: 0.000010932752, z: 0}
-      rotation: {x: 0, y: 0, z: 0.07097126, w: 0.9974784}
+      position: {x: 144.79933, y: 0.00013529827, z: 0}
+      rotation: {x: 0, y: 0, z: 0.07097099, w: 0.99747837}
       length: 84.08462
       parentId: 3
     - name: bone_18
@@ -5438,10 +5471,10 @@ ScriptedImporter:
     - name: bone_20
       position: {x: -92.475426, y: 88.549736, z: 0}
       rotation: {x: 0, y: -0, z: 0.9983538, w: 0.05735677}
-      length: 153.63759
+      length: 153.6375
       parentId: 0
     - name: bone_21
-      position: {x: 153.63754, y: 0.0000017155767, z: 0}
+      position: {x: 153.63745, y: -0.000005887463, z: 0}
       rotation: {x: 0, y: 0, z: -0.009272552, w: 0.999957}
       length: 69.826035
       parentId: 7

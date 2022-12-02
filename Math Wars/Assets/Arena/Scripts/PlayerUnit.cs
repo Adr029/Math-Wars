@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.U2D.Animation;
 
 public class PlayerUnit : MonoBehaviour
 {    
@@ -9,21 +10,23 @@ int bodySprite;
 int headSprite;
 [Header("Player Sprite")]
 
-public SpriteRenderer head;
-public SpriteRenderer body;
-public List<Sprite> headOptions = new List<Sprite>();
-public List<Sprite> bodyOptions = new List<Sprite>();
 public int MaxHealth = 100;
 public int CurrentHealth = 100;
 [SerializeField] Animator animate;
+[SerializeField]SpriteLibrary spritelibrary;
+[SerializeField]SpriteResolver Head;
 
+
+private void Awake() 
+{
+    headSprite = PlayerPrefs.GetInt("head");
+    bodySprite = PlayerPrefs.GetInt("body");
+}
 public void Start()
 
 {
-        headSprite = PlayerPrefs.GetInt("head");
-        bodySprite = PlayerPrefs.GetInt("body");
-        head.sprite = headOptions[headSprite];
-        body.sprite = bodyOptions[bodySprite];
+        Head.SetCategoryAndLabel(Head.GetCategory(), headSprite.ToString());
+        Head.ResolveSpriteToSpriteRenderer();
 }   
 
 public void HealPlayer(int heal)
@@ -45,6 +48,7 @@ public void HealPlayer(int heal)
         CurrentHealth = 0;
     }
    }
+   /*
     public void AttackAnimate()
     {
         animate.SetTrigger("Attacking");
@@ -61,4 +65,5 @@ public void HealPlayer(int heal)
     {
         animate.SetTrigger("Attacking");
     }
+    */
 }
