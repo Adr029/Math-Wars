@@ -93,8 +93,6 @@ public void EnemyTurn()
     confirm.SetActive(false);
     timer.SetActive(false);
     question.SetActive(false);
-
-    
 }
 
 }

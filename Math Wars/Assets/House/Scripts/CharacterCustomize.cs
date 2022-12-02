@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using UnityEngine.Experimental.U2D.Animation;
 
 public class CharacterCustomize : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class CharacterCustomize : MonoBehaviour
     public int bodySprite;    
     public int bodyChosen = 0;
     public int playerLevel = 0;
+
+[SerializeField]SpriteLibrary spritelibrary = default;
+[SerializeField]SpriteResolver targetResolver = default;
+[SerializeField]string targetCategory = default;
+[SerializeField]SpriteLibraryAsset LibraryAsset => spritelibrary.spriteLibraryAsset;
 
     private void Awake() {
         playerLevel = PlayerPrefs.GetInt("Level");
@@ -61,4 +67,13 @@ public class CharacterCustomize : MonoBehaviour
         PlayerPrefs.SetInt("head", headChosen);
         PlayerPrefs.SetInt("body", bodyChosen);
     }
+
+    /*public void SelectRandom ()
+    {
+        string[]labels = LibraryAsset.GetCategoryLabelNames(targetCategory).ToArray();
+        int index = Random. Range(0, labels.Length ) ;
+        string label = labels[index] ;
+        targetResolver.SetCategoryAndLabel (targetCategory, label);
+    }
+    */
 }

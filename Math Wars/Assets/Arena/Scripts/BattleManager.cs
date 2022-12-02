@@ -78,7 +78,6 @@ void Start()
                 background.sprite = bgOptions[0];
             break;
         }
-
     }
     else
     {
@@ -103,7 +102,6 @@ public void BeginBattle()
             {
                 //normal enemy
                 enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
-
             }
     }
     else
@@ -142,8 +140,31 @@ void PlayerTurn()
 
  public void Attack()
  {
-   playerchoice = "Attack";
-   UI.SelectTopic();
+    playerchoice = "Attack";
+
+    if(!storyMode)
+    {
+        UI.SelectTopic();
+    }
+
+    else
+    {
+        UI.ChooseAnswer();
+        runTimer = true;
+
+        switch (chosenKingdom)
+        {
+            case "Kingdom1":
+                questions.Arithmetic();            
+            break;
+            case "Kingdom2":
+                questions.Algebra();
+            break;
+            case "Kingdom3":
+                questions.Calculus();
+            break;
+        }
+    }
  }
 
  public void Heal()
@@ -151,7 +172,28 @@ void PlayerTurn()
     if (player1.CurrentHealth < 100)
     {
         playerchoice = "Heal";
-        UI.SelectTopic();
+        if (!storyMode)
+        {
+            UI.SelectTopic();
+        }
+        else
+        {
+        UI.ChooseAnswer();
+        runTimer = true;
+        switch (chosenKingdom)
+        {
+            
+            case "Kingdom1":
+                questions.Arithmetic();            
+            break;
+            case "Kingdom2":
+                questions.Algebra();
+            break;
+            case "Kingdom3":
+                questions.Calculus();
+            break;
+        }
+        }
     }
     else
     {
@@ -163,6 +205,8 @@ void PlayerTurn()
     }
  }
 
+
+
 public void AttackType(Button button)
 {
 
@@ -172,7 +216,8 @@ UI.ChooseAnswer();
     
     Timer();
     runTimer = true;
-
+if (!storyMode)
+{
     switch (topic)
     {
     case "Arithmetic":
@@ -185,7 +230,7 @@ UI.ChooseAnswer();
         questions.Calculus();
     break;
     }
-  
+}
     UpdateHealth();
 
 }
@@ -387,13 +432,13 @@ if (questions.correct)
             switch (topic)
             {
             case "Arithmetic":
-                player1.HealPlayer(Random.Range(7,11));
+                player1.HealPlayer(Random.Range(11,16));
             break;
             case "Algebra":
-                player1.HealPlayer(Random.Range(12,16));
+                player1.HealPlayer(Random.Range(19,25));
             break;
             case "Calculus":
-                player1.HealPlayer(Random.Range(17,21));
+                player1.HealPlayer(Random.Range(27,33));
             break;
             }
             questions.correctText.text = "CORRECT";                      
@@ -417,6 +462,9 @@ if (questions.correct)
 
 public void Timer()
 {
+
+if (!storyMode)
+{
 switch (difficulty)
 {
 case "Easy":
@@ -431,6 +479,13 @@ case "Hard":
     timer = 30f;
 break;
 }
+}
+
+else
+{
+    timer = 60f;
+}
+
 }
 
 public void UpdateHealth()

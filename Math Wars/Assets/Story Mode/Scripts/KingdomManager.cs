@@ -63,16 +63,11 @@ public class KingdomManager : MonoBehaviour
 
         }
         
-         if (level >= 6)
-        {
-            levels[5].interactable = true;
-
-        }
     }
     public void BeginBattle(Button button)
     {
         selectedLevel = button.name;
-        SceneManager.LoadScene("SelectDifficulty");
+        SceneManager.LoadScene("Arena");
         PlayerPrefs.SetString("storyKingdom", kingdomName);
         PlayerPrefs.SetString("selectedLevel", selectedLevel);
     }
