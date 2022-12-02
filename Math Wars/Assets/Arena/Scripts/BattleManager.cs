@@ -88,7 +88,7 @@ void Start()
 }
 public void BeginBattle()
 {
-    playerClone = (GameObject)Instantiate(player, new Vector3(-3, 0, 0), Quaternion.identity);
+    playerClone = (GameObject)Instantiate(player, new Vector3(-3, -0.5f, 0), Quaternion.identity);
     
     if (storyMode)
     {

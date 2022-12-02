@@ -429,7 +429,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459845920}
-  - component: {fileID: 459845919}
   - component: {fileID: 459845918}
   - component: {fileID: 459845921}
   m_Layer: 0
@@ -451,20 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e704a70ea403e6141bfd7c45361aa8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &459845919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459845917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74bb7a3d5cb66ce449d55c337be1a39d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  experience: 0
-  playerLevel: 0
+  kingdomName: 
 --- !u!4 &459845920
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,7 +1271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 182, y: -123.96}
+  m_AnchoredPosition: {x: 182, y: -123.95999}
   m_SizeDelta: {x: 202.27, y: 37.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898100535
