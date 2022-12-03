@@ -116,7 +116,7 @@ public void BeginBattle()
 IEnumerator SetupBattle()
 {
     enemy1 = enemyClone.GetComponent<EnemyUnit>();
-    player1 = player.GetComponent<PlayerUnit>();
+    player1 = playerClone.GetComponent<PlayerUnit>();
     UI = UIManager.GetComponent<UIManagement>();
     questions = QuestionManager.GetComponent<QuestionManagement>();
     UpdateHealth();
@@ -396,6 +396,7 @@ runTimer = false;
 Timer();
 if (questions.correct)
     {
+        player1.AttackAnimate();
      questions.correctText.text = "";
     
         switch (playerchoice)

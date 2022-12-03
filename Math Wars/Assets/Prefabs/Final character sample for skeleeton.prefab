@@ -211,7 +211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   CurrentHealth: 100
-  animate: {fileID: 0}
+  playerAnimate: {fileID: 1098168933211178432}
+  fireballAnimate: {fileID: 1073403504}
   spritelibrary: {fileID: 765180732677332367}
   Head: {fileID: 4957983651441427513}
 --- !u!1 &1482937039076217893
@@ -238,7 +239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482937039076217893}
   m_LocalRotation: {x: -0, y: -0, z: 0.7116432, w: 0.7025411}
-  m_LocalPosition: {x: 0.37243766, y: 1.6745245, z: 0}
+  m_LocalPosition: {x: 0.41401795, y: -2.525113, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1489939578189267007}
@@ -439,7 +440,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 2562735752549766387}
   m_Bounds:
-    m_Center: {x: 0.14393306, y: -5.184548, z: 0}
+    m_Center: {x: 0.18551338, y: -9.384185, z: 0}
     m_Extent: {x: 1.5217302, y: 0.9774828, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -574,8 +575,8 @@ MonoBehaviour:
   - {fileID: 2660531834320827813}
   - {fileID: 2513121602537321827}
   m_Bounds:
-    m_Center: {x: 0.12048733, y: -5.47273, z: 0}
-    m_Extent: {x: 1.328816, y: 1.7867327, z: 0}
+    m_Center: {x: 0.16207027, y: -9.672368, z: 0}
+    m_Extent: {x: 1.3288159, y: 1.7867324, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3270487264825523174
@@ -679,8 +680,8 @@ MonoBehaviour:
   - {fileID: 1489939578189267007}
   - {fileID: 7015436697045497731}
   m_Bounds:
-    m_Center: {x: 0.117249966, y: -5.7338166, z: 0}
-    m_Extent: {x: 3.514726, y: 2.8095183, z: 0}
+    m_Center: {x: 0.15883017, y: -9.9334545, z: 0}
+    m_Extent: {x: 3.5147262, y: 2.8095188, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3813074380359252476
@@ -783,8 +784,8 @@ MonoBehaviour:
   - {fileID: 8077892938220766093}
   - {fileID: 704066634066216323}
   m_Bounds:
-    m_Center: {x: 0.21097481, y: -5.50432, z: 0}
-    m_Extent: {x: 1.1275773, y: 0.9545121, z: 0}
+    m_Center: {x: 0.25255454, y: -9.703958, z: 0}
+    m_Extent: {x: 1.1275768, y: 0.9545126, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &4208603674678969570
@@ -844,7 +845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4886571549421390801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 7.7, z: 0}
+  m_LocalPosition: {x: 0.56, y: 2.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2745915130711094776}
@@ -918,8 +919,8 @@ MonoBehaviour:
   - {fileID: 7015436697045497731}
   - {fileID: 1489939578189267007}
   m_Bounds:
-    m_Center: {x: 0.037880898, y: -0.5440991, z: 0}
-    m_Extent: {x: 3.4281185, y: 3.8501203, z: 0}
+    m_Center: {x: 0.0794611, y: 0.04626441, z: 0}
+    m_Extent: {x: 3.4281187, y: 3.8501205, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &4957983651441427513
@@ -935,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CategoryHash: 2.9092094e-34
-  m_labelHash: 2.8851348e-37
+  m_labelHash: -1.2985474e-36
 --- !u!1 &4926349310172821942
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +967,7 @@ Transform:
   m_Father: {fileID: 1489939578189267007}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6.282}
---- !u!95 &1098168934830175120
+--- !u!95 &1073403504
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -1085,8 +1086,8 @@ MonoBehaviour:
   - {fileID: 4520477342165517374}
   - {fileID: 5673440925241336949}
   m_Bounds:
-    m_Center: {x: 0.11178827, y: -5.4240084, z: 0}
-    m_Extent: {x: 1.4572731, y: 1.7790015, z: 0}
+    m_Center: {x: 0.15336752, y: -9.623644, z: 0}
+    m_Extent: {x: 1.4572741, y: 1.7790017, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6905182129954794148
@@ -1219,8 +1220,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3686889565281454493}
   m_Bounds:
-    m_Center: {x: 0.15268955, y: -5.3313103, z: 0}
-    m_Extent: {x: 0.46553308, y: 0.33930278, z: 0}
+    m_Center: {x: 0.19426975, y: -9.530947, z: 0}
+    m_Extent: {x: 0.4655331, y: 0.33930302, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1001 &1098168934830175122

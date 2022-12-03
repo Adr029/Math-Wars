@@ -11,8 +11,9 @@ int headSprite;
 [Header("Player Sprite")]
 
 public int MaxHealth = 100;
-public int CurrentHealth = 100;
-[SerializeField] Animator animate;
+public int CurrentHealth;
+[SerializeField] Animator playerAnimate;
+[SerializeField] Animator fireballAnimate;
 [SerializeField]SpriteLibrary spritelibrary;
 [SerializeField]SpriteResolver Head;
 
@@ -21,10 +22,13 @@ private void Awake()
 {
     headSprite = PlayerPrefs.GetInt("head");
     bodySprite = PlayerPrefs.GetInt("body");
+
 }
 public void Start()
 
 {
+        CurrentHealth = 100;
+
         Head.SetCategoryAndLabel(Head.GetCategory(), headSprite.ToString());
         Head.ResolveSpriteToSpriteRenderer();
 }   
@@ -48,11 +52,13 @@ public void HealPlayer(int heal)
         CurrentHealth = 0;
     }
    }
-   /*
+
     public void AttackAnimate()
     {
-        animate.SetTrigger("Attacking");
+        playerAnimate.SetTrigger("Attacking");
+        fireballAnimate.SetTrigger("Attacking");
     }
+    /*
     public void HealAnimate()
     {
         animate.SetTrigger("Attacking");

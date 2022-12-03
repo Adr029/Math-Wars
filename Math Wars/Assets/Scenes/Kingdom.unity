@@ -565,6 +565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experience: 0
+  level: {fileID: 0}
+  XP: {fileID: 0}
   playerLevel: 0
 --- !u!4 &748318639
 Transform:
@@ -1445,8 +1447,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 162.19006, y: 486.75}
-  m_SizeDelta: {x: 168.5, y: 31.59}
+  m_AnchoredPosition: {x: 167.92, y: 485.68}
+  m_SizeDelta: {x: 179.96, y: 33.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893882759
 MonoBehaviour:
