@@ -36,6 +36,7 @@ public class KingdomManager : MonoBehaviour
             break;
 
         }
+        Debug.Log(level);
 
         if (level >= 1)
         {

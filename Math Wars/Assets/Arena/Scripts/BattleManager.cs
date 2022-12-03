@@ -473,13 +473,13 @@ if (questions.correct)
             switch (topic)
                 {
                 case "Arithmetic":
-                    enemy1.TakeDamage(Random.Range(7,11));
+                    enemy1.TakeDamage(100);//Random.Range(7,11));
                 break;
                 case "Algebra":
-                    enemy1.TakeDamage(Random.Range(12,16));
+                    enemy1.TakeDamage(100);//(Random.Range(12,16));
                 break;
                 case "Calculus":
-                    enemy1.TakeDamage(Random.Range(17,21));
+                    enemy1.TakeDamage(100);//(Random.Range(17,21));
                 break;
                 }
             }
@@ -489,17 +489,17 @@ if (questions.correct)
             {
                 case "Kingdom1":
 
-                enemy1.TakeDamage(Random.Range(7,11));
+                enemy1.TakeDamage(100);//(Random.Range(7,11));
 
             break;
 
             case "Kingdom2":
-                enemy1.TakeDamage(Random.Range(12,16));
+                enemy1.TakeDamage(100);//(Random.Range(12,16));
 
             break;
 
             case "Kingdom3":
-                enemy1.TakeDamage(Random.Range(17,21));
+                enemy1.TakeDamage(100);//(Random.Range(17,21));
             break;
             }
 
