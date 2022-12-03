@@ -58,6 +58,11 @@ public void HealPlayer(int heal)
         playerAnimate.SetTrigger("Attacking");
         fireballAnimate.SetTrigger("Attacking");
     }
+
+    public void IdleAnimate()
+    {
+        fireballAnimate.ResetTrigger("Attacking");
+    }
     /*
     public void HealAnimate()
     {
