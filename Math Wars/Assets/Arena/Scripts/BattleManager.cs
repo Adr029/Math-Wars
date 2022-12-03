@@ -240,11 +240,11 @@ IEnumerator EnemyTurn()
 runTimer = false;
 if (enemy1.CurrentHealth < 100)
     {
-     dice = Random.Range(0,5);
+     dice = Random.Range(0,6);
     }
     else
     {
-    dice = Random.Range(0,4);  
+    dice = Random.Range(0,5);  
     }
     UI.EnemyTurn();
 yield return new WaitForSeconds(1f);
@@ -252,12 +252,14 @@ UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
 yield return new WaitForSeconds(2f);
-
-switch (dice)
+if (!storyMode)
+{
+    switch (dice)
 {
 case 0:
 case 1:
 case 2:
+case 3:
 
 //enemy attack
     dice = Random.Range(0,3);
@@ -286,11 +288,11 @@ case 2:
 enemy1.AttackAnimate();
 
 break;
-case 3:
+case 4:
     UI.status.text = "ENEMY MISSED";
     UI.statusScroll.SetActive(true);  
 break;
-case 4:
+case 5:
 //enemy heal
 dice = Random.Range(0,3);
 UI.status.text = "ENEMY HEALED";
@@ -309,6 +311,70 @@ UI.statusScroll.SetActive(true);
     }
 break;
 }
+}
+
+
+else if (storyMode)
+{
+switch (dice)
+{
+case 0:
+case 1:
+case 2:
+case 3:
+
+//enemy attack
+ 
+    switch (chosenKingdom)
+    {
+    case "Kingdom1":        
+        player1.TakeDamage(Random.Range(7,11));
+        UI.status.text = "ENEMY USED ARITHMETIC";
+        UI.statusScroll.SetActive(true);  
+
+    break;
+
+    case "Kingdom2":        
+    player1.TakeDamage(Random.Range(12,16));
+        UI.status.text = "ENEMY USED ALGEBRA";
+        UI.statusScroll.SetActive(true); 
+
+    break;
+
+    case "Kingdom3":        
+    player1.TakeDamage(Random.Range(17,21));
+        UI.status.text = "ENEMY USED CALCULUS";
+        UI.statusScroll.SetActive(true); 
+    break;
+    }
+enemy1.AttackAnimate();
+
+break;
+case 4:
+    UI.status.text = "ENEMY MISSED";
+    UI.statusScroll.SetActive(true);  
+break;
+case 5:
+//enemy heal
+UI.status.text = "ENEMY HEALED";
+UI.statusScroll.SetActive(true); 
+    switch (chosenKingdom)
+    {
+
+  case "Kingdom1":        
+        enemy1.HealEnemy(Random.Range(11,16));
+    break;
+    case "Kingdom2":        
+        enemy1.HealEnemy(Random.Range(19,25));
+    break;
+    case "Kingdom3":        
+        enemy1.HealEnemy(Random.Range(27,33));
+    break;  
+    }
+break;
+}
+}
+
 
 StartCoroutine(SetupBattle());
 
@@ -402,18 +468,42 @@ if (questions.correct)
         switch (playerchoice)
         {
         case "Attack":
-             switch (topic)
+            if (!storyMode)
             {
-            case "Arithmetic":
+            switch (topic)
+                {
+                case "Arithmetic":
+                    enemy1.TakeDamage(Random.Range(7,11));
+                break;
+                case "Algebra":
+                    enemy1.TakeDamage(Random.Range(12,16));
+                break;
+                case "Calculus":
+                    enemy1.TakeDamage(Random.Range(17,21));
+                break;
+                }
+            }
+           else if (storyMode)
+           {
+            switch(chosenKingdom)
+            {
+                case "Kingdom1":
+
                 enemy1.TakeDamage(Random.Range(7,11));
+
             break;
-            case "Algebra":
+
+            case "Kingdom2":
                 enemy1.TakeDamage(Random.Range(12,16));
+
             break;
-            case "Calculus":
+
+            case "Kingdom3":
                 enemy1.TakeDamage(Random.Range(17,21));
             break;
             }
+
+           }
             
             UpdateHealth();
 
@@ -430,7 +520,9 @@ if (questions.correct)
         break;
         
         case "Heal":
-            switch (topic)
+        if (!storyMode)
+        {
+        switch (topic)
             {
             case "Arithmetic":
                 player1.HealPlayer(Random.Range(11,16));
@@ -442,11 +534,27 @@ if (questions.correct)
                 player1.HealPlayer(Random.Range(27,33));
             break;
             }
+        }
+        else if (storyMode)
+        {
+            switch(chosenKingdom)
+            {
+            case "Kingdom1":
+                player1.HealPlayer(Random.Range(11,16));
+            break;
+            case "Kingdom2":
+                player1.HealPlayer(Random.Range(19,25));
+            break;
+            case "Kingdom3":
+                player1.HealPlayer(Random.Range(27,33));
+            break;
+            }
+        }
+
+            
             questions.correctText.text = "CORRECT";                      
             UI.statusScroll.SetActive(true);  
             UpdateHealth();
-
-
             StartCoroutine(EnemyTurn());
 
         break;
