@@ -11,6 +11,8 @@ public class LibraryManager : MonoBehaviour
    [SerializeField]GameObject arithmeticButton;
    [SerializeField]GameObject algebraButton;
    [SerializeField]GameObject calculusButton;
+   public SpriteRenderer libraryBG;
+   public List<Sprite> bgOptions = new List<Sprite>();
 
    public void Arithmetic()
    {
@@ -21,6 +23,7 @@ public class LibraryManager : MonoBehaviour
     arithmeticButton.SetActive(false);
     algebraButton.SetActive(false);
     calculusButton.SetActive(false);
+    libraryBG.sprite = bgOptions[1];
    }
    public void Algebra()
    {
@@ -31,7 +34,7 @@ public class LibraryManager : MonoBehaviour
     arithmeticButton.SetActive(false);
     algebraButton.SetActive(false);
     calculusButton.SetActive(false);
-
+    libraryBG.sprite = bgOptions[2];
    }
    public void Calculus()
    {
@@ -42,7 +45,7 @@ public class LibraryManager : MonoBehaviour
     arithmeticButton.SetActive(false);
     algebraButton.SetActive(false);
     calculusButton.SetActive(false);
-
+    libraryBG.sprite = bgOptions[3];
    }
 
    public void CloseBook()
@@ -54,5 +57,6 @@ public class LibraryManager : MonoBehaviour
     arithmeticButton.SetActive(true);
     algebraButton.SetActive(true);
     calculusButton.SetActive(true);
+    libraryBG.sprite = bgOptions[0];
    }
 }
