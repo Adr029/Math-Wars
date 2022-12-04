@@ -88,7 +88,7 @@ void Start()
 }
 public void BeginBattle()
 {
-    playerClone = (GameObject)Instantiate(player, new Vector3(-3, -0.5f, 0), Quaternion.identity);
+    playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Quaternion.identity);
     
     if (storyMode)
     {
@@ -101,12 +101,29 @@ public void BeginBattle()
         else
             {
                 //normal enemy
-                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
-            }
+                switch(prefabIndex)
+                {
+            case 0:
+                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+            break;
+            case 1:
+                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+            break;
+                }
+        }     
     }
     else
     {
-        enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3, 0, 0), Quaternion.identity);
+        switch(prefabIndex)
+        {
+            case 0:
+                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+            break;
+            case 1:
+                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+            break;
+
+        }
     }
 
     StartCoroutine(SetupBattle());
