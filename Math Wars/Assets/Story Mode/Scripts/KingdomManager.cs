@@ -10,7 +10,9 @@ public class KingdomManager : MonoBehaviour
     string kingdomName;
     public List<Button> levels = new List<Button>();
     public List<Sprite> bgOptions = new List<Sprite>();
+    public List<Sprite> bossOptions = new List<Sprite>();
     public SpriteRenderer background;
+    public Button bossBattle;
 
     public string selectedLevel;
 
@@ -23,16 +25,21 @@ public class KingdomManager : MonoBehaviour
             case "Kingdom1":
                 level = PlayerPrefs.GetInt("kingdom1Level");
                 background.sprite = bgOptions[0];
+                bossBattle.GetComponent<Image>().sprite = bossOptions[0];
             break;
             
             case "Kingdom2":
                 level = PlayerPrefs.GetInt("kingdom2Level");
-                background.sprite = bgOptions[0];
+                background.sprite = bgOptions[1];
+                bossBattle.GetComponent<Image>().sprite = bossOptions[1];
+
             break;
 
             case "Kingdom3":
                 level = PlayerPrefs.GetInt("kingdom3Level");
-                background.sprite = bgOptions[0];
+                background.sprite = bgOptions[2];
+                bossBattle.GetComponent<Image>().sprite = bossOptions[2];
+
             break;
 
         }

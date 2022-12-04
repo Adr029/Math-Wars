@@ -27,6 +27,11 @@ public class Buildings : MonoBehaviour
         SceneManager.LoadScene("Story Mode Map");
         
     }
+    public void Exit()
+    {
+      Application.Quit();
+        
+    }
     
       /*  IEnumerator Fade()
     {

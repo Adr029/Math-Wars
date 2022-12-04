@@ -69,13 +69,13 @@ void Start()
         {
             //change to custom bg for finalization
             case "Kingdom1":
-                background.sprite = bgOptions[0];
+                background.sprite = bgOptions[1];
             break;
             case "Kingdom2":
-                background.sprite = bgOptions[0];
+                background.sprite = bgOptions[2];
             break;
             case "Kingdom3":
-                background.sprite = bgOptions[0];
+                background.sprite = bgOptions[3];
             break;
         }
     }

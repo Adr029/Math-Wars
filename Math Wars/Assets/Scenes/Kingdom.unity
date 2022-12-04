@@ -218,9 +218,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: da0bcbcdac37aa342982509c464c01fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6da76d394961e5b458c5adc06713adab, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -392,7 +392,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 7578eae3dc6b6f94292de3bb50ef8962, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fcf5ab62d013ae4d932145311ac91a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -411,8 +411,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638606535}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.472776, y: -7.5587034, z: -9718.333}
-  m_LocalScale: {x: 329.8305, y: 271.46542, z: 271.46542}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 137.21506, y: 112.934204, z: 112.934204}
   m_Children: []
   m_Father: {fileID: 1576597618}
   m_RootOrder: 6
@@ -536,10 +536,15 @@ MonoBehaviour:
   - {fileID: 1722235012}
   - {fileID: 472225915}
   bgOptions:
-  - {fileID: 21300000, guid: 7578eae3dc6b6f94292de3bb50ef8962, type: 3}
-  - {fileID: 21300000, guid: af91c7bea9ba5134db41f5a689118dad, type: 3}
-  - {fileID: 21300000, guid: 5b08f11f4bbd3c94eaa9d1b9a8ca0a9b, type: 3}
+  - {fileID: 21300000, guid: 5a89c0ecab46bab4bae58b0a3be564e1, type: 3}
+  - {fileID: 21300000, guid: 3f31ba7ef5b77924cb1748112420d77e, type: 3}
+  - {fileID: 21300000, guid: 4fcf5ab62d013ae4d932145311ac91a5, type: 3}
+  bossOptions:
+  - {fileID: 21300000, guid: 6da76d394961e5b458c5adc06713adab, type: 3}
+  - {fileID: 21300000, guid: 32501e23212b7e14ca6fba0c65185a34, type: 3}
+  - {fileID: 21300000, guid: 4931ebd2c80a9bc4da6f70e5ef316046, type: 3}
   background: {fileID: 638606536}
+  bossBattle: {fileID: 472225915}
   selectedLevel: 
 --- !u!114 &748318637
 MonoBehaviour:
@@ -1432,7 +1437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 167.92, y: 485.68}
+  m_AnchoredPosition: {x: 167.92004, y: 485.68}
   m_SizeDelta: {x: 179.96, y: 33.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893882759
