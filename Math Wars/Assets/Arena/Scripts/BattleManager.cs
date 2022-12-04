@@ -463,8 +463,8 @@ void PlayerWin()
         {
             case "Kingdom1":
 
-            int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level");
-            if (int.Parse(selectedLevel) - 1 == kingdom1lvl)
+            int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level", 1);
+            if (int.Parse(selectedLevel) == kingdom1lvl)
             {
                 kingdom1lvl++;
                 PlayerPrefs.SetInt("kingdom1Level", kingdom1lvl);
@@ -472,8 +472,8 @@ void PlayerWin()
         break;
 
             case "Kingdom2":
-            int kingdom2lvl = PlayerPrefs.GetInt("kingdom2Level");
-            if (int.Parse(selectedLevel) - 1 == kingdom2lvl)
+            int kingdom2lvl = PlayerPrefs.GetInt("kingdom2Level", 1);
+            if (int.Parse(selectedLevel) == kingdom2lvl)
             {
                 kingdom2lvl++;
                 PlayerPrefs.SetInt("kingdom2Level", kingdom2lvl);
@@ -481,8 +481,8 @@ void PlayerWin()
         break;
 
             case "Kingdom3":
-            int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level");
-            if (int.Parse(selectedLevel) - 1 == kingdom3lvl)
+            int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level", 1);
+            if (int.Parse(selectedLevel) == kingdom3lvl)
             {
                 kingdom3lvl++;
                 PlayerPrefs.SetInt("kingdom3Level", kingdom3lvl);
