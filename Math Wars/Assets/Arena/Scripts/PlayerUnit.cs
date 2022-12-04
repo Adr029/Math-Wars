@@ -16,6 +16,7 @@ public int CurrentHealth;
 [SerializeField] Animator fireballAnimate;
 [SerializeField]SpriteLibrary spritelibrary;
 [SerializeField]SpriteResolver Head;
+[SerializeField]SpriteResolver Body;
 
 
 private void Awake() 
@@ -31,6 +32,8 @@ public void Start()
 
         Head.SetCategoryAndLabel(Head.GetCategory(), headSprite.ToString());
         Head.ResolveSpriteToSpriteRenderer();
+        Body.SetCategoryAndLabel(Body.GetCategory(), bodySprite.ToString());
+        Body.ResolveSpriteToSpriteRenderer();
 }   
 
 public void HealPlayer(int heal)

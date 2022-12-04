@@ -27,6 +27,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject player;
     [SerializeField]GameObject UIManager;
     [SerializeField]GameObject ReturnToTown;
+    [SerializeField]GameObject ReturnToMap;
     [SerializeField]GameObject QuestionManager;
     [SerializeField]Text TimerUI;
     [SerializeField]Slider PlayerHP;
@@ -153,6 +154,7 @@ void PlayerTurn()
 {
    UI.ChooseAction();
    Confirm.interactable = false;
+   enemy1.IdleAnimate();
 }
 
  public void Attack()
@@ -269,6 +271,7 @@ UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
 yield return new WaitForSeconds(2f);
+
 if (!storyMode)
 {
     switch (dice)
@@ -401,12 +404,20 @@ void PlayerLose()
 {
     UI.status.text = "YOU LOSE!";
     runTimer = false;
-    ReturnToTown.SetActive(true);
+    if (!storyMode)
+    {
+        ReturnToTown.SetActive(true);
+    }
+    else if (storyMode)
+    {
+        ReturnToMap.SetActive(true);
+    }
 }
 
 void PlayerWin()
 {
     UI.EnemyTurn();
+    UI.statusScroll.SetActive(true); 
     UI.status.text = "YOU WIN!";
     enemy1.DeadAnimate();
 
@@ -429,10 +440,16 @@ void PlayerWin()
     break;
     }
     PlayerPrefs.SetInt("XP", experience);
-    ReturnToTown.SetActive(true);
-
-    if (storyMode)
+    
+    if (!storyMode)
     {
+        ReturnToTown.SetActive(true);
+    }
+
+    else if (storyMode)
+    {
+        ReturnToMap.SetActive(true);
+
         switch (chosenKingdom)
         {
             case "Kingdom1":
