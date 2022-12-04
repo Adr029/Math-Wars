@@ -216,14 +216,22 @@ void PlayerTurn()
     }
     else
     {
+        StartCoroutine(fullHealth());
+    }
+ }
+IEnumerator fullHealth()
+{
 
     UI.status.text = "HEALTH ALREADY FULL!";
     UI.statusScroll.SetActive(true);
     UI.attack.SetActive(false);
     UI.heal.SetActive(false);
-    }
- }
-
+    yield return new WaitForSeconds(1.5f);
+     UI.status.text = "";
+    UI.statusScroll.SetActive(false);
+    UI.attack.SetActive(true);
+    UI.heal.SetActive(true);
+}
 
 
 public void AttackType(Button button)
@@ -267,6 +275,7 @@ if (enemy1.CurrentHealth < 100)
     }
     UI.EnemyTurn();
 yield return new WaitForSeconds(1f);
+player1.IdleAnimate();
 UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
@@ -496,57 +505,13 @@ runTimer = false;
 Timer();
 if (questions.correct)
     {
-        player1.AttackAnimate();
      questions.correctText.text = "";
     
         switch (playerchoice)
         {
         case "Attack":
-            if (!storyMode)
-            {
-            switch (topic)
-                {
-                case "Arithmetic":
-                    enemy1.TakeDamage(Random.Range(7,11));
-                break;
-                case "Algebra":
-                    enemy1.TakeDamage(Random.Range(12,16));
-                break;
-                case "Calculus":
-                    enemy1.TakeDamage(Random.Range(17,21));
-                break;
-                }
-            }
-           else if (storyMode)
-           {
-            switch(chosenKingdom)
-            {
-                case "Kingdom1":
-                    enemy1.TakeDamage(Random.Range(7,11));
-                break;
-
-                case "Kingdom2":
-                    enemy1.TakeDamage(Random.Range(12,16));
-                break;
-                case "Kingdom3":
-                    enemy1.TakeDamage(Random.Range(17,21));
-                break;
-            }
-
-           }
-            
-            UpdateHealth();
-
-            if (enemy1.CurrentHealth <= 0)
-            {
-                PlayerWin();
-            }
-            else 
-            {
-                questions.correctText.text = "CORRECT";
-                UI.statusScroll.SetActive(true);  
-                StartCoroutine(EnemyTurn());
-            }
+            player1.AttackAnimate();
+            StartCoroutine(damageEnemy());
         break;
         
         case "Heal":
@@ -598,7 +563,60 @@ if (questions.correct)
         StartCoroutine(EnemyTurn());
     }
 }
+IEnumerator damageEnemy(){
+     
 
+    questions.correctText.text = "CORRECT";
+    UI.statusScroll.SetActive(true);  
+    UI.EnemyTurn();
+
+            
+    yield return new WaitForSeconds  (1.5f);
+    if (!storyMode)
+            {
+            switch (topic)
+                {
+                case "Arithmetic":
+                    enemy1.TakeDamage(Random.Range(7,11));
+                break;
+                case "Algebra":
+                    enemy1.TakeDamage(Random.Range(12,16));
+                break;
+                case "Calculus":
+                    enemy1.TakeDamage(Random.Range(17,21));
+                break;
+                }
+            }
+           else if (storyMode)
+           {
+            switch(chosenKingdom)
+            {
+                case "Kingdom1":
+                    enemy1.TakeDamage(Random.Range(7,11));
+                break;
+
+                case "Kingdom2":
+                    enemy1.TakeDamage(Random.Range(12,16));
+                break;
+                case "Kingdom3":
+                    enemy1.TakeDamage(Random.Range(17,21));
+                break;
+            }
+
+           }
+            
+            UpdateHealth();
+
+            if (enemy1.CurrentHealth <= 0)
+            {
+                PlayerWin();
+            }
+            else
+            {
+                StartCoroutine(EnemyTurn());
+
+            }
+}
 public void Timer()
 {
 
