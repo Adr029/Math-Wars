@@ -42,5 +42,10 @@ public class EnemyUnit : MonoBehaviour
     {
         animate.SetTrigger("Attacking");
     }
+
+    public void IdleAnimate()
+    {
+        animate.ResetTrigger("Attacking");
+    }
   
 }

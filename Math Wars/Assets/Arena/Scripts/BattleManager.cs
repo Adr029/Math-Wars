@@ -154,6 +154,7 @@ void PlayerTurn()
 {
    UI.ChooseAction();
    Confirm.interactable = false;
+   enemy1.IdleAnimate();
 }
 
  public void Attack()
@@ -270,6 +271,7 @@ UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
 yield return new WaitForSeconds(2f);
+
 if (!storyMode)
 {
     switch (dice)
