@@ -69,7 +69,6 @@ public class KingdomManager : MonoBehaviour
          if (level >= 5)
         {
             levels[4].interactable = true;
-            levels[4].GetComponent<Image>().sprite = unlocked;
         }
         
     }
