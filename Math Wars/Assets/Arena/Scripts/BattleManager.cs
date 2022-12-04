@@ -464,7 +464,7 @@ void PlayerWin()
             case "Kingdom1":
 
             int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level");
-            if (int.Parse(selectedLevel) == kingdom1lvl)
+            if (int.Parse(selectedLevel) - 1 == kingdom1lvl)
             {
                 kingdom1lvl++;
                 PlayerPrefs.SetInt("kingdom1Level", kingdom1lvl);
@@ -473,7 +473,7 @@ void PlayerWin()
 
             case "Kingdom2":
             int kingdom2lvl = PlayerPrefs.GetInt("kingdom2Level");
-            if (int.Parse(selectedLevel) == kingdom2lvl)
+            if (int.Parse(selectedLevel) - 1 == kingdom2lvl)
             {
                 kingdom2lvl++;
                 PlayerPrefs.SetInt("kingdom2Level", kingdom2lvl);
@@ -482,7 +482,7 @@ void PlayerWin()
 
             case "Kingdom3":
             int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level");
-            if (int.Parse(selectedLevel) == kingdom3lvl)
+            if (int.Parse(selectedLevel) - 1 == kingdom3lvl)
             {
                 kingdom3lvl++;
                 PlayerPrefs.SetInt("kingdom3Level", kingdom3lvl);
@@ -609,7 +609,8 @@ IEnumerator damageEnemy(){
 
             if (enemy1.CurrentHealth <= 0)
             {
-                PlayerWin();
+                questions.correctText.text = "";
+                PlayerWin();    
             }
             else
             {
