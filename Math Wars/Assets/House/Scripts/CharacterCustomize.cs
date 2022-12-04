@@ -24,6 +24,7 @@ public class CharacterCustomize : MonoBehaviour
 
 [SerializeField]SpriteLibrary spritelibrary;
 [SerializeField]SpriteResolver Head;
+[SerializeField]SpriteResolver Body;
 
     private void Awake() {
 
@@ -38,11 +39,11 @@ public class CharacterCustomize : MonoBehaviour
        
             if (playerLevel >= 1)
             {
-                headChoices[1].interactable = true;
+                headChoices[0].interactable = true;
             }
             if (playerLevel >= 2)
             {
-                headChoices[2].interactable = true;
+                headChoices[1].interactable = true;
             }
        
             if (playerLevel >= 1)
@@ -61,6 +62,8 @@ public class CharacterCustomize : MonoBehaviour
    public void SelectBody (Button button)
     {
         bodyChosen = int.Parse(button.name);
+        Body.SetCategoryAndLabel(Body.GetCategory(), bodyChosen.ToString());
+        Body.ResolveSpriteToSpriteRenderer();
     }
     public void Save()
     {
