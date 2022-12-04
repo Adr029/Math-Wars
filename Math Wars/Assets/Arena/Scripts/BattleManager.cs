@@ -406,7 +406,7 @@ void PlayerLose()
     {
         ReturnToTown.SetActive(true);
     }
-    else if (storyMode);
+    else if (storyMode)
     {
         ReturnToMap.SetActive(true);
     }
