@@ -11,6 +11,8 @@ public class KingdomManager : MonoBehaviour
     public List<Button> levels = new List<Button>();
     public List<Sprite> bgOptions = new List<Sprite>();
     public List<Sprite> bossOptions = new List<Sprite>();
+    public Sprite unlocked;
+    public Sprite locked;
     public SpriteRenderer background;
     public Button bossBattle;
 
@@ -43,32 +45,31 @@ public class KingdomManager : MonoBehaviour
             break;
 
         }
-        Debug.Log(level);
 
         if (level >= 1)
         {
             levels[0].interactable = true;
-
+            levels[0].GetComponent<Image>().sprite = unlocked;
         }
          if (level >= 2)
         {
             levels[1].interactable = true;
-
+            levels[1].GetComponent<Image>().sprite = unlocked;
         }
          if (level >= 3)
         {
             levels[2].interactable = true;
-
+            levels[2].GetComponent<Image>().sprite = unlocked;
         }
          if (level >= 4)
         {
             levels[3].interactable = true;
-
+            levels[3].GetComponent<Image>().sprite = unlocked;
         }
          if (level >= 5)
         {
             levels[4].interactable = true;
-
+            levels[4].GetComponent<Image>().sprite = unlocked;
         }
         
     }
