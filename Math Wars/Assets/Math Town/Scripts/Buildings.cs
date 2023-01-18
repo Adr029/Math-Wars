@@ -61,7 +61,7 @@ public class Buildings : MonoBehaviour
     
     public void noReset()
     {
-        resetConfirm.SetActive(true);
+        resetConfirm.SetActive(false);
     }
 
     public void yesReset()
