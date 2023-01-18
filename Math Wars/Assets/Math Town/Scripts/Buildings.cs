@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Buildings : MonoBehaviour
 {
+    [SerializeField]GameObject settings;
+    [SerializeField]GameObject resetConfirm;
+    [SerializeField]GameObject restartApp;
+    [SerializeField]GameObject PopUpsUI;
+    [SerializeField]CanvasGroup TownUI;
    public void Library()
     {
         //StartCoroutine(Fade());
@@ -29,10 +34,47 @@ public class Buildings : MonoBehaviour
     }
     public void Exit()
     {
-      Application.Quit();
+        Application.Quit();
         
     }
+
+    public void Settings()
+    {
+        settings.SetActive(true);
+        PopUpsUI.SetActive(true);
+        TownUI.blocksRaycasts = false;
+    }
+
+    public void Reset()
+    {
+        resetConfirm.SetActive(true);
+    }
+
+    public void closeSettings()
+    {
+        settings.SetActive(false);
+        PopUpsUI.SetActive(false);
+        TownUI.blocksRaycasts = true;
+
+
+    }
     
+    public void noReset()
+    {
+        resetConfirm.SetActive(true);
+    }
+
+    public void yesReset()
+    {
+        //PlayerPrefs.DeleteAll();
+        restartApp.SetActive(true);
+    }
+     public void appRestart()
+    {
+        Application.Quit();
+    }
+    //figure out a way para di mapindot yung iba pag may open na pop up
+
       /*  IEnumerator Fade()
     {
         animate.SetBool("Fade", true);
