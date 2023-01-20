@@ -29,6 +29,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject ReturnToTown;
     [SerializeField]GameObject ReturnToMap;
     [SerializeField]GameObject QuestionManager;
+    [SerializeField]GameObject AudioManager;
     [SerializeField]Text TimerUI;
     [SerializeField]Slider PlayerHP;
     [SerializeField]Slider EnemyHP;
@@ -38,6 +39,7 @@ public class BattleManager : MonoBehaviour
     GameObject enemyClone;
     UIManagement UI;
     QuestionManagement questions;
+    ArenaAudio audioclips;
     int dice;
     string topic;
     EnemyUnit enemy1;
@@ -51,6 +53,7 @@ public class BattleManager : MonoBehaviour
 
 void Start()
 {
+    audioclips = AudioManager.GetComponent<ArenaAudio>();
     difficulty = PlayerPrefs.GetString("difficulty");
     storyStatus = PlayerPrefs.GetInt("storymode");
     experience = PlayerPrefs.GetInt("XP");
@@ -94,7 +97,7 @@ public void BeginBattle()
     if (storyMode)
     {
 
-        if (selectedLevel == "10")
+        if (selectedLevel == "5")
             {
                 //king prefab
             }
@@ -330,12 +333,16 @@ UI.statusScroll.SetActive(true);
     {
     case 0:
         enemy1.HealEnemy(Random.Range(7,11));
+        audioclips.PlayEnemyHeal();
     break;
     case 1:
         enemy1.HealEnemy(Random.Range(12,16));
+        audioclips.PlayEnemyHeal();
+
     break;
     case 2:
         enemy1.HealEnemy(Random.Range(17,21));
+        audioclips.PlayEnemyHeal();
     break;
     }
 break;
@@ -392,12 +399,18 @@ UI.statusScroll.SetActive(true);
 
   case "Kingdom1":        
         enemy1.HealEnemy(Random.Range(11,16));
+        audioclips.PlayEnemyHeal();
+
     break;
     case "Kingdom2":        
         enemy1.HealEnemy(Random.Range(19,25));
+        audioclips.PlayEnemyHeal();
+
     break;
     case "Kingdom3":        
         enemy1.HealEnemy(Random.Range(27,33));
+        audioclips.PlayEnemyHeal();
+
     break;  
     }
 break;
@@ -521,12 +534,15 @@ if (questions.correct)
             {
             case "Arithmetic":
                 player1.HealPlayer(Random.Range(11,16));
+                audioclips.PlayPlayerHeal();
             break;
             case "Algebra":
                 player1.HealPlayer(Random.Range(19,25));
+                audioclips.PlayPlayerHeal();
             break;
             case "Calculus":
                 player1.HealPlayer(Random.Range(27,33));
+                audioclips.PlayPlayerHeal();
             break;
             }
         }
@@ -536,17 +552,19 @@ if (questions.correct)
             {
             case "Kingdom1":
                 player1.HealPlayer(Random.Range(11,16));
+                audioclips.PlayPlayerHeal();
             break;
             case "Kingdom2":
                 player1.HealPlayer(Random.Range(19,25));
+                audioclips.PlayPlayerHeal();
             break;
             case "Kingdom3":
                 player1.HealPlayer(Random.Range(27,33));
+                audioclips.PlayPlayerHeal();
             break;
             }
         }
 
-            
             questions.correctText.text = "CORRECT";                      
             UI.statusScroll.SetActive(true);  
             UpdateHealth();
@@ -578,12 +596,15 @@ IEnumerator damageEnemy(){
                 {
                 case "Arithmetic":
                     enemy1.TakeDamage(Random.Range(7,11));
+                    audioclips.PlayPlayerAttack();
                 break;
                 case "Algebra":
                     enemy1.TakeDamage(Random.Range(12,16));
+                    audioclips.PlayPlayerAttack();
                 break;
                 case "Calculus":
                     enemy1.TakeDamage(Random.Range(17,21));
+                    audioclips.PlayPlayerAttack();
                 break;
                 }
             }
@@ -593,13 +614,16 @@ IEnumerator damageEnemy(){
             {
                 case "Kingdom1":
                     enemy1.TakeDamage(Random.Range(7,11));
+                    audioclips.PlayPlayerAttack();
                 break;
 
                 case "Kingdom2":
                     enemy1.TakeDamage(Random.Range(12,16));
+                    audioclips.PlayPlayerAttack();
                 break;
                 case "Kingdom3":
                     enemy1.TakeDamage(Random.Range(17,21));
+                    audioclips.PlayPlayerAttack();
                 break;
             }
 
