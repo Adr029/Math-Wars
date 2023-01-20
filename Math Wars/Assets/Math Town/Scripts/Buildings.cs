@@ -66,14 +66,13 @@ public class Buildings : MonoBehaviour
 
     public void yesReset()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         restartApp.SetActive(true);
     }
      public void appRestart()
     {
         Application.Quit();
     }
-    //figure out a way para di mapindot yung iba pag may open na pop up
 
       /*  IEnumerator Fade()
     {

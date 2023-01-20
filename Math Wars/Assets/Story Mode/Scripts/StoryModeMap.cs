@@ -14,10 +14,19 @@ public string kingdomName;
 [SerializeField]CanvasGroup mapUI;
 [SerializeField]Image tutorialSample;
 public int tutorialCount;
+public int firstLaunch;
+
 
 void Awake()
 {
-   tutorialCount = 0;
+    tutorialCount = 0;
+    firstLaunch = PlayerPrefs.GetInt("firstLaunchStory", 0);
+    if (firstLaunch == 0)
+    {
+        ShowTutorial();
+        PlayerPrefs.SetInt("firstLaunchStory", 1);
+    }
+    
 }
 
    public void Kingdom1()

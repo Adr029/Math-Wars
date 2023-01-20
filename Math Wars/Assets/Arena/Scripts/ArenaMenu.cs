@@ -22,11 +22,19 @@ public int tutorialCount;
 public int winCount;
 public int experience;
 public int playerLevel;
+public int firstLaunch;
 
 BattleManager battle;
 
 void Start()
 {   
+    firstLaunch = PlayerPrefs.GetInt("firstLaunchArena", 0);
+    if (firstLaunch == 0)
+    {
+        ShowTutorial();
+        PlayerPrefs.SetInt("firstLaunchArena", 1);
+    }
+    
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
     playerLevel = PlayerPrefs.GetInt("Level");
