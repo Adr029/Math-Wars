@@ -18,6 +18,10 @@ public string difficulty;
 [SerializeField]CanvasGroup arenaMenu;
 [SerializeField]Image tutorialSample;
 
+//[SerializeField]Image tutorialImage;
+public List<Sprite> tutorialImages = new List<Sprite>();
+
+
 public int tutorialCount;
 public int winCount;
 public int experience;
@@ -66,6 +70,7 @@ public void ShowTutorial()
     {
         tutorialCount = 0;
         tutorialPopup.SetActive(true);
+        //tutorialImage.sprite = tutorialImages[0];
         tutorialSample.GetComponent<Image>().color = new Color32(21,232,225,100);
 
     }
@@ -85,14 +90,17 @@ public void NextTutorial()
      
         if (tutorialCount == 1)
         {
+            //tutorialImage.sprite = tutorialImages[1];
             tutorialSample.GetComponent<Image>().color = new Color32(255,255,225,100);
         }
         else if (tutorialCount == 2)
         {
+            //tutorialImage.sprite = tutorialImages[2];
             tutorialSample.GetComponent<Image>().color = new Color32(155,255,225,100);
         }
         else if (tutorialCount == 3)
         {
+            //tutorialImage.sprite = tutorialImages[3];
             tutorialSample.GetComponent<Image>().color = new Color32(255,255,125,100);
         }
     
@@ -102,7 +110,6 @@ public void NextTutorial()
     }
 
     //insert code for changing button from next to exit
-    
 
 }
 }

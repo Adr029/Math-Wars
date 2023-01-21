@@ -13,6 +13,9 @@ public string kingdomName;
 [SerializeField]GameObject tutorialUI;
 [SerializeField]CanvasGroup mapUI;
 [SerializeField]Image tutorialSample;
+
+//[SerializeField]Image tutorialImage;
+
 public int tutorialCount;
 public int firstLaunch;
 
@@ -56,6 +59,8 @@ void Awake()
    public void ShowTutorial()
 {
     tutorialUI.SetActive(true);
+    //tutorialImage.sprite = tutorialImages[0];
+
     mapUI.blocksRaycasts = false;
      if (!tutorialPopup.activeSelf)
     {
@@ -80,14 +85,20 @@ public void NextTutorial()
      
         if (tutorialCount == 1)
         {
+
+            //tutorialImage.sprite = tutorialImages[1];
             tutorialSample.GetComponent<Image>().color = new Color32(255,255,225,100);
         }
         else if (tutorialCount == 2)
         {
+            
+            //tutorialImage.sprite = tutorialImages[2];
             tutorialSample.GetComponent<Image>().color = new Color32(155,255,225,100);
         }
         else if (tutorialCount == 3)
         {
+            
+            //tutorialImage.sprite = tutorialImages[3];
             tutorialSample.GetComponent<Image>().color = new Color32(255,255,125,100);
         }
     
