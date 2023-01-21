@@ -8,6 +8,7 @@ public class Settings : MonoBehaviour
 
     [SerializeField] Button musicToggle;
     [SerializeField] Button SFXToggle;
+    [SerializeField] GameObject creditsPopUp;
     int music;
     int SFX;
     void Start()
@@ -59,5 +60,14 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetInt("SFX", 1);
         SFXToggle.GetComponentInChildren<Text>().text = "ON";
     }
+   }
+
+   public void ShowCredits()
+   {
+        creditsPopUp.SetActive(true);
+   }
+   public void CloseCredits()
+   {
+        creditsPopUp.SetActive(false);
    }
 }
