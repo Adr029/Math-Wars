@@ -13,7 +13,6 @@ public class LibraryManager : MonoBehaviour
    [SerializeField]GameObject calculusButton;
    public SpriteRenderer libraryBG;
    public List<Sprite> bgOptions = new List<Sprite>();
-
    public void Arithmetic()
    {
     arithmetic.SetActive(true);
