@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ec3df84bfe0a24985429a9786325a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  img: {fileID: 0}
+  animate: {fileID: 0}
 --- !u!4 &4692128
 Transform:
   m_ObjectHideFlags: 0
@@ -338,6 +340,10 @@ PrefabInstance:
     - target: {fileID: 1788251988064763466, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
       propertyPath: m_Name
       value: Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788251988064763466, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
@@ -1724,7 +1730,7 @@ GameObject:
   - component: {fileID: 586583234}
   - component: {fileID: 586583233}
   m_Layer: 5
-  m_Name: Algebra
+  m_Name: Trigonometry Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1743,7 +1749,7 @@ RectTransform:
   m_Children:
   - {fileID: 798808802}
   m_Father: {fileID: 1386249655}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1826,7 +1832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c8107aa674b0bf4096e16809d5cd217, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bde3a23c456d6dc44a8bf1b699df3500, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2119,7 +2125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58026e41f53d1d24393c45407fd07dd6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16649833a968c494a9c3666d90f79d10, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2252,7 +2258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b295c62aabcc5d4fa9832f9c7e84fda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ca220d649576514085ee89cd8db72c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2538,7 +2544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 44dc581afcc03354bb6dfc15dee04603, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0e975dfd2a863f4fb2a3d44a77af67b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2819,7 +2825,7 @@ GameObject:
   - component: {fileID: 1000114549}
   - component: {fileID: 1000114548}
   m_Layer: 5
-  m_Name: Arithmetic
+  m_Name: Algebra Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,7 +2844,7 @@ RectTransform:
   m_Children:
   - {fileID: 651568517}
   m_Father: {fileID: 1386249655}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2921,7 +2927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0741ca3694701f84282baf5152028161, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 706be0af2c09cc343b8df86f3a76e932, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3639,7 +3645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e8553fcd4ad47942a897d3e2bbfbf2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43efe0a01d4e6a74cb84c23d98e26f12, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3886,8 +3892,8 @@ RectTransform:
   - {fileID: 1937169609}
   - {fileID: 827760466}
   - {fileID: 1348955095}
-  - {fileID: 586583232}
   - {fileID: 1000114547}
+  - {fileID: 586583232}
   - {fileID: 680403995}
   - {fileID: 1594928677}
   - {fileID: 523680519}
@@ -4560,7 +4566,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7851a08c2a35e4b42b01db5951480caf, type: 3}
   - {fileID: 21300000, guid: 7851a08c2a35e4b42b01db5951480caf, type: 3}
   - {fileID: 21300000, guid: 7851a08c2a35e4b42b01db5951480caf, type: 3}
-  artquestions:
+  trigoquestions:
   - {fileID: 21300000, guid: 44123d77deca3fa4c97c487c0053c9f3, type: 3}
   - {fileID: 21300000, guid: 4d0b7edb34d9ea94c8548b37eb0a3e46, type: 3}
   - {fileID: 21300000, guid: dbe028f53f9fada41854670e9cf879b4, type: 3}
@@ -4591,7 +4597,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2ad70f761d2c02b4191cab2db031d8c3, type: 3}
   - {fileID: 21300000, guid: c388b3f7e3cf3e64589d91953a806e0e, type: 3}
   - {fileID: 21300000, guid: fff633e6ad307e1459e16e0c60be865e, type: 3}
-  artanswers:
+  trigoanswers:
   - {fileID: 21300000, guid: 024facbd0888bc54cbf930408400778d, type: 3}
   - {fileID: 21300000, guid: 8f289f47171b2974aa1ef00011cb799b, type: 3}
   - {fileID: 21300000, guid: 8c7ff0c853a869e41b83a88cbc322424, type: 3}
