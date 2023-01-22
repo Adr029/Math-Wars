@@ -274,6 +274,7 @@ case 26:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[107];
     answer = "C";
+break;
 
 case 27:
     question.GetComponent<Image>().sprite = calquestions[27];
@@ -282,6 +283,7 @@ case 27:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[110];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[111];
     answer = "D";
+break;
 
 case 28:
     question.GetComponent<Image>().sprite = calquestions[28];
@@ -290,6 +292,7 @@ case 28:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = calanswers[115];
     answer = "A";
+break;
 
 case 29:
     question.GetComponent<Image>().sprite = calquestions[29];
@@ -552,6 +555,7 @@ case 26:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = algeanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = algeanswers[107];
     answer = "C";
+break;
 
 case 27:
     question.GetComponent<Image>().sprite = algequestions[27];
@@ -560,6 +564,7 @@ case 27:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = algeanswers[110];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = algeanswers[111];
     answer = "D";
+break;
 
 case 28:
     question.GetComponent<Image>().sprite = algequestions[28];
@@ -568,6 +573,7 @@ case 28:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = algeanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = algeanswers[115];
     answer = "A";
+break;
 
 case 29:
     question.GetComponent<Image>().sprite = algequestions[29];
@@ -830,6 +836,7 @@ case 26:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = trigoanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = trigoanswers[107];
     answer = "C";
+break;
 
 case 27:
     question.GetComponent<Image>().sprite = trigoquestions[27];
@@ -838,6 +845,7 @@ case 27:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = trigoanswers[110];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = trigoanswers[111];
     answer = "D";
+break;
 
 case 28:
     question.GetComponent<Image>().sprite = trigoquestions[28];
@@ -846,6 +854,7 @@ case 28:
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = trigoanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = trigoanswers[115];
     answer = "A";
+break;
 
 case 29:
     question.GetComponent<Image>().sprite = trigoquestions[29];

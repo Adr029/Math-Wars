@@ -177,10 +177,10 @@ void PlayerTurn()
         switch (chosenKingdom)
         {
             case "Kingdom1":
-                questions.Arithmetic();            
+                questions.Algebra();            
             break;
             case "Kingdom2":
-                questions.Algebra();
+                questions.Trigonometry();
             break;
             case "Kingdom3":
                 questions.Calculus();
@@ -206,10 +206,10 @@ void PlayerTurn()
         {
             
             case "Kingdom1":
-                questions.Arithmetic();            
+                questions.Algebra();            
             break;
             case "Kingdom2":
-                questions.Algebra();
+                questions.Trigonometry();
             break;
             case "Kingdom3":
                 questions.Calculus();
@@ -250,11 +250,11 @@ if (!storyMode)
 {
     switch (topic)
     {
-    case "Arithmetic":
-        questions.Arithmetic();
-    break;
     case "Algebra":
         questions.Algebra();
+    break;
+    case "Trigonometry":
+        questions.Trigonometry();
     break;
     case "Calculus":
         questions.Calculus();
@@ -299,14 +299,14 @@ case 3:
     {
     case 0:
         player1.TakeDamage(Random.Range(7,11));
-        UI.status.text = "ENEMY USED ARITHMETIC";
+        UI.status.text = "ENEMY USED ALGEBRA";
         UI.statusScroll.SetActive(true);  
 
     break;
 
     case 1:
         player1.TakeDamage(Random.Range(12,16));
-        UI.status.text = "ENEMY USED ALGEBRA";
+        UI.status.text = "ENEMY USED TRIGONOMETRY";
         UI.statusScroll.SetActive(true); 
 
     break;
@@ -365,14 +365,14 @@ case 3:
     {
     case "Kingdom1":        
         player1.TakeDamage(Random.Range(7,11));
-        UI.status.text = "ENEMY USED ARITHMETIC";
+        UI.status.text = "ENEMY USED ALGEBRA";
         UI.statusScroll.SetActive(true);  
 
     break;
 
     case "Kingdom2":        
     player1.TakeDamage(Random.Range(12,16));
-        UI.status.text = "ENEMY USED ALGEBRA";
+        UI.status.text = "ENEMY USED TRIGONOMETRY";
         UI.statusScroll.SetActive(true); 
 
     break;
@@ -532,11 +532,11 @@ if (questions.correct)
         {
         switch (topic)
             {
-            case "Arithmetic":
+            case "Algebra":
                 player1.HealPlayer(Random.Range(11,16));
                 audioclips.PlayPlayerHeal();
             break;
-            case "Algebra":
+            case "Trigonometry":
                 player1.HealPlayer(Random.Range(19,25));
                 audioclips.PlayPlayerHeal();
             break;
@@ -594,7 +594,7 @@ IEnumerator damageEnemy(){
             {
             switch (topic)
                 {
-                case "Arithmetic":
+                case "Trigonometry":
                     enemy1.TakeDamage(Random.Range(7,11));
                     audioclips.PlayPlayerAttack();
                 break;
