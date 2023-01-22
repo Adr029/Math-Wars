@@ -10,26 +10,37 @@ public class Buildings : MonoBehaviour
     [SerializeField]GameObject restartApp;
     [SerializeField]GameObject PopUpsUI;
     [SerializeField]CanvasGroup TownUI;
+    [SerializeField]GameObject character;
+
+    public Image img;
+
+    public Animator animate;
+
    public void Library()
     {
-        //StartCoroutine(Fade());
-        SceneManager.LoadScene("Library");
+        StartCoroutine(FadeLibrary());
+        character.SetActive(false);
+
     }
      public void Arena()
     {
-        //StartCoroutine(Fade());
+        StartCoroutine(FadeArena());
         PlayerPrefs.SetInt("storymode", 0);
-        SceneManager.LoadScene("SelectDifficulty");
+        character.SetActive(false);
+        
     }
      public void House()
     {
-        //StartCoroutine(Fade());   
-        SceneManager.LoadScene("Home");
+        StartCoroutine(FadeHouse());        
+        character.SetActive(false);
+   
     }
     public void StoryMode()
     {
-        PlayerPrefs.SetInt("storymode", 1);
-        SceneManager.LoadScene("Story Mode Map");
+        StartCoroutine(FadeStory());   
+        PlayerPrefs.SetInt("storymode", 1);        
+        character.SetActive(false);
+
         
     }
     public void Exit()
@@ -74,11 +85,33 @@ public class Buildings : MonoBehaviour
         Application.Quit();
     }
 
-      /*  IEnumerator Fade()
+   IEnumerator FadeLibrary()
     {
         animate.SetBool("Fade", true);
         yield return new WaitUntil(() => img.color.a == 1);
-        
+        SceneManager.LoadScene("Library");
+
     }
-    */
+   IEnumerator FadeArena()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("SelectDifficulty");
+
+    }
+   IEnumerator FadeStory()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("Story Mode Map");
+
+    }
+   IEnumerator FadeHouse()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("Home");
+
+    }
+    
 }

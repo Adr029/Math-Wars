@@ -20,7 +20,9 @@ public string difficulty;
 
 //[SerializeField]Image tutorialImage;
 public List<Sprite> tutorialImages = new List<Sprite>();
+public Image img;
 
+public Animator animate;
 
 public int tutorialCount;
 public int winCount;
@@ -58,7 +60,9 @@ public void Confirm()
 if (difficulty.Length != 0)
 {
     PlayerPrefs.SetString("difficulty", difficulty);
-    SceneManager.LoadScene("Arena");
+    StartCoroutine(Fade());
+
+    
 }
 }
 
@@ -112,4 +116,10 @@ public void NextTutorial()
     //insert code for changing button from next to exit
 
 }
+   IEnumerator Fade()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("Arena");
+    }
 }

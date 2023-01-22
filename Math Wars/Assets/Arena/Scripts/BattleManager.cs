@@ -53,7 +53,7 @@ public class BattleManager : MonoBehaviour
 
 void Start()
 {
-    audioclips = AudioManager.GetComponent<ArenaAudio>();
+    //audioclips = AudioManager.GetComponent<ArenaAudio>();
     difficulty = PlayerPrefs.GetString("difficulty");
     storyStatus = PlayerPrefs.GetInt("storymode");
     experience = PlayerPrefs.GetInt("XP");
