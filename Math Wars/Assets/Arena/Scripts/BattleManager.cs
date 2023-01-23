@@ -177,13 +177,73 @@ void PlayerTurn()
         switch (chosenKingdom)
         {
             case "Kingdom1":
-                questions.Algebra();            
+                questions.Algebra(); 
+            /*
+                switch (selectedLevel)
+                {
+                    case "1":
+                        questions.AlgebraLevel1(); 
+                    break;
+                    case "2":
+                        questions.AlgebraLevel2(); 
+                    break;
+                    case "3":
+                        questions.AlgebraLevel3(); 
+                    break;
+                    case "4":
+                        questions.AlgebraLevel4(); 
+                    break;
+                    case "5":
+                        questions.AlgebraLevel5(); 
+                    break;
+                }           
+                */
             break;
             case "Kingdom2":
                 questions.Trigonometry();
+                 /*
+                switch (selectedLevel)
+                {
+                    case "1":
+                        questions.TrigonometryLevel1(); 
+                    break;
+                    case "2":
+                        questions.TrigonometryLevel2(); 
+                    break;
+                    case "3":
+                        questions.TrigonometryLevel3(); 
+                    break;
+                    case "4":
+                        questions.TrigonometryLevel4(); 
+                    break;
+                    case "5":
+                        questions.TrigonometryLevel5(); 
+                    break;
+                }           
+                */
             break;
             case "Kingdom3":
                 questions.Calculus();
+                 /*
+                switch (selectedLevel)
+                {
+                    case "1":
+                        questions.CalculusLevel1(); 
+                    break;
+                    case "2":
+                        questions.CalculusLevel2(); 
+                    break;
+                    case "3":
+                        questions.CalculusLevel3(); 
+                    break;
+                    case "4":
+                        questions.CalculusLevel4(); 
+                    break;
+                    case "5":
+                        questions.CalculusLevel5(); 
+                    break;
+                }           
+                */
             break;
         }
     }
@@ -202,17 +262,76 @@ void PlayerTurn()
         {
         UI.ChooseAnswer();
         runTimer = true;
-        switch (chosenKingdom)
+         switch (chosenKingdom)
         {
-            
             case "Kingdom1":
-                questions.Algebra();            
+                questions.Algebra(); 
+            /*
+                switch (selectedLevel)
+                {
+                    case "1":
+                        questions.AlgebraLevel1(); 
+                    break;
+                    case "2":
+                        questions.AlgebraLevel2(); 
+                    break;
+                    case "3":
+                        questions.AlgebraLevel3(); 
+                    break;
+                    case "4":
+                        questions.AlgebraLevel4(); 
+                    break;
+                    case "5":
+                        questions.AlgebraLevel5(); 
+                    break;
+                }           
+                */
             break;
             case "Kingdom2":
                 questions.Trigonometry();
+                 /*
+                switch (selectedLevel)
+                {
+                    case "1":
+                        questions.TrigonometryLevel1(); 
+                    break;
+                    case "2":
+                        questions.TrigonometryLevel2(); 
+                    break;
+                    case "3":
+                        questions.TrigonometryLevel3(); 
+                    break;
+                    case "4":
+                        questions.TrigonometryLevel4(); 
+                    break;
+                    case "5":
+                        questions.TrigonometryLevel5(); 
+                    break;
+                }           
+                */
             break;
             case "Kingdom3":
                 questions.Calculus();
+                 /*
+                switch (selectedLevel)
+                {
+                    case "1":
+                        questions.CalculusLevel1(); 
+                    break;
+                    case "2":
+                        questions.CalculusLevel2(); 
+                    break;
+                    case "3":
+                        questions.CalculusLevel3(); 
+                    break;
+                    case "4":
+                        questions.CalculusLevel4(); 
+                    break;
+                    case "5":
+                        questions.CalculusLevel5(); 
+                    break;
+                }           
+                */
             break;
         }
         }
