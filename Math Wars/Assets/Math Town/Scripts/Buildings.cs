@@ -11,6 +11,7 @@ public class Buildings : MonoBehaviour
     [SerializeField]GameObject PopUpsUI;
     [SerializeField]CanvasGroup TownUI;
     [SerializeField]GameObject character;
+    
 
     public Image img;
 
