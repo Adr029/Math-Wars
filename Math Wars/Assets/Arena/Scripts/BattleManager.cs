@@ -769,22 +769,22 @@ if (!storyMode)
 switch (difficulty)
 {
 case "Easy":
-    timer = 90f;
+    timer = 120f;
 break;
 
 case "Normal":
-    timer = 60f;
+    timer = 90f;
 break;
 
 case "Hard":
-    timer = 30f;
+    timer = 60f;
 break;
 }
 }
 
 else
 {
-    timer = 60f;
+    timer = 90f;
 }
 
 }
