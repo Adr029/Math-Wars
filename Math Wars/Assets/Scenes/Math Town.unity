@@ -6019,7 +6019,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3497518236390305637, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3497518236390305637, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
       propertyPath: m_BlocksRaycasts
