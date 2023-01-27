@@ -1002,7 +1002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 552, y: 400}
+  m_AnchoredPosition: {x: 552, y: 417}
   m_SizeDelta: {x: 213.68, y: 43.83}
   m_Pivot: {x: 1.1962146, y: 0.16312143}
 --- !u!114 &176417506
@@ -1179,7 +1179,6 @@ MonoBehaviour:
   ReturnToTown: {fileID: 1870798861}
   ReturnToMap: {fileID: 1361958036}
   QuestionManager: {fileID: 1532027431}
-  AudioManager: {fileID: 0}
   TimerUI: {fileID: 1102446962}
   PlayerHP: {fileID: 834352143}
   EnemyHP: {fileID: 176417506}
@@ -1730,7 +1729,7 @@ GameObject:
   - component: {fileID: 586583234}
   - component: {fileID: 586583233}
   m_Layer: 5
-  m_Name: Trigonometry Button
+  m_Name: Trigonometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2598,7 +2597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -175, y: 400}
+  m_AnchoredPosition: {x: -175, y: 417}
   m_SizeDelta: {x: 213.68, y: 43.83}
   m_Pivot: {x: 1.1962146, y: 0.16312143}
 --- !u!114 &834352143
@@ -2825,7 +2824,7 @@ GameObject:
   - component: {fileID: 1000114549}
   - component: {fileID: 1000114548}
   m_Layer: 5
-  m_Name: Algebra Button
+  m_Name: Algebra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3269,7 +3268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 581, y: 414.77}
+  m_AnchoredPosition: {x: 581, y: 431.77}
   m_SizeDelta: {x: 299.73, y: 60.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115689237
@@ -4717,6 +4716,36 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9168721bf5f44434785a24e55104ebee, type: 3}
   - {fileID: 21300000, guid: caea89326c2d12547870e4d15e921c90, type: 3}
   - {fileID: 21300000, guid: 4f5eb49f76067dd4e8a69d8ec13889f3, type: 3}
+  Level1calquestions: []
+  Level1calanswers: []
+  Level2calquestions: []
+  Level2calanswers: []
+  Level3calquestions: []
+  Level3calanswers: []
+  Level4calquestions: []
+  Level4calanswers: []
+  Level5calquestions: []
+  Level5calanswers: []
+  Level1algequestions: []
+  Level1algeanswers: []
+  Level2algequestions: []
+  Level2algeanswers: []
+  Level3algequestions: []
+  Level3algeanswers: []
+  Level4algequestions: []
+  Level4algeanswers: []
+  Level5algequestions: []
+  Level5algeanswers: []
+  Level1trigoquestions: []
+  Level1trigoanswers: []
+  Level2trigoquestions: []
+  Level2trigoanswers: []
+  Level3trigoquestions: []
+  Level3trigoanswers: []
+  Level4trigoquestions: []
+  Level4trigoanswers: []
+  Level5trigoquestions: []
+  Level5trigoanswers: []
 --- !u!1 &1537149409
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,7 +5006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.06672692, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.83137256, g: 0.007843138, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5410,7 +5439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -532.2, y: 436.22}
+  m_AnchoredPosition: {x: -532.2, y: 453.22}
   m_SizeDelta: {x: 299.73, y: 60.26}
   m_Pivot: {x: 0.6610451, y: 0.85607255}
 --- !u!114 &1928977758
@@ -5799,7 +5828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.06672692, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.7058824, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
