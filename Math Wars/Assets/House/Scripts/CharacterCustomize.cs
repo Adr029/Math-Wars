@@ -25,10 +25,11 @@ public class CharacterCustomize : MonoBehaviour
 [SerializeField]SpriteLibrary spritelibrary;
 [SerializeField]SpriteResolver Head;
 [SerializeField]SpriteResolver Body;
+[SerializeField]GameObject Transition;
 
     private void Awake() {
+        Transition.SetActive(true);
 
-        
         playerLevel = PlayerPrefs.GetInt("Level");
 
         headSprite = PlayerPrefs.GetInt("head", 0);

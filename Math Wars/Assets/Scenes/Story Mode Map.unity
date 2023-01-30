@@ -490,9 +490,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tutorial
-
-'
+  m_Text: 
 --- !u!222 &424071686
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -535,6 +533,7 @@ MonoBehaviour:
   tutorial: {fileID: 761317723}
   tutorialPopup: {fileID: 939167210}
   tutorialUI: {fileID: 928945343}
+  Transition: {fileID: 1211516024}
   mapUI: {fileID: 807230364}
   tutorialSample: {fileID: 939167212}
   tutorialCount: 0
@@ -815,10 +814,10 @@ RectTransform:
   m_Father: {fileID: 807230363}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000095367, y: 426.71}
-  m_SizeDelta: {x: 403.58, y: 49.43}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -118, y: -123.96}
+  m_SizeDelta: {x: 153.76001, y: 153.76001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761317723
 MonoBehaviour:
@@ -896,9 +895,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: ea26111c702d42541a2b79140d59d0c1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -970,7 +969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 577d4ffa6a5d0a74a9032a377d2d3c24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1050,7 +1049,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2400, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1426,7 +1425,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 8f1aec29600aa9343943d71bb2357289, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1642,7 +1641,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1788251988064763460, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
   m_PrefabInstance: {fileID: 1211516020}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1211516024}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1651,6 +1650,11 @@ MonoBehaviour:
 --- !u!95 &1211516023 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1788251988064763462, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
+  m_PrefabInstance: {fileID: 1211516020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1211516024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788251988064763466, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
   m_PrefabInstance: {fileID: 1211516020}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1261822188
@@ -2201,7 +2205,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 258722b8beac011418076279b3cbc184, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2606,7 +2610,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: bb5d28c91e2f4a547ab9ffc9dad47230, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

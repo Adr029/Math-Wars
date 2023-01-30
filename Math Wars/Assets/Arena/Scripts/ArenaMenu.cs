@@ -15,6 +15,7 @@ public string difficulty;
 [SerializeField]Button tutorial;
 [SerializeField]GameObject tutorialPopup;
 [SerializeField]GameObject tutorialUI;
+[SerializeField]GameObject Transition;
 [SerializeField]CanvasGroup arenaMenu;
 [SerializeField]Image tutorialSample;
 
@@ -31,7 +32,10 @@ public int playerLevel;
 public int firstLaunch;
 
 BattleManager battle;
-
+void Awake()
+{
+    Transition.SetActive(true);
+}
 void Start()
 {   
     firstLaunch = PlayerPrefs.GetInt("firstLaunchArena", 0);

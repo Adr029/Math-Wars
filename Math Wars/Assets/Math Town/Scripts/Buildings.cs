@@ -9,10 +9,13 @@ public class Buildings : MonoBehaviour
     [SerializeField]GameObject resetConfirm;
     [SerializeField]GameObject restartApp;
     [SerializeField]GameObject PopUpsUI;
+    [SerializeField]GameObject Transition;
     [SerializeField]CanvasGroup TownUI;
-    [SerializeField]GameObject character;
     
-
+void Awake()
+{
+    Transition.SetActive(true);
+}
     public Image img;
 
     public Animator animate;
@@ -20,28 +23,23 @@ public class Buildings : MonoBehaviour
    public void Library()
     {
         StartCoroutine(FadeLibrary());
-        character.SetActive(false);
 
     }
      public void Arena()
     {
         StartCoroutine(FadeArena());
         PlayerPrefs.SetInt("storymode", 0);
-        character.SetActive(false);
         
     }
      public void House()
     {
         StartCoroutine(FadeHouse());        
-        character.SetActive(false);
    
     }
     public void StoryMode()
     {
         StartCoroutine(FadeStory());   
         PlayerPrefs.SetInt("storymode", 1);        
-        character.SetActive(false);
-
         
     }
     public void Exit()

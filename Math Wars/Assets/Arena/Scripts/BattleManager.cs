@@ -29,6 +29,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject ReturnToTown;
     [SerializeField]GameObject ReturnToMap;
     [SerializeField]GameObject QuestionManager;
+    [SerializeField]GameObject Transition;
    // [SerializeField]GameObject AudioManager;
     [SerializeField]Text TimerUI;
     [SerializeField]Slider PlayerHP;
@@ -50,7 +51,10 @@ public class BattleManager : MonoBehaviour
     int prefabIndex;
     int storyStatus;
     bool storyMode = false;
-
+void Awake() 
+{
+    Transition.SetActive(true);
+}
 void Start()
 {
     //audioclips = AudioManager.GetComponent<ArenaAudio>();

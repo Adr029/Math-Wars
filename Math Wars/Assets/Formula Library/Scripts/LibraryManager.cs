@@ -11,8 +11,14 @@ public class LibraryManager : MonoBehaviour
    [SerializeField]GameObject arithmeticButton;
    [SerializeField]GameObject algebraButton;
    [SerializeField]GameObject calculusButton;
+   [SerializeField]GameObject Transition;
+
    public SpriteRenderer libraryBG;
    public List<Sprite> bgOptions = new List<Sprite>();
+   void Awake() 
+{
+    Transition.SetActive(true);
+}
    public void Arithmetic()
    {
     arithmetic.SetActive(true);

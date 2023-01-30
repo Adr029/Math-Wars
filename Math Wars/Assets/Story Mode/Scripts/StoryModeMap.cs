@@ -11,6 +11,7 @@ public string kingdomName;
 [SerializeField]Button tutorial;
 [SerializeField]GameObject tutorialPopup;
 [SerializeField]GameObject tutorialUI;
+[SerializeField]GameObject Transition;
 [SerializeField]CanvasGroup mapUI;
 [SerializeField]Image tutorialSample;
 
@@ -22,6 +23,7 @@ public int firstLaunch;
 
 void Awake()
 {
+    Transition.SetActive(true);
     tutorialCount = 0;
     firstLaunch = PlayerPrefs.GetInt("firstLaunchStory", 0);
     if (firstLaunch == 0)

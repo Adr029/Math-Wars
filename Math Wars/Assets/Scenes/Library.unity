@@ -966,6 +966,7 @@ MonoBehaviour:
   arithmeticButton: {fileID: 965607159}
   algebraButton: {fileID: 188857498}
   calculusButton: {fileID: 1859220330}
+  Transition: {fileID: 1506302781}
   libraryBG: {fileID: 782802027}
   bgOptions:
   - {fileID: 21300000, guid: 6f172c83f5a2d71408de50c5492517cb, type: 3}
@@ -4411,12 +4412,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1788251988064763460, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
   m_PrefabInstance: {fileID: 1506302777}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1506302781}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1506302781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788251988064763466, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
+  m_PrefabInstance: {fileID: 1506302777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520757260
 GameObject:
   m_ObjectHideFlags: 0
