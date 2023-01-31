@@ -35,7 +35,6 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Slider PlayerHP;
     [SerializeField]Slider EnemyHP;
     [SerializeField]Button Confirm;
-
     GameObject playerClone;
     GameObject enemyClone;
     UIManagement UI;
@@ -200,7 +199,7 @@ void PlayerTurn()
                         questions.AlgebraLevel4(); 
                     break;
                     case "5":
-                        questions.AlgebraLevel5(); 
+                       AlgebraLevel5(); 
                     break;
                 }           
                 */
@@ -223,7 +222,7 @@ void PlayerTurn()
                         questions.TrigonometryLevel4(); 
                     break;
                     case "5":
-                        questions.TrigonometryLevel5(); 
+                        TrigonometryLevel5(); 
                     break;
                 }           
                 */
@@ -246,7 +245,7 @@ void PlayerTurn()
                         questions.CalculusLevel4(); 
                     break;
                     case "5":
-                        questions.CalculusLevel5(); 
+                        CalculusLevel5(); 
                     break;
                 }           
                 */
@@ -820,5 +819,81 @@ public void Back()
         Destroy(playerClone);
         Destroy(enemyClone);
         SceneManager.LoadScene("Math Town");
+    }
+
+void AlgebraLevel5()
+    {
+        int dice2;
+        dice2 = Random.Range(0,4);
+        switch (dice2)
+        {
+            case 0:
+                //questions.AlgebraLevel1();
+            break;
+
+            case 1:
+                //questions.AlgebraLevel2();
+            break;
+
+            case 2:
+                //questions.AlgebraLevel3();
+            break;
+
+            case 3:
+                //questions.AlgebraLevel4();
+            break;
+  
+        }
+
+    }
+void TrigonometryLevel5()
+    {
+        int dice2;
+        dice2 = Random.Range(0,4);
+        switch (dice2)
+        {
+            case 0:
+                //questions.TrigonometryLevel1();
+            break;
+
+            case 1:
+                //questions.TrigonometryLevel2();
+            break;
+
+            case 2:
+                //questions.TrigonometryLevel3();
+            break;
+
+            case 3:
+                //questions.TrigonometryLevel4();
+            break;
+  
+        }
+
+    }
+void CalculusLevel5()
+    {
+        int dice2;
+        dice2 = Random.Range(0,4);
+        switch (dice2)
+        {
+            case 0:
+                //questions.CalculusLevel1();
+            break;
+
+            case 1:
+                //questions.CalculusLevel2();
+            break;
+
+            case 2:
+                //questions.CalculusLevel3();
+            break;
+
+            case 3:
+                //questions.CalculusLevel4();
+            break;
+  
+        }
+
     }
 }
