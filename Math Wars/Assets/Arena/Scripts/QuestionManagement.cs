@@ -39,9 +39,6 @@ public class QuestionManagement : MonoBehaviour
 [Header("Level 4 Calculus")]
         public List<Sprite> Level4calquestions = new List<Sprite>();
         public List<Sprite> Level4calanswers = new List<Sprite>();
-[Header("Level 5 Calculus")]
-        public List<Sprite> Level5calquestions = new List<Sprite>();
-        public List<Sprite> Level5calanswers = new List<Sprite>();
 
 [Header("Level 1 Algebra")]
         public List<Sprite> Level1algequestions = new List<Sprite>();
@@ -55,9 +52,6 @@ public class QuestionManagement : MonoBehaviour
 [Header("Level 4 Algebra")]
         public List<Sprite> Level4algequestions = new List<Sprite>();
         public List<Sprite> Level4algeanswers = new List<Sprite>();
-[Header("Level 5 Algebra")]
-        public List<Sprite> Level5algequestions = new List<Sprite>();
-        public List<Sprite> Level5algeanswers = new List<Sprite>();
 
 [Header("Level 1 Trigonometry")]
         public List<Sprite> Level1trigoquestions = new List<Sprite>();
@@ -71,9 +65,7 @@ public class QuestionManagement : MonoBehaviour
 [Header("Level 4 Trigonometry")]
         public List<Sprite> Level4trigoquestions = new List<Sprite>();
         public List<Sprite> Level4trigoanswers = new List<Sprite>();
-[Header("Level 5 Trigonometry")]
-        public List<Sprite> Level5trigoquestions = new List<Sprite>();
-        public List<Sprite> Level5trigoanswers = new List<Sprite>();
+
 public void Calculus()
 {
 
