@@ -19,6 +19,8 @@ public string kingdomName;
 
 public int tutorialCount;
 public int firstLaunch;
+public Image img;
+public Animator animate;
 
 
 void Awake()
@@ -36,26 +38,23 @@ void Awake()
 
    public void Kingdom1()
    {
-    kingdomName = "Kingdom1";    
-    PlayerPrefs.SetString("kingdomName", kingdomName);
-    SceneManager.LoadScene("Kingdom");
-
+        kingdomName = "Kingdom1";    
+        PlayerPrefs.SetString("kingdomName", kingdomName);
+        StartCoroutine(FadeKingdom());
    }
 
   public void Kingdom2()
    {
-    kingdomName = "Kingdom2";    
-    PlayerPrefs.SetString("kingdomName", kingdomName);
-    SceneManager.LoadScene("Kingdom");
-
+        kingdomName = "Kingdom2";    
+        PlayerPrefs.SetString("kingdomName", kingdomName);
+        StartCoroutine(FadeKingdom());
    }
 
    public void Kingdom3()
    {
-    kingdomName = "Kingdom3";    
-    PlayerPrefs.SetString("kingdomName", kingdomName);
-    SceneManager.LoadScene("Kingdom");
-
+        kingdomName = "Kingdom3";    
+        PlayerPrefs.SetString("kingdomName", kingdomName);
+        StartCoroutine(FadeKingdom());
    }
 
    public void ShowTutorial()
@@ -114,5 +113,12 @@ public void NextTutorial()
     
 
 }
+ IEnumerator FadeKingdom()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("Kingdom");
+
+    }
 
 }
