@@ -1077,7 +1077,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 case 19:
@@ -1086,7 +1086,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 case 20:
@@ -1095,7 +1095,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 case 21:
@@ -1113,7 +1113,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 case 23:
@@ -1122,7 +1122,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 case 24:
@@ -1131,7 +1131,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 case 25:
@@ -1140,7 +1140,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 case 26:
@@ -1149,7 +1149,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 case 27:
@@ -1167,7 +1167,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 case 29:
@@ -1176,7 +1176,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1algeanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
@@ -1355,7 +1355,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 case 19:
@@ -1364,7 +1364,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 case 20:
@@ -1373,7 +1373,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 case 21:
@@ -1391,7 +1391,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 case 23:
@@ -1400,7 +1400,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 case 24:
@@ -1409,7 +1409,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 case 25:
@@ -1418,7 +1418,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 case 26:
@@ -1427,7 +1427,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 case 27:
@@ -1445,7 +1445,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 case 29:
@@ -1454,7 +1454,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2algeanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
@@ -1633,7 +1633,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 case 19:
@@ -1642,7 +1642,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 case 20:
@@ -1651,7 +1651,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 case 21:
@@ -1669,7 +1669,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 case 23:
@@ -1678,7 +1678,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 case 24:
@@ -1687,7 +1687,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 case 25:
@@ -1696,7 +1696,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 case 26:
@@ -1705,7 +1705,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 case 27:
@@ -1723,7 +1723,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 case 29:
@@ -1732,7 +1732,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
@@ -1911,7 +1911,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 case 19:
@@ -1920,7 +1920,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 case 20:
@@ -1929,7 +1929,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 case 21:
@@ -1947,7 +1947,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 case 23:
@@ -1956,7 +1956,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 case 24:
@@ -1965,7 +1965,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 case 25:
@@ -1974,7 +1974,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 case 26:
@@ -1983,7 +1983,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 case 27:
@@ -2001,7 +2001,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 case 29:
@@ -2010,7 +2010,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4algeanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
@@ -3447,7 +3447,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -3457,7 +3457,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -3467,7 +3467,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -3487,7 +3487,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -3497,7 +3497,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -3507,7 +3507,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -3517,7 +3517,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -3527,7 +3527,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -3547,7 +3547,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -3557,7 +3557,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1calanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
@@ -3758,7 +3758,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -3768,7 +3768,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -3778,7 +3778,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -3798,7 +3798,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -3808,7 +3808,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -3818,7 +3818,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -3828,7 +3828,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -3838,7 +3838,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -3858,7 +3858,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -3868,7 +3868,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2calanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
@@ -4068,7 +4068,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -4078,7 +4078,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -4088,7 +4088,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -4108,7 +4108,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -4118,7 +4118,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -4128,7 +4128,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -4138,7 +4138,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -4148,7 +4148,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -4168,7 +4168,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -4178,7 +4178,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3calanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
@@ -4378,7 +4378,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -4388,7 +4388,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -4398,7 +4398,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -4418,7 +4418,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -4428,7 +4428,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -4438,7 +4438,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -4448,7 +4448,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -4458,7 +4458,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -4478,7 +4478,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -4488,7 +4488,7 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4calanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
