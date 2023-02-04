@@ -2016,7 +2016,7 @@ break;
 }
 */
 
-/*public void TrigonometryLevel1()
+public void TrigonometryLevel1()
 
 {
 dice = Random.Range(0,30);
@@ -2210,7 +2210,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -2220,7 +2220,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -2230,7 +2230,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -2250,7 +2250,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -2260,7 +2260,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -2270,7 +2270,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -2280,7 +2280,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -2290,7 +2290,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -2310,7 +2310,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -2320,12 +2320,12 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level1trigoanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
-*/
-/*public void TrigonometryLevel2()
+
+public void TrigonometryLevel2()
 
 {
 dice = Random.Range(0,30);
@@ -2519,7 +2519,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -2529,7 +2529,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -2539,7 +2539,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -2559,7 +2559,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -2569,7 +2569,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -2579,7 +2579,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -2589,7 +2589,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -2599,7 +2599,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -2619,7 +2619,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -2629,12 +2629,12 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level2trigoanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
-*/
-/*public void TrigonometryLevel3()
+
+public void TrigonometryLevel3()
 {
 dice = Random.Range(0,30);
 
@@ -2827,7 +2827,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -2837,7 +2837,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -2847,7 +2847,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -2867,7 +2867,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -2877,7 +2877,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -2887,7 +2887,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -2897,7 +2897,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -2907,7 +2907,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -2927,7 +2927,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -2937,12 +2937,12 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3trigoanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
-*/
-/*public void TrigonometryLevel4()
+
+public void TrigonometryLevel4()
 {
 dice = Random.Range(0,30);
 
@@ -3135,7 +3135,7 @@ case 18:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[73];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[74];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[75];
-    answer = "C";
+    answer = "B";
 break;
 
 
@@ -3145,7 +3145,7 @@ case 19:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[77];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[78];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[79];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -3155,7 +3155,7 @@ case 20:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[81];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[82];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[83];
-    answer = "C";
+    answer = "D";
 break;
 
 
@@ -3175,7 +3175,7 @@ case 22:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[89];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[90];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[91];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -3185,7 +3185,7 @@ case 23:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[93];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[94];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[95];
-    answer = "B";
+    answer = "A";
 break;
 
 
@@ -3195,7 +3195,7 @@ case 24:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[97];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[98];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[99];
-    answer = "D";
+    answer = "A";
 break;
 
 
@@ -3205,7 +3205,7 @@ case 25:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[101];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[102];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[103];
-    answer = "A";
+    answer = "D";
 break;
 
 
@@ -3215,7 +3215,7 @@ case 26:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[105];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[106];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[107];
-    answer = "C";
+    answer = "A";
 break;
 
 
@@ -3235,7 +3235,7 @@ case 28:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[113];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[114];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[115];
-    answer = "A";
+    answer = "C";
 break;
 
 
@@ -3245,12 +3245,12 @@ case 29:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[117];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[118];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level4trigoanswers[119];
-    answer = "A";
+    answer = "C";
 break;
 }
 }
 
-*/
+
 
 /*public void CalculusLevel1()
 {
