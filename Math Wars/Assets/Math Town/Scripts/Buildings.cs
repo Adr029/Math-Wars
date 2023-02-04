@@ -11,14 +11,15 @@ public class Buildings : MonoBehaviour
     [SerializeField]GameObject PopUpsUI;
     [SerializeField]GameObject Transition;
     [SerializeField]CanvasGroup TownUI;
+    public Image img;
+
+    public Animator animate;
     
 void Awake()
 {
     Transition.SetActive(true);
 }
-    public Image img;
 
-    public Animator animate;
 
    public void Library()
     {

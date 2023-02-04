@@ -15,9 +15,17 @@ public class KingdomManager : MonoBehaviour
     public Sprite locked;
     public SpriteRenderer background;
     public Button bossBattle;
+    [SerializeField]GameObject Transition;
+    public Image img;
+
+    public Animator animate;
 
     public string selectedLevel;
-
+void Awake() 
+{
+    Transition.SetActive(true);
+ 
+}
     void Start()
     {
        kingdomName = PlayerPrefs.GetString("kingdomName");
@@ -75,8 +83,17 @@ public class KingdomManager : MonoBehaviour
     public void BeginBattle(Button button)
     {
         selectedLevel = button.name;
-        SceneManager.LoadScene("Arena");
         PlayerPrefs.SetString("storyKingdom", kingdomName);
         PlayerPrefs.SetString("selectedLevel", selectedLevel);
+        StartCoroutine(FadeBattle());
+
+    }
+
+    IEnumerator FadeBattle()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("Arena");
+
     }
 }
