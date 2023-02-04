@@ -3252,7 +3252,7 @@ break;
 
 
 
-/*public void CalculusLevel1()
+public void CalculusLevel1()
 {
 
 
@@ -3562,8 +3562,8 @@ break;
 }
 }
 
-*/
-/*public void CalculusLevel2()
+public void CalculusLevel2()
+
 {
 
 
@@ -3872,8 +3872,8 @@ case 29:
 break;
 }
 }
-*/
-/*public void CalculusLevel3()
+
+public void CalculusLevel3()
 {
 
 
@@ -4182,8 +4182,8 @@ case 29:
 break;
 }
 }
-*/
-/*public void CalculusLevel4()
+
+public void CalculusLevel4()
 {
 
 
@@ -4492,7 +4492,6 @@ case 29:
 break;
 }
 }
-*/
 
 
 
