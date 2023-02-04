@@ -44,7 +44,8 @@ public class BattleManager : MonoBehaviour
     string topic;
     EnemyUnit enemy1;
     PlayerUnit player1;
-    List<GameObject> prefabList = new List<GameObject>();
+    List<GameObject> enemyPrefabs = new List<GameObject>();
+    List<GameObject> kingPrefabs = new List<GameObject>();
     public GameObject Enemy1;
     public GameObject Enemy2;
     int prefabIndex;
@@ -61,10 +62,10 @@ void Start()
     storyStatus = PlayerPrefs.GetInt("storymode");
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
-    prefabList.Add(Enemy1);
-    prefabList.Add(Enemy2);
+    enemyPrefabs.Add(Enemy1);
+    enemyPrefabs.Add(Enemy2);
     prefabIndex = UnityEngine.Random.Range(0,2);
-    
+    // for expansion pag dumami na enemies
 
     Scene currentScene = SceneManager.GetActiveScene();
 
@@ -99,39 +100,40 @@ public void BeginBattle()
 {
     playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Quaternion.identity);
     
-    if (storyMode)
+    if (storyMode && selectedLevel == "5") //undergoing testing
     {
-
-        if (selectedLevel == "5")
+        switch (chosenKingdom)
             {
-                //king prefab
+                case "Kingdom1":
+                    //enemyClone = (GameObject)Instantiate(kingPrefabs[0], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[1], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+
+                break;
+
+                case "Kingdom2":
+                    //enemyClone = (GameObject)Instantiate(kingPrefabs[1], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[0], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+
+                break;
+
+                case "Kingdom3":
+                    //enemyClone = (GameObject)Instantiate(kingPrefabs[2], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[1], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+
+                break;
             }
-
-        else
-            {
-                //normal enemy
-                switch(prefabIndex)
-                {
-            case 0:
-                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-            break;
-            case 1:
-                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
-            break;
-                }
-        }     
+            
     }
     else
     {
         switch(prefabIndex)
         {
             case 0:
-                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
             break;
             case 1:
-                enemyClone = (GameObject)Instantiate(prefabList[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
             break;
-
         }
     }
 
@@ -706,7 +708,7 @@ if (questions.correct)
     }
 }
 IEnumerator damageEnemy(){
-     
+     // 100 muna for testing
 
     questions.correctText.text = "CORRECT";
     UI.statusScroll.SetActive(true);  
@@ -724,10 +726,12 @@ IEnumerator damageEnemy(){
                 break;
                 case "Algebra":
                     enemy1.TakeDamage(Random.Range(12,16));
+
                    // audioclips.PlayPlayerAttack();
                 break;
                 case "Calculus":
                     enemy1.TakeDamage(Random.Range(17,21));
+
                   //  audioclips.PlayPlayerAttack();
                 break;
                 }
@@ -737,16 +741,22 @@ IEnumerator damageEnemy(){
             switch(chosenKingdom)
             {
                 case "Kingdom1":
-                    enemy1.TakeDamage(Random.Range(7,11));
+                    //enemy1.TakeDamage(Random.Range(7,11));
+                    enemy1.TakeDamage(100);
+
                    // audioclips.PlayPlayerAttack();
                 break;
 
                 case "Kingdom2":
-                    enemy1.TakeDamage(Random.Range(12,16));
+                    //enemy1.TakeDamage(Random.Range(12,16));
+                    enemy1.TakeDamage(100);
+
 //                    audioclips.PlayPlayerAttack();
                 break;
                 case "Kingdom3":
-                    enemy1.TakeDamage(Random.Range(17,21));
+                    //enemy1.TakeDamage(Random.Range(17,21));
+                    enemy1.TakeDamage(100);
+
                    // audioclips.PlayPlayerAttack();
                 break;
             }
