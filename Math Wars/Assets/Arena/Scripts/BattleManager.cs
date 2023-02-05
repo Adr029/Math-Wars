@@ -607,6 +607,11 @@ void PlayerWin()
             {
                 kingdom1lvl++;
                 PlayerPrefs.SetInt("kingdom1Level", kingdom1lvl);
+                if (kingdom1lvl > 5)
+                {
+                    PlayerPrefs.SetInt("kingdom1Complete", 1);
+
+                }
             }
         break;
 
@@ -616,7 +621,12 @@ void PlayerWin()
             {
                 kingdom2lvl++;
                 PlayerPrefs.SetInt("kingdom2Level", kingdom2lvl);
+            if (kingdom2lvl > 5)
+                {
+                    PlayerPrefs.SetInt("kingdom2Complete", 1);
+                }
             }
+            
         break;
 
             case "Kingdom3":
@@ -625,6 +635,10 @@ void PlayerWin()
             {
                 kingdom3lvl++;
                 PlayerPrefs.SetInt("kingdom3Level", kingdom3lvl);
+                if (kingdom3lvl > 5)
+                {
+                    PlayerPrefs.SetInt("kingdom3Complete", 1);
+                }
             }
         break;
         }
@@ -834,22 +848,22 @@ public void Back()
 void AlgebraLevel5()
     {
         int dice2;
-        dice2 = Random.Range(0,4);
+        dice2 = Random.Range(1,5);
         switch (dice2)
         {
-            case 0:
+            case 1:
                 //questions.AlgebraLevel1();
             break;
 
-            case 1:
+            case 2:
                 //questions.AlgebraLevel2();
             break;
 
-            case 2:
+            case 3:
                 //questions.AlgebraLevel3();
             break;
 
-            case 3:
+            case 4:
                 //questions.AlgebraLevel4();
             break;
   
@@ -859,22 +873,22 @@ void AlgebraLevel5()
 void TrigonometryLevel5()
     {
         int dice2;
-        dice2 = Random.Range(0,4);
+        dice2 = Random.Range(1,5);
         switch (dice2)
         {
-            case 0:
+            case 1:
                 //questions.TrigonometryLevel1();
             break;
 
-            case 1:
+            case 2:
                 //questions.TrigonometryLevel2();
             break;
 
-            case 2:
+            case 3:
                 //questions.TrigonometryLevel3();
             break;
 
-            case 3:
+            case 4:
                 //questions.TrigonometryLevel4();
             break;
   
@@ -884,22 +898,22 @@ void TrigonometryLevel5()
 void CalculusLevel5()
     {
         int dice2;
-        dice2 = Random.Range(0,4);
+        dice2 = Random.Range(1,5);
         switch (dice2)
         {
-            case 0:
+            case 1:
                 //questions.CalculusLevel1();
             break;
 
-            case 1:
+            case 2:
                 //questions.CalculusLevel2();
             break;
 
-            case 2:
+            case 3:
                 //questions.CalculusLevel3();
             break;
 
-            case 3:
+            case 4:
                 //questions.CalculusLevel4();
             break;
   

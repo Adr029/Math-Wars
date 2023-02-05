@@ -19,6 +19,9 @@ public class CharacterCustomize : MonoBehaviour
     public int bodySprite;    
     public int bodyChosen = 0;
     public int playerLevel = 0;
+    public int kingdom1Complete = 0;
+    public int kingdom2Complete = 0;
+    public int kingdom3Complete = 0;
 
     PlayerUnit player;
 
@@ -27,11 +30,13 @@ public class CharacterCustomize : MonoBehaviour
 [SerializeField]SpriteResolver Body;
 [SerializeField]GameObject Transition;
 
-    private void Awake() {
+    void Awake() {
         Transition.SetActive(true);
 
         playerLevel = PlayerPrefs.GetInt("Level");
-
+        kingdom1Complete = PlayerPrefs.GetInt("kingdom1Complete");
+        kingdom2Complete = PlayerPrefs.GetInt("kingdom2Complete");
+        kingdom3Complete = PlayerPrefs.GetInt("kingdom3Complete");
         headSprite = PlayerPrefs.GetInt("head", 0);
         bodySprite = PlayerPrefs.GetInt("body", 0);
         headChosen = headSprite;
@@ -41,16 +46,27 @@ public class CharacterCustomize : MonoBehaviour
             if (playerLevel >= 1)
             {
                 headChoices[0].interactable = true;
+                bodyChoices[1].interactable = true;
             }
             if (playerLevel >= 2)
             {
                 headChoices[1].interactable = true;
             }
-       
-            if (playerLevel >= 1)
+            // copy paste gang mabuo lahat
+/*
+            if (kingdom1Complete == 1)
             {
-                bodyChoices[1].interactable = true;
+                //option.interactable = true;
             }
+            if (kingdom2Complete == 1)
+            {
+                //option.interactable = true;
+            }
+            if (kingdom3Complete == 1)
+            {
+                //option.interactable = true;
+            }
+*/       
     }
 
     public void SelectHead (Button button)
