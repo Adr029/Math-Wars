@@ -1557,8 +1557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -708, y: 86.328125}
-  m_SizeDelta: {x: 350.49, y: 65.71}
+  m_AnchoredPosition: {x: -694, y: 80.42}
+  m_SizeDelta: {x: 376.45, y: 70.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &961578447
 CanvasRenderer:
@@ -1589,7 +1589,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e14a0babae1756f4e9e6506b40cc9e37, type: 3}
+    m_Font: {fileID: 12800000, guid: 431e897add2123c47bcb222d0385c24a, type: 3}
     m_FontSize: 56
     m_FontStyle: 1
     m_BestFit: 0
@@ -1976,8 +1976,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -708, y: 152.0381}
-  m_SizeDelta: {x: 350.49, y: 65.71}
+  m_AnchoredPosition: {x: -694, y: 151}
+  m_SizeDelta: {x: 376.45, y: 70.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1322531690
 CanvasRenderer:
@@ -2008,7 +2008,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e14a0babae1756f4e9e6506b40cc9e37, type: 3}
+    m_Font: {fileID: 12800000, guid: 431e897add2123c47bcb222d0385c24a, type: 3}
     m_FontSize: 56
     m_FontStyle: 1
     m_BestFit: 0
@@ -2652,7 +2652,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e14a0babae1756f4e9e6506b40cc9e37, type: 3}
+    m_Font: {fileID: 12800000, guid: 431e897add2123c47bcb222d0385c24a, type: 3}
     m_FontSize: 56
     m_FontStyle: 1
     m_BestFit: 0
@@ -2689,8 +2689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -708, y: 217.74806}
-  m_SizeDelta: {x: 350.49, y: 65.71}
+  m_AnchoredPosition: {x: -694, y: 221.56999}
+  m_SizeDelta: {x: 376.45, y: 70.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1996548412
 GameObject:
