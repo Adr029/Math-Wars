@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 766469292}
   - component: {fileID: 766469291}
   m_Layer: 0
-  m_Name: Al-jabr Kingdom
+  m_Name: Hipparchuis Empire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 1789112927}
   - component: {fileID: 1789112926}
   m_Layer: 0
-  m_Name: Derigral Realm
+  m_Name: Derivare Realm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2567,7 +2567,7 @@ GameObject:
   - component: {fileID: 2105562495}
   - component: {fileID: 2105562494}
   m_Layer: 0
-  m_Name: Abacus Empire
+  m_Name: Al-jabr Kingdom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

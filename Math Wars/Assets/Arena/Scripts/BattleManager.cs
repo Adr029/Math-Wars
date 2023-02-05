@@ -15,6 +15,9 @@ public class BattleManager : MonoBehaviour
     public int experience;
     public string difficulty;
     string playerchoice;
+     public Image transition;
+
+    public Animator animate;
 
     // story mode variables
     string chosenKingdom;
@@ -28,6 +31,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject UIManager;
     [SerializeField]GameObject ReturnToTown;
     [SerializeField]GameObject ReturnToMap;
+    [SerializeField]GameObject ReturnToKingdom;
     [SerializeField]GameObject QuestionManager;
     [SerializeField]GameObject Transition;
    // [SerializeField]GameObject AudioManager;
@@ -596,6 +600,7 @@ void PlayerWin()
 
     else if (storyMode)
     {
+        ReturnToKingdom.SetActive(true);
         ReturnToMap.SetActive(true);
 
         switch (chosenKingdom)
@@ -838,11 +843,47 @@ void FixedUpdate()
     }
     }
 }
-public void Back()
+
+  public void Back()
     {
+        StartCoroutine(FadeTown());
+    }
+       public void ReturnStory()
+    {
+        StartCoroutine(FadeStory());
+    }
+   public void ReturnKingdom()
+    {
+        StartCoroutine(FadeKingdom());
+    }
+      IEnumerator FadeTown()
+    {
+        animate.SetBool("Fade", true);
         Destroy(playerClone);
         Destroy(enemyClone);
+        yield return new WaitUntil(() => transition.color.a == 1);
         SceneManager.LoadScene("Math Town");
+
+        
+    }
+   IEnumerator FadeStory()
+    {
+        animate.SetBool("Fade", true);
+        Destroy(playerClone);
+        Destroy(enemyClone);
+        yield return new WaitUntil(() => transition.color.a == 1);
+        SceneManager.LoadScene("Story Mode Map");
+   
+
+    }
+      IEnumerator FadeKingdom()
+    {
+        animate.SetBool("Fade", true);
+        Destroy(playerClone);
+        Destroy(enemyClone);
+        yield return new WaitUntil(() => transition.color.a == 1);
+        SceneManager.LoadScene("Kingdom");
+        
     }
 
 void AlgebraLevel5()

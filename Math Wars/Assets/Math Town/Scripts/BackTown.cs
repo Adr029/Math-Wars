@@ -16,6 +16,10 @@ public class BackTown : MonoBehaviour
     {
         StartCoroutine(FadeStory());
     }
+   public void ReturnKingdom()
+    {
+        StartCoroutine(FadeKingdom());
+    }
 
 
       IEnumerator FadeTown()
@@ -23,6 +27,7 @@ public class BackTown : MonoBehaviour
         animate.SetBool("Fade", true);
         yield return new WaitUntil(() => img.color.a == 1);
         SceneManager.LoadScene("Math Town");
+        
 
     }
       IEnumerator FadeStory()
@@ -30,6 +35,14 @@ public class BackTown : MonoBehaviour
         animate.SetBool("Fade", true);
         yield return new WaitUntil(() => img.color.a == 1);
         SceneManager.LoadScene("Story Mode Map");
+        
+
+    }
+      IEnumerator FadeKingdom()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("Kingdom");
 
     }
 }
