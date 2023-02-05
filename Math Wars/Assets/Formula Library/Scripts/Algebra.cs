@@ -5,14 +5,19 @@ using UnityEngine;
 public class Algebra : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public List<Sprite> formula = new List<Sprite>();
+public SpriteRenderer algebraFormula;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public void Factoring()
+{
+    
+}
+public void SpecialProducts()
+{
+
+}
+public void Functions()
+{
+
+}
 }

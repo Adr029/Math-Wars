@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class LibraryManager : MonoBehaviour
 {
-   [SerializeField]GameObject arithmetic;
+[Header("Formula")]
+
    [SerializeField]GameObject algebra;
+   [SerializeField]GameObject trigonometry;
    [SerializeField]GameObject calculus;
-   [SerializeField]GameObject close;
-   [SerializeField]GameObject arithmeticButton;
+
+[Header("Books")]
+
    [SerializeField]GameObject algebraButton;
+   [SerializeField]GameObject trigoButton;
    [SerializeField]GameObject calculusButton;
+   
+[Header("Misc")]
+
    [SerializeField]GameObject Transition;
+   [SerializeField]GameObject close;
 
    public SpriteRenderer libraryBG;
    public List<Sprite> bgOptions = new List<Sprite>();
@@ -19,48 +27,48 @@ public class LibraryManager : MonoBehaviour
 {
     Transition.SetActive(true);
 }
-   public void Arithmetic()
+   public void Algebra()
    {
-    arithmetic.SetActive(true);
-    algebra.SetActive(false);
+    algebra.SetActive(true);
+    trigonometry.SetActive(false);
     calculus.SetActive(false);
     close.SetActive(true);
-    arithmeticButton.SetActive(false);
     algebraButton.SetActive(false);
+    trigoButton.SetActive(false);
     calculusButton.SetActive(false);
     libraryBG.sprite = bgOptions[1];
    }
-   public void Algebra()
+   public void Trigonometry()
    {
-    arithmetic.SetActive(false);
-    algebra.SetActive(true);
+    algebra.SetActive(false);
+    trigonometry.SetActive(true);
     calculus.SetActive(false);
     close.SetActive(true);
-    arithmeticButton.SetActive(false);
     algebraButton.SetActive(false);
+    trigoButton.SetActive(false);
     calculusButton.SetActive(false);
     libraryBG.sprite = bgOptions[2];
    }
    public void Calculus()
    {
-    arithmetic.SetActive(false);
     algebra.SetActive(false);
+    trigonometry.SetActive(false);
     calculus.SetActive(true);
     close.SetActive(true);
-    arithmeticButton.SetActive(false);
     algebraButton.SetActive(false);
+    trigoButton.SetActive(false);
     calculusButton.SetActive(false);
     libraryBG.sprite = bgOptions[3];
    }
 
    public void CloseBook()
    {
-    arithmetic.SetActive(false);
     algebra.SetActive(false);
+    trigonometry.SetActive(false);
     calculus.SetActive(false);
     close.SetActive(false);
-    arithmeticButton.SetActive(true);
     algebraButton.SetActive(true);
+    trigoButton.SetActive(true);
     calculusButton.SetActive(true);
     libraryBG.sprite = bgOptions[0];
    }
