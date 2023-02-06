@@ -903,7 +903,7 @@ break;
 
 //Story Mode Questions (answers to be replaced)
 
-/*public void AlgebraLevel1()
+public void AlgebraLevel1()
 {
 dice = Random.Range(0,30);
 
@@ -1180,8 +1180,8 @@ case 29:
 break;
 }
 }
-*/
-/*public void AlgebraLevel2()
+
+public void AlgebraLevel2()
 {
 dice = Random.Range(0,30);
 
@@ -1458,8 +1458,8 @@ case 29:
 break;
 }
 }
-*/
-/*public void AlgebraLevel3()
+
+public void AlgebraLevel3()
 {
 dice = Random.Range(0,30);
 
@@ -1710,7 +1710,7 @@ break;
 
 case 27:
     question.GetComponent<Image>().sprite = Level3algequestions[27];
-    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = Levela3lgeanswers[108];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = Level3algeanswers[108];
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[109];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[110];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = Level3algeanswers[111];
@@ -1736,8 +1736,8 @@ case 29:
 break;
 }
 }
-*/
-/*public void AlgebraLevel4()
+
+public void AlgebraLevel4()
 {
 dice = Random.Range(0,30);
 
@@ -2014,7 +2014,7 @@ case 29:
 break;
 }
 }
-*/
+
 
 public void TrigonometryLevel1()
 
