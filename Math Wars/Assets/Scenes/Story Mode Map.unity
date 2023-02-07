@@ -515,6 +515,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7702494931700433663, guid: c433ef8f89b8bc04db7674e923102ac5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 459845918}
+    - target: {fileID: 7702494931700433663, guid: c433ef8f89b8bc04db7674e923102ac5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702494931700433663, guid: c433ef8f89b8bc04db7674e923102ac5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryModeMap, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c433ef8f89b8bc04db7674e923102ac5, type: 3}
 --- !u!224 &344502264 stripped
@@ -635,9 +647,9 @@ MonoBehaviour:
   tutorialPopup: {fileID: 939167210}
   tutorialUI: {fileID: 928945343}
   Transition: {fileID: 1211516024}
-  tutorialBG: {fileID: 0}
+  tutorialBG: {fileID: 1739185573}
   mapUI: {fileID: 807230364}
-  tutorialImage: {fileID: 0}
+  tutorialImage: {fileID: 939167212}
   tutorialImages:
   - {fileID: 21300000, guid: 5e091cae637211c49bcdcaeff5711c24, type: 3}
   - {fileID: 21300000, guid: bcc45732a67681c4eab1d171ead6143d, type: 3}
@@ -1233,6 +1245,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 939167211}
     m_Modifications:
+    - target: {fileID: 78654932255020721, guid: b6cf81ef5f830bf49ba8e4239b8d4af8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 459845918}
+    - target: {fileID: 78654932255020721, guid: b6cf81ef5f830bf49ba8e4239b8d4af8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 78654932255020721, guid: b6cf81ef5f830bf49ba8e4239b8d4af8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryModeMap, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 78654932255020726, guid: b6cf81ef5f830bf49ba8e4239b8d4af8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

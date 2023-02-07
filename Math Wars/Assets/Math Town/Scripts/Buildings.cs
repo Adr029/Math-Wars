@@ -21,12 +21,16 @@ public class Buildings : MonoBehaviour
 
 void Awake()
 {
-    Transition.SetActive(true);
       firstLaunch = PlayerPrefs.GetInt("firstLaunchGame", 0);
     if (firstLaunch == 0)
-    {
+    {     
         Tutorial();
         PlayerPrefs.SetInt("firstLaunchGame", 1);
+    }
+    else
+    {
+        Transition.SetActive(true);
+
     }
 }
 public void Tutorial()

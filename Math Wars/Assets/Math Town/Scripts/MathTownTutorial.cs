@@ -7,11 +7,14 @@ public class MathTownTutorial : MonoBehaviour
 {
 public List<Sprite> tutorialImages = new List<Sprite>();
 public Image townTutorial;
+public Image transition;
+public Animator animate;
 
 int tutorialCount;
 
 void Awake()
 {
+    tutorialCount = 0;
     townTutorial.sprite = tutorialImages[0];
 }
 
@@ -49,7 +52,15 @@ public void NextTutorial()
 
     if (tutorialCount == 7)
     {
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => transition.color.a == 1);
         Destroy(this.gameObject); 
+
     }
 }
 }
