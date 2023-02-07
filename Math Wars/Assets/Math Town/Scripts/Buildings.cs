@@ -79,6 +79,8 @@ public void Tutorial()
     public void Reset()
     {
         resetConfirm.SetActive(true);
+        settings.SetActive(false);
+
     }
 
     public void closeSettings()
@@ -94,6 +96,8 @@ public void Tutorial()
     public void noReset()
     {
         resetConfirm.SetActive(false);
+        settings.SetActive(true);
+
     }
 
     public void yesReset()
