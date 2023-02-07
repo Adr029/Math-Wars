@@ -6,13 +6,11 @@ using UnityEngine.UI;
 public class KingdomManager : MonoBehaviour
 {
     public int level = 1;
-    Scene currentScene;
     string kingdomName;
     public List<Button> levels = new List<Button>();
     public List<Sprite> bgOptions = new List<Sprite>();
     public List<Sprite> bossOptions = new List<Sprite>();
     public Sprite unlocked;
-    public Sprite locked;
     public SpriteRenderer background;
     public Button bossBattle;
     [SerializeField]GameObject Transition;

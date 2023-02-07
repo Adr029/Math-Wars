@@ -12,14 +12,12 @@ public string difficulty;
 [SerializeField]Text XP;
 [SerializeField]Text Level;
 [SerializeField]Button confirm;
-[SerializeField]Button tutorial;
 [SerializeField]GameObject tutorialPopup;
 [SerializeField]GameObject tutorialUI;
 [SerializeField]GameObject Transition;
 [SerializeField]CanvasGroup arenaMenu;
-[SerializeField]Image tutorialSample;
-
-//[SerializeField]Image tutorialImage;
+[SerializeField]Image tutorialImage;
+[SerializeField]GameObject tutorialBG;
 public List<Sprite> tutorialImages = new List<Sprite>();
 public Image img;
 
@@ -31,7 +29,6 @@ public int experience;
 public int playerLevel;
 public int firstLaunch;
 
-BattleManager battle;
 void Awake()
 {
     Transition.SetActive(true);
@@ -73,20 +70,18 @@ if (difficulty.Length != 0)
 public void ShowTutorial()
 {
     tutorialUI.SetActive(true);
+    tutorialCount = 0;
+    tutorialPopup.SetActive(true);
+    tutorialImage.sprite = tutorialImages[0];
+    tutorialBG.SetActive(true);
     arenaMenu.blocksRaycasts = false;
-     if (!tutorialPopup.activeSelf)
-    {
-        tutorialCount = 0;
-        tutorialPopup.SetActive(true);
-        //tutorialImage.sprite = tutorialImages[0];
-        tutorialSample.GetComponent<Image>().color = new Color32(21,232,225,100);
-
-    }
 }
 public void CloseTutorial()
 {
     tutorialPopup.SetActive(false);
     tutorialUI.SetActive(false);
+    tutorialBG.SetActive(false);
+
     arenaMenu.blocksRaycasts = true;
 
 }
@@ -98,26 +93,40 @@ public void NextTutorial()
      
         if (tutorialCount == 1)
         {
-            //tutorialImage.sprite = tutorialImages[1];
-            tutorialSample.GetComponent<Image>().color = new Color32(255,255,225,100);
+            tutorialImage.sprite = tutorialImages[1];
         }
         else if (tutorialCount == 2)
         {
-            //tutorialImage.sprite = tutorialImages[2];
-            tutorialSample.GetComponent<Image>().color = new Color32(155,255,225,100);
+            tutorialImage.sprite = tutorialImages[2];
         }
         else if (tutorialCount == 3)
         {
-            //tutorialImage.sprite = tutorialImages[3];
-            tutorialSample.GetComponent<Image>().color = new Color32(255,255,125,100);
+            tutorialImage.sprite = tutorialImages[3];
         }
     
-    if (tutorialCount == 4)
+        else if (tutorialCount == 4)
+        {
+            tutorialImage.sprite = tutorialImages[4];
+        }
+    
+        else if (tutorialCount == 5)
+        {
+            tutorialImage.sprite = tutorialImages[5];
+        }
+    
+        else if (tutorialCount == 6)
+        {
+            tutorialImage.sprite = tutorialImages[6];
+        }
+        else if (tutorialCount == 7)
+        {
+            tutorialImage.sprite = tutorialImages[7];
+        }
+    
+    if (tutorialCount == 8)
     {
         CloseTutorial(); 
     }
-
-    //insert code for changing button from next to exit
 
 }
    IEnumerator Fade()

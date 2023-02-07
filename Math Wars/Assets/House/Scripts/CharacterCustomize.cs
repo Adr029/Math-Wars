@@ -9,12 +9,9 @@ using UnityEngine.Experimental.U2D.Animation;
 public class CharacterCustomize : MonoBehaviour
 {
     [Header("Sprite to Change")]
-    public GameObject playerPreview;
-    public List<Sprite> headOptions = new List<Sprite>();
     public List<Button> headChoices = new List<Button>();
     public int headSprite;    
     public int headChosen = 0;
-    public List<Sprite> bodyOptions = new List<Sprite>();
     public List<Button> bodyChoices = new List<Button>();
     public int bodySprite;    
     public int bodyChosen = 0;

@@ -11,15 +11,29 @@ public class Buildings : MonoBehaviour
     [SerializeField]GameObject PopUpsUI;
     [SerializeField]GameObject Transition;
     [SerializeField]CanvasGroup TownUI;
+    [SerializeField]GameObject settingsBG;
+    [SerializeField]GameObject tutorialTown;
+
     public Image img;
 
     public Animator animate;
-    
+    int firstLaunch;
+
 void Awake()
 {
     Transition.SetActive(true);
+      firstLaunch = PlayerPrefs.GetInt("firstLaunchGame", 0);
+    if (firstLaunch == 0)
+    {
+        Tutorial();
+        PlayerPrefs.SetInt("firstLaunchGame", 1);
+    }
 }
+public void Tutorial()
+    {
+        Instantiate(tutorialTown, new Vector3(0, 0, 0), Quaternion.identity);
 
+    }
 
    public void Library()
     {
@@ -51,6 +65,8 @@ void Awake()
 
     public void Settings()
     {
+        settingsBG.SetActive(true);
+
         settings.SetActive(true);
         PopUpsUI.SetActive(true);
         TownUI.blocksRaycasts = false;
@@ -63,6 +79,7 @@ void Awake()
 
     public void closeSettings()
     {
+        settingsBG.SetActive(false);
         settings.SetActive(false);
         PopUpsUI.SetActive(false);
         TownUI.blocksRaycasts = true;
@@ -84,6 +101,8 @@ void Awake()
     {
         Application.Quit();
     }
+
+    
 
    IEnumerator FadeLibrary()
     {
@@ -113,5 +132,4 @@ void Awake()
         SceneManager.LoadScene("Home");
 
     }
-    
 }

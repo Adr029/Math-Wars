@@ -8,14 +8,14 @@ public class StoryModeMap : MonoBehaviour
 {
 
 public string kingdomName;
-[SerializeField]Button tutorial;
 [SerializeField]GameObject tutorialPopup;
 [SerializeField]GameObject tutorialUI;
 [SerializeField]GameObject Transition;
+[SerializeField]GameObject tutorialBG;
 [SerializeField]CanvasGroup mapUI;
-[SerializeField]Image tutorialSample;
 
-//[SerializeField]Image tutorialImage;
+[SerializeField]Image tutorialImage;
+public List<Sprite> tutorialImages = new List<Sprite>();
 
 public int tutorialCount;
 public int firstLaunch;
@@ -59,22 +59,18 @@ void Awake()
 
    public void ShowTutorial()
 {
-    tutorialUI.SetActive(true);
-    //tutorialImage.sprite = tutorialImages[0];
-
-    mapUI.blocksRaycasts = false;
-     if (!tutorialPopup.activeSelf)
-    {
-        tutorialCount = 0;
-        tutorialPopup.SetActive(true);
-        tutorialSample.GetComponent<Image>().color = new Color32(21,232,225,100);
-
-    }
+   tutorialUI.SetActive(true);
+    tutorialCount = 0;
+    tutorialPopup.SetActive(true);
+    tutorialImage.sprite = tutorialImages[0];
+    tutorialBG.SetActive(true);
+  
 }
 public void CloseTutorial()
 {
     tutorialPopup.SetActive(false);
     tutorialUI.SetActive(false);
+    tutorialBG.SetActive(false);
     mapUI.blocksRaycasts = true;
 
 }
@@ -87,29 +83,43 @@ public void NextTutorial()
         if (tutorialCount == 1)
         {
 
-            //tutorialImage.sprite = tutorialImages[1];
-            tutorialSample.GetComponent<Image>().color = new Color32(255,255,225,100);
+            tutorialImage.sprite = tutorialImages[1];
         }
         else if (tutorialCount == 2)
         {
             
-            //tutorialImage.sprite = tutorialImages[2];
-            tutorialSample.GetComponent<Image>().color = new Color32(155,255,225,100);
+            tutorialImage.sprite = tutorialImages[2];
         }
         else if (tutorialCount == 3)
         {
             
-            //tutorialImage.sprite = tutorialImages[3];
-            tutorialSample.GetComponent<Image>().color = new Color32(255,255,125,100);
+            tutorialImage.sprite = tutorialImages[3];
         }
     
-    if (tutorialCount == 4)
+        else if (tutorialCount == 4)
+        {
+            
+            tutorialImage.sprite = tutorialImages[4];
+        }
+    
+        else if (tutorialCount == 5)
+        {
+            
+            tutorialImage.sprite = tutorialImages[5];
+        }
+    
+        else if (tutorialCount == 6)
+        {
+            
+            tutorialImage.sprite = tutorialImages[6];
+        }
+    
+    
+     if (tutorialCount == 7)
     {
         CloseTutorial(); 
- 
     }
 
-    //insert code for changing button from next to exit
     
 
 }
