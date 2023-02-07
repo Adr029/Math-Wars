@@ -8,16 +8,21 @@ public class Algebra : MonoBehaviour
 public List<Sprite> formula = new List<Sprite>();
 public SpriteRenderer algebraFormula;
 
-public void Factoring()
+public void OperationsOnFunctions()
 {
-    
+    algebraFormula.sprite = formula[0];
 }
 public void SpecialProducts()
 {
-
+    algebraFormula.sprite = formula[1];
 }
-public void Functions()
+public void ExponentialRules()
 {
+    algebraFormula.sprite = formula[2];
+}
 
+public void LogarithmicRules()
+{
+    algebraFormula.sprite = formula[3];
 }
 }
