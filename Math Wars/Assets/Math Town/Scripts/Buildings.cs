@@ -102,6 +102,7 @@ public void Tutorial()
 
     public void yesReset()
     {
+        resetConfirm.SetActive(false);
         PlayerPrefs.DeleteAll();
         restartApp.SetActive(true);
     }
