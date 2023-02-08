@@ -8,6 +8,7 @@ public class ArenaSettings : MonoBehaviour
     [SerializeField] Image musicToggle;
     [SerializeField] Image SFXToggle;
     [SerializeField]GameObject settingsPopUp;
+    [SerializeField]GameObject quitPopUp;
     [SerializeField]GameObject popUpBG;
     [SerializeField]CanvasGroup ArenaUI;
     public List<Sprite> soundIcon = new List<Sprite>();
@@ -46,6 +47,21 @@ public void OpenSettings()
 public void CloseSettings()
 {
     settingsPopUp.SetActive(false);
+    ArenaUI.blocksRaycasts = true;
+    popUpBG.SetActive(false);
+
+
+}
+public void OpenQuit()
+{
+    quitPopUp.SetActive(true);
+    ArenaUI.blocksRaycasts = false;
+    popUpBG.SetActive(true);
+}
+
+public void CloseQuit()
+{
+    quitPopUp.SetActive(false);
     ArenaUI.blocksRaycasts = true;
     popUpBG.SetActive(false);
 
