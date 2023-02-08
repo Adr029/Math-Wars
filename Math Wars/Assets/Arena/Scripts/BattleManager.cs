@@ -859,9 +859,9 @@ void FixedUpdate()
       IEnumerator FadeTown()
     {
         animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => transition.color.a == 1);
         Destroy(playerClone);
         Destroy(enemyClone);
-        yield return new WaitUntil(() => transition.color.a == 1);
         SceneManager.LoadScene("Math Town");
 
         
