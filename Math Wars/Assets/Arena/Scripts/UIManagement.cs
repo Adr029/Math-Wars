@@ -14,7 +14,9 @@ public class UIManagement : MonoBehaviour
     [SerializeField]GameObject choice2;
     [SerializeField]GameObject choice3;
     [SerializeField]GameObject choice4;
-    [SerializeField]GameObject confirm;
+    //[SerializeField]GameObject confirm;
+    [SerializeField]GameObject confirmAttack;
+    [SerializeField]GameObject confirmHeal;
     [SerializeField]GameObject timer;
     [SerializeField]GameObject question;
     public GameObject statusScroll;
@@ -34,7 +36,9 @@ public void ChooseAction()
     choice2.SetActive(false);
     choice3.SetActive(false);
     choice4.SetActive(false);
-    confirm.SetActive(false);
+    //confirm.SetActive(false);
+    confirmAttack.SetActive(false);
+    confirmHeal.SetActive(false);
     timer.SetActive(false);
     question.SetActive(false);
 }
@@ -54,7 +58,9 @@ public void SelectTopic()
     choice2.SetActive(false);
     choice3.SetActive(false);
     choice4.SetActive(false);
-    confirm.SetActive(false);
+    //confirm.SetActive(false);
+    confirmAttack.SetActive(false);
+    confirmHeal.SetActive(false);
     timer.SetActive(false);
     question.SetActive(false);
 
@@ -73,7 +79,9 @@ public void ChooseAnswer()
     choice2.SetActive(true);
     choice3.SetActive(true);
     choice4.SetActive(true);
-    confirm.SetActive(true);
+    //confirm.SetActive(true);
+    confirmAttack.SetActive(true);
+    confirmHeal.SetActive(true);
     timer.SetActive(true);
     question.SetActive(true);
 
@@ -90,7 +98,9 @@ public void EnemyTurn()
     choice2.SetActive(false);
     choice3.SetActive(false);
     choice4.SetActive(false);
-    confirm.SetActive(false);
+   // confirm.SetActive(false);
+    confirmAttack.SetActive(false);
+    confirmHeal.SetActive(false);
     timer.SetActive(false);
     question.SetActive(false);
 }

@@ -39,6 +39,10 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Slider PlayerHP;
     [SerializeField]Slider EnemyHP;
     [SerializeField]Button Confirm;
+    [SerializeField]Button ConfirmAttack;
+    [SerializeField]Button ConfirmHeal;
+    [SerializeField]GameObject ConfirmAttackGO;
+    [SerializeField]GameObject ConfirmHealGO;
     GameObject playerClone;
     GameObject enemyClone;
     UIManagement UI;
@@ -167,7 +171,22 @@ IEnumerator SetupBattle()
 void PlayerTurn()
 {
    UI.ChooseAction();
-   Confirm.interactable = false;
+   //Confirm.interactable = false;
+   switch (playerchoice)
+    {
+    case "Attack":
+        ConfirmAttack.interactable = false;
+        ConfirmHealGO.SetActive(false);  
+    break;
+        
+    case "Heal":
+        ConfirmHeal.interactable = false;
+        ConfirmAttackGO.SetActive(false);
+    break;
+    }
+
+   //ConfirmAttack.interactable = false;
+   //ConfirmHeal.interactable = false;
    enemy1.IdleAnimate();
 }
 
@@ -374,6 +393,19 @@ topic = button.name;
 
 UI.ChooseAnswer();
     
+switch (playerchoice)
+    {
+    case "Attack":
+        ConfirmAttack.interactable = false;
+        ConfirmHealGO.SetActive(false);  
+    break;
+        
+    case "Heal":
+        ConfirmHeal.interactable = false;
+        ConfirmAttackGO.SetActive(false);
+    break;
+    }
+
     Timer();
     runTimer = true;
 if (!storyMode)
@@ -650,11 +682,27 @@ void PlayerWin()
     }
 }
 
-public void ShowConfirm()
+/*public void ShowConfirm()
 {
-
+    
     Confirm.interactable = true;
 
+}*/
+
+public void ShowConfirmAttackHeal()
+{
+    switch (playerchoice)
+    {
+    case "Attack":
+        ConfirmAttack.interactable = true;
+        ConfirmHealGO.SetActive(false);  
+    break;
+        
+    case "Heal":
+        ConfirmHeal.interactable = true;
+        ConfirmAttackGO.SetActive(false);
+    break;
+    }
 }
 
 public void CheckAnswer()
