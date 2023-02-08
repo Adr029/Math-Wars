@@ -901,8 +901,7 @@ break;
 }
 }
 
-//Story Mode Questions (answers to be replaced)
-
+//Story Mode Questions 
 public void AlgebraLevel1()
 {
 dice = Random.Range(0,30);

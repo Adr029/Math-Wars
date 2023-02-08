@@ -24,6 +24,7 @@ public class BattleManager : MonoBehaviour
     string selectedLevel;
     public int levelUnlocked;
     public List<Sprite> bgOptions = new List<Sprite>();
+    public List<Sprite> WinLose = new List<Sprite>();
 
 //end of story mode variables
     public SpriteRenderer background;
@@ -177,11 +178,13 @@ void PlayerTurn()
     case "Attack":
         ConfirmAttack.interactable = false;
         ConfirmHealGO.SetActive(false);  
+
     break;
         
     case "Heal":
         ConfirmHeal.interactable = false;
         ConfirmAttackGO.SetActive(false);
+
     break;
     }
 
@@ -202,13 +205,14 @@ void PlayerTurn()
     else
     {
         UI.ChooseAnswer();
+        UI.ShowAttack();
         runTimer = true;
 
         switch (chosenKingdom)
         {
             case "Kingdom1":
                 questions.Algebra(); 
-            /*
+            
                 switch (selectedLevel)
                 {
                     case "1":
@@ -227,11 +231,11 @@ void PlayerTurn()
                        AlgebraLevel5(); 
                     break;
                 }           
-                */
+                
             break;
             case "Kingdom2":
                 questions.Trigonometry();
-                 /*
+                 
                 switch (selectedLevel)
                 {
                     case "1":
@@ -250,11 +254,11 @@ void PlayerTurn()
                         TrigonometryLevel5(); 
                     break;
                 }           
-                */
+                
             break;
             case "Kingdom3":
                 questions.Calculus();
-                 /*
+                 
                 switch (selectedLevel)
                 {
                     case "1":
@@ -273,7 +277,7 @@ void PlayerTurn()
                         CalculusLevel5(); 
                     break;
                 }           
-                */
+                
             break;
         }
     }
@@ -291,12 +295,13 @@ void PlayerTurn()
         else
         {
         UI.ChooseAnswer();
+        UI.ShowHeal();
+
         runTimer = true;
          switch (chosenKingdom)
         {
             case "Kingdom1":
-                questions.Algebra(); 
-            /*
+            
                 switch (selectedLevel)
                 {
                     case "1":
@@ -312,14 +317,13 @@ void PlayerTurn()
                         questions.AlgebraLevel4(); 
                     break;
                     case "5":
-                        questions.AlgebraLevel5(); 
+                        AlgebraLevel5(); 
                     break;
                 }           
-                */
+                
             break;
             case "Kingdom2":
-                questions.Trigonometry();
-                 /*
+                 
                 switch (selectedLevel)
                 {
                     case "1":
@@ -335,14 +339,13 @@ void PlayerTurn()
                         questions.TrigonometryLevel4(); 
                     break;
                     case "5":
-                        questions.TrigonometryLevel5(); 
+                       TrigonometryLevel5(); 
                     break;
                 }           
-                */
+                
             break;
             case "Kingdom3":
-                questions.Calculus();
-                 /*
+                 
                 switch (selectedLevel)
                 {
                     case "1":
@@ -358,10 +361,10 @@ void PlayerTurn()
                         questions.CalculusLevel4(); 
                     break;
                     case "5":
-                        questions.CalculusLevel5(); 
+                        CalculusLevel5(); 
                     break;
                 }           
-                */
+                
             break;
         }
         }
@@ -398,11 +401,13 @@ switch (playerchoice)
     case "Attack":
         ConfirmAttack.interactable = false;
         ConfirmHealGO.SetActive(false);  
+        
     break;
         
     case "Heal":
         ConfirmHeal.interactable = false;
         ConfirmAttackGO.SetActive(false);
+        
     break;
     }
 
@@ -586,7 +591,8 @@ StartCoroutine(SetupBattle());
 
 void PlayerLose()
 {
-    UI.status.text = "YOU LOSE!";
+    UI.statusScroll.SetActive(false);  
+    StartCoroutine(ShowLose());
     runTimer = false;
     if (!storyMode)
     {
@@ -595,20 +601,23 @@ void PlayerLose()
     else if (storyMode)
     {
         ReturnToMap.SetActive(true);
+        ReturnToKingdom.SetActive(true);
     }
 }
 
 void PlayerWin()
 {
-    UI.EnemyTurn();
-    UI.statusScroll.SetActive(true); 
-    UI.status.text = "YOU WIN!";
+    UI.statusScroll.SetActive(false);  
     enemy1.DeadAnimate();
-
+    StartCoroutine(ShowWin());  
     runTimer = false;
     winCount += 1;
     PlayerPrefs.SetInt("wins", winCount);
 
+    
+    
+    if (!storyMode)
+    {
     switch (difficulty)
     {
     case "Easy":
@@ -624,9 +633,6 @@ void PlayerWin()
     break;
     }
     PlayerPrefs.SetInt("XP", experience);
-    
-    if (!storyMode)
-    {
         ReturnToTown.SetActive(true);
     }
 
@@ -638,7 +644,7 @@ void PlayerWin()
         switch (chosenKingdom)
         {
             case "Kingdom1":
-
+            experience += 15;
             int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level", 1);
             if (int.Parse(selectedLevel) == kingdom1lvl)
             {
@@ -653,6 +659,7 @@ void PlayerWin()
         break;
 
             case "Kingdom2":
+            experience += 30;
             int kingdom2lvl = PlayerPrefs.GetInt("kingdom2Level", 1);
             if (int.Parse(selectedLevel) == kingdom2lvl)
             {
@@ -667,6 +674,7 @@ void PlayerWin()
         break;
 
             case "Kingdom3":
+            experience += 45;
             int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level", 1);
             if (int.Parse(selectedLevel) == kingdom3lvl)
             {
@@ -679,15 +687,10 @@ void PlayerWin()
             }
         break;
         }
+            PlayerPrefs.SetInt("XP", experience);
     }
 }
 
-/*public void ShowConfirm()
-{
-    
-    Confirm.interactable = true;
-
-}*/
 
 public void ShowConfirmAttackHeal()
 {
@@ -907,9 +910,8 @@ void FixedUpdate()
       IEnumerator FadeTown()
     {
         animate.SetBool("Fade", true);
+        UI.winPopUp.SetActive(false);
         yield return new WaitUntil(() => transition.color.a == 1);
-        Destroy(playerClone);
-        Destroy(enemyClone);
         SceneManager.LoadScene("Math Town");
 
         
@@ -917,8 +919,7 @@ void FixedUpdate()
    IEnumerator FadeStory()
     {
         animate.SetBool("Fade", true);
-        Destroy(playerClone);
-        Destroy(enemyClone);
+        UI.winPopUp.SetActive(false);
         yield return new WaitUntil(() => transition.color.a == 1);
         SceneManager.LoadScene("Story Mode Map");
    
@@ -927,11 +928,26 @@ void FixedUpdate()
       IEnumerator FadeKingdom()
     {
         animate.SetBool("Fade", true);
-        Destroy(playerClone);
-        Destroy(enemyClone);
-        yield return new WaitUntil(() => transition.color.a == 1);
+        UI.winPopUp.SetActive(false);
+        yield return new WaitUntil(() => transition.color.a == 1);       
         SceneManager.LoadScene("Kingdom");
         
+    }
+      IEnumerator ShowLose()
+    {
+
+    yield return new WaitForSeconds(3f);
+     UI.winPopUp.SetActive(true);
+    UI.winPopUpSprite.sprite = WinLose[1];
+    UI.popUpsBG.SetActive(true);
+    }
+      IEnumerator ShowWin()
+    {
+
+    yield return new WaitForSeconds(3f);
+     UI.winPopUp.SetActive(true);
+    UI.winPopUpSprite.sprite = WinLose[0];
+    UI.popUpsBG.SetActive(true);
     }
 
 void AlgebraLevel5()
@@ -941,19 +957,19 @@ void AlgebraLevel5()
         switch (dice2)
         {
             case 1:
-                //questions.AlgebraLevel1();
+                questions.AlgebraLevel1();
             break;
 
             case 2:
-                //questions.AlgebraLevel2();
+                questions.AlgebraLevel2();
             break;
 
             case 3:
-                //questions.AlgebraLevel3();
+                questions.AlgebraLevel3();
             break;
 
             case 4:
-                //questions.AlgebraLevel4();
+                questions.AlgebraLevel4();
             break;
   
         }
@@ -966,19 +982,19 @@ void TrigonometryLevel5()
         switch (dice2)
         {
             case 1:
-                //questions.TrigonometryLevel1();
+                questions.TrigonometryLevel1();
             break;
 
             case 2:
-                //questions.TrigonometryLevel2();
+                questions.TrigonometryLevel2();
             break;
 
             case 3:
-                //questions.TrigonometryLevel3();
+                questions.TrigonometryLevel3();
             break;
 
             case 4:
-                //questions.TrigonometryLevel4();
+                questions.TrigonometryLevel4();
             break;
   
         }
@@ -991,19 +1007,19 @@ void CalculusLevel5()
         switch (dice2)
         {
             case 1:
-                //questions.CalculusLevel1();
+                questions.CalculusLevel1();
             break;
 
             case 2:
-                //questions.CalculusLevel2();
+                questions.CalculusLevel2();
             break;
 
             case 3:
-                //questions.CalculusLevel3();
+                questions.CalculusLevel3();
             break;
 
             case 4:
-                //questions.CalculusLevel4();
+                questions.CalculusLevel4();
             break;
   
         }

@@ -19,6 +19,9 @@ public class UIManagement : MonoBehaviour
     [SerializeField]GameObject confirmHeal;
     [SerializeField]GameObject timer;
     [SerializeField]GameObject question;
+    public GameObject winPopUp;
+    public Image winPopUpSprite;
+    public GameObject popUpsBG;
     public GameObject statusScroll;
     public Text status;
  
@@ -80,8 +83,6 @@ public void ChooseAnswer()
     choice3.SetActive(true);
     choice4.SetActive(true);
     //confirm.SetActive(true);
-    confirmAttack.SetActive(true);
-    confirmHeal.SetActive(true);
     timer.SetActive(true);
     question.SetActive(true);
 
@@ -103,6 +104,15 @@ public void EnemyTurn()
     confirmHeal.SetActive(false);
     timer.SetActive(false);
     question.SetActive(false);
+}
+
+public void ShowAttack()
+{
+    confirmAttack.SetActive(true);
+}
+public void ShowHeal()
+{
+    confirmHeal.SetActive(true);
 }
 
 }
