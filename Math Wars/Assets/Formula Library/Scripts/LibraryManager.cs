@@ -9,6 +9,9 @@ public class LibraryManager : MonoBehaviour
    [SerializeField]GameObject algebra;
    [SerializeField]GameObject trigonometry;
    [SerializeField]GameObject calculus;
+   [SerializeField]GameObject algebraSprite;
+   [SerializeField]GameObject trigonometrySprite;
+   [SerializeField]GameObject calculusSprite;
 
 [Header("Books")]
 
