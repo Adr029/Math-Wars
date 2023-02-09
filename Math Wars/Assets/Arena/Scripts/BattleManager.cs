@@ -200,6 +200,7 @@ void PlayerTurn()
     if(!storyMode)
     {
         UI.SelectTopic();
+
     }
 
     else
@@ -291,6 +292,7 @@ void PlayerTurn()
         if (!storyMode)
         {
             UI.SelectTopic();
+
         }
         else
         {
@@ -401,12 +403,16 @@ switch (playerchoice)
     case "Attack":
         ConfirmAttack.interactable = false;
         ConfirmHealGO.SetActive(false);  
+        UI.ShowAttack();
+
         
     break;
         
     case "Heal":
         ConfirmHeal.interactable = false;
         ConfirmAttackGO.SetActive(false);
+        UI.ShowHeal();
+
         
     break;
     }
