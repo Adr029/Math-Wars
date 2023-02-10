@@ -644,6 +644,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2452757786679010451, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2745915130711094776, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -701,8 +705,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6857859808645451786, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+    - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957983651441427513, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_labelHash
+      value: -9277.291
       objectReference: {fileID: 0}
     - target: {fileID: 5371114397579279000, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_IsActive
@@ -712,6 +724,42 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Bounds.m_Center.x
+      value: 0.079461575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Bounds.m_Center.y
+      value: 0.046262503
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Bounds.m_Center.z
+      value: 0.000013078967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 3.4281178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 3.8501205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Bounds.m_Extent.z
+      value: 4.5474735e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_BoneTransforms.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 530586934}
+    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_BoneTransforms.Array.data[1]
+      value: 
+      objectReference: {fileID: 530586933}
     - target: {fileID: 7243186166633880706, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_SortingOrder
       value: -2
@@ -760,6 +808,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &530586933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1489939578189267007, guid: f0bd508ec8a882546955224500c369de, type: 3}
+  m_PrefabInstance: {fileID: 530586928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &530586934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7015436697045497731, guid: f0bd508ec8a882546955224500c369de, type: 3}
+  m_PrefabInstance: {fileID: 530586928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &622111143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,26 +1271,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfac91f4f77ce34080cdbec1e484c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPreview: {fileID: 0}
-  headOptions:
-  - {fileID: 6943535168657398750, guid: 75df6940ab0e69c488534632ed35712a, type: 3}
-  - {fileID: 5945871790718036829, guid: 75df6940ab0e69c488534632ed35712a, type: 3}
-  - {fileID: 1130122704705763027, guid: 75df6940ab0e69c488534632ed35712a, type: 3}
   headChoices:
   - {fileID: 1199349744}
   - {fileID: 1860153781}
   - {fileID: 2039748906}
   headSprite: 0
   headChosen: 0
-  bodyOptions:
-  - {fileID: -1880120661550918566, guid: 9dc2835a64b84d941be2436198c8caf1, type: 3}
-  - {fileID: 3948609945394740131, guid: 9dc2835a64b84d941be2436198c8caf1, type: 3}
   bodyChoices:
   - {fileID: 1451912977}
   - {fileID: 92487064}
   bodySprite: 0
   bodyChosen: 0
   playerLevel: 0
+  kingdom1Complete: 0
+  kingdom2Complete: 0
+  kingdom3Complete: 0
   spritelibrary: {fileID: 530586932}
   Head: {fileID: 530586931}
   Body: {fileID: 530586929}
