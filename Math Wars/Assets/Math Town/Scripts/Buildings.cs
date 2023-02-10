@@ -9,6 +9,7 @@ public class Buildings : MonoBehaviour
     [SerializeField]GameObject resetConfirm;
     [SerializeField]GameObject restartApp;
     [SerializeField]GameObject PopUpsUI;
+    [SerializeField]GameObject QuitPopUp;
     [SerializeField]GameObject Transition;
     [SerializeField]CanvasGroup TownUI;
     [SerializeField]GameObject settingsBG;
@@ -60,6 +61,17 @@ public void Tutorial()
         StartCoroutine(FadeStory());   
         PlayerPrefs.SetInt("storymode", 1);        
         
+    }
+    
+    public void ShowQuit()
+    {
+        settingsBG.SetActive(true);
+        QuitPopUp.SetActive(true);
+    }
+    public void closeExit()
+    {
+        settingsBG.SetActive(false);
+        QuitPopUp.SetActive(false);
     }
     public void Exit()
     {
