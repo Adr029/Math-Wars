@@ -8,11 +8,22 @@ public class ArenaAudio : MonoBehaviour
     int playAudio;
     int playSFX;
     [SerializeField]AudioSource BGMusic;
-    [SerializeField]AudioSource PlayerAttack;
-    [SerializeField]AudioSource PlayerHeal;
-    [SerializeField]AudioSource EnemyAttack;
-    [SerializeField]AudioSource EnemyHeal;
+    [SerializeField]AudioSource Manager;
+    [SerializeField]GameObject BattleManagement;
 
+    public List <AudioClip> EnemyAttack;
+    [SerializeField] AudioClip EnemyHeal;
+    [SerializeField] AudioClip PlayerAttack;
+    int EnemyIndex;
+    BattleManager battle;
+    
+    AudioClip enemyAttack;
+
+    void Start()
+    {
+        battle = BattleManagement.GetComponent<BattleManager>();    
+        EnemyIndex = battle.prefabIndex;
+    }
     void Update()
     {
         playAudio = PlayerPrefs.GetInt("music", 1);
@@ -30,28 +41,44 @@ public class ArenaAudio : MonoBehaviour
     {
         if (playSFX == 1)
         {
-            PlayerAttack.Play();
+            Manager.clip = PlayerAttack;
+            Manager.Play();
         }
     }
     public void PlayPlayerHeal()
     {
         if (playSFX == 1)
             {
-                PlayerHeal.Play();
+                Manager.clip = EnemyHeal;
+                Manager.Play();
             }
     }
     public void PlayEnemyAttack()
     {
         if (playSFX == 1)
             {
-                EnemyAttack.Play();
+                switch (EnemyIndex)
+                {
+                    case 0:
+                            enemyAttack = EnemyAttack[0];
+                            Manager.clip = enemyAttack;
+                            Manager.Play();
+                    break;
+                    case 1:
+                            enemyAttack = EnemyAttack[1];
+                            Manager.clip = enemyAttack;
+                            Manager.Play();
+                    break;
             }
+                }
+                
     }
     public void PlayEnemyHeal()
     {
         if (playSFX == 1)
             {
-                EnemyHeal.Play();
+                Manager.clip = EnemyHeal;
+                Manager.Play();
             }
     }
     public void MatchEnding()

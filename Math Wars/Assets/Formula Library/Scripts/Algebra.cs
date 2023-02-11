@@ -7,22 +7,31 @@ public class Algebra : MonoBehaviour
     // Start is called before the first frame update
 public List<Sprite> formula = new List<Sprite>();
 public SpriteRenderer algebraFormula;
-
-public void OperationsOnFunctions()
+void Start() 
 {
     algebraFormula.sprite = formula[0];
 }
-public void SpecialProducts()
+public void OperationsOnFunctions()
 {
     algebraFormula.sprite = formula[1];
 }
-public void ExponentialRules()
+public void SpecialProducts()
 {
     algebraFormula.sprite = formula[2];
+}
+public void ExponentialRules()
+{
+    algebraFormula.sprite = formula[3];
 }
 
 public void LogarithmicRules()
 {
-    algebraFormula.sprite = formula[3];
+    algebraFormula.sprite = formula[4];
 }
+
+ public void ResetAlge()
+ {
+    algebraFormula.sprite = formula[0];
+
+ }
 }

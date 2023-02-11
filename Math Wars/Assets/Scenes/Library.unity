@@ -218,6 +218,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 408589687}
+        m_TargetAssemblyTypeName: Algebra, Assembly-CSharp
+        m_MethodName: ResetAlge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1124606542}
+        m_TargetAssemblyTypeName: Trigonometry, Assembly-CSharp
+        m_MethodName: ResetTrigo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 259013497}
+        m_TargetAssemblyTypeName: Calculus, Assembly-CSharp
+        m_MethodName: ResetCalc
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &121868280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   formula:
+  - {fileID: 21300000, guid: ee19a255f1bc3724984856b5b495b54a, type: 3}
   - {fileID: 21300000, guid: 662a9f0be2a83c142ba375377a2783fe, type: 3}
   - {fileID: 21300000, guid: 8ac6c336033999242ac51f51fd571fd4, type: 3}
   - {fileID: 21300000, guid: 04c058eafe8741d4db3cc5cdece42d9c, type: 3}
@@ -801,6 +838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   formula:
+  - {fileID: 21300000, guid: add03c287e0f3714896fee841f82f9ef, type: 3}
   - {fileID: 21300000, guid: d1e070283ab1359449e47eaae00c8fed, type: 3}
   - {fileID: 21300000, guid: 14e0415a030b21b4789f409f723a33fb, type: 3}
   - {fileID: 21300000, guid: 63fa05abdd927564ab4af275c5c6cde0, type: 3}
@@ -2903,6 +2941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   formula:
+  - {fileID: 21300000, guid: ee19a255f1bc3724984856b5b495b54a, type: 3}
   - {fileID: 21300000, guid: be530510765f3244a88ad7cd6c476782, type: 3}
   - {fileID: 21300000, guid: f99e00d462e49a64cb891875957c9392, type: 3}
   - {fileID: 21300000, guid: 64b8a3c106879ee49bea061a8f50e1dd, type: 3}
