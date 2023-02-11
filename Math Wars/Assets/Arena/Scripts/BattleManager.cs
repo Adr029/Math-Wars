@@ -39,7 +39,6 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Text TimerUI;
     [SerializeField]Slider PlayerHP;
     [SerializeField]Slider EnemyHP;
-    [SerializeField]Button Confirm;
     [SerializeField]Button ConfirmAttack;
     [SerializeField]Button ConfirmHeal;
     [SerializeField]GameObject ConfirmAttackGO;

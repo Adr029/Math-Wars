@@ -18,6 +18,8 @@ public string difficulty;
 [SerializeField]CanvasGroup arenaMenu;
 [SerializeField]Image tutorialImage;
 [SerializeField]GameObject tutorialBG;
+[SerializeField]Slider PlayerXP;
+
 public List<Sprite> tutorialImages = new List<Sprite>();
 public Image img;
 
@@ -48,6 +50,7 @@ void Start()
     Wins.text = winCount.ToString() + " WINS";
     XP.text = "XP: " + experience.ToString()+ "/100";
     Level.text = "Level "+ playerLevel.ToString();
+    PlayerXP.value = experience;
     tutorialCount = 0;
 }
 public void ChooseDifficulty(Button button)
