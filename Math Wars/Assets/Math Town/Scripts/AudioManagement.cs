@@ -5,8 +5,9 @@ using UnityEngine;
 public class AudioManagement : MonoBehaviour
 {
     int playAudio;
-    // Start is called before the first frame update
+    int playSFX;
     [SerializeField]AudioSource BGMusic;
+    [SerializeField]AudioSource uiSFX;
 
     void Start()
     {
@@ -28,5 +29,15 @@ public class AudioManagement : MonoBehaviour
            BGMusic.Pause();
         }
 
+    }
+
+    public void PlayUISFX()
+    {
+        playSFX = PlayerPrefs.GetInt("SFX");
+
+        if (playSFX == 1)
+        {
+            uiSFX.Play();
+        }
     }
 }

@@ -501,21 +501,20 @@ case 5:
 //enemy heal
 dice = Random.Range(0,3);
 UI.status.text = "ENEMY HEALED";
-UI.statusScroll.SetActive(true); 
+UI.statusScroll.SetActive(true);
+audioclips.PlayEnemyHeal();
+
     switch (dice)
     {
     case 0:
         enemy1.HealEnemy(Random.Range(7,11));
-            audioclips.PlayEnemyHeal();
     break;
     case 1:
         enemy1.HealEnemy(Random.Range(12,16));
-            audioclips.PlayEnemyHeal();
 
     break;
     case 2:
         enemy1.HealEnemy(Random.Range(17,21));
-            audioclips.PlayEnemyHeal();
     break;
     }
 break;
@@ -556,6 +555,7 @@ case 3:
         UI.statusScroll.SetActive(true); 
     break;
     }
+audioclips.PlayEnemyAttack();
 enemy1.AttackAnimate();
 
 break;
@@ -566,23 +566,21 @@ break;
 case 5:
 //enemy heal
 UI.status.text = "ENEMY HEALED";
-UI.statusScroll.SetActive(true); 
+UI.statusScroll.SetActive(true);
+audioclips.PlayEnemyHeal();
+
     switch (chosenKingdom)
     {
-
   case "Kingdom1":        
         enemy1.HealEnemy(Random.Range(11,16));
-        audioclips.PlayEnemyHeal();
 
     break;
     case "Kingdom2":        
         enemy1.HealEnemy(Random.Range(19,25));
-        audioclips.PlayEnemyHeal();
 
     break;
     case "Kingdom3":        
         enemy1.HealEnemy(Random.Range(27,33));
-        audioclips.PlayEnemyHeal();
 
     break;  
     }
@@ -646,9 +644,11 @@ void PlayerWin()
     {
         ReturnToKingdom.SetActive(true);
         ReturnToMap.SetActive(true);
-
+      
         switch (chosenKingdom)
         {
+
+            
             case "Kingdom1":
             experience += 15;
             int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level", 1);
@@ -730,21 +730,21 @@ if (questions.correct)
         break;
         
         case "Heal":
+            audioclips.PlayPlayerHeal();
+
         if (!storyMode)
         {
+
         switch (topic)
             {
             case "Algebra":
                 player1.HealPlayer(Random.Range(11,16));
-                audioclips.PlayPlayerHeal();
             break;
             case "Trigonometry":
                 player1.HealPlayer(Random.Range(19,25));
-                audioclips.PlayPlayerHeal();
             break;
             case "Calculus":
                 player1.HealPlayer(Random.Range(27,33));
-                audioclips.PlayPlayerHeal();
             break;
             }
         }
@@ -754,15 +754,12 @@ if (questions.correct)
             {
             case "Kingdom1":
                 player1.HealPlayer(Random.Range(11,16));
-                audioclips.PlayPlayerHeal();
             break;
             case "Kingdom2":
                 player1.HealPlayer(Random.Range(19,25));
-                audioclips.PlayPlayerHeal();
             break;
             case "Kingdom3":
                 player1.HealPlayer(Random.Range(27,33));
-                audioclips.PlayPlayerHeal();
             break;
             }
         }
@@ -790,7 +787,7 @@ IEnumerator damageEnemy(){
     UI.statusScroll.SetActive(true);  
     UI.EnemyTurn();
 
-            
+    audioclips.PlayPlayerAttack();
     yield return new WaitForSeconds  (1.5f);
     if (!storyMode)
             {
@@ -798,15 +795,13 @@ IEnumerator damageEnemy(){
                 {
                 case "Trigonometry":
                     enemy1.TakeDamage(Random.Range(7,11));
-                    audioclips.PlayPlayerAttack();
                 break;
-                case "Algebra":
+                case "Algebra":                 
                     enemy1.TakeDamage(Random.Range(12,16));
-                    audioclips.PlayPlayerAttack();
                 break;
                 case "Calculus":
                     enemy1.TakeDamage(Random.Range(17,21));
-                    audioclips.PlayPlayerAttack();
+                    
                 break;
                 }
             }
@@ -817,18 +812,16 @@ IEnumerator damageEnemy(){
                 case "Kingdom1":
                     //enemy1.TakeDamage(Random.Range(7,11));
                     enemy1.TakeDamage(100);
-                    audioclips.PlayPlayerAttack();
+                    
                 break;
 
                 case "Kingdom2":
                     //enemy1.TakeDamage(Random.Range(12,16));
                     enemy1.TakeDamage(100);
-                    audioclips.PlayPlayerAttack();
                 break;
                 case "Kingdom3":
                     //enemy1.TakeDamage(Random.Range(17,21));
                     enemy1.TakeDamage(100);
-                    audioclips.PlayPlayerAttack();
                 break;
             }
 
@@ -946,6 +939,10 @@ void FixedUpdate()
     {
 
     yield return new WaitForSeconds(3f);
+      if (storyMode && int.Parse(selectedLevel) == 5)
+            {
+                audioclips.BossFightWin();
+            }
      UI.winPopUp.SetActive(true);
     UI.winPopUpSprite.sprite = WinLose[0];
     UI.popUpsBG.SetActive(true);

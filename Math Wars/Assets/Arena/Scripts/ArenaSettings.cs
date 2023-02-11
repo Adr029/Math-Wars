@@ -37,6 +37,11 @@ void Awake()
         SFXToggle.sprite = soundIcon[0];
     }
     }
+
+    void Update()
+    {
+        
+    }
 public void OpenSettings()
 {
     settingsPopUp.SetActive(true);

@@ -13,7 +13,9 @@ public class ArenaAudio : MonoBehaviour
 
     public List <AudioClip> EnemyAttack;
     [SerializeField] AudioClip EnemyHeal;
+    [SerializeField] AudioClip BossWin;
     [SerializeField] AudioClip PlayerAttack;
+    [SerializeField] AudioSource uiSFX;
     int EnemyIndex;
     BattleManager battle;
     
@@ -23,20 +25,22 @@ public class ArenaAudio : MonoBehaviour
     {
         battle = BattleManagement.GetComponent<BattleManager>();    
         EnemyIndex = battle.prefabIndex;
+
     }
     void Update()
     {
         playAudio = PlayerPrefs.GetInt("music", 1);
         playSFX = PlayerPrefs.GetInt("SFX", 1);
-    }
-
-    public void PlayBG()
-    {
-        if (playAudio == 1)
+        if(playAudio == 1)
         {
-            BGMusic.Play();
+           BGMusic.UnPause();
+        }
+        if(playAudio == 0)
+        {
+           BGMusic.Pause();
         }
     }
+
     public void PlayPlayerAttack()
     {
         if (playSFX == 1)
@@ -83,6 +87,27 @@ public class ArenaAudio : MonoBehaviour
     }
     public void MatchEnding()
     {
+        
+    }
+    public void BossFightWin()
+    {
+        if (playAudio == 1)
+        {
+            BGMusic.volume = 0f;
 
+            Manager.clip = BossWin;
+            Manager.Play();
+        }
+           
+    }
+
+      public void PlayUISFX()
+    {
+        playSFX = PlayerPrefs.GetInt("SFX");
+
+        if (playSFX == 1)
+        {
+            uiSFX.Play();
+        }
     }
 }
