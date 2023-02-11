@@ -20,10 +20,10 @@ void Awake() {
     }
     void Start()
     {
-        experience = PlayerPrefs.GetInt("XP");
+        experience =  PlayerPrefs.GetInt("XP");
         playerLevel = PlayerPrefs.GetInt("Level");
-        level.text = "Level "+ playerLevel.ToString();
-        XP.text = "XP: " + experience.ToString()+ "/100";        
+        level.text =  playerLevel.ToString();
+        //XP.text =     experience.ToString()+ "/100";        
         computeLevel();
         PlayerXP.value = experience;
 
