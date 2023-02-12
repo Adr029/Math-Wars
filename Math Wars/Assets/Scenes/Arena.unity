@@ -1397,9 +1397,9 @@ MonoBehaviour:
   levelUnlocked: 0
   bgOptions:
   - {fileID: 21300000, guid: edc8faefe0b194c41a5d8ba1463ed6ca, type: 3}
-  - {fileID: 21300000, guid: 0f392a2ef66d6e64182807ead6be35e3, type: 3}
-  - {fileID: 21300000, guid: 4a8aca5eca0cfcf499e20f93f141e2d5, type: 3}
-  - {fileID: 21300000, guid: eca36aecf24371a46bb2e7a1d24babcf, type: 3}
+  - {fileID: 21300000, guid: 96ea06c4851a50342a7dfbd4d21105a4, type: 3}
+  - {fileID: 21300000, guid: 62436d9bf45ab6d4c9bd81d7b4bf86f5, type: 3}
+  - {fileID: 21300000, guid: 45909ac93e6e21a459f53f6b589b5317, type: 3}
   WinLose:
   - {fileID: 21300000, guid: 654e792f5f4ba054a8fda8e2e567f6ca, type: 3}
   - {fileID: 21300000, guid: 107c0e0d2c96e12439d2fc15e18b2290, type: 3}
