@@ -52,10 +52,8 @@ public class BattleManager : MonoBehaviour
     string topic;
     EnemyUnit enemy1;
     PlayerUnit player1;
-    List<GameObject> enemyPrefabs = new List<GameObject>();
-    List<GameObject> kingPrefabs = new List<GameObject>();
-    public GameObject Enemy1;
-    public GameObject Enemy2;
+    public List<GameObject> enemyPrefabs = new List<GameObject>();
+    public List<GameObject> kingPrefabs = new List<GameObject>();
     public int prefabIndex;
     int storyStatus;
     bool storyMode = false;
@@ -70,10 +68,9 @@ void Start()
     storyStatus = PlayerPrefs.GetInt("storymode");
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
-    enemyPrefabs.Add(Enemy1);
-    enemyPrefabs.Add(Enemy2);
-    prefabIndex = UnityEngine.Random.Range(0,2);
-    // for expansion pag dumami na enemies
+   
+    prefabIndex = Random.Range(0,3);
+    // for expansion pag dumami na enemies, limit lang range bago umabot sa index ng kings
 
     Scene currentScene = SceneManager.GetActiveScene();
 
@@ -98,7 +95,7 @@ void Start()
     }
     else
     {
-     background.sprite = bgOptions[0];
+        background.sprite = bgOptions[0];
 
     }
 
@@ -113,20 +110,19 @@ public void BeginBattle()
         switch (chosenKingdom)
             {
                 case "Kingdom1":
-                    //enemyClone = (GameObject)Instantiate(kingPrefabs[0], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[1], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[3], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    prefabIndex = 3;
                 break;
 
                 case "Kingdom2":
-                    //enemyClone = (GameObject)Instantiate(kingPrefabs[1], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[0], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[3], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    prefabIndex = 3;
 
                 break;
 
                 case "Kingdom3":
-                    //enemyClone = (GameObject)Instantiate(kingPrefabs[2], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[1], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[3], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    prefabIndex = 3;
 
                 break;
             }
@@ -140,6 +136,9 @@ public void BeginBattle()
                 enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
             break;
             case 1:
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+            break;
+            case 2:
                 enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
             break;
         }
@@ -490,6 +489,7 @@ case 3:
     }
 
 audioclips.PlayEnemyAttack();
+audioclips.PlayHurt();
 enemy1.AttackAnimate();
 
 break;
@@ -555,7 +555,10 @@ case 3:
         UI.statusScroll.SetActive(true); 
     break;
     }
+audioclips.PlayArmySFX();
 audioclips.PlayEnemyAttack();
+audioclips.PlayHurt();
+
 enemy1.AttackAnimate();
 
 break;
@@ -617,7 +620,6 @@ void PlayerWin()
     runTimer = false;
     winCount += 1;
     PlayerPrefs.SetInt("wins", winCount);
-
     
     
     if (!storyMode)
@@ -788,8 +790,8 @@ IEnumerator damageEnemy(){
     UI.EnemyTurn();
 
     audioclips.PlayPlayerAttack();
-    yield return new WaitForSeconds  (1.5f);
-    audioclips.PlayEnemyHurt();
+    yield return new WaitForSeconds(1.5f);
+    audioclips.PlayHurt();
     if (!storyMode)
             {
             switch (topic)
@@ -808,6 +810,7 @@ IEnumerator damageEnemy(){
             }
            else if (storyMode)
            {
+            audioclips.PlayArmySFX();
             switch(chosenKingdom)
             {
                 case "Kingdom1":
@@ -931,7 +934,8 @@ void FixedUpdate()
       IEnumerator ShowLose()
     {
 
-    yield return new WaitForSeconds(3f);
+    yield return new WaitForSeconds(2.5f);
+    audioclips.PlayMatchLose();
      UI.winPopUp.SetActive(true);
     UI.winPopUpSprite.sprite = WinLose[1];
     UI.popUpsBG.SetActive(true);
@@ -939,11 +943,17 @@ void FixedUpdate()
       IEnumerator ShowWin()
     {
 
-    yield return new WaitForSeconds(3f);
+    yield return new WaitForSeconds(2.5f);
       if (storyMode && int.Parse(selectedLevel) == 5)
             {
                 audioclips.BossFightWin();
             }
+        else
+        {
+                audioclips.PlayMatchWin();
+
+        }
+
      UI.winPopUp.SetActive(true);
     UI.winPopUpSprite.sprite = WinLose[0];
     UI.popUpsBG.SetActive(true);

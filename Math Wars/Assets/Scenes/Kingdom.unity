@@ -544,7 +544,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 29d87e6c89c1a0a46bad1770fde22b42, type: 3}
   - {fileID: 21300000, guid: 2128545ab996c8244975b2db2610e430, type: 3}
   unlocked: {fileID: 21300000, guid: 9ea7b274827e7d24f97f43bbc7bc6acb, type: 3}
-  locked: {fileID: 21300000, guid: 26c1f0ba2a74c2a48b723b5a4b852925, type: 3}
   background: {fileID: 638606536}
   bossBattle: {fileID: 472225915}
   Transition: {fileID: 1464333293}

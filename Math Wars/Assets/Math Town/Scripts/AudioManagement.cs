@@ -8,6 +8,7 @@ public class AudioManagement : MonoBehaviour
     int playSFX;
     [SerializeField]AudioSource BGMusic;
     [SerializeField]AudioSource uiSFX;
+    [SerializeField]AudioSource uiSFXNonWood;
     [SerializeField]AudioClip mapSFX;
     void Start()
     {
@@ -38,6 +39,16 @@ public class AudioManagement : MonoBehaviour
         if (playSFX == 1)
         {
             uiSFX.Play();
+        }
+    }
+
+    public void PlayUISFXNonWood()
+    {
+        playSFX = PlayerPrefs.GetInt("SFX");
+
+        if (playSFX == 1)
+        {
+            uiSFXNonWood.Play();
         }
     }
     

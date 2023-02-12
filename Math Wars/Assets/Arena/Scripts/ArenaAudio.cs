@@ -14,10 +14,15 @@ public class ArenaAudio : MonoBehaviour
     public List <AudioClip> EnemyAttack;
     [SerializeField] AudioClip EnemyHeal;
     [SerializeField] AudioClip BossWin;
+    [SerializeField] AudioClip MatchWin;
+    [SerializeField] AudioClip MatchLose;
     [SerializeField] AudioClip PlayerAttack;
     public List <AudioClip> EnemyHurt;
     [SerializeField] AudioSource uiSFX;
+    [SerializeField] AudioSource hurtSFX;
+    [SerializeField] AudioSource answerSFX;
     [SerializeField] AudioSource enemySFX;
+    [SerializeField] AudioSource armySFX;
     int EnemyIndex;
     BattleManager battle;
     
@@ -59,7 +64,7 @@ public class ArenaAudio : MonoBehaviour
                 enemySFX.Play();
             }
     }
-    public void PlayEnemyHurt()
+    public void PlayHurt()
     {
         if (playSFX == 1)
             {
@@ -67,28 +72,26 @@ public class ArenaAudio : MonoBehaviour
                 switch (hurt)
                 {
                     case 0:
-                        enemySFX.clip = EnemyHurt[0];
+                        hurtSFX.clip = EnemyHurt[0];
                     break;
                     case 1:
-                        enemySFX.clip = EnemyHurt[1];
+                        hurtSFX.clip = EnemyHurt[1];
                     break;
                     case 2:
-                        enemySFX.clip = EnemyHurt[2];
+                        hurtSFX.clip = EnemyHurt[2];
                     break;
                     case 3:
-                        enemySFX.clip = EnemyHurt[3];
+                        hurtSFX.clip = EnemyHurt[3];
                     break;
                     case 4:
-                        enemySFX.clip = EnemyHurt[4];
+                        hurtSFX.clip = EnemyHurt[4];
                     break;
                     case 5:
-                        enemySFX.clip = EnemyHurt[5];
+                        hurtSFX.clip = EnemyHurt[5];
                     break;
-                    case 6:
-                        enemySFX.clip = EnemyHurt[6];
-                    break;
+
                 }
-                    enemySFX.Play();
+                    hurtSFX.Play();
 
             }
     }
@@ -104,6 +107,8 @@ public class ArenaAudio : MonoBehaviour
                             enemySFX.Play();
                     break;
                     case 1:
+                    case 2:
+                    case 3:
                             enemyAttack = EnemyAttack[1];
                             enemySFX.clip = enemyAttack;
                             enemySFX.Play();
@@ -120,9 +125,25 @@ public class ArenaAudio : MonoBehaviour
                 enemySFX.Play();
             }
     }
-    public void MatchEnding()
+    public void PlayMatchLose()
     {
-        
+        if (playAudio == 1)
+        {
+            BGMusic.volume = 0f;
+
+            Manager.clip = MatchLose;
+            Manager.Play();
+        }
+    }
+    public void PlayMatchWin()
+    {
+        if (playAudio == 1)
+        {
+            BGMusic.volume = 0f;
+
+            Manager.clip = MatchWin;
+            Manager.Play();
+        }
     }
     public void BossFightWin()
     {
@@ -138,11 +159,26 @@ public class ArenaAudio : MonoBehaviour
 
       public void PlayUISFX()
     {
-        playSFX = PlayerPrefs.GetInt("SFX");
 
         if (playSFX == 1)
         {
             uiSFX.Play();
+        }
+    }
+      public void PlayAnswerSFX()
+    {
+
+        if (playSFX == 1)
+        {
+            answerSFX.Play();
+        }
+    }
+      public void PlayArmySFX()
+    {
+            //consider randomizing army sfx parang sa ginawa sa hurt
+        if (playSFX == 1)
+        {
+            armySFX.Play();
         }
     }
 }
