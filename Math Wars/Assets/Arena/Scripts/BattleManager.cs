@@ -789,6 +789,7 @@ IEnumerator damageEnemy(){
 
     audioclips.PlayPlayerAttack();
     yield return new WaitForSeconds  (1.5f);
+    audioclips.PlayEnemyHurt();
     if (!storyMode)
             {
             switch (topic)
