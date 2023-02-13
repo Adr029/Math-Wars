@@ -5,7 +5,7 @@ using UnityEngine.Experimental.U2D.Animation;
 
 public class PlayerUnit : MonoBehaviour
 {    
-
+int weaponSprite;    
 int bodySprite;
 int headSprite;
 [Header("Player Sprite")]
@@ -17,12 +17,14 @@ public int CurrentHealth;
 [SerializeField]SpriteLibrary spritelibrary;
 [SerializeField]SpriteResolver Head;
 [SerializeField]SpriteResolver Body;
+[SerializeField]SpriteResolver Weapon;
 
 
 private void Awake() 
 {
     headSprite = PlayerPrefs.GetInt("head");
     bodySprite = PlayerPrefs.GetInt("body");
+    weaponSprite = PlayerPrefs.GetInt("body");
 
 }
 public void Start()
@@ -34,6 +36,8 @@ public void Start()
         Head.ResolveSpriteToSpriteRenderer();
         Body.SetCategoryAndLabel(Body.GetCategory(), bodySprite.ToString());
         Body.ResolveSpriteToSpriteRenderer();
+        Weapon.SetCategoryAndLabel(Weapon.GetCategory(), weaponSprite.ToString());
+        Weapon.ResolveSpriteToSpriteRenderer();
 }   
 
 public void HealPlayer(int heal)
