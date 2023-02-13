@@ -8,16 +8,21 @@ using UnityEngine.Experimental.U2D.Animation;
 
 public class CharacterCustomize : MonoBehaviour
 {
-    [Header("Head")]
+    [Header("Head Sprites")]
     public List<Button> headChoices = new List<Button>();
+    public List<GameObject> headLocks = new List<GameObject>();
+
     public int headSprite;    
     public int headChosen = 0;
-    [Header("Body")]
+    [Header("Body Sprites")]
     public List<Button> bodyChoices = new List<Button>();
+    public List<GameObject> bodyLocks = new List<GameObject>();
+
     public int bodySprite;    
     public int bodyChosen = 0;
-    [Header("Weapon")]
+    [Header("Weapon Sprites")]
     public List<Button> weaponChoices = new List<Button>();
+    public List<GameObject> weaponLocks = new List<GameObject>();
     public int weaponSprite;    
     public int weaponChosen = 0;
     public int playerLevel = 0;
@@ -50,14 +55,21 @@ public class CharacterCustomize : MonoBehaviour
        
             if (playerLevel >= 1)
             {
-                headChoices[0].interactable = true;
+                headChoices[1].interactable = true;
                 bodyChoices[1].interactable = true;
-                weaponChoices[0].interactable = true;
+                weaponChoices[1].interactable = true;
+                headLocks[1].SetActive(false);
+                bodyLocks[1].SetActive(false);
+                //weaponLocks[1].SetActive(false);
             }
             if (playerLevel >= 2)
             {
-                headChoices[1].interactable = true;
+                headChoices[2].interactable = true;
+                headLocks[2].SetActive(false);
+                //bodyLocks[2].SetActive(false);
+                //weaponLocks[2].SetActive(false);                
             }
+    
             // copy paste gang mabuo lahat
 
             if (kingdom1Complete == 1)
@@ -65,6 +77,9 @@ public class CharacterCustomize : MonoBehaviour
                 headChoices[3].interactable = true;
                 bodyChoices[2].interactable = true;
                 weaponChoices[1].interactable = true;
+                headLocks[3].SetActive(false);
+                bodyLocks[2].SetActive(false);
+                weaponLocks[1].SetActive(false);  
  
 
             }
@@ -73,6 +88,9 @@ public class CharacterCustomize : MonoBehaviour
                 headChoices[4].interactable = true;
                 bodyChoices[3].interactable = true;
                 weaponChoices[2].interactable = true;
+                headLocks[4].SetActive(false);
+                bodyLocks[3].SetActive(false);
+                weaponLocks[2].SetActive(false);  
 
 
             }
@@ -81,6 +99,9 @@ public class CharacterCustomize : MonoBehaviour
                 headChoices[5].interactable = true;
                 bodyChoices[4].interactable = true;
                 weaponChoices[3].interactable = true;
+                headLocks[5].SetActive(false);
+                bodyLocks[4].SetActive(false);
+                weaponLocks[3].SetActive(false);  
 
 
             }
