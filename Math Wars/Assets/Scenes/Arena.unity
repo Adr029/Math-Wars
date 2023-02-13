@@ -2175,6 +2175,9 @@ MonoBehaviour:
   EnemyAttack:
   - {fileID: 8300000, guid: 0101bb8f0ed8f6143b57b64f0a053c3f, type: 3}
   - {fileID: 8300000, guid: 3032ff2afb42f7c4dbe565683efbc467, type: 3}
+  - {fileID: 8300000, guid: 9e0cd128266d88447ae96e74a695dbc8, type: 3}
+  - {fileID: 8300000, guid: f922868657b141845a96973491ae7df4, type: 3}
+  - {fileID: 8300000, guid: 9c0d41a9ac781994aa984f4e4bb1cbda, type: 3}
   EnemyHeal: {fileID: 8300000, guid: 737b5b302de594f4b9e6ba4c0a8a1eb4, type: 3}
   BossWin: {fileID: 8300000, guid: d36ab66d02f594641b9effbda20a7fea, type: 3}
   MatchWin: {fileID: 8300000, guid: ba144eef8ebeb51488788a77dd4c12f5, type: 3}
