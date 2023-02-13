@@ -69,7 +69,7 @@ void Start()
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
    
-    prefabIndex = Random.Range(0,3);
+    prefabIndex = Random.Range(0,4);
     // for expansion pag dumami na enemies, limit lang range bago umabot sa index ng kings
 
     Scene currentScene = SceneManager.GetActiveScene();
@@ -110,19 +110,19 @@ public void BeginBattle()
         switch (chosenKingdom)
             {
                 case "Kingdom1":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[3], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-                    prefabIndex = 3;
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    prefabIndex = 4;
                 break;
 
                 case "Kingdom2":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[3], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-                    prefabIndex = 3;
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    prefabIndex = 4;
 
                 break;
 
                 case "Kingdom3":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[3], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
-                    prefabIndex = 3;
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    prefabIndex = 4;
 
                 break;
             }
@@ -139,6 +139,9 @@ public void BeginBattle()
                 enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
             break;
             case 2:
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+            break;
+            case 3:
                 enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
             break;
         }

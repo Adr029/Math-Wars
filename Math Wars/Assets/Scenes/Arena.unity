@@ -1564,6 +1564,7 @@ MonoBehaviour:
   - {fileID: 4710941720534787603, guid: a318e2e39ed6db74a8d8f5381f0d26f3, type: 3}
   - {fileID: 4326534732453397616, guid: 47ce4bc99386e5745a84c4caa1517b5e, type: 3}
   - {fileID: 3879361909803106384, guid: dd0f4cfbb4392f0498a202e32b2b3226, type: 3}
+  - {fileID: 942231122117852605, guid: d2990f392aba2f745a010357e015ba82, type: 3}
   - {fileID: 4416960217665190756, guid: 7cc2d39c4fdb431478809aedfa04e73c, type: 3}
   kingPrefabs:
   - {fileID: 4416960217665190756, guid: 7cc2d39c4fdb431478809aedfa04e73c, type: 3}
