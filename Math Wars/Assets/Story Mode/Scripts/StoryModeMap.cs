@@ -10,10 +10,11 @@ public class StoryModeMap : MonoBehaviour
 public string kingdomName;
 [SerializeField]GameObject tutorialPopup;
 [SerializeField]GameObject tutorialUI;
+[SerializeField]GameObject selectionPopup;
+[SerializeField]GameObject selectionUI;
 [SerializeField]GameObject Transition;
 [SerializeField]GameObject tutorialBG;
 [SerializeField]CanvasGroup mapUI;
-
 [SerializeField]Image tutorialImage;
 public List<Sprite> tutorialImages = new List<Sprite>();
 
@@ -63,14 +64,28 @@ void Awake()
     tutorialCount = 0;
     tutorialPopup.SetActive(true);
     tutorialImage.sprite = tutorialImages[0];
-    tutorialBG.SetActive(true);
+    selectionUI.SetActive(false);
+
   
 }
 public void CloseTutorial()
 {
     tutorialPopup.SetActive(false);
     tutorialUI.SetActive(false);
-    tutorialBG.SetActive(false);
+    mapUI.blocksRaycasts = true;
+
+}
+public void OpenSelection()
+{
+    selectionPopup.SetActive(true);
+    selectionUI.SetActive(true);
+    mapUI.blocksRaycasts = true;
+
+}
+public void CloseSelection()
+{
+    selectionPopup.SetActive(false);
+    selectionUI.SetActive(false);
     mapUI.blocksRaycasts = true;
 
 }
