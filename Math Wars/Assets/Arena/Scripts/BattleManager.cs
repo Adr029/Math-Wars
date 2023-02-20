@@ -43,8 +43,10 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Button ConfirmHeal;
     [SerializeField]GameObject ConfirmAttackGO;
     [SerializeField]GameObject ConfirmHealGO;
+    [SerializeField]GameObject ArenaUI;
     public GameObject playerClone;
     public GameObject enemyClone;
+    GameObject kingdomWin;
     UIManagement UI;
     QuestionManagement questions;
     ArenaAudio audioclips;
@@ -54,6 +56,7 @@ public class BattleManager : MonoBehaviour
     PlayerUnit player1;
     public List<GameObject> enemyPrefabs = new List<GameObject>();
     public List<GameObject> kingPrefabs = new List<GameObject>();
+    public List<GameObject> kingdomWinPrefabs = new List<GameObject>();
     public int prefabIndex;
     int storyStatus;
     bool storyMode = false;
@@ -126,7 +129,7 @@ public void BeginBattle()
 
                 break;
             }
-            
+            EnemyHP.maxValue = 150;
     }
     else
     {
@@ -667,6 +670,7 @@ void PlayerWin()
 
                 }
             }
+
         break;
 
             case "Kingdom2":
@@ -678,6 +682,8 @@ void PlayerWin()
                 PlayerPrefs.SetInt("kingdom2Level", kingdom2lvl);
             if (kingdom2lvl > 5)
                 {
+                    
+
                     PlayerPrefs.SetInt("kingdom2Complete", 1);
                 }
             }
@@ -696,6 +702,7 @@ void PlayerWin()
                     PlayerPrefs.SetInt("kingdom3Complete", 1);
                 }
             }
+
         break;
         }
             PlayerPrefs.SetInt("XP", experience);
@@ -912,6 +919,10 @@ void FixedUpdate()
     {
         animate.SetBool("Fade", true);
         UI.winPopUp.SetActive(false);
+        kingdomWinPrefabs[0].SetActive(false);
+        kingdomWinPrefabs[1].SetActive(false);
+        kingdomWinPrefabs[2].SetActive(false);
+
         yield return new WaitUntil(() => transition.color.a == 1);
         SceneManager.LoadScene("Math Town");
 
@@ -946,10 +957,22 @@ void FixedUpdate()
       IEnumerator ShowWin()
     {
 
-    yield return new WaitForSeconds(2.5f);
+    yield return new WaitForSeconds(2f);
       if (storyMode && int.Parse(selectedLevel) == 5)
             {
                 audioclips.BossFightWin();
+                if (chosenKingdom == "Kingdom1")
+                {
+                    kingdomWinPrefabs[0].SetActive(true);
+                }
+                else if (chosenKingdom == "Kingdom2")
+                {
+                    kingdomWinPrefabs[1].SetActive(true);
+                }
+                else if (chosenKingdom == "Kingdom3")
+                {
+                    kingdomWinPrefabs[2].SetActive(true);
+                }
             }
         else
         {
