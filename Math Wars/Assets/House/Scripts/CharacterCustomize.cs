@@ -65,8 +65,28 @@ public class CharacterCustomize : MonoBehaviour
             if (playerLevel >= 2)
             {
                 headChoices[2].interactable = true;
+                bodyChoices[2].interactable = true;
                 headLocks[2].SetActive(false);
-                //bodyLocks[2].SetActive(false);
+                bodyLocks[2].SetActive(false);
+                //weaponLocks[2].SetActive(false);                
+            }
+    
+            if (playerLevel >= 3)
+            {
+                headChoices[2].interactable = true;
+                bodyChoices[3].interactable = true;
+
+                headLocks[2].SetActive(false);
+                bodyLocks[3].SetActive(false);
+                //weaponLocks[2].SetActive(false);                
+            }
+    
+            if (playerLevel >= 4)
+            {
+                headChoices[2].interactable = true;
+                bodyChoices[4].interactable = true;
+                headLocks[2].SetActive(false);
+                bodyLocks[4].SetActive(false);
                 //weaponLocks[2].SetActive(false);                
             }
     
@@ -75,10 +95,10 @@ public class CharacterCustomize : MonoBehaviour
             if (kingdom1Complete == 1)
             {
                 headChoices[3].interactable = true;
-                bodyChoices[2].interactable = true;
+                bodyChoices[5].interactable = true;
                 weaponChoices[1].interactable = true;
                 headLocks[3].SetActive(false);
-                bodyLocks[2].SetActive(false);
+                bodyLocks[5].SetActive(false);
                 weaponLocks[1].SetActive(false);  
  
 
@@ -86,10 +106,10 @@ public class CharacterCustomize : MonoBehaviour
             if (kingdom2Complete == 1)
             {
                 headChoices[4].interactable = true;
-                bodyChoices[3].interactable = true;
+                bodyChoices[6].interactable = true;
                 weaponChoices[2].interactable = true;
                 headLocks[4].SetActive(false);
-                bodyLocks[3].SetActive(false);
+                bodyLocks[6].SetActive(false);
                 weaponLocks[2].SetActive(false);  
 
 
@@ -97,10 +117,10 @@ public class CharacterCustomize : MonoBehaviour
             if (kingdom3Complete == 1)
             {
                 headChoices[5].interactable = true;
-                bodyChoices[4].interactable = true;
+                bodyChoices[7].interactable = true;
                 weaponChoices[3].interactable = true;
                 headLocks[5].SetActive(false);
-                bodyLocks[4].SetActive(false);
+                bodyLocks[7].SetActive(false);
                 weaponLocks[3].SetActive(false);  
 
 
