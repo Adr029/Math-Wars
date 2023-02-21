@@ -60,6 +60,8 @@ public class BattleManager : MonoBehaviour
     public int prefabIndex;
     int storyStatus;
     bool storyMode = false;
+
+Vector3 enemyDefaultPos;
 void Awake() 
 {
     Transition.SetActive(true);
@@ -101,12 +103,7 @@ void Start()
         background.sprite = bgOptions[0];
 
     }
-
-    BeginBattle();
-}
-public void BeginBattle()
-{
-    playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Quaternion.identity);
+playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Quaternion.identity);
     
     if (storyMode && selectedLevel == "5") //undergoing testing
     {
@@ -151,7 +148,7 @@ public void BeginBattle()
     }
 
     StartCoroutine(SetupBattle());
-
+    enemyDefaultPos = enemyClone.transform.position;
 }
 
 IEnumerator SetupBattle()
@@ -175,6 +172,7 @@ IEnumerator SetupBattle()
    
 void PlayerTurn()
 {
+    enemyClone.transform.localPosition = enemyDefaultPos;
    UI.ChooseAction();
    switch (playerchoice)
     {
@@ -468,6 +466,10 @@ case 1:
 case 2:
 case 3:
 
+if (prefabIndex != 0)
+{
+    enemyClone.transform.localPosition= new Vector3(-1.3f, enemyDefaultPos.y, 0);
+}
 //enemy attack
     dice = Random.Range(0,3);
     switch (dice)
@@ -566,6 +568,7 @@ audioclips.PlayEnemyAttack();
 audioclips.PlayHurt();
 
 enemy1.AttackAnimate();
+enemyClone.transform.localPosition= new Vector3(-1.5f, enemyDefaultPos.y, 0);
 
 break;
 case 4:
@@ -800,10 +803,11 @@ IEnumerator damageEnemy(){
     UI.EnemyTurn();
 
     audioclips.PlayPlayerAttack();
-    yield return new WaitForSeconds(1.5f);
     audioclips.PlayHurt();
     if (!storyMode)
             {
+        yield return new WaitForSeconds(1.5f);
+
             switch (topic)
                 {
                 case "Trigonometry":
@@ -821,6 +825,8 @@ IEnumerator damageEnemy(){
            else if (storyMode)
            {
             audioclips.PlayArmySFX();
+            yield return new WaitForSeconds(1.5f);
+
             switch(chosenKingdom)
             {
                 case "Kingdom1":

@@ -14,18 +14,13 @@ public class PlayerLevel : MonoBehaviour
 
     public int playerLevel;
 
-void Awake() {
-    computeLevel();
-
-    }
     void Start()
     {
         experience =  PlayerPrefs.GetInt("XP");
         playerLevel = PlayerPrefs.GetInt("Level");
         level.text =  playerLevel.ToString();
-        //XP.text =     experience.ToString()+ "/100";        
-        computeLevel();
         PlayerXP.value = experience;
+        computeLevel();
 
     }
 
@@ -38,6 +33,8 @@ void Awake() {
             experience -= requiredXP;
             PlayerPrefs.SetInt("Level", playerLevel);
             PlayerPrefs.SetInt("XP", experience);
+            level.text =  playerLevel.ToString();
+
         }
 
     }
