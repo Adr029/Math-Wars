@@ -113,18 +113,18 @@ public void BeginBattle()
         switch (chosenKingdom)
             {
                 case "Kingdom1":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(2.5f, 1.6f, 0), Quaternion.identity);
                     prefabIndex = 4;
                 break;
 
                 case "Kingdom2":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(2.5f, 1.6f, 0), Quaternion.identity);
                     prefabIndex = 4;
 
                 break;
 
                 case "Kingdom3":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(2.5f, 1.6f, 0), Quaternion.identity);
                     prefabIndex = 4;
 
                 break;
@@ -142,10 +142,10 @@ public void BeginBattle()
                 enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
             break;
             case 2:
-                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3f, 1.20f, 0), Quaternion.identity);
             break;
             case 3:
-                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(2.71f, 1.27f, 0), Quaternion.identity);
             break;
         }
     }
