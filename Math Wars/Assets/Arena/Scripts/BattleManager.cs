@@ -60,7 +60,13 @@ public class BattleManager : MonoBehaviour
     public int prefabIndex;
     int storyStatus;
     bool storyMode = false;
+//coroutine timers
 
+WaitForSeconds dmgDelay = new WaitForSeconds(0.7f);
+WaitForSeconds delay1 = new WaitForSeconds(1f);
+WaitForSeconds delay15 = new WaitForSeconds(1.5f);
+WaitForSeconds delay2 = new WaitForSeconds(2f);
+WaitForSeconds delay25 = new WaitForSeconds(2.5f);
 Vector3 enemyDefaultPos;
 void Awake() 
 {
@@ -164,7 +170,7 @@ IEnumerator SetupBattle()
     }
     else
     {
-        yield return new WaitForSeconds(2f);
+        yield return delay2;
         PlayerTurn();
         Timer();
     }
@@ -383,7 +389,7 @@ IEnumerator fullHealth()
     UI.statusScroll.SetActive(true);
     UI.attack.SetActive(false);
     UI.heal.SetActive(false);
-    yield return new WaitForSeconds(1.5f);
+    yield return delay15;
      UI.status.text = "";
     UI.statusScroll.SetActive(false);
     UI.attack.SetActive(true);
@@ -450,12 +456,12 @@ if (enemy1.CurrentHealth < 100)
     dice = Random.Range(0,5);  
     }
     UI.EnemyTurn();
-yield return new WaitForSeconds(1f);
+yield return delay1;
 player1.IdleAnimate();
 UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
-yield return new WaitForSeconds(2f);
+yield return delay2;
 
 if (!storyMode)
 {
@@ -468,37 +474,27 @@ case 3:
 
 if (prefabIndex != 0)
 {
-    enemyClone.transform.localPosition= new Vector3(-1.3f, enemyDefaultPos.y, 0);
+    enemyClone.transform.localPosition= new Vector3(-1.2f, enemyDefaultPos.y, 0);
 }
+audioclips.PlayEnemyAttack();
+enemy1.AttackAnimate();
+
 //enemy attack
     dice = Random.Range(0,3);
     switch (dice)
     {
     case 0:
-        player1.TakeDamage(Random.Range(7,11));
-        UI.status.text = "ENEMY USED ALGEBRA";
-        UI.statusScroll.SetActive(true);  
-        
-
+        StartCoroutine(EnemyAlgebra());
     break;
 
     case 1:
-        player1.TakeDamage(Random.Range(12,16));
-        UI.status.text = "ENEMY USED TRIGONOMETRY";
-        UI.statusScroll.SetActive(true); 
-
+        StartCoroutine(EnemyTrigonometry());
     break;
 
     case 2:
-        player1.TakeDamage(Random.Range(17,21));
-        UI.status.text = "ENEMY USED CALCULUS";
-        UI.statusScroll.SetActive(true); 
+       StartCoroutine(EnemyCalculus());
     break;
     }
-
-audioclips.PlayEnemyAttack();
-audioclips.PlayHurt();
-enemy1.AttackAnimate();
 
 break;
 case 4:
@@ -544,32 +540,23 @@ case 3:
     switch (chosenKingdom)
     {
     case "Kingdom1":        
-        player1.TakeDamage(Random.Range(7,11));
-        UI.status.text = "ENEMY USED ALGEBRA";
-        UI.statusScroll.SetActive(true);  
-
+        StartCoroutine(EnemyAlgebra());
     break;
 
     case "Kingdom2":        
-    player1.TakeDamage(Random.Range(12,16));
-        UI.status.text = "ENEMY USED TRIGONOMETRY";
-        UI.statusScroll.SetActive(true); 
-
+        StartCoroutine(EnemyTrigonometry());
     break;
 
     case "Kingdom3":        
-    player1.TakeDamage(Random.Range(17,21));
-        UI.status.text = "ENEMY USED CALCULUS";
-        UI.statusScroll.SetActive(true); 
+       StartCoroutine(EnemyCalculus());
     break;
     }
 audioclips.PlayArmySFX();
 audioclips.PlayEnemyAttack();
-audioclips.PlayHurt();
-
 enemy1.AttackAnimate();
-enemyClone.transform.localPosition= new Vector3(-1.5f, enemyDefaultPos.y, 0);
-
+enemyClone.transform.localPosition= new Vector3(-1.2f, enemyDefaultPos.y, 0);
+yield return delay1;
+audioclips.PlayHurt();
 break;
 case 4:
     UI.status.text = "ENEMY MISSED";
@@ -604,7 +591,37 @@ break;
 StartCoroutine(SetupBattle());
 
 }
+IEnumerator EnemyAlgebra()
+{
+        UI.status.text = "ENEMY USED ALGEBRA";
+        UI.statusScroll.SetActive(true);  
+        yield return dmgDelay;
+        player1.TakeDamage(Random.Range(7,11)); 
+        audioclips.PlayHurt();
+        UpdateHealth();
 
+}
+IEnumerator EnemyTrigonometry()
+{
+        UI.status.text = "ENEMY USED TRIGONOMETRY";
+        UI.statusScroll.SetActive(true);
+        yield return dmgDelay;
+        player1.TakeDamage(Random.Range(12,16));
+        audioclips.PlayHurt();
+        UpdateHealth();
+
+        
+}
+IEnumerator EnemyCalculus()
+{
+        UI.status.text = "ENEMY USED CALCULUS";
+        UI.statusScroll.SetActive(true); 
+        yield return dmgDelay;
+        player1.TakeDamage(Random.Range(17,21));
+        audioclips.PlayHurt();
+        UpdateHealth();
+
+}
 void PlayerLose()
 {
     UI.statusScroll.SetActive(false);  
@@ -803,17 +820,17 @@ IEnumerator damageEnemy(){
     UI.EnemyTurn();
 
     audioclips.PlayPlayerAttack();
-    audioclips.PlayHurt();
     if (!storyMode)
             {
-        yield return new WaitForSeconds(1.5f);
+        yield return delay15;
+        audioclips.PlayHurt();
 
             switch (topic)
                 {
-                case "Trigonometry":
+                case "Algebra":
                     enemy1.TakeDamage(Random.Range(7,11));
                 break;
-                case "Algebra":                 
+                case "Trigonometry":                 
                     enemy1.TakeDamage(Random.Range(12,16));
                 break;
                 case "Calculus":
@@ -825,7 +842,8 @@ IEnumerator damageEnemy(){
            else if (storyMode)
            {
             audioclips.PlayArmySFX();
-            yield return new WaitForSeconds(1.5f);
+            yield return delay15;
+            audioclips.PlayHurt();
 
             switch(chosenKingdom)
             {
@@ -954,7 +972,7 @@ void FixedUpdate()
       IEnumerator ShowLose()
     {
 
-    yield return new WaitForSeconds(2.5f);
+    yield return delay25;
     audioclips.PlayMatchLose();
      UI.winPopUp.SetActive(true);
     UI.winPopUpSprite.sprite = WinLose[1];
@@ -963,7 +981,7 @@ void FixedUpdate()
       IEnumerator ShowWin()
     {
  
-    yield return new WaitForSeconds(2f);
+    yield return delay2;
       if (storyMode && int.Parse(selectedLevel) == 5)
             {
                 audioclips.BossFightWin();
