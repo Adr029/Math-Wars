@@ -12,6 +12,8 @@ public class AudioManagement : MonoBehaviour
     [SerializeField]AudioClip mapSFX;
     void Start()
     {
+        playAudio = PlayerPrefs.GetInt("music", 1);
+        playSFX = PlayerPrefs.GetInt("SFX", 1);
 
         if(playAudio == 1)
         {
@@ -21,6 +23,8 @@ public class AudioManagement : MonoBehaviour
     void Update()
     {
         playAudio = PlayerPrefs.GetInt("music", 1);
+        playSFX = PlayerPrefs.GetInt("SFX");
+
         if(playAudio == 1)
         {
            BGMusic.UnPause();
@@ -34,7 +38,7 @@ public class AudioManagement : MonoBehaviour
 
     public void PlayUISFX()
     {
-        playSFX = PlayerPrefs.GetInt("SFX");
+        playSFX = PlayerPrefs.GetInt("SFX", 1);
 
         if (playSFX == 1)
         {
@@ -44,7 +48,7 @@ public class AudioManagement : MonoBehaviour
 
     public void PlayUISFXNonWood()
     {
-        playSFX = PlayerPrefs.GetInt("SFX");
+        playSFX = PlayerPrefs.GetInt("SFX", 1);
 
         if (playSFX == 1)
         {
@@ -54,7 +58,7 @@ public class AudioManagement : MonoBehaviour
     
     public void PlayMapSFX()
     {
-        playSFX = PlayerPrefs.GetInt("SFX");
+        playSFX = PlayerPrefs.GetInt("SFX", 1);
 
         if (playSFX == 1)
         {

@@ -53,14 +53,14 @@ public class Settings : MonoBehaviour
     {
         SFXToggle.sprite = soundIcon[1];
     }
-    else if (music == 0)
+    else if (SFX == 0)
     {
         SFXToggle.sprite = soundIcon[0];
     }
     }
    public void ToggleMusic()
    {
-    music = PlayerPrefs.GetInt("music");
+    music = PlayerPrefs.GetInt("music", 1);
     if (music == 1)
     {
         PlayerPrefs.SetInt("music", 0);
@@ -75,7 +75,7 @@ public class Settings : MonoBehaviour
    }
    public void ToggleSFX()
    {
-    SFX = PlayerPrefs.GetInt("SFX");
+    SFX = PlayerPrefs.GetInt("SFX", 1);
     if (SFX == 1)
     {
         PlayerPrefs.SetInt("SFX", 0);
