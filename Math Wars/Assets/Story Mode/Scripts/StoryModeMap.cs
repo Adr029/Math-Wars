@@ -138,11 +138,23 @@ public void NextTutorial()
     
 
 }
+
+public void ShowStory()
+{
+    StartCoroutine(FadeStoryCutscene());
+}
  IEnumerator FadeKingdom()
     {
         animate.SetBool("Fade", true);
         yield return new WaitUntil(() => img.color.a == 1);
         SceneManager.LoadScene("Kingdom");
+
+    }
+ IEnumerator FadeStoryCutscene()
+    {
+        animate.SetBool("Fade", true);
+        yield return new WaitUntil(() => img.color.a == 1);
+        SceneManager.LoadScene("Story Cutscenes");
 
     }
 
