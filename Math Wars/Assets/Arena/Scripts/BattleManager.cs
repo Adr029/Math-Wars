@@ -95,7 +95,7 @@ void Start()
 
             case "Kingdom1":
                 background.sprite = bgOptions[1];
-            break;
+                break;
             case "Kingdom2":
                 background.sprite = bgOptions[2];
             break;
@@ -171,6 +171,7 @@ IEnumerator SetupBattle()
     else
     {
         yield return delay2;
+        enemy1.ResetHeal();
         PlayerTurn();
         Timer();
     }
@@ -457,6 +458,7 @@ if (enemy1.CurrentHealth < 100)
     }
     UI.EnemyTurn();
 yield return delay1;
+player1.ResetHeal();
 player1.IdleAnimate();
 UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
@@ -507,6 +509,7 @@ dice = Random.Range(0,3);
 UI.status.text = "ENEMY HEALED";
 UI.statusScroll.SetActive(true);
 audioclips.PlayEnemyHeal();
+enemy1.HealAnimate();
 
     switch (dice)
     {
@@ -567,6 +570,7 @@ case 5:
 UI.status.text = "ENEMY HEALED";
 UI.statusScroll.SetActive(true);
 audioclips.PlayEnemyHeal();
+enemy1.HealAnimate();
 
     switch (chosenKingdom)
     {
@@ -763,6 +767,7 @@ if (questions.correct)
         
         case "Heal":
             audioclips.PlayPlayerHeal();
+            player1.HealAnimate();
 
         if (!storyMode)
         {

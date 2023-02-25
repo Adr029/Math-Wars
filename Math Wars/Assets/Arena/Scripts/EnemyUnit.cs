@@ -7,6 +7,7 @@ public class EnemyUnit : MonoBehaviour
    public int MaxHealth;
    public int CurrentHealth;
    [SerializeField] Animator animate;
+   [SerializeField] GameObject healAura;
    
     public void HealEnemy(int heal)
    {
@@ -32,7 +33,11 @@ public class EnemyUnit : MonoBehaviour
     }
     public void HealAnimate()
     {
-        animate.SetTrigger("Attacking");
+        healAura.SetActive(true);
+    }
+    public void ResetHeal()
+    {
+        healAura.SetActive(false);
     }
     public void DeadAnimate()
     {

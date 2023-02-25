@@ -3523,37 +3523,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 649180038}
     m_Modifications:
-    - target: {fileID: 530586937, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_labelHash
-      value: -1.3936018e+32
+    - target: {fileID: 257804971, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 751588076443255518, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_SortingOrder
       value: -3
       objectReference: {fileID: 0}
-    - target: {fileID: 1098168933211178432, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1125411795881137752, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Name
       value: Final character sample for skeleeton
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332902830814314154, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2165240874515634664, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2386048191325046483, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 4678936682158018624, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
-    - target: {fileID: 2386048191325046483, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2745915130711094776, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_RootOrder
@@ -3611,71 +3595,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5180549517842946893, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
-    - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957983651441427513, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_labelHash
-      value: -1.3936018e+32
+    - target: {fileID: 3580014644303743187, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5371114397579279000, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5844067406165191769, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_BoneTransforms.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844067406165191769, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_BoneTransforms.Array.data[0]
-      value: 
-      objectReference: {fileID: 1073403505}
-    - target: {fileID: 6053751376633868282, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_BoneTransforms.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_BoneTransforms.Array.data[0]
-      value: 
-      objectReference: {fileID: 1073403504}
-    - target: {fileID: 6939099279364426304, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_BoneTransforms.Array.data[1]
-      value: 
-      objectReference: {fileID: 1073403503}
-    - target: {fileID: 7243186166633880706, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8533270406251444211, guid: f0bd508ec8a882546955224500c369de, type: 3}
-      propertyPath: m_SortingOrder
-      value: -2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0bd508ec8a882546955224500c369de, type: 3}
---- !u!4 &1073403503 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1489939578189267007, guid: f0bd508ec8a882546955224500c369de, type: 3}
-  m_PrefabInstance: {fileID: 1073403502}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1073403504 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7015436697045497731, guid: f0bd508ec8a882546955224500c369de, type: 3}
-  m_PrefabInstance: {fileID: 1073403502}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1073403505 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2562735752549766387, guid: f0bd508ec8a882546955224500c369de, type: 3}
-  m_PrefabInstance: {fileID: 1073403502}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1152303332
 GameObject:
   m_ObjectHideFlags: 0
