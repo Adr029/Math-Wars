@@ -14,10 +14,7 @@ public int MaxHealth = 100;
 public int CurrentHealth;
 [SerializeField] Animator playerAnimate;
 [SerializeField] Animator fireballAnimate;
-[SerializeField]GameObject healAura;
-[SerializeField]GameObject cropAttack;
-[SerializeField]GameObject thunderAttack;
-[SerializeField]GameObject waterAttack;
+public List<GameObject> effects = new List<GameObject>();
 [SerializeField]SpriteLibrary spritelibrary;
 [SerializeField]SpriteResolver Head;
 [SerializeField]SpriteResolver Body;
@@ -35,7 +32,6 @@ public void Start()
 
 {
         CurrentHealth = 100;
-        healAura.SetActive(false);
         Head.SetCategoryAndLabel(Head.GetCategory(), headSprite.ToString());
         Head.ResolveSpriteToSpriteRenderer();
         Body.SetCategoryAndLabel(Body.GetCategory(), bodySprite.ToString());
@@ -67,7 +63,7 @@ public void HealPlayer(int heal)
     public void AttackAnimate()
     {
         playerAnimate.SetTrigger("Attacking");
-        //0 fireball, 1 crop, 2 water, 3 thunder
+        //0 fireball, 1 crop, 2 water, 3 thunder, 4 damaged
 
         switch (weaponSprite)
         {
@@ -75,13 +71,13 @@ public void HealPlayer(int heal)
                 fireballAnimate.SetTrigger("Attacking");
             break;
             case 1:
-                cropAttack.SetActive(true);
+                effects[1].SetActive(true);
             break;
             case 2:
-                waterAttack.SetActive(true);
+                effects[2].SetActive(true);
             break;
             case 3:
-                thunderAttack.SetActive(true);
+                effects[3].SetActive(true);
             break;
         }
     }
@@ -89,22 +85,35 @@ public void HealPlayer(int heal)
     public void IdleAnimate()
     {
         fireballAnimate.ResetTrigger("Attacking");
-        thunderAttack.SetActive(false);
-        cropAttack.SetActive(false);
-        waterAttack.SetActive(false);
+        effects[1].SetActive(false);
+        effects[2].SetActive(false);
+        effects[3].SetActive(false);
+      
 
     }
     
     public void HealAnimate()
     {
 
-        healAura.SetActive(true);
+        effects[0].SetActive(true);
     }
     
     public void ResetHeal()
     {
 
-        healAura.SetActive(false);
+        effects[0].SetActive(false);
+    }
+    
+    public void DmgAnimate()
+    {
+
+        effects[4].SetActive(true);
+    }
+    
+    public void ResetDmg()
+    {
+
+        effects[4].SetActive(false);
     }
     /*
     public void LoseAnimate()
@@ -116,4 +125,6 @@ public void HealPlayer(int heal)
         animate.SetTrigger("Attacking");
     }
     */
+
+
 }

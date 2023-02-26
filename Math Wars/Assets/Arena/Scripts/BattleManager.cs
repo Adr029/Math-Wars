@@ -459,6 +459,7 @@ if (enemy1.CurrentHealth < 100)
     UI.EnemyTurn();
 yield return delay1;
 enemy1.ResetDamage();
+player1.ResetDmg();
 player1.ResetHeal();
 player1.IdleAnimate();
 UI.status.text = "ENEMY TURN...";
@@ -601,6 +602,7 @@ IEnumerator EnemyAlgebra()
         UI.status.text = "ENEMY USED ALGEBRA";
         UI.statusScroll.SetActive(true);  
         yield return dmgDelay;
+        player1.DmgAnimate();
         player1.TakeDamage(Random.Range(7,11)); 
         audioclips.PlayHurt();
         UpdateHealth();
@@ -611,6 +613,7 @@ IEnumerator EnemyTrigonometry()
         UI.status.text = "ENEMY USED TRIGONOMETRY";
         UI.statusScroll.SetActive(true);
         yield return dmgDelay;
+        player1.DmgAnimate();
         player1.TakeDamage(Random.Range(12,16));
         audioclips.PlayHurt();
         UpdateHealth();
@@ -622,6 +625,7 @@ IEnumerator EnemyCalculus()
         UI.status.text = "ENEMY USED CALCULUS";
         UI.statusScroll.SetActive(true); 
         yield return dmgDelay;
+        player1.DmgAnimate();
         player1.TakeDamage(Random.Range(17,21));
         audioclips.PlayHurt();
         UpdateHealth();
