@@ -5317,7 +5317,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experience: 0
   level: {fileID: 1652924515}
-  XP: {fileID: 1317688784}
   PlayerXP: {fileID: 2078763128}
   playerLevel: 0
 --- !u!114 &1652924515 stripped
@@ -7142,6 +7141,18 @@ PrefabInstance:
     - target: {fileID: 412103034648472277, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401342, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401342, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401342, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8326802503477445976, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
       propertyPath: m_AnchorMax.x

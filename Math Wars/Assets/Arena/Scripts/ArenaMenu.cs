@@ -9,7 +9,6 @@ public class ArenaMenu : MonoBehaviour
 {
 public string difficulty;
 [SerializeField]Text Wins;
-[SerializeField]Text XP;
 [SerializeField]Text Level;
 [SerializeField]Button confirm;
 [SerializeField]GameObject tutorialPopup;
@@ -48,7 +47,6 @@ void Start()
     winCount = PlayerPrefs.GetInt("wins");
     playerLevel = PlayerPrefs.GetInt("Level");
     Wins.text = winCount.ToString() + " WINS";
-    XP.text = "XP: " + experience.ToString()+ "/100";
     Level.text = "Level "+ playerLevel.ToString();
     PlayerXP.value = experience;
     tutorialCount = 0;
