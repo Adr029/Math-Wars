@@ -458,6 +458,7 @@ if (enemy1.CurrentHealth < 100)
     }
     UI.EnemyTurn();
 yield return delay1;
+enemy1.ResetDamage();
 player1.ResetHeal();
 player1.IdleAnimate();
 UI.status.text = "ENEMY TURN...";
@@ -829,7 +830,7 @@ IEnumerator damageEnemy(){
             {
         yield return delay15;
         audioclips.PlayHurt();
-
+        enemy1.DamageAnimate();
             switch (topic)
                 {
                 case "Algebra":
@@ -849,6 +850,7 @@ IEnumerator damageEnemy(){
             audioclips.PlayArmySFX();
             yield return delay15;
             audioclips.PlayHurt();
+            enemy1.DamageAnimate();
 
             switch(chosenKingdom)
             {
@@ -880,7 +882,7 @@ IEnumerator damageEnemy(){
             else
             {
                 StartCoroutine(EnemyTurn());
-
+                
             }
 }
 public void Timer()

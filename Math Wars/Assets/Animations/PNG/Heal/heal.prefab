@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5549911957006398602}
   - component: {fileID: 6958288356341164700}
   m_Layer: 0
-  m_Name: 01
+  m_Name: heal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 86881669023353174}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2c3e588b215b7ac4990e3000442651ee, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1547ccaf46811b742b6949d0e1fdd46d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

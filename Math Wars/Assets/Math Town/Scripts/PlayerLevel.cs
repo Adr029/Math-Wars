@@ -7,7 +7,6 @@ public class PlayerLevel : MonoBehaviour
 {
     public int experience;
     public Text level;
-    public Text XP;
     [SerializeField]Slider PlayerXP;
 
     int requiredXP = 100;
