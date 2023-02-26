@@ -2547,7 +2547,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficulty: 
   Wins: {fileID: 1322531691}
-  XP: {fileID: 0}
   Level: {fileID: 1741153142}
   confirm: {fileID: 1073582057}
   tutorialPopup: {fileID: 1609469303}
@@ -2873,8 +2872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.43187, y: 4}
-  m_SizeDelta: {x: 347.31, y: 78.24}
+  m_AnchoredPosition: {x: -169.81, y: 5.95}
+  m_SizeDelta: {x: 336.97, y: 75.91}
   m_Pivot: {x: 1.1962146, y: 0.16312143}
 --- !u!114 &2018953423
 MonoBehaviour:
