@@ -5,7 +5,7 @@ using UnityEngine.Experimental.U2D.Animation;
 
 public class PlayerUnit : MonoBehaviour
 {    
-int weaponSprite;    
+public int weaponSprite;    
 int bodySprite;
 int headSprite;
 [Header("Player Sprite")]

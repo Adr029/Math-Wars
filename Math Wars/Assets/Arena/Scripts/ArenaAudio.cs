@@ -18,6 +18,7 @@ public class ArenaAudio : MonoBehaviour
     [SerializeField] AudioClip MatchLose;
     [SerializeField] AudioClip PlayerAttack;
     public List <AudioClip> EnemyHurt;
+    public List <AudioClip> AttackSFX;
     [SerializeField] AudioSource uiSFX;
     [SerializeField] AudioSource hurtSFX;
     [SerializeField] AudioSource answerSFX;
@@ -25,14 +26,15 @@ public class ArenaAudio : MonoBehaviour
     [SerializeField] AudioSource armySFX;
     int EnemyIndex;
     BattleManager battle;
-    
     AudioClip enemyAttack;
+    int playerWeapon;
 
     void Start()
     {
         battle = BattleManagement.GetComponent<BattleManager>();    
         EnemyIndex = battle.prefabIndex;
-
+        playerWeapon = battle.playerClone.GetComponent<PlayerUnit>().weaponSprite;
+        
     }
     void Update()
     {
@@ -50,10 +52,30 @@ public class ArenaAudio : MonoBehaviour
 
     public void PlayPlayerAttack()
     {
+
         if (playSFX == 1)
         {
-            Manager.clip = PlayerAttack;
+            switch (playerWeapon)
+        {
+        //0 fireball, 1 crop, 2 water, 3 thunder
+        case 0:
+            Manager.clip = AttackSFX[0];
             Manager.Play();
+        break;
+        case 1:
+            Manager.clip = AttackSFX[1];
+            Manager.Play();
+        break;
+        case 2:
+            Manager.clip = AttackSFX[2];
+            Manager.Play();
+        break;
+        case 3:
+            Manager.clip = AttackSFX[3];
+            Manager.Play();
+        break;
+    
+        }
         }
     }
     public void PlayPlayerHeal()
@@ -68,7 +90,7 @@ public class ArenaAudio : MonoBehaviour
     {
         if (playSFX == 1)
             {
-                int hurt = Random.Range(0,7);
+                int hurt = Random.Range(0,6);
                 switch (hurt)
                 {
                     case 0:

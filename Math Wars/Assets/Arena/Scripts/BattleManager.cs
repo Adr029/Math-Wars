@@ -92,7 +92,6 @@ void Start()
         selectedLevel = PlayerPrefs.GetString("selectedLevel");
         switch (chosenKingdom)
         {
-
             case "Kingdom1":
                 background.sprite = bgOptions[1];
                 break;
