@@ -31,7 +31,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject UIManager;
     [SerializeField]GameObject ReturnToTown;
     [SerializeField]GameObject ReturnToMap;
-    [SerializeField]GameObject ReturnToKingdom;
+    [SerializeField]GameObject ContinueButton;
     [SerializeField]GameObject QuestionManager;
     [SerializeField]GameObject Transition;
     [SerializeField]GameObject AudioManager;
@@ -159,15 +159,16 @@ IEnumerator SetupBattle()
     UI = UIManager.GetComponent<UIManagement>();
     questions = QuestionManager.GetComponent<QuestionManagement>();
     UpdateHealth();
+    yield return delay1;
+    enemy1.ResetHeal();
+    player1.ResetDmg();
     if (player1.CurrentHealth <= 0)
     {
         PlayerLose();
     }
     else
     {
-        yield return delay2;
-        enemy1.ResetHeal();
-        player1.ResetDmg();
+        yield return delay1;
         PlayerTurn();
         Timer();
     }
@@ -641,7 +642,6 @@ void PlayerLose()
     else if (storyMode)
     {
         ReturnToMap.SetActive(true);
-        ReturnToKingdom.SetActive(true);
     }
 }
 
@@ -672,12 +672,12 @@ void PlayerWin()
     break;
     }
     PlayerPrefs.SetInt("XP", experience);
-        ReturnToTown.SetActive(true);
+    ReturnToTown.SetActive(true);
     }
 
     else if (storyMode)
     {
-        ReturnToKingdom.SetActive(true);
+        ContinueButton.SetActive(false);
         ReturnToMap.SetActive(true);
       
         switch (chosenKingdom)
@@ -836,13 +836,18 @@ IEnumerator damageEnemy(){
             switch (topic)
                 {
                 case "Algebra":
-                    enemy1.TakeDamage(Random.Range(7,11));
+                    //enemy1.TakeDamage(Random.Range(7,11));
+                    enemy1.TakeDamage(100);
+
                 break;
                 case "Trigonometry":                 
-                    enemy1.TakeDamage(Random.Range(12,16));
+                    //enemy1.TakeDamage(Random.Range(12,16));
+                    enemy1.TakeDamage(100);
+
                 break;
                 case "Calculus":
-                    enemy1.TakeDamage(Random.Range(17,21));
+                    //enemy1.TakeDamage(Random.Range(17,21));
+                    enemy1.TakeDamage(100);
                     
                 break;
                 }
@@ -1018,7 +1023,11 @@ void FixedUpdate()
     UI.winPopUpSprite.sprite = WinLose[0];
     UI.popUpsBG.SetActive(true);
     }
-
+public void PlayAgain()
+{
+    Debug.Log(experience);
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+}
 void AlgebraLevel5()
     {
         int dice2;
