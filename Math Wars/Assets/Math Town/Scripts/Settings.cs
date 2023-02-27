@@ -100,10 +100,12 @@ public class Settings : MonoBehaviour
    public void ShowCredits()
    {
         creditsPopUp.SetActive(true);
+        settingsPopUp.SetActive(false);
    }
    public void CloseCredits()
    {
         creditsPopUp.SetActive(false);
+        settingsPopUp.SetActive(true);
    }
 public void ShowTutorialMathTown()
 {
