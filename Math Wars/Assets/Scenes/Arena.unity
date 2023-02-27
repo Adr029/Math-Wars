@@ -2323,7 +2323,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9e0cd128266d88447ae96e74a695dbc8, type: 3}
   - {fileID: 8300000, guid: f922868657b141845a96973491ae7df4, type: 3}
   - {fileID: 8300000, guid: 9c0d41a9ac781994aa984f4e4bb1cbda, type: 3}
-  EnemyHeal: {fileID: 8300000, guid: 737b5b302de594f4b9e6ba4c0a8a1eb4, type: 3}
+  EnemyHeal: {fileID: 8300000, guid: 8eca73705247f3048bed82574cd54b6f, type: 3}
   BossWin: {fileID: 8300000, guid: d36ab66d02f594641b9effbda20a7fea, type: 3}
   MatchWin: {fileID: 8300000, guid: ba144eef8ebeb51488788a77dd4c12f5, type: 3}
   MatchLose: {fileID: 8300000, guid: de317a5cca3805f41b4d7fd77eeff1a3, type: 3}
