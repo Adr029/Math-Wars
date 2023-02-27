@@ -17,7 +17,9 @@ public List<GameObject> effects = new List<GameObject>();
 [SerializeField]SpriteResolver Head;
 [SerializeField]SpriteResolver Body;
 [SerializeField]SpriteResolver Weapon;
-
+[SerializeField]SpriteResolver RightHand;
+[SerializeField]SpriteResolver LeftLeg;
+[SerializeField]SpriteResolver RightLeg;
 
 private void Awake() 
 {
@@ -36,6 +38,12 @@ public void Start()
         Body.ResolveSpriteToSpriteRenderer();
         Weapon.SetCategoryAndLabel(Weapon.GetCategory(), weaponSprite.ToString());
         Weapon.ResolveSpriteToSpriteRenderer();
+        LeftLeg.SetCategoryAndLabel(LeftLeg.GetCategory(), bodySprite.ToString());
+        LeftLeg.ResolveSpriteToSpriteRenderer();
+        RightHand.SetCategoryAndLabel(RightHand.GetCategory(), bodySprite.ToString());
+        RightHand.ResolveSpriteToSpriteRenderer();
+        RightLeg.SetCategoryAndLabel(RightLeg.GetCategory(), bodySprite.ToString());
+        RightLeg.ResolveSpriteToSpriteRenderer();
 }   
 
 public void HealPlayer(int heal)

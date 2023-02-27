@@ -36,6 +36,9 @@ public class CharacterCustomize : MonoBehaviour
 [SerializeField]SpriteResolver Head;
 [SerializeField]SpriteResolver Body;
 [SerializeField]SpriteResolver Weapon;
+[SerializeField]SpriteResolver RightHand;
+[SerializeField]SpriteResolver LeftLeg;
+[SerializeField]SpriteResolver RightLeg;
 [SerializeField]GameObject Transition;
 
     void Awake() {
@@ -140,6 +143,12 @@ public class CharacterCustomize : MonoBehaviour
         bodyChosen = int.Parse(button.name);
         Body.SetCategoryAndLabel(Body.GetCategory(), bodyChosen.ToString());
         Body.ResolveSpriteToSpriteRenderer();
+        LeftLeg.SetCategoryAndLabel(LeftLeg.GetCategory(), bodyChosen.ToString());
+        LeftLeg.ResolveSpriteToSpriteRenderer();
+        RightHand.SetCategoryAndLabel(RightHand.GetCategory(), bodyChosen.ToString());
+        RightHand.ResolveSpriteToSpriteRenderer();
+        RightLeg.SetCategoryAndLabel(RightLeg.GetCategory(), bodyChosen.ToString());
+        RightLeg.ResolveSpriteToSpriteRenderer();
     }
    public void SelectWeapon (Button button)
     {
