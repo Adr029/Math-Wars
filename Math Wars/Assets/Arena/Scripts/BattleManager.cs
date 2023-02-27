@@ -555,8 +555,10 @@ case 3:
 audioclips.PlayArmySFX();
 audioclips.PlayEnemyAttack();
 enemy1.AttackAnimate();
-enemyClone.transform.localPosition= new Vector3(-1.2f, enemyDefaultPos.y, 0);
-yield return delay1;
+if (prefabIndex != 0)
+{
+    enemyClone.transform.localPosition= new Vector3(-1.2f, enemyDefaultPos.y, 0);
+}yield return delay1;
 audioclips.PlayHurt();
 break;
 case 4:
@@ -987,8 +989,9 @@ void FixedUpdate()
     }
       IEnumerator ShowWin()
     {
- 
-    yield return delay2;
+    yield return delay1;
+    enemy1.ResetDamage();
+    yield return delay1;
       if (storyMode && int.Parse(selectedLevel) == 5)
             {
                 audioclips.BossFightWin();
