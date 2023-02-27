@@ -2000,7 +2000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964493831, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
-      value: -1.2985474e-36
+      value: 1.1562834e+26
       objectReference: {fileID: 0}
     - target: {fileID: 719215360017659798, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_LocalScale.x
@@ -2025,7 +2025,7 @@ PrefabInstance:
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2853501842602199272, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+      objectReference: {fileID: -339388505014090878, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_SortingOrder
       value: -3
