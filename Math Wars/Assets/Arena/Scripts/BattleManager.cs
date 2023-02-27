@@ -1025,7 +1025,6 @@ void FixedUpdate()
     }
 public void PlayAgain()
 {
-    Debug.Log(experience);
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 }
 void AlgebraLevel5()
