@@ -15,11 +15,13 @@ public class PlayerLevel : MonoBehaviour
 
     void Start()
     {
+        
         experience =  PlayerPrefs.GetInt("XP");
         playerLevel = PlayerPrefs.GetInt("Level");
+        computeLevel();
         level.text =  playerLevel.ToString();
         PlayerXP.value = experience;
-        computeLevel();
+        
 
     }
 

@@ -10,9 +10,12 @@ public class PlayGame : MonoBehaviour
     public Image transition;
     public Animator animate;
 
+    int firstPlaythrough;
+
     void Awake()
     {
         transitionBG.SetActive(true);
+        firstPlaythrough = PlayerPrefs.GetInt("firstPlaythrough", 0);
     }
     public void Play()
    {
@@ -22,7 +25,16 @@ public class PlayGame : MonoBehaviour
     {
         animate.SetBool("Fade", true);
         yield return new WaitUntil(() => transition.color.a == 1);
-        SceneManager.LoadScene("Math Town");
+        if (firstPlaythrough == 0)
+        {
+            SceneManager.LoadScene("Story Cutscenes");
+
+
+        }
+        else
+        {
+            SceneManager.LoadScene("Math Town");
+        }
     }
 
     public void ShowCredits()

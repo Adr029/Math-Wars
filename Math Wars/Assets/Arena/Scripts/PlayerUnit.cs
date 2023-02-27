@@ -10,12 +10,10 @@ int bodySprite;
 int headSprite;
 [Header("Player Sprite")]
 
-public int MaxHealth = 100;
 public int CurrentHealth;
 [SerializeField] Animator playerAnimate;
 [SerializeField] Animator fireballAnimate;
 public List<GameObject> effects = new List<GameObject>();
-[SerializeField]SpriteLibrary spritelibrary;
 [SerializeField]SpriteResolver Head;
 [SerializeField]SpriteResolver Body;
 [SerializeField]SpriteResolver Weapon;

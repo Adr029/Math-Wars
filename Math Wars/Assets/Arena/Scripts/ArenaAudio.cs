@@ -16,7 +16,6 @@ public class ArenaAudio : MonoBehaviour
     [SerializeField] AudioClip BossWin;
     [SerializeField] AudioClip MatchWin;
     [SerializeField] AudioClip MatchLose;
-    [SerializeField] AudioClip PlayerAttack;
     public List <AudioClip> EnemyHurt;
     public List <AudioClip> AttackSFX;
     [SerializeField] AudioSource uiSFX;

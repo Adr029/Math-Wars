@@ -9,9 +9,11 @@ public class Cutscenes : MonoBehaviour
     [SerializeField]List<Sprite> cutsceneFrames = new List<Sprite>();
     [SerializeField]Image storyFrame;
     int cutsceneCount;
+    int firstPlaythrough;
+
     void Start()
     {
-        
+        firstPlaythrough = PlayerPrefs.GetInt("firstPlaythrough", 0);
         cutsceneCount = 0;
         storyFrame.sprite = cutsceneFrames[0];
 
@@ -22,8 +24,16 @@ public class Cutscenes : MonoBehaviour
     cutsceneCount++;
     if(cutsceneCount == cutsceneFrames.Count)
     {
-        SceneManager.LoadScene("Story Mode Map");
+        if (firstPlaythrough == 0)
+        {
+            SceneManager.LoadScene("Math Town");
+            PlayerPrefs.SetInt("firstPlaythrough", 1);
 
+        }
+        else
+        {
+            SceneManager.LoadScene("Story Mode Map");
+        }
     }
     else
     {
