@@ -46,8 +46,8 @@ void Start()
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
     playerLevel = PlayerPrefs.GetInt("Level");
-    Wins.text = winCount.ToString() + " WINS";
-    Level.text = "Level "+ playerLevel.ToString();
+    Wins.text = winCount.ToString();
+    Level.text = playerLevel.ToString();
     PlayerXP.value = experience;
     tutorialCount = 0;
 }

@@ -22,7 +22,6 @@ public class BattleManager : MonoBehaviour
     // story mode variables
     string chosenKingdom;
     string selectedLevel;
-    public int levelUnlocked;
     public List<Sprite> bgOptions = new List<Sprite>();
     public List<Sprite> WinLose = new List<Sprite>();
 
@@ -43,10 +42,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Button ConfirmHeal;
     [SerializeField]GameObject ConfirmAttackGO;
     [SerializeField]GameObject ConfirmHealGO;
-    [SerializeField]GameObject ArenaUI;
     public GameObject playerClone;
     public GameObject enemyClone;
-    GameObject kingdomWin;
     UIManagement UI;
     QuestionManagement questions;
     ArenaAudio audioclips;
@@ -55,7 +52,6 @@ public class BattleManager : MonoBehaviour
     EnemyUnit enemy1;
     PlayerUnit player1;
     public List<GameObject> enemyPrefabs = new List<GameObject>();
-    public List<GameObject> kingPrefabs = new List<GameObject>();
     public List<GameObject> kingdomWinPrefabs = new List<GameObject>();
     public int prefabIndex;
     int storyStatus;
@@ -147,7 +143,7 @@ playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Qua
                 enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3f, 1.20f, 0), Quaternion.identity);
             break;
             case 3:
-                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(2.71f, 1.27f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(2.9f, 1.27f, 0), Quaternion.identity);
             break;
         }
     }
@@ -171,6 +167,7 @@ IEnumerator SetupBattle()
     {
         yield return delay2;
         enemy1.ResetHeal();
+        player1.ResetDmg();
         PlayerTurn();
         Timer();
     }

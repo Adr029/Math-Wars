@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea384ec977618fc4f8962cff4a9b6fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponSprite: 0
   MaxHealth: 100
   CurrentHealth: 100
   playerAnimate: {fileID: 1098168933211178432}
@@ -1444,7 +1445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5371114397579279000}
   m_LocalRotation: {x: -0, y: -0, z: 0.9961947, w: 0.08715588}
-  m_LocalPosition: {x: 0.94, y: 3.57, z: 0}
+  m_LocalPosition: {x: -0.82, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2745915130711094776}
@@ -1726,7 +1727,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 2596368175450887913, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
