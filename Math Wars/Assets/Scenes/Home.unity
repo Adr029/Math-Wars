@@ -3964,10 +3964,14 @@ MonoBehaviour:
   - {fileID: 1794313554}
   - {fileID: 2096833386}
   weaponLocks:
-  - {fileID: 1456514879}
-  - {fileID: 1112485545}
-  - {fileID: 1071674589}
-  - {fileID: 428419957}
+  - {fileID: 164022734}
+  - {fileID: 1234532812}
+  - {fileID: 1310660057}
+  - {fileID: 1776266757}
+  - {fileID: 1531623544}
+  - {fileID: 1061822765}
+  - {fileID: 1794313552}
+  - {fileID: 2096833384}
   weaponSprite: 0
   weaponChosen: 0
   playerLevel: 0

@@ -60,7 +60,7 @@ public class CharacterCustomize : MonoBehaviour
                 weaponChoices[1].interactable = true;
                 headLocks[1].SetActive(false);
                 bodyLocks[1].SetActive(false);
-                //weaponLocks[1].SetActive(false);
+                weaponLocks[1].SetActive(false);
             }
             if (playerLevel >= 2)
             {
@@ -68,7 +68,7 @@ public class CharacterCustomize : MonoBehaviour
                 bodyChoices[2].interactable = true;
                 headLocks[2].SetActive(false);
                 bodyLocks[2].SetActive(false);
-                //weaponLocks[2].SetActive(false);                
+                weaponLocks[2].SetActive(false);                
             }
     
             if (playerLevel >= 3)
@@ -78,7 +78,7 @@ public class CharacterCustomize : MonoBehaviour
 
                 headLocks[2].SetActive(false);
                 bodyLocks[3].SetActive(false);
-                //weaponLocks[2].SetActive(false);                
+                weaponLocks[3].SetActive(false);                
             }
     
             if (playerLevel >= 4)
@@ -87,7 +87,7 @@ public class CharacterCustomize : MonoBehaviour
                 bodyChoices[4].interactable = true;
                 headLocks[2].SetActive(false);
                 bodyLocks[4].SetActive(false);
-                //weaponLocks[2].SetActive(false);                
+                weaponLocks[4].SetActive(false);                
             }
     
             // copy paste gang mabuo lahat
@@ -96,10 +96,10 @@ public class CharacterCustomize : MonoBehaviour
             {
                 headChoices[3].interactable = true;
                 bodyChoices[5].interactable = true;
-                weaponChoices[1].interactable = true;
+                weaponChoices[5].interactable = true;
                 headLocks[3].SetActive(false);
                 bodyLocks[5].SetActive(false);
-                weaponLocks[1].SetActive(false);  
+                weaponLocks[5].SetActive(false);  
  
 
             }
@@ -107,10 +107,10 @@ public class CharacterCustomize : MonoBehaviour
             {
                 headChoices[4].interactable = true;
                 bodyChoices[6].interactable = true;
-                weaponChoices[2].interactable = true;
+                weaponChoices[6].interactable = true;
                 headLocks[4].SetActive(false);
                 bodyLocks[6].SetActive(false);
-                weaponLocks[2].SetActive(false);  
+                weaponLocks[6].SetActive(false);  
 
 
             }
@@ -118,10 +118,10 @@ public class CharacterCustomize : MonoBehaviour
             {
                 headChoices[5].interactable = true;
                 bodyChoices[7].interactable = true;
-                weaponChoices[3].interactable = true;
+                weaponChoices[7].interactable = true;
                 headLocks[5].SetActive(false);
                 bodyLocks[7].SetActive(false);
-                weaponLocks[3].SetActive(false);  
+                weaponLocks[7].SetActive(false);  
 
 
             }
