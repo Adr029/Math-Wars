@@ -537,7 +537,7 @@ MonoBehaviour:
   - {fileID: 472225915}
   bgOptions:
   - {fileID: 21300000, guid: 5a89c0ecab46bab4bae58b0a3be564e1, type: 3}
-  - {fileID: 21300000, guid: b6414fe19cc083b42a817b3653785346, type: 3}
+  - {fileID: 21300000, guid: da34ee3901134364fb55d514f0122ec9, type: 3}
   - {fileID: 21300000, guid: 4fcf5ab62d013ae4d932145311ac91a5, type: 3}
   bossOptions:
   - {fileID: 21300000, guid: c7429052f9e2cfb45b78daad3f48ee20, type: 3}
