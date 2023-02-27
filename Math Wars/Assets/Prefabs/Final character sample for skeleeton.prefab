@@ -521,7 +521,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponSprite: 0
-  MaxHealth: 100
   CurrentHealth: 100
   playerAnimate: {fileID: 1098168933211178432}
   fireballAnimate: {fileID: 1073403504}
@@ -531,7 +530,6 @@ MonoBehaviour:
   - {fileID: 257804971}
   - {fileID: 751588076443255518}
   - {fileID: 5773525378816383941}
-  spritelibrary: {fileID: 765180732677332367}
   Head: {fileID: 4957983651441427513}
   Body: {fileID: 964493831}
   Weapon: {fileID: 530586937}
