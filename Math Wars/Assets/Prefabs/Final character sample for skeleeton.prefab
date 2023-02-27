@@ -987,7 +987,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 2853501842602199272, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+  m_Sprite: {fileID: -2018332832229704653, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1011,10 +1011,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RootBone: {fileID: 2848593416271957058}
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 2848593416271957058}
+  - {fileID: 1489939578189267007}
+  - {fileID: 7015436697045497731}
   m_Bounds:
-    m_Center: {x: 6.075694, y: -5.452547, z: 0}
-    m_Extent: {x: 9.431271, y: 7.6571007, z: 0}
+    m_Center: {x: 0.07158923, y: 0.4978187, z: 0}
+    m_Extent: {x: 3.5174851, y: 2.855791, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &964493831
@@ -1030,7 +1033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CategoryHash: -8.069325e-16
-  m_labelHash: -1.2985474e-36
+  m_labelHash: -1.3936018e+32
 --- !u!1 &3580014644303743187
 GameObject:
   m_ObjectHideFlags: 0
