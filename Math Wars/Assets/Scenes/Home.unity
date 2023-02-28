@@ -541,7 +541,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1800033922}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42568725
+  m_Size: 0.42568722
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3931,7 +3931,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1572386627}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42568725
+  m_Size: 0.42568722
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5778,7 +5778,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1649968900}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42568725
+  m_Size: 0.42568722
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9708,7 +9708,7 @@ PrefabInstance:
     - target: {fileID: 5348752114122542423, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 06c0e73acffc51044985f5fab084c15a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
 --- !u!114 &1992244841 stripped
