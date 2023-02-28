@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CategoryHash: -7.331012e+12
-  m_labelHash: -1.2985474e-36
+  m_labelHash: -1.3936018e+32
 --- !u!1 &92487062
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 157715193}
   - component: {fileID: 157715192}
   m_Layer: 5
-  m_Name: 5
+  m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 157715193}
   m_OnClick:
     m_PersistentCalls:
@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 437131267}
   - component: {fileID: 437131266}
   m_Layer: 5
-  m_Name: 7
+  m_Name: 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1897,7 +1897,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 437131267}
   m_OnClick:
     m_PersistentCalls:
@@ -2353,7 +2353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964493831, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
-      value: 4.883062e-21
+      value: 3.5445015e+9
       objectReference: {fileID: 0}
     - target: {fileID: 964493831, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_CategoryHash
@@ -2389,11 +2389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Size.x
-      value: 7.01
+      value: 6.88
       objectReference: {fileID: 0}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Size.y
-      value: 7.36
+      value: 6.31
       objectReference: {fileID: 0}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
@@ -2409,7 +2409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939561784735301295, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
-      value: 8.1455314e+27
+      value: -1.3936018e+32
       objectReference: {fileID: 0}
     - target: {fileID: 978483751001984850, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -2606,10 +2606,14 @@ PrefabInstance:
     - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7219777054929888947, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+      objectReference: {fileID: -5180549517842946893, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
     - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813074380359252476, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Name
+      value: right hand
       objectReference: {fileID: 0}
     - target: {fileID: 3837144663817493722, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -2685,7 +2689,7 @@ PrefabInstance:
       objectReference: {fileID: 530586934}
     - target: {fileID: 4957983651441427513, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
-      value: 1.1562834e+26
+      value: -1.3936018e+32
       objectReference: {fileID: 0}
     - target: {fileID: 5371114397579279000, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_IsActive
@@ -2722,7 +2726,7 @@ PrefabInstance:
     - target: {fileID: 6053751376633868282, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4391942258796441239, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+      objectReference: {fileID: 4727772438792335793, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
     - target: {fileID: 6911377136197234999, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
       value: 4.883062e-21
@@ -2762,8 +2766,10 @@ PrefabInstance:
     - target: {fileID: 7243186166633880706, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 9042663690541104039, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
-    m_RemovedComponents: []
+      objectReference: {fileID: 6625414110631683889, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+    m_RemovedComponents:
+    - {fileID: 4045428938541009768, guid: f0bd508ec8a882546955224500c369de, type: 3}
+    - {fileID: 6911377136197234999, guid: f0bd508ec8a882546955224500c369de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0bd508ec8a882546955224500c369de, type: 3}
 --- !u!114 &530586929 stripped
 MonoBehaviour:
@@ -4080,7 +4086,7 @@ GameObject:
   - component: {fileID: 922152514}
   - component: {fileID: 922152513}
   m_Layer: 5
-  m_Name: 6
+  m_Name: 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4145,7 +4151,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 922152514}
   m_OnClick:
     m_PersistentCalls:
@@ -4322,7 +4328,7 @@ MonoBehaviour:
   Body: {fileID: 530586929}
   Weapon: {fileID: 530586937}
   RightHand: {fileID: 74876868}
-  LeftLeg: {fileID: 1166908807}
+  LeftLeg: {fileID: 1166908805}
   RightLeg: {fileID: 112877942}
   Transition: {fileID: 1232546360}
 --- !u!1 &972930056
@@ -4618,7 +4624,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1040619987}
   m_OnClick:
     m_PersistentCalls:
@@ -5058,25 +5064,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126784626}
   m_CullTransparentMesh: 1
---- !u!1 &1166908803 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6291877983346559901, guid: f0bd508ec8a882546955224500c369de, type: 3}
+--- !u!114 &1166908805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 939561784735301295, guid: f0bd508ec8a882546955224500c369de, type: 3}
   m_PrefabInstance: {fileID: 530586928}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1166908807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166908803}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: -360.6715
-  m_labelHash: 8.840178e-23
 --- !u!1 &1199349742
 GameObject:
   m_ObjectHideFlags: 0
@@ -6469,7 +6467,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1392608125}
   m_OnClick:
     m_PersistentCalls:
@@ -6657,7 +6655,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1451912978}
   m_OnClick:
     m_PersistentCalls:
@@ -9417,7 +9415,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1918089495}
   m_OnClick:
     m_PersistentCalls:
