@@ -997,7 +997,7 @@ void FixedUpdate()
     yield return delay1;
     player1.IdleAnimate();
     enemy1.ResetDamage();
-    yield return delay1;
+    yield return delay2;
       if (storyMode && int.Parse(selectedLevel) == 5)
             {
                 audioclips.BossFightWin();
