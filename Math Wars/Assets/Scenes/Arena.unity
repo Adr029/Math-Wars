@@ -2336,7 +2336,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 612332c70073c85439ff9e8a50ccfdbb, type: 3}
   AttackSFX:
   - {fileID: 8300000, guid: 63c99763c3a9db34c8fc3e6f69f9d4b7, type: 3}
-  - {fileID: 8300000, guid: 63c99763c3a9db34c8fc3e6f69f9d4b7, type: 3}
+  - {fileID: 8300000, guid: 6ce381782d2810b40b1862c504e21f1d, type: 3}
   - {fileID: 8300000, guid: 82dad0821632f524485cc79edadfe938, type: 3}
   - {fileID: 8300000, guid: 9fe82d1e6a574e34f88dc57e3306eca4, type: 3}
   uiSFX: {fileID: 1073045039}
