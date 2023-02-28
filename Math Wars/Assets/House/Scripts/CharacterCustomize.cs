@@ -69,6 +69,7 @@ public class CharacterCustomize : MonoBehaviour
             {
                 headChoices[2].interactable = true;
                 bodyChoices[2].interactable = true;
+                weaponChoices[2].interactable = true;
                 headLocks[2].SetActive(false);
                 bodyLocks[2].SetActive(false);
                 weaponLocks[2].SetActive(false);                
@@ -76,31 +77,31 @@ public class CharacterCustomize : MonoBehaviour
     
             if (playerLevel >= 3)
             {
-                headChoices[2].interactable = true;
+                headChoices[3].interactable = true;
                 bodyChoices[3].interactable = true;
-
-                headLocks[2].SetActive(false);
+                weaponChoices[3].interactable = true;
+                headLocks[3].SetActive(false);
                 bodyLocks[3].SetActive(false);
                 weaponLocks[3].SetActive(false);                
             }
     
             if (playerLevel >= 4)
             {
-                headChoices[2].interactable = true;
+                headChoices[4].interactable = true;
                 bodyChoices[4].interactable = true;
-                headLocks[2].SetActive(false);
+                weaponChoices[4].interactable = true;
+                headLocks[4].SetActive(false);
                 bodyLocks[4].SetActive(false);
                 weaponLocks[4].SetActive(false);                
             }
     
-            // copy paste gang mabuo lahat
 
             if (kingdom1Complete == 1)
             {
-                headChoices[3].interactable = true;
+                headChoices[5].interactable = true;
                 bodyChoices[5].interactable = true;
                 weaponChoices[5].interactable = true;
-                headLocks[3].SetActive(false);
+                headLocks[5].SetActive(false);
                 bodyLocks[5].SetActive(false);
                 weaponLocks[5].SetActive(false);  
  
@@ -108,10 +109,10 @@ public class CharacterCustomize : MonoBehaviour
             }
             if (kingdom2Complete == 1)
             {
-                headChoices[4].interactable = true;
+                headChoices[6].interactable = true;
                 bodyChoices[6].interactable = true;
                 weaponChoices[6].interactable = true;
-                headLocks[4].SetActive(false);
+                headLocks[6].SetActive(false);
                 bodyLocks[6].SetActive(false);
                 weaponLocks[6].SetActive(false);  
 
@@ -119,13 +120,12 @@ public class CharacterCustomize : MonoBehaviour
             }
             if (kingdom3Complete == 1)
             {
-                headChoices[5].interactable = true;
+                headChoices[7].interactable = true;
                 bodyChoices[7].interactable = true;
                 weaponChoices[7].interactable = true;
-                headLocks[5].SetActive(false);
+                headLocks[7].SetActive(false);
                 bodyLocks[7].SetActive(false);
                 weaponLocks[7].SetActive(false);  
-
 
             }
     
@@ -164,5 +164,57 @@ public class CharacterCustomize : MonoBehaviour
     }
 
 
-    
+    public void UnlockAll()
+    {
+
+                headChoices[1].interactable = true;
+                bodyChoices[1].interactable = true;
+                weaponChoices[1].interactable = true;
+                headLocks[1].SetActive(false);
+                bodyLocks[1].SetActive(false);
+                weaponLocks[1].SetActive(false);
+
+                headChoices[2].interactable = true;
+                bodyChoices[2].interactable = true;
+                weaponChoices[2].interactable = true;
+                headLocks[2].SetActive(false);
+                bodyLocks[2].SetActive(false);
+                weaponLocks[2].SetActive(false);
+
+                headChoices[3].interactable = true;
+                bodyChoices[3].interactable = true;
+                weaponChoices[3].interactable = true;
+                headLocks[3].SetActive(false);
+                bodyLocks[3].SetActive(false);
+                weaponLocks[3].SetActive(false); 
+
+                headChoices[4].interactable = true;
+                bodyChoices[4].interactable = true;
+                weaponChoices[4].interactable = true;
+                headLocks[4].SetActive(false);
+                bodyLocks[4].SetActive(false);
+                weaponLocks[4].SetActive(false);   
+
+               headChoices[5].interactable = true;
+                bodyChoices[5].interactable = true;
+                weaponChoices[5].interactable = true;
+                headLocks[5].SetActive(false);
+                bodyLocks[5].SetActive(false);
+                weaponLocks[5].SetActive(false);  
+
+                headChoices[6].interactable = true;
+                bodyChoices[6].interactable = true;
+                weaponChoices[6].interactable = true;
+                headLocks[6].SetActive(false);
+                bodyLocks[6].SetActive(false);
+                weaponLocks[6].SetActive(false); 
+
+                headChoices[7].interactable = true;
+                bodyChoices[7].interactable = true;
+                weaponChoices[7].interactable = true;
+                headLocks[7].SetActive(false);
+                bodyLocks[7].SetActive(false);
+                weaponLocks[7].SetActive(false);  
+
+    }
 }
