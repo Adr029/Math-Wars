@@ -821,7 +821,6 @@ if (questions.correct)
     }
 }
 IEnumerator damageEnemy(){
-     // 100 muna for testing
 
     questions.correctText.text = "CORRECT";
     UI.statusScroll.SetActive(true);  
@@ -836,19 +835,13 @@ IEnumerator damageEnemy(){
             switch (topic)
                 {
                 case "Algebra":
-                    //enemy1.TakeDamage(Random.Range(7,11));
-                    enemy1.TakeDamage(100);
-
+                    enemy1.TakeDamage(Random.Range(7,11));
                 break;
                 case "Trigonometry":                 
-                    //enemy1.TakeDamage(Random.Range(12,16));
-                    enemy1.TakeDamage(100);
-
+                    enemy1.TakeDamage(Random.Range(12,16));
                 break;
                 case "Calculus":
-                    //enemy1.TakeDamage(Random.Range(17,21));
-                    enemy1.TakeDamage(100);
-                    
+                    enemy1.TakeDamage(Random.Range(17,21));                    
                 break;
                 }
             }
@@ -862,18 +855,14 @@ IEnumerator damageEnemy(){
             switch(chosenKingdom)
             {
                 case "Kingdom1":
-                    //enemy1.TakeDamage(Random.Range(7,11));
-                    enemy1.TakeDamage(100);
-                    
+                    enemy1.TakeDamage(Random.Range(7,11));
                 break;
 
                 case "Kingdom2":
-                    //enemy1.TakeDamage(Random.Range(12,16));
-                    enemy1.TakeDamage(100);
+                    enemy1.TakeDamage(Random.Range(12,16));
                 break;
                 case "Kingdom3":
-                    //enemy1.TakeDamage(Random.Range(17,21));
-                    enemy1.TakeDamage(100);
+                    enemy1.TakeDamage(Random.Range(17,21));
                 break;
             }
 
@@ -952,6 +941,15 @@ void FixedUpdate()
    public void ReturnKingdom()
     {
         StartCoroutine(FadeKingdom());
+    }
+
+    public void AutoKill()
+    {
+        
+        enemy1.TakeDamage(150);
+        UpdateHealth();
+        PlayerWin();
+
     }
       IEnumerator FadeTown()
     {
