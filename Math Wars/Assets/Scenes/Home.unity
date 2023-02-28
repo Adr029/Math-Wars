@@ -541,7 +541,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1800033922}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42568722
+  m_Size: 0.42568725
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2353,7 +2353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964493831, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
-      value: -1.3936018e+32
+      value: -4.1652613e-36
       objectReference: {fileID: 0}
     - target: {fileID: 964493831, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_CategoryHash
@@ -2394,7 +2394,7 @@ PrefabInstance:
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2018332832229704653, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+      objectReference: {fileID: 2439434714620305765, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_SortingOrder
       value: -3
@@ -2402,6 +2402,10 @@ PrefabInstance:
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939561784735301295, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_labelHash
+      value: 8.1455314e+27
       objectReference: {fileID: 0}
     - target: {fileID: 978483751001984850, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -2617,8 +2621,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3837144663817493722, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3837144663817493722, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 1581136474}
+    - target: {fileID: 3837144663817493722, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_BoneTransforms.Array.data[1]
+      value: 
+      objectReference: {fileID: 903844519}
     - target: {fileID: 4045428938541009768, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
       value: -4.1652613e-36
@@ -2629,11 +2641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.48606873
+      value: -0.82820725
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.6997287
+      value: -1.1359189
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Center.z
@@ -2641,11 +2653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 3.5135803
+      value: 3.4733264
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 3.086122
+      value: 1.8128593
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Bounds.m_Extent.z
@@ -2653,16 +2665,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.data[0]
       value: 
-      objectReference: {fileID: 1489427382}
+      objectReference: {fileID: 530586933}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.data[1]
       value: 
-      objectReference: {fileID: 530586933}
+      objectReference: {fileID: 1489427382}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.data[2]
       value: 
@@ -2706,7 +2718,7 @@ PrefabInstance:
     - target: {fileID: 6053751376633868282, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2299269900752947870, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+      objectReference: {fileID: 4391942258796441239, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
     - target: {fileID: 6911377136197234999, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
       value: 4.883062e-21
@@ -4003,7 +4015,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1572386627}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42568722
+  m_Size: 0.42568725
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4046,6 +4058,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871318812}
   m_CullTransparentMesh: 1
+--- !u!4 &903844519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5673440925241336949, guid: f0bd508ec8a882546955224500c369de, type: 3}
+  m_PrefabInstance: {fileID: 530586928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &922152511
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,7 +5867,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1649968900}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.42568722
+  m_Size: 0.42568725
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7387,6 +7404,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572386626}
   m_CullTransparentMesh: 1
+--- !u!4 &1581136474 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4520477342165517374, guid: f0bd508ec8a882546955224500c369de, type: 3}
+  m_PrefabInstance: {fileID: 530586928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1607528654
 GameObject:
   m_ObjectHideFlags: 0
