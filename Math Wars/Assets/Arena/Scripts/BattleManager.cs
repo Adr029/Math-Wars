@@ -995,6 +995,7 @@ void FixedUpdate()
       IEnumerator ShowWin()
     {
     yield return delay1;
+    player1.IdleAnimate();
     enemy1.ResetDamage();
     yield return delay1;
       if (storyMode && int.Parse(selectedLevel) == 5)

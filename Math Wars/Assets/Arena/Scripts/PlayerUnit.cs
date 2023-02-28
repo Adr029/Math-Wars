@@ -74,15 +74,19 @@ public void HealPlayer(int heal)
         switch (weaponSprite)
         {
             case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
                 fireballAnimate.SetTrigger("Attacking");
             break;
-            case 1:
+            case 5:
                 effects[1].SetActive(true);
             break;
-            case 2:
+            case 6:
                 effects[2].SetActive(true);
             break;
-            case 3:
+            case 7:
                 effects[3].SetActive(true);
             break;
         }

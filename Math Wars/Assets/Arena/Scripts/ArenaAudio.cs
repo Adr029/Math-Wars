@@ -58,18 +58,22 @@ public class ArenaAudio : MonoBehaviour
         {
         //0 fireball, 1 crop, 2 water, 3 thunder
         case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
             Manager.clip = AttackSFX[0];
             Manager.Play();
         break;
-        case 1:
+        case 5:
             Manager.clip = AttackSFX[1];
             Manager.Play();
         break;
-        case 2:
+        case 6:
             Manager.clip = AttackSFX[2];
             Manager.Play();
         break;
-        case 3:
+        case 7:
             Manager.clip = AttackSFX[3];
             Manager.Play();
         break;
