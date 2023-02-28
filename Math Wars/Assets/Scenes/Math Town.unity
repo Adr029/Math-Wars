@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bfd207cbd19747a47b5f5bf84e2987eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29cbc1c586908974ebd0b38e57a2d61d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6291,7 +6291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 511, y: 321}
+  m_AnchoredPosition: {x: -492, y: 312}
   m_SizeDelta: {x: 118.51, y: 118.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1983995192
@@ -6338,9 +6338,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: e4d6632fe6d4ddf4d878915d1db1e448, type: 3}
-        m_TargetAssemblyTypeName: AudioManagement, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 507817645}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: CloseCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6370,7 +6370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e73ad31fbe7e70c4da1bf3c1b3aa7b74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ba018953a00ee54dab04d69a42a4eb8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
