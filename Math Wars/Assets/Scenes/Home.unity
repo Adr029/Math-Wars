@@ -2353,7 +2353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964493831, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
-      value: -4.1652613e-36
+      value: 4.883062e-21
       objectReference: {fileID: 0}
     - target: {fileID: 964493831, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_CategoryHash
@@ -2385,11 +2385,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719215360017659798, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.88
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_Size.x
+      value: 7.01
       objectReference: {fileID: 0}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Size.y
-      value: 6.57
+      value: 7.36
       objectReference: {fileID: 0}
     - target: {fileID: 903217889232726720, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
@@ -2602,7 +2606,7 @@ PrefabInstance:
     - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5180549517842946893, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
+      objectReference: {fileID: -7219777054929888947, guid: d5bd2dbeb89f2174f86f79f2d4c53965, type: 3}
     - target: {fileID: 3765337652516143531, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -2665,23 +2669,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.data[0]
       value: 
-      objectReference: {fileID: 530586933}
+      objectReference: {fileID: 1489427382}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.data[1]
       value: 
-      objectReference: {fileID: 1489427382}
+      objectReference: {fileID: 530586933}
     - target: {fileID: 4826057468124589309, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_BoneTransforms.Array.data[2]
       value: 
       objectReference: {fileID: 530586934}
     - target: {fileID: 4957983651441427513, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_labelHash
-      value: -1.3936018e+32
+      value: 1.1562834e+26
       objectReference: {fileID: 0}
     - target: {fileID: 5371114397579279000, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_IsActive
@@ -5717,7 +5721,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1310660060}
   m_OnClick:
     m_PersistentCalls:
@@ -7262,7 +7266,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1531623547}
   m_OnClick:
     m_PersistentCalls:
@@ -8450,7 +8454,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1776266760}
   m_OnClick:
     m_PersistentCalls:
