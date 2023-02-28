@@ -1228,7 +1228,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 92
     mosaicPosition: {x: 0, y: 0}
   - name: thunder weapon
@@ -1291,7 +1291,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 73
     mosaicPosition: {x: 0, y: 0}
   - name: Electric Circlet
@@ -1361,7 +1361,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 141
     mosaicPosition: {x: 0, y: 0}
   - name: rh outfit 3
@@ -1431,7 +1431,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 132
     mosaicPosition: {x: 0, y: 0}
   - name: rl outfit 8
@@ -1494,7 +1494,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 123
     mosaicPosition: {x: 0, y: 0}
   - name: ll outfit 3
@@ -1557,7 +1557,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 84
     mosaicPosition: {x: 0, y: 0}
   - name: yellow cape outfit
