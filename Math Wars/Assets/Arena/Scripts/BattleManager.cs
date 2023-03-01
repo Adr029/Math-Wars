@@ -116,14 +116,14 @@ playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Qua
                 break;
 
                 case "Kingdom2":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(2.5f, 1.6f, 0), Quaternion.identity);
-                    prefabIndex = 4;
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[5], new Vector3(2.5f, 1.6f, 0), Quaternion.identity);
+                    prefabIndex = 5;
 
                 break;
 
                 case "Kingdom3":
-                    enemyClone = (GameObject)Instantiate(enemyPrefabs[4], new Vector3(2.5f, 1.6f, 0), Quaternion.identity);
-                    prefabIndex = 4;
+                    enemyClone = (GameObject)Instantiate(enemyPrefabs[6], new Vector3(2.5f, 1.6f, 0), Quaternion.identity);
+                    prefabIndex = 6;
 
                 break;
             }

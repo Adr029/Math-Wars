@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788251988064763461, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1788251988064763461, guid: 68e4c10b3a46bd340bca9ef8a95e3f02, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1565,6 +1565,8 @@ MonoBehaviour:
   - {fileID: 3879361909803106384, guid: dd0f4cfbb4392f0498a202e32b2b3226, type: 3}
   - {fileID: 942231122117852605, guid: d2990f392aba2f745a010357e015ba82, type: 3}
   - {fileID: 4416960217665190756, guid: 7cc2d39c4fdb431478809aedfa04e73c, type: 3}
+  - {fileID: 678929946662110740, guid: 77de07e25ae3fc2479c763816ad50482, type: 3}
+  - {fileID: 8228745901641184595, guid: 0c096d83a22a5794ebbda9d88e1caf68, type: 3}
   kingdomWinPrefabs:
   - {fileID: 3108229250105834790}
   - {fileID: 3796968858035875810}
@@ -5324,7 +5326,7 @@ RectTransform:
   m_Children:
   - {fileID: 1972445041}
   m_Father: {fileID: 1386249655}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5970,8 +5972,8 @@ RectTransform:
   - {fileID: 176417505}
   - {fileID: 1115689236}
   - {fileID: 1928977757}
-  - {fileID: 12958886}
   - {fileID: 1281738267}
+  - {fileID: 12958886}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

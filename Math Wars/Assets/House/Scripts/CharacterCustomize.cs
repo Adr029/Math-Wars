@@ -44,7 +44,7 @@ public class CharacterCustomize : MonoBehaviour
     void Awake() {
         Transition.SetActive(true);
 
-        playerLevel = PlayerPrefs.GetInt("Level");
+        playerLevel = PlayerPrefs.GetInt("Level", 1);
         kingdom1Complete = PlayerPrefs.GetInt("kingdom1Complete");
         kingdom2Complete = PlayerPrefs.GetInt("kingdom2Complete");
         kingdom3Complete = PlayerPrefs.GetInt("kingdom3Complete");
@@ -56,7 +56,7 @@ public class CharacterCustomize : MonoBehaviour
         weaponChosen = weaponSprite;
      
        
-            if (playerLevel >= 1)
+            if (playerLevel >= 2)
             {
                 headChoices[1].interactable = true;
                 bodyChoices[1].interactable = true;
@@ -65,7 +65,7 @@ public class CharacterCustomize : MonoBehaviour
                 bodyLocks[1].SetActive(false);
                 weaponLocks[1].SetActive(false);
             }
-            if (playerLevel >= 2)
+            if (playerLevel >= 3)
             {
                 headChoices[2].interactable = true;
                 bodyChoices[2].interactable = true;
@@ -75,7 +75,7 @@ public class CharacterCustomize : MonoBehaviour
                 weaponLocks[2].SetActive(false);                
             }
     
-            if (playerLevel >= 3)
+            if (playerLevel >= 4)
             {
                 headChoices[3].interactable = true;
                 bodyChoices[3].interactable = true;
@@ -85,7 +85,7 @@ public class CharacterCustomize : MonoBehaviour
                 weaponLocks[3].SetActive(false);                
             }
     
-            if (playerLevel >= 4)
+            if (playerLevel >= 5)
             {
                 headChoices[4].interactable = true;
                 bodyChoices[4].interactable = true;

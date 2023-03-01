@@ -147,10 +147,12 @@ public class ArenaAudio : MonoBehaviour
                             enemySFX.Play();
                     break;
                     case 4:
+                    case 5:
+                    case 6:
                             enemyAttack = EnemyAttack[4];
                             enemySFX.clip = enemyAttack;
                             enemySFX.Play();
-                    break;
+                    break;       
             }
                 }
                 

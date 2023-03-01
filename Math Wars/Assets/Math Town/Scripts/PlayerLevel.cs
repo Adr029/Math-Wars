@@ -16,8 +16,10 @@ public class PlayerLevel : MonoBehaviour
     void Start()
     {
         
-        experience =  PlayerPrefs.GetInt("XP");
-        playerLevel = PlayerPrefs.GetInt("Level");
+        experience =  PlayerPrefs.GetInt("XP", 0);
+        playerLevel = PlayerPrefs.GetInt("Level", 1);
+        PlayerPrefs.SetInt("Level", playerLevel);
+        PlayerPrefs.SetInt("XP", experience);
         computeLevel();
         level.text =  playerLevel.ToString();
         PlayerXP.value = experience;
@@ -35,7 +37,6 @@ public class PlayerLevel : MonoBehaviour
             PlayerPrefs.SetInt("Level", playerLevel);
             PlayerPrefs.SetInt("XP", experience);
             level.text =  playerLevel.ToString();
-
         }
 
     }
