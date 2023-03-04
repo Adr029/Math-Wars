@@ -23,9 +23,13 @@ public class BattleManager : MonoBehaviour
     string chosenKingdom;
     string selectedLevel;
     public List<Sprite> bgOptions = new List<Sprite>();
+    public List<Sprite> armyOptions = new List<Sprite>();
     public List<Sprite> WinLose = new List<Sprite>();
 
 //end of story mode variables
+
+    public SpriteRenderer armyRight;
+    public SpriteRenderer armyLeft;
     public SpriteRenderer background;
     [SerializeField]GameObject player;
     [SerializeField]GameObject UIManager;
@@ -42,6 +46,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Button ConfirmHeal;
     [SerializeField]GameObject ConfirmAttackGO;
     [SerializeField]GameObject ConfirmHealGO;
+    [SerializeField]GameObject ArmyLeft;
+    [SerializeField]GameObject ArmyRight;
     public GameObject playerClone;
     public GameObject enemyClone;
     UIManagement UI;
@@ -64,6 +70,8 @@ WaitForSeconds delay15 = new WaitForSeconds(1.5f);
 WaitForSeconds delay2 = new WaitForSeconds(2f);
 WaitForSeconds delay25 = new WaitForSeconds(2.5f);
 Vector3 enemyDefaultPos;
+Vector3 ArmyLDefaultPos;
+Vector3 ArmyRDefaultPos;
 void Awake() 
 {
     Transition.SetActive(true);
@@ -83,21 +91,32 @@ void Start()
 
     if (storyStatus > 0)
     {
+        ArmyLeft.SetActive(true);
+        ArmyRight.SetActive(true);
         storyMode = true;
         chosenKingdom = PlayerPrefs.GetString("storyKingdom");
         selectedLevel = PlayerPrefs.GetString("selectedLevel");
         switch (chosenKingdom)
         {
             case "Kingdom1":
+                armyLeft.sprite = armyOptions[0];
+                armyRight.sprite = armyOptions[0];
                 background.sprite = bgOptions[1];
                 break;
             case "Kingdom2":
+                armyLeft.sprite = armyOptions[1];
+                armyRight.sprite = armyOptions[1];
                 background.sprite = bgOptions[2];
             break;
             case "Kingdom3":
+                armyLeft.sprite = armyOptions[2];
+                armyRight.sprite = armyOptions[2];
                 background.sprite = bgOptions[3];
             break;
         }
+        ArmyLDefaultPos = new Vector3(-780, 173, 0);
+        ArmyRDefaultPos = new Vector3(780, 173, 0);
+        
     }
     else
     {
@@ -161,6 +180,7 @@ IEnumerator SetupBattle()
     UpdateHealth();
     yield return delay1;
     enemy1.ResetHeal();
+    yield return delay1;
     player1.ResetDmg();
     if (player1.CurrentHealth <= 0)
     {
@@ -176,6 +196,8 @@ IEnumerator SetupBattle()
    
 void PlayerTurn()
 {
+
+    ArmyRight.transform.localPosition = ArmyRDefaultPos;
     enemyClone.transform.localPosition = enemyDefaultPos;
    UI.ChooseAction();
    switch (playerchoice)
@@ -463,6 +485,7 @@ UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
 yield return delay2;
+ArmyLeft.transform.localPosition = ArmyLDefaultPos;
 
 if (!storyMode)
 {
@@ -473,9 +496,14 @@ case 1:
 case 2:
 case 3:
 
-if (prefabIndex != 0)
+if (prefabIndex > 1)
 {
     enemyClone.transform.localPosition= new Vector3(-1.2f, enemyDefaultPos.y, 0);
+}
+else if (prefabIndex == 1)
+{
+    enemyClone.transform.localPosition= new Vector3(-0.2f, enemyDefaultPos.y, 0);
+
 }
 audioclips.PlayEnemyAttack();
 enemy1.AttackAnimate();
@@ -556,10 +584,18 @@ case 3:
 audioclips.PlayArmySFX();
 audioclips.PlayEnemyAttack();
 enemy1.AttackAnimate();
-if (prefabIndex != 0)
+if (prefabIndex > 1)
 {
     enemyClone.transform.localPosition= new Vector3(-1.2f, enemyDefaultPos.y, 0);
-}yield return delay1;
+}
+else if (prefabIndex == 1)
+{
+    enemyClone.transform.localPosition= new Vector3(-0.2f, enemyDefaultPos.y, 0);
+
+}
+ArmyRight.transform.localPosition = new Vector3(60f, ArmyRDefaultPos.y, 0);
+
+yield return delay1;
 audioclips.PlayHurt();
 break;
 case 4:
@@ -825,7 +861,7 @@ IEnumerator damageEnemy(){
     questions.correctText.text = "CORRECT";
     UI.statusScroll.SetActive(true);  
     UI.EnemyTurn();
-
+    
     audioclips.PlayPlayerAttack();
     if (!storyMode)
             {
@@ -847,6 +883,7 @@ IEnumerator damageEnemy(){
             }
            else if (storyMode)
            {
+            ArmyLeft.transform.localPosition = new Vector3(-60f, ArmyLDefaultPos.y, 0);
             audioclips.PlayArmySFX();
             yield return delay15;
             audioclips.PlayHurt();
