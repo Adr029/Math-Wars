@@ -9,6 +9,8 @@ public class EnemyUnit : MonoBehaviour
    [SerializeField] Animator animate;
    [SerializeField] GameObject healAura;
    [SerializeField] GameObject damageFX;
+   [SerializeField] GameObject trigdamageFX;
+   [SerializeField] GameObject caldamageFX;
    
     public void HealEnemy(int heal)
    {
@@ -56,9 +58,19 @@ public class EnemyUnit : MonoBehaviour
     {
         damageFX.SetActive(true);
     }
+    public void TrigDamageAnimate()
+    {
+        trigdamageFX.SetActive(true);
+    }
+    public void CalDamageAnimate()
+    {
+        caldamageFX.SetActive(true);
+    }
     public void ResetDamage()
     {
         damageFX.SetActive(false);
+        trigdamageFX.SetActive(false);
+        caldamageFX.SetActive(false);
     }
   
 }

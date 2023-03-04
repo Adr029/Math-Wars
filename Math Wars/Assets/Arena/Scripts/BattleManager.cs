@@ -48,6 +48,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject ConfirmHealGO;
     [SerializeField]GameObject ArmyLeft;
     [SerializeField]GameObject ArmyRight;
+    [SerializeField]GameObject smoke;
     public GameObject playerClone;
     public GameObject enemyClone;
     UIManagement UI;
@@ -114,8 +115,8 @@ void Start()
                 background.sprite = bgOptions[3];
             break;
         }
-        ArmyLDefaultPos = new Vector3(-780, 173, 0);
-        ArmyRDefaultPos = new Vector3(780, 173, 0);
+        ArmyLDefaultPos = new Vector3(-780, 160, 0);
+        ArmyRDefaultPos = new Vector3(780, 160, 0);
         
     }
     else
@@ -199,6 +200,7 @@ void PlayerTurn()
 
     ArmyRight.transform.localPosition = ArmyRDefaultPos;
     enemyClone.transform.localPosition = enemyDefaultPos;
+    smoke.SetActive(false);
    UI.ChooseAction();
    switch (playerchoice)
     {
@@ -481,11 +483,12 @@ enemy1.ResetDamage();
 player1.ResetDmg();
 player1.ResetHeal();
 player1.IdleAnimate();
+ArmyLeft.transform.localPosition = ArmyLDefaultPos;
+smoke.SetActive(false);
 UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
-yield return delay2;
-ArmyLeft.transform.localPosition = ArmyLDefaultPos;
+yield return delay25;
 
 if (!storyMode)
 {
@@ -594,7 +597,7 @@ else if (prefabIndex == 1)
 
 }
 ArmyRight.transform.localPosition = new Vector3(60f, ArmyRDefaultPos.y, 0);
-
+smoke.SetActive(true);
 yield return delay1;
 audioclips.PlayHurt();
 break;
@@ -648,7 +651,7 @@ IEnumerator EnemyTrigonometry()
         UI.status.text = "ENEMY USED TRIGONOMETRY";
         UI.statusScroll.SetActive(true);
         yield return dmgDelay;
-        player1.DmgAnimate();
+        player1.TrigDmgAnimate();
         player1.TakeDamage(Random.Range(12,16));
         audioclips.PlayHurt();
         UpdateHealth();
@@ -660,7 +663,7 @@ IEnumerator EnemyCalculus()
         UI.status.text = "ENEMY USED CALCULUS";
         UI.statusScroll.SetActive(true); 
         yield return dmgDelay;
-        player1.DmgAnimate();
+        player1.CalDmgAnimate();
         player1.TakeDamage(Random.Range(17,21));
         audioclips.PlayHurt();
         UpdateHealth();
@@ -867,39 +870,50 @@ IEnumerator damageEnemy(){
             {
         yield return delay15;
         audioclips.PlayHurt();
-        enemy1.DamageAnimate();
             switch (topic)
                 {
                 case "Algebra":
                     enemy1.TakeDamage(Random.Range(7,11));
+                    enemy1.DamageAnimate();
+
                 break;
                 case "Trigonometry":                 
                     enemy1.TakeDamage(Random.Range(12,16));
+                    enemy1.TrigDamageAnimate();
+
                 break;
                 case "Calculus":
-                    enemy1.TakeDamage(Random.Range(17,21));                    
+                    enemy1.TakeDamage(Random.Range(17,21));  
+                    enemy1.CalDamageAnimate();
+                  
                 break;
                 }
             }
            else if (storyMode)
            {
             ArmyLeft.transform.localPosition = new Vector3(-60f, ArmyLDefaultPos.y, 0);
+            smoke.SetActive(true);
             audioclips.PlayArmySFX();
             yield return delay15;
             audioclips.PlayHurt();
-            enemy1.DamageAnimate();
 
             switch(chosenKingdom)
             {
                 case "Kingdom1":
                     enemy1.TakeDamage(Random.Range(7,11));
+                    enemy1.DamageAnimate();
+
                 break;
 
                 case "Kingdom2":
                     enemy1.TakeDamage(Random.Range(12,16));
+                    enemy1.TrigDamageAnimate();
+
                 break;
                 case "Kingdom3":
                     enemy1.TakeDamage(Random.Range(17,21));
+                    enemy1.CalDamageAnimate();
+
                 break;
             }
 

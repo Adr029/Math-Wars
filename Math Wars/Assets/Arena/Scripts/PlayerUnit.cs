@@ -119,11 +119,23 @@ public void HealPlayer(int heal)
 
         effects[4].SetActive(true);
     }
+    public void TrigDmgAnimate()
+    {
+
+        effects[5].SetActive(true);
+    }
+    public void CalDmgAnimate()
+    {
+
+        effects[6].SetActive(true);
+    }
     
     public void ResetDmg()
     {
 
         effects[4].SetActive(false);
+        effects[5].SetActive(false);
+        effects[6].SetActive(false);
     }
     /*
     public void LoseAnimate()
