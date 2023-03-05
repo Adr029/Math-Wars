@@ -825,14 +825,15 @@ MonoBehaviour:
   mapUI: {fileID: 807230364}
   tutorialImage: {fileID: 939167212}
   tutorialImages:
-  - {fileID: 21300000, guid: 5e091cae637211c49bcdcaeff5711c24, type: 3}
-  - {fileID: 21300000, guid: bcc45732a67681c4eab1d171ead6143d, type: 3}
-  - {fileID: 21300000, guid: 75ffd3727e3babc4ab9ca19a33d43f26, type: 3}
-  - {fileID: 21300000, guid: e46f9a3a76474db449c4a89b30606397, type: 3}
-  - {fileID: 21300000, guid: eb64e9b063e93e24193aed0726729926, type: 3}
-  - {fileID: 21300000, guid: fee10790360ab8645bf48aef464692c2, type: 3}
-  - {fileID: 21300000, guid: 0916849ee821fb74ab0952316a2af945, type: 3}
-  - {fileID: 21300000, guid: ab7b5be398b3dd34491c1b0ba29d3c58, type: 3}
+  - {fileID: 21300000, guid: a4c0e1cbfae01984781d5cfcdcee5041, type: 3}
+  - {fileID: 21300000, guid: c72f023cbd5160f46812b9b86f98b8f0, type: 3}
+  - {fileID: 21300000, guid: 93b31cf813b99214b9aaa2093db266f5, type: 3}
+  - {fileID: 21300000, guid: c8c841cebc1842240b778504db1db160, type: 3}
+  - {fileID: 21300000, guid: 0f295bcf14c994843b9eb343e9ab91da, type: 3}
+  - {fileID: 21300000, guid: 41b0e66261068bd4ea0d071d0647a090, type: 3}
+  - {fileID: 21300000, guid: 3330762d6046d1542b0ee109ce6d7e49, type: 3}
+  - {fileID: 21300000, guid: de05b060d11512540973d32733bda5dd, type: 3}
+  - {fileID: 21300000, guid: a852402e8200a6d48a1fa119a66e7f7e, type: 3}
   tutorialCount: 0
   firstLaunch: 0
   img: {fileID: 1211516022}

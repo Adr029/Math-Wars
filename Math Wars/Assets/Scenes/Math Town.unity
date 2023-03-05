@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0a8dcd0bd9090ba44a01303f18061118, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91b17aa6609ca0c4f909970fc2c8e2fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e3d464f2700e70541accb9d5d0f2f3d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e85fe0bb43b82764680b45f55532e3e0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32e2af30691f3d44781f9f19b3839a4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1de5cf82735bf624d9796ccf21140f66, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1676,36 +1676,37 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dc5e8b1099c49f14fa405e335225d163, type: 3}
   MathTownHelpImage: {fileID: 1906351274}
   MathTownHelpImages:
-  - {fileID: 21300000, guid: ba7f4e737bfc4914a8275a07b7b48e45, type: 3}
-  - {fileID: 21300000, guid: afd90e4ab3cc9444d8f2a67f2c72910d, type: 3}
-  - {fileID: 21300000, guid: 20253ade2fbcb47438cbfb23a6994fd3, type: 3}
-  - {fileID: 21300000, guid: 806eb4de6a0e86e41a89aba54685a81f, type: 3}
-  - {fileID: 21300000, guid: 2ecd951d55ec43c47ad2d385c1d5a324, type: 3}
-  - {fileID: 21300000, guid: d2dd4040e07b0944ab6890e0bf294807, type: 3}
-  - {fileID: 21300000, guid: aad97231af34b5b479e4c21a1e1b5e33, type: 3}
-  - {fileID: 21300000, guid: 4f7cfd95845c63745beb46f30d2ebd03, type: 3}
+  - {fileID: 21300000, guid: fec69a10dab62a44db7ded2db221388d, type: 3}
+  - {fileID: 21300000, guid: 4387847c060041748ab42f2393c99c41, type: 3}
+  - {fileID: 21300000, guid: 99130fbeb0796e7488e6fbbaa2cc8568, type: 3}
+  - {fileID: 21300000, guid: 539a5cbbfbceefd48b24fa65222db4ca, type: 3}
+  - {fileID: 21300000, guid: 9649ac9f61f14e241883c45e8f74dbec, type: 3}
+  - {fileID: 21300000, guid: 7d164b68b0375464cb2901f127ec9d78, type: 3}
+  - {fileID: 21300000, guid: cf7cb85925aa8b8419725e9b68bbbd39, type: 3}
+  - {fileID: 21300000, guid: af22852113fc2b049b70180f97d6197a, type: 3}
   MathTownTutorial: {fileID: 1906351272}
   ArenaHelpImage: {fileID: 44756739}
   ArenaHelpImages:
-  - {fileID: 21300000, guid: b49197adabf05914bb696287bd80a15f, type: 3}
-  - {fileID: 21300000, guid: bcc45732a67681c4eab1d171ead6143d, type: 3}
-  - {fileID: 21300000, guid: 3247a6a0e45275040ac370bd83222f86, type: 3}
-  - {fileID: 21300000, guid: eb64e9b063e93e24193aed0726729926, type: 3}
-  - {fileID: 21300000, guid: 9b47f2c508997df4aa9f5e2e9d900639, type: 3}
-  - {fileID: 21300000, guid: fee10790360ab8645bf48aef464692c2, type: 3}
-  - {fileID: 21300000, guid: 0916849ee821fb74ab0952316a2af945, type: 3}
-  - {fileID: 21300000, guid: ab7b5be398b3dd34491c1b0ba29d3c58, type: 3}
+  - {fileID: 21300000, guid: 6187cb3e19365c542bc13c221a7679ef, type: 3}
+  - {fileID: 21300000, guid: c72f023cbd5160f46812b9b86f98b8f0, type: 3}
+  - {fileID: 21300000, guid: f4b4f161632f9a24f91763be78ff8bf9, type: 3}
+  - {fileID: 21300000, guid: 0f295bcf14c994843b9eb343e9ab91da, type: 3}
+  - {fileID: 21300000, guid: 46cadbf00e5e8a74e9bae343fd752a04, type: 3}
+  - {fileID: 21300000, guid: 41b0e66261068bd4ea0d071d0647a090, type: 3}
+  - {fileID: 21300000, guid: 3330762d6046d1542b0ee109ce6d7e49, type: 3}
+  - {fileID: 21300000, guid: a852402e8200a6d48a1fa119a66e7f7e, type: 3}
   ArenaTutorial: {fileID: 44756737}
   StoryHelpImage: {fileID: 1657279782}
   StoryHelpImages:
-  - {fileID: 21300000, guid: 5e091cae637211c49bcdcaeff5711c24, type: 3}
-  - {fileID: 21300000, guid: bcc45732a67681c4eab1d171ead6143d, type: 3}
-  - {fileID: 21300000, guid: 75ffd3727e3babc4ab9ca19a33d43f26, type: 3}
-  - {fileID: 21300000, guid: e46f9a3a76474db449c4a89b30606397, type: 3}
-  - {fileID: 21300000, guid: eb64e9b063e93e24193aed0726729926, type: 3}
-  - {fileID: 21300000, guid: fee10790360ab8645bf48aef464692c2, type: 3}
-  - {fileID: 21300000, guid: 0916849ee821fb74ab0952316a2af945, type: 3}
-  - {fileID: 21300000, guid: ab7b5be398b3dd34491c1b0ba29d3c58, type: 3}
+  - {fileID: 21300000, guid: a4c0e1cbfae01984781d5cfcdcee5041, type: 3}
+  - {fileID: 21300000, guid: c72f023cbd5160f46812b9b86f98b8f0, type: 3}
+  - {fileID: 21300000, guid: 93b31cf813b99214b9aaa2093db266f5, type: 3}
+  - {fileID: 21300000, guid: c8c841cebc1842240b778504db1db160, type: 3}
+  - {fileID: 21300000, guid: 0f295bcf14c994843b9eb343e9ab91da, type: 3}
+  - {fileID: 21300000, guid: 41b0e66261068bd4ea0d071d0647a090, type: 3}
+  - {fileID: 21300000, guid: 3330762d6046d1542b0ee109ce6d7e49, type: 3}
+  - {fileID: 21300000, guid: de05b060d11512540973d32733bda5dd, type: 3}
+  - {fileID: 21300000, guid: a852402e8200a6d48a1fa119a66e7f7e, type: 3}
   StoryTutorial: {fileID: 1657279780}
 --- !u!1 &549673675
 GameObject:
@@ -2415,7 +2416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 49626daa23ee07c4881d6df9eac77c46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42fe98e48a077ae419f824d5171a229f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3893,7 +3894,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 549673676}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.09810853
+  m_Size: 0.09810854
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4879,7 +4880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 60aab7c707873014faf7c49eb1c71702, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afc06bb4e5416254098cfa56e454ed5b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5174,7 +5175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3531cb87a4ea8e3448da09604e250ad6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 179319c976ea58f45803ed99a852b978, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

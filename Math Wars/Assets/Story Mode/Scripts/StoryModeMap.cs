@@ -128,9 +128,19 @@ public void NextTutorial()
             
             tutorialImage.sprite = tutorialImages[6];
         }
+        else if (tutorialCount == 7)
+        {
+            
+            tutorialImage.sprite = tutorialImages[7];
+        }
+        else if (tutorialCount == 8)
+        {
+            
+            tutorialImage.sprite = tutorialImages[8];
+        }
     
     
-     if (tutorialCount == 7)
+     if (tutorialCount == 9)
     {
         CloseTutorial(); 
     }

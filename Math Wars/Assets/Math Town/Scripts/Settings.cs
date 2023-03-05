@@ -253,9 +253,13 @@ public void ShowTutorialStory()
         {
             StoryHelpImage.sprite = StoryHelpImages[7];
         }
+        else if (StoryTutorialCount == 8)
+        {
+            StoryHelpImage.sprite = StoryHelpImages[8];
+        }
      
    
-    if (StoryTutorialCount == 8)
+    if (StoryTutorialCount == 9)
     {
         CloseTutorial();
     }

@@ -2077,7 +2077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.6552, y: 116.10147}
+  m_AnchoredPosition: {x: -141.65521, y: 116.10147}
   m_SizeDelta: {x: 838.36, y: 838.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444707628
@@ -2557,14 +2557,14 @@ MonoBehaviour:
   tutorialBG: {fileID: 144076403}
   PlayerXP: {fileID: 2018953423}
   tutorialImages:
-  - {fileID: 21300000, guid: b49197adabf05914bb696287bd80a15f, type: 3}
-  - {fileID: 21300000, guid: bcc45732a67681c4eab1d171ead6143d, type: 3}
-  - {fileID: 21300000, guid: 3247a6a0e45275040ac370bd83222f86, type: 3}
-  - {fileID: 21300000, guid: eb64e9b063e93e24193aed0726729926, type: 3}
-  - {fileID: 21300000, guid: 9b47f2c508997df4aa9f5e2e9d900639, type: 3}
-  - {fileID: 21300000, guid: 3275e754c8fc7474398542207d4cf5f4, type: 3}
-  - {fileID: 21300000, guid: 0916849ee821fb74ab0952316a2af945, type: 3}
-  - {fileID: 21300000, guid: ab7b5be398b3dd34491c1b0ba29d3c58, type: 3}
+  - {fileID: 21300000, guid: 6187cb3e19365c542bc13c221a7679ef, type: 3}
+  - {fileID: 21300000, guid: c72f023cbd5160f46812b9b86f98b8f0, type: 3}
+  - {fileID: 21300000, guid: f4b4f161632f9a24f91763be78ff8bf9, type: 3}
+  - {fileID: 21300000, guid: 0f295bcf14c994843b9eb343e9ab91da, type: 3}
+  - {fileID: 21300000, guid: 46cadbf00e5e8a74e9bae343fd752a04, type: 3}
+  - {fileID: 21300000, guid: 41b0e66261068bd4ea0d071d0647a090, type: 3}
+  - {fileID: 21300000, guid: 3330762d6046d1542b0ee109ce6d7e49, type: 3}
+  - {fileID: 21300000, guid: a852402e8200a6d48a1fa119a66e7f7e, type: 3}
   img: {fileID: 274354269}
   animate: {fileID: 274354268}
   tutorialCount: 0
