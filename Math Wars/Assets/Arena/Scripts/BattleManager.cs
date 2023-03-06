@@ -154,16 +154,16 @@ playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Qua
         switch(prefabIndex)
         {
             case 0:
-                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.96f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 1.13f, 0), Quaternion.identity);
             break;
             case 1:
-                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.29f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3.44f, 0.57f, 0), Quaternion.identity);
             break;
             case 2:
-                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3f, 1.20f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(3f, 1.43f, 0), Quaternion.identity);
             break;
             case 3:
-                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(2.9f, 1.27f, 0), Quaternion.identity);
+                enemyClone = (GameObject)Instantiate(enemyPrefabs[prefabIndex], new Vector3(2.9f, 1.49f, 0), Quaternion.identity);
             break;
         }
     }
@@ -179,7 +179,7 @@ IEnumerator SetupBattle()
     UI = UIManager.GetComponent<UIManagement>();
     questions = QuestionManager.GetComponent<QuestionManagement>();
     UpdateHealth();
-    yield return delay1;
+    yield return delay15;
     enemy1.ResetHeal();
     yield return delay1;
     player1.ResetDmg();
@@ -483,12 +483,13 @@ enemy1.ResetDamage();
 player1.ResetDmg();
 player1.ResetHeal();
 player1.IdleAnimate();
+yield return delay1;
 ArmyLeft.transform.localPosition = ArmyLDefaultPos;
 smoke.SetActive(false);
 UI.status.text = "ENEMY TURN...";
 UI.statusScroll.SetActive(true);     
 questions.correctText.text = "";
-yield return delay25;
+yield return delay15;
 
 if (!storyMode)
 {
@@ -868,7 +869,7 @@ IEnumerator damageEnemy(){
     audioclips.PlayPlayerAttack();
     if (!storyMode)
             {
-        yield return delay15;
+        yield return delay1;
         audioclips.PlayHurt();
             switch (topic)
                 {
@@ -918,8 +919,9 @@ IEnumerator damageEnemy(){
             }
 
            }
-            
+
             UpdateHealth();
+            yield return delay15;
 
             if (enemy1.CurrentHealth <= 0)
             {
