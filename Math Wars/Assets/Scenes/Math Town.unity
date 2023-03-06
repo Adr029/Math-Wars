@@ -4990,6 +4990,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experience: 0
   level: {fileID: 1652924515}
+  canvas: {fileID: 649180038}
+  NewItems:
+  - {fileID: 2718289439953185429, guid: 58ae0e5003e9f08419872e184c43a223, type: 3}
+  - {fileID: 1896551705693328460, guid: 4f6bf565a16c3bf4ea0577a82aa16145, type: 3}
+  - {fileID: 3284511079545628172, guid: e438704cf780dcb429d821a48ab3ac0b, type: 3}
+  - {fileID: 8706680373949731656, guid: f20c9228b81263c4a85df0381e7ed04e, type: 3}
   PlayerXP: {fileID: 2078763128}
   playerLevel: 0
 --- !u!114 &1652924515 stripped
