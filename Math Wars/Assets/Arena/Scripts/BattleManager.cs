@@ -468,6 +468,7 @@ if (!storyMode)
     
 IEnumerator EnemyTurn()
 {
+
 runTimer = false;
 if (enemy1.CurrentHealth < 100)
     {
@@ -478,7 +479,7 @@ if (enemy1.CurrentHealth < 100)
     dice = Random.Range(0,5);  
     }
     UI.EnemyTurn();
-yield return delay1;
+yield return delay15;
 enemy1.ResetDamage();
 player1.ResetDmg();
 player1.ResetHeal();
@@ -921,7 +922,6 @@ IEnumerator damageEnemy(){
            }
 
             UpdateHealth();
-            yield return delay15;
 
             if (enemy1.CurrentHealth <= 0)
             {
