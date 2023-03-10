@@ -23,9 +23,9 @@ public List<GameObject> effects = new List<GameObject>();
 
 private void Awake() 
 {
-    headSprite = PlayerPrefs.GetInt("head");
-    bodySprite = PlayerPrefs.GetInt("body");
-    weaponSprite = PlayerPrefs.GetInt("weapon");
+    headSprite = PlayerPrefs.GetInt("head", 0);
+    bodySprite = PlayerPrefs.GetInt("body", 0);
+    weaponSprite = PlayerPrefs.GetInt("weapon", 0);
 
 }
 public void Start()

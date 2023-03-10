@@ -42,6 +42,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Text TimerUI;
     [SerializeField]Slider PlayerHP;
     [SerializeField]Slider EnemyHP;
+    [SerializeField]Slider TimerCircle;
     [SerializeField]Button ConfirmAttack;
     [SerializeField]Button ConfirmHeal;
     [SerializeField]GameObject ConfirmAttackGO;
@@ -49,6 +50,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject ArmyLeft;
     [SerializeField]GameObject ArmyRight;
     [SerializeField]GameObject smoke;
+    [SerializeField]GameObject circularTimer;
     public GameObject playerClone;
     public GameObject enemyClone;
     UIManagement UI;
@@ -76,6 +78,7 @@ Vector3 ArmyRDefaultPos;
 void Awake() 
 {
     Transition.SetActive(true);
+    circularTimer.SetActive(false);
 }
 void Start()
 {
@@ -84,7 +87,7 @@ void Start()
     storyStatus = PlayerPrefs.GetInt("storymode");
     experience = PlayerPrefs.GetInt("XP");
     winCount = PlayerPrefs.GetInt("wins");
-   
+    
     prefabIndex = Random.Range(0,4);
     // for expansion pag dumami na enemies, limit lang range bago umabot sa index ng kings
 
@@ -546,14 +549,13 @@ enemy1.HealAnimate();
     switch (dice)
     {
     case 0:
-        enemy1.HealEnemy(Random.Range(7,11));
+        enemy1.HealEnemy(Random.Range(19,25));
     break;
     case 1:
-        enemy1.HealEnemy(Random.Range(12,16));
-
+        enemy1.HealEnemy(Random.Range(25,30));
     break;
     case 2:
-        enemy1.HealEnemy(Random.Range(17,21));
+        enemy1.HealEnemy(Random.Range(30,35));
     break;
     }
 break;
@@ -616,17 +618,14 @@ enemy1.HealAnimate();
 
     switch (chosenKingdom)
     {
-  case "Kingdom1":        
-        enemy1.HealEnemy(Random.Range(11,16));
-
+    case "Kingdom1":        
+        enemy1.HealEnemy(Random.Range(19,25));
     break;
     case "Kingdom2":        
-        enemy1.HealEnemy(Random.Range(19,25));
-
+        enemy1.HealEnemy(Random.Range(25,30));
     break;
     case "Kingdom3":        
-        enemy1.HealEnemy(Random.Range(27,33));
-
+        enemy1.HealEnemy(Random.Range(30,35));
     break;  
     }
 break;
@@ -643,7 +642,7 @@ IEnumerator EnemyAlgebra()
         UI.statusScroll.SetActive(true);  
         yield return dmgDelay;
         player1.DmgAnimate();
-        player1.TakeDamage(Random.Range(7,11)); 
+        player1.TakeDamage(Random.Range(10,15)); 
         audioclips.PlayHurt();
         UpdateHealth();
 
@@ -654,7 +653,7 @@ IEnumerator EnemyTrigonometry()
         UI.statusScroll.SetActive(true);
         yield return dmgDelay;
         player1.TrigDmgAnimate();
-        player1.TakeDamage(Random.Range(12,16));
+        player1.TakeDamage(Random.Range(15,20));
         audioclips.PlayHurt();
         UpdateHealth();
 
@@ -666,7 +665,7 @@ IEnumerator EnemyCalculus()
         UI.statusScroll.SetActive(true); 
         yield return dmgDelay;
         player1.CalDmgAnimate();
-        player1.TakeDamage(Random.Range(17,21));
+        player1.TakeDamage(Random.Range(20,25));
         audioclips.PlayHurt();
         UpdateHealth();
 
@@ -701,7 +700,7 @@ void PlayerWin()
     switch (difficulty)
     {
     case "Easy":
-        experience += 15;
+        experience += 20;
     break;
 
     case "Normal":
@@ -709,7 +708,7 @@ void PlayerWin()
     break;
 
     case "Hard":
-        experience += 45;
+        experience += 40;
     break;
     }
     PlayerPrefs.SetInt("XP", experience);
@@ -726,7 +725,7 @@ void PlayerWin()
 
             
             case "Kingdom1":
-            experience += 15;
+            experience += 20;
             int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level", 1);
             if (int.Parse(selectedLevel) == kingdom1lvl)
             {
@@ -759,7 +758,7 @@ void PlayerWin()
         break;
 
             case "Kingdom3":
-            experience += 45;
+            experience += 40;
             int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level", 1);
             if (int.Parse(selectedLevel) == kingdom3lvl)
             {
@@ -819,13 +818,13 @@ if (questions.correct)
         switch (topic)
             {
             case "Algebra":
-                player1.HealPlayer(Random.Range(11,16));
-            break;
-            case "Trigonometry":
                 player1.HealPlayer(Random.Range(19,25));
             break;
+            case "Trigonometry":
+                player1.HealPlayer(Random.Range(25,30));
+            break;
             case "Calculus":
-                player1.HealPlayer(Random.Range(27,33));
+                player1.HealPlayer(Random.Range(30,35));
             break;
             }
         }
@@ -834,13 +833,13 @@ if (questions.correct)
             switch(chosenKingdom)
             {
             case "Kingdom1":
-                player1.HealPlayer(Random.Range(11,16));
-            break;
-            case "Kingdom2":
                 player1.HealPlayer(Random.Range(19,25));
             break;
+            case "Kingdom2":
+                player1.HealPlayer(Random.Range(25,30));
+            break;
             case "Kingdom3":
-                player1.HealPlayer(Random.Range(27,33));
+                player1.HealPlayer(Random.Range(30,35));
             break;
             }
         }
@@ -875,17 +874,17 @@ IEnumerator damageEnemy(){
             switch (topic)
                 {
                 case "Algebra":
-                    enemy1.TakeDamage(Random.Range(7,11));
+                    enemy1.TakeDamage(Random.Range(10,15));
                     enemy1.DamageAnimate();
 
                 break;
                 case "Trigonometry":                 
-                    enemy1.TakeDamage(Random.Range(12,16));
+                    enemy1.TakeDamage(Random.Range(15,20));
                     enemy1.TrigDamageAnimate();
 
                 break;
                 case "Calculus":
-                    enemy1.TakeDamage(Random.Range(17,21));  
+                    enemy1.TakeDamage(Random.Range(20,25));  
                     enemy1.CalDamageAnimate();
                   
                 break;
@@ -902,18 +901,18 @@ IEnumerator damageEnemy(){
             switch(chosenKingdom)
             {
                 case "Kingdom1":
-                    enemy1.TakeDamage(Random.Range(7,11));
+                    enemy1.TakeDamage(Random.Range(10,15));
                     enemy1.DamageAnimate();
 
                 break;
 
                 case "Kingdom2":
-                    enemy1.TakeDamage(Random.Range(12,16));
+                    enemy1.TakeDamage(Random.Range(15,20));
                     enemy1.TrigDamageAnimate();
 
                 break;
                 case "Kingdom3":
-                    enemy1.TakeDamage(Random.Range(17,21));
+                    enemy1.TakeDamage(Random.Range(20,25));  
                     enemy1.CalDamageAnimate();
 
                 break;
@@ -942,22 +941,26 @@ if (!storyMode)
 switch (difficulty)
 {
 case "Easy":
-    timer = 120f;
-break;
-
-case "Normal":
+    TimerCircle.maxValue = 90f;
     timer = 90f;
 break;
 
-case "Hard":
+case "Normal":
+    TimerCircle.maxValue = 60f;
     timer = 60f;
+break;
+
+case "Hard":
+    TimerCircle.maxValue = 30f;
+    timer = 30f;
 break;
 }
 }
 
 else
 {
-    timer = 90f;
+    TimerCircle.maxValue = 60f;
+    timer = 60f;
 }
 
 }
@@ -973,13 +976,19 @@ void FixedUpdate()
 {
     if (runTimer)
     {
+    circularTimer.SetActive(true);
     timer -= Time.deltaTime;
-    TimerUI.text = timer.ToString("N0"); 
+    TimerUI.text = timer.ToString("N0");
+    TimerCircle.value = timer;
       if (timer <= 0.5f)
     {
         questions.correctText.text = "";
         StartCoroutine(EnemyTurn());
     }
+    }
+    else
+    {
+        circularTimer.SetActive(false);
     }
 }
 
@@ -1023,8 +1032,6 @@ void FixedUpdate()
         UI.winPopUp.SetActive(false);
         yield return new WaitUntil(() => transition.color.a == 1);
         SceneManager.LoadScene("Story Mode Map");
-   
-
     }
       IEnumerator FadeKingdom()
     {
