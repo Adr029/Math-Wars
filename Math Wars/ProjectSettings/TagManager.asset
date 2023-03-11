@@ -7,6 +7,7 @@ TagManager:
   - Library
   - Arena
   - Home
+  - KingdomAudio
   layers:
   - Default
   - TransparentFX

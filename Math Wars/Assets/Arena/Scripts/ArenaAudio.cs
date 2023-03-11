@@ -30,6 +30,7 @@ public class ArenaAudio : MonoBehaviour
 
     void Start()
     {
+        Destroy (GameObject.FindWithTag("KingdomAudio"));
         battle = BattleManagement.GetComponent<BattleManager>();    
         EnemyIndex = battle.prefabIndex;
         playerWeapon = battle.playerClone.GetComponent<PlayerUnit>().weaponSprite;

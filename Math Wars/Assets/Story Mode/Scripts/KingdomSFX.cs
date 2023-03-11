@@ -1,41 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class AudioManagement : MonoBehaviour
+public class KingdomSFX : MonoBehaviour
 {
+    private static KingdomAudio backgroundMusic;
+
     int playAudio;
     int playSFX;
-    [SerializeField]AudioSource BGMusic;
     [SerializeField]AudioSource uiSFX;
     [SerializeField]AudioSource uiSFXNonWood;
     [SerializeField]AudioClip mapSFX;
+    
+
     void Start()
     {
-        Destroy (GameObject.FindWithTag("KingdomAudio"));
-
         playAudio = PlayerPrefs.GetInt("music", 1);
         playSFX = PlayerPrefs.GetInt("SFX", 1);
 
-        if(playAudio == 1)
-        {
-           BGMusic.Play();
-        } 
+
     }
     void Update()
     {
+
         playAudio = PlayerPrefs.GetInt("music", 1);
         playSFX = PlayerPrefs.GetInt("SFX");
-
-        if(playAudio == 1)
-        {
-           BGMusic.UnPause();
-        }
-        if(playAudio == 0)
-        {
-           BGMusic.Pause();
-        }
-
     }
 
     public void PlayUISFX()
@@ -68,4 +58,5 @@ public class AudioManagement : MonoBehaviour
             uiSFX.Play();
         }
     }
+
 }

@@ -198,8 +198,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 658454712}
-        m_TargetAssemblyTypeName: AudioManagement, Assembly-CSharp
+      - m_Target: {fileID: 1015361588}
+        m_TargetAssemblyTypeName: KingdomSFX, Assembly-CSharp
         m_MethodName: PlayUISFX
         m_Mode: 1
         m_Arguments:
@@ -268,6 +268,133 @@ RectTransform:
   m_AnchoredPosition: {x: 595, y: -229}
   m_SizeDelta: {x: 428.17993, y: 428.18}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &479139929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479139931}
+  - component: {fileID: 479139930}
+  m_Layer: 0
+  m_Name: UI SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &479139930
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479139929}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 753b95c0aa1e2cf44a996a59e6f4073e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &479139931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479139929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1015361589}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &578339929
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,74 +556,133 @@ Transform:
   m_Father: {fileID: 1576597618}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &658454711
-PrefabInstance:
+--- !u!1 &645539209
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.49699864
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.48698413
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 74617.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108342, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348752112653108343, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
---- !u!114 &658454712 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5348752112653108337, guid: 6a3ab229a158681449123e7288d054d0, type: 3}
-  m_PrefabInstance: {fileID: 658454711}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645539211}
+  - component: {fileID: 645539210}
+  m_Layer: 0
+  m_Name: UI Non Wood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &645539210
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645539209}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 932d07377cd03c849a363fe059a35538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c5d9c45a3c61eca4bb70f070413e2779, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &645539211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645539209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1015361589}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &661435091
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +843,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1015361587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015361589}
+  - component: {fileID: 1015361588}
+  m_Layer: 0
+  m_Name: KingdomSFXManager
+  m_TagString: KingdomAudio
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1015361588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015361587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e8824a4f7d87d488ee5927a40b4f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiSFX: {fileID: 479139930}
+  uiSFXNonWood: {fileID: 645539210}
+  mapSFX: {fileID: 8300000, guid: 29274d51e13ff3748b50f3e4863689c5, type: 3}
+--- !u!4 &1015361589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015361587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49699864, y: 0.48698413, z: 74617.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 479139931}
+  - {fileID: 645539211}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1064695900
 GameObject:
@@ -951,8 +1185,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 658454712}
-        m_TargetAssemblyTypeName: AudioManagement, Assembly-CSharp
+      - m_Target: {fileID: 1015361588}
+        m_TargetAssemblyTypeName: KingdomSFX, Assembly-CSharp
         m_MethodName: PlayUISFX
         m_Mode: 1
         m_Arguments:
@@ -1096,8 +1330,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 658454712}
-        m_TargetAssemblyTypeName: AudioManagement, Assembly-CSharp
+      - m_Target: {fileID: 1015361588}
+        m_TargetAssemblyTypeName: KingdomSFX, Assembly-CSharp
         m_MethodName: PlayUISFX
         m_Mode: 1
         m_Arguments:
@@ -1191,6 +1425,94 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1382769846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 794598519894536263, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: uiSFX
+      value: 
+      objectReference: {fileID: 1382769849}
+    - target: {fileID: 794598519894536263, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: BGMusic
+      value: 
+      objectReference: {fileID: 1382769850}
+    - target: {fileID: 794598519894536263, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: uiSFXNonWood
+      value: 
+      objectReference: {fileID: 1382769848}
+    - target: {fileID: 3642356771138914246, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_Name
+      value: KingdomAudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914246, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_TagString
+      value: KingdomAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.49699864
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48698413
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 74617.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3642356771138914247, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+--- !u!82 &1382769848 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2037602688882168985, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+  m_PrefabInstance: {fileID: 1382769846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1382769849 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8698374588543999613, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+  m_PrefabInstance: {fileID: 1382769846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1382769850 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3642356769970360038, guid: b8c6e8e160afcd24e958995927eec128, type: 3}
+  m_PrefabInstance: {fileID: 1382769846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1464333289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1558,8 +1880,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 658454712}
-        m_TargetAssemblyTypeName: AudioManagement, Assembly-CSharp
+      - m_Target: {fileID: 1015361588}
+        m_TargetAssemblyTypeName: KingdomSFX, Assembly-CSharp
         m_MethodName: PlayUISFX
         m_Mode: 1
         m_Arguments:
@@ -1746,8 +2068,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 658454712}
-        m_TargetAssemblyTypeName: AudioManagement, Assembly-CSharp
+      - m_Target: {fileID: 1015361588}
+        m_TargetAssemblyTypeName: KingdomSFX, Assembly-CSharp
         m_MethodName: PlayUISFX
         m_Mode: 1
         m_Arguments:
@@ -1929,8 +2251,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 658454712}
-        m_TargetAssemblyTypeName: AudioManagement, Assembly-CSharp
+      - m_Target: {fileID: 1015361588}
+        m_TargetAssemblyTypeName: KingdomSFX, Assembly-CSharp
         m_MethodName: PlayUISFX
         m_Mode: 1
         m_Arguments:
