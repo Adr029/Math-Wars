@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8a41c286b1f654aadbaad625935c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 150
-  CurrentHealth: 150
+  MaxHealth: 120
+  CurrentHealth: 120
   animate: {fileID: 8906221014628969539}
   healAura: {fileID: 86881668106456206}
   damageFX: {fileID: 169361617289982693}

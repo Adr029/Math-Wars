@@ -150,7 +150,7 @@ playerClone = (GameObject)Instantiate(player, new Vector3(-3.44f, 0.71f, 0), Qua
 
                 break;
             }
-            EnemyHP.maxValue = 150;
+            EnemyHP.maxValue = 120;
     }
     else
     {
