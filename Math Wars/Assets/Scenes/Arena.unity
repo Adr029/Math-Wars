@@ -2674,6 +2674,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6ce381782d2810b40b1862c504e21f1d, type: 3}
   - {fileID: 8300000, guid: 82dad0821632f524485cc79edadfe938, type: 3}
   - {fileID: 8300000, guid: 9fe82d1e6a574e34f88dc57e3306eca4, type: 3}
+  ArmySFX:
+  - {fileID: 8300000, guid: a32794d2344dad84996e29dbc74659ae, type: 3}
+  - {fileID: 8300000, guid: ba08fe03985d4d0429a63dba4b534e6f, type: 3}
+  - {fileID: 8300000, guid: 0fad4a2a02cd2b648a49d40d4142adfb, type: 3}
   uiSFX: {fileID: 1073045039}
   hurtSFX: {fileID: 37176564}
   answerSFX: {fileID: 974813412}

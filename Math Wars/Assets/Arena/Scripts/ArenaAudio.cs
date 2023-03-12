@@ -18,6 +18,7 @@ public class ArenaAudio : MonoBehaviour
     [SerializeField] AudioClip MatchLose;
     public List <AudioClip> EnemyHurt;
     public List <AudioClip> AttackSFX;
+    public List <AudioClip> ArmySFX;
     [SerializeField] AudioSource uiSFX;
     [SerializeField] AudioSource hurtSFX;
     [SerializeField] AudioSource answerSFX;
@@ -219,6 +220,20 @@ public class ArenaAudio : MonoBehaviour
             //consider randomizing army sfx parang sa ginawa sa hurt
         if (playSFX == 1)
         {
+            int army = Random.Range(0,4);
+            switch (army)
+            {
+                case 1:
+                    armySFX.clip = ArmySFX[0];
+                break;
+                case 2:
+                    armySFX.clip = ArmySFX[1];
+                break;
+                case 3:
+                    armySFX.clip = ArmySFX[2];
+                break;
+
+            }
             armySFX.Play();
         }
     }
