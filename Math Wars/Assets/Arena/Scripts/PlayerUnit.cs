@@ -141,7 +141,7 @@ public void HealPlayer(int heal)
     
     public void LoseAnimate()
     {
-        deadFaces[0].SetActive(true);
+        deadFaces[headSprite].SetActive(true);
         playerAnimate.SetTrigger("Dead");
     }
 

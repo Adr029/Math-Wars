@@ -184,7 +184,6 @@ IEnumerator SetupBattle()
     UpdateHealth();
     yield return delay15;
     enemy1.ResetHeal();
-    yield return delay1;
     player1.ResetDmg();
     if (player1.CurrentHealth <= 0)
     {
