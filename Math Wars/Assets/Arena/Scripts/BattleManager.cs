@@ -487,7 +487,7 @@ enemy1.ResetDamage();
 player1.ResetDmg();
 player1.ResetHeal();
 player1.IdleAnimate();
-yield return delay1;
+yield return dmgDelay;
 ArmyLeft.transform.localPosition = ArmyLDefaultPos;
 smoke.SetActive(false);
 UI.status.text = "ENEMY TURN...";
@@ -608,11 +608,13 @@ audioclips.PlayHurt();
 break;
 case 4:
 case 5:
+yield return delay1;
+
     UI.status.text = "ENEMY MISSED";
     UI.statusScroll.SetActive(true);  
 break;
 case 6:
-//enemy heal
+yield return delay1;
 UI.status.text = "ENEMY HEALED";
 UI.statusScroll.SetActive(true);
 audioclips.PlayEnemyHeal();
