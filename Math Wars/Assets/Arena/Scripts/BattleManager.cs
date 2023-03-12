@@ -475,11 +475,11 @@ IEnumerator EnemyTurn()
 runTimer = false;
 if (enemy1.CurrentHealth < 100)
     {
-     dice = Random.Range(0,6);
+     dice = Random.Range(0,7);
     }
     else
     {
-    dice = Random.Range(0,5);  
+    dice = Random.Range(0,6);  
     }
     UI.EnemyTurn();
 yield return delay15;
@@ -535,10 +535,11 @@ enemy1.AttackAnimate();
 
 break;
 case 4:
+case 5:
     UI.status.text = "ENEMY MISSED";
     UI.statusScroll.SetActive(true);  
 break;
-case 5:
+case 6:
 //enemy heal
 dice = Random.Range(0,3);
 UI.status.text = "ENEMY HEALED";
@@ -606,10 +607,11 @@ yield return delay1;
 audioclips.PlayHurt();
 break;
 case 4:
+case 5:
     UI.status.text = "ENEMY MISSED";
     UI.statusScroll.SetActive(true);  
 break;
-case 5:
+case 6:
 //enemy heal
 UI.status.text = "ENEMY HEALED";
 UI.statusScroll.SetActive(true);
