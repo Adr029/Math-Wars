@@ -676,7 +676,8 @@ IEnumerator EnemyCalculus()
 }
 void PlayerLose()
 {
-    UI.statusScroll.SetActive(false);  
+    UI.statusScroll.SetActive(false);
+
     StartCoroutine(ShowLose());
     runTimer = false;
     if (!storyMode)
@@ -1047,7 +1048,7 @@ void FixedUpdate()
     }
       IEnumerator ShowLose()
     {
-
+    player1.LoseAnimate();
     yield return delay25;
     audioclips.PlayMatchLose();
      UI.winPopUp.SetActive(true);
