@@ -3805,6 +3805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Final character sample for skeleeton
       objectReference: {fileID: 0}
+    - target: {fileID: 1205139535058955279, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1489939578189267007, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5041978
@@ -3859,7 +3863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2469607882876767264, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2513121602537321827, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4132,6 +4136,10 @@ PrefabInstance:
     - target: {fileID: 8077892938220766093, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -2.559
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533270406251444211, guid: f0bd508ec8a882546955224500c369de, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8617763976710789733, guid: f0bd508ec8a882546955224500c369de, type: 3}
       propertyPath: m_RootOrder
