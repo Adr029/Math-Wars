@@ -1966,6 +1966,7 @@ MonoBehaviour:
   ArmyRight: {fileID: 1184291905}
   smoke: {fileID: 95065331}
   circularTimer: {fileID: 462706517}
+  healCircle: {fileID: 1365791441}
   healCounter: {fileID: 34197539}
   playerClone: {fileID: 0}
   enemyClone: {fileID: 0}

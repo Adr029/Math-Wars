@@ -52,6 +52,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField]GameObject ArmyRight;
     [SerializeField]GameObject smoke;
     [SerializeField]GameObject circularTimer;
+    [SerializeField]GameObject healCircle;
     [SerializeField]Text healCounter;
     public GameObject playerClone;
     public GameObject enemyClone;
@@ -127,6 +128,7 @@ void Start()
     }
     else
     {
+        healCircle.SetActive(false);
         background.sprite = bgOptions[0];
 
     }
