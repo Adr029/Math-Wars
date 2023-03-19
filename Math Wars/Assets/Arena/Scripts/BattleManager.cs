@@ -45,18 +45,21 @@ public class BattleManager : MonoBehaviour
     [SerializeField]Slider TimerCircle;
     [SerializeField]Button ConfirmAttack;
     [SerializeField]Button ConfirmHeal;
+    [SerializeField]Button HealButton;
     [SerializeField]GameObject ConfirmAttackGO;
     [SerializeField]GameObject ConfirmHealGO;
     [SerializeField]GameObject ArmyLeft;
     [SerializeField]GameObject ArmyRight;
     [SerializeField]GameObject smoke;
     [SerializeField]GameObject circularTimer;
+    [SerializeField]Text healCounter;
     public GameObject playerClone;
     public GameObject enemyClone;
     UIManagement UI;
     QuestionManagement questions;
     ArenaAudio audioclips;
     int dice;
+    int healCount;
     string topic;
     EnemyUnit enemy1;
     PlayerUnit player1;
@@ -120,7 +123,7 @@ void Start()
         }
         ArmyLDefaultPos = new Vector3(-780, 160, 0);
         ArmyRDefaultPos = new Vector3(780, 160, 0);
-        
+        healCount = int.Parse(selectedLevel);
     }
     else
     {
@@ -182,9 +185,14 @@ IEnumerator SetupBattle()
     UI = UIManager.GetComponent<UIManagement>();
     questions = QuestionManager.GetComponent<QuestionManagement>();
     UpdateHealth();
+    healCounter.text = healCount.ToString();
     yield return delay15;
     enemy1.ResetHeal();
     player1.ResetDmg();
+    if (healCount == 0)
+    {
+        HealButton.interactable = false;
+    }
     if (player1.CurrentHealth <= 0)
     {
         PlayerLose();
@@ -815,7 +823,7 @@ if (questions.correct)
         case "Heal":
             audioclips.PlayPlayerHeal();
             player1.HealAnimate();
-
+            healCount--;
         if (!storyMode)
         {
 
