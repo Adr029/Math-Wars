@@ -74,7 +74,7 @@ public void CloseQuit()
 }
 public void ToggleMusic()
    {
-    music = PlayerPrefs.GetInt("music");
+    music = PlayerPrefs.GetInt("music", 1);
     if (music == 1)
     {
         PlayerPrefs.SetInt("music", 0);
@@ -89,7 +89,7 @@ public void ToggleMusic()
    }
 public void ToggleSFX()
    {
-    SFX = PlayerPrefs.GetInt("SFX");
+    SFX = PlayerPrefs.GetInt("SFX", 1);
     if (SFX == 1)
     {
         PlayerPrefs.SetInt("SFX", 0);
