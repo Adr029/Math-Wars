@@ -2696,7 +2696,6 @@ RectTransform:
   - {fileID: 475523343}
   - {fileID: 953144650}
   - {fileID: 2078763127}
-  - {fileID: 1317688783}
   - {fileID: 496354186}
   - {fileID: 235409880}
   - {fileID: 1748715068}
@@ -5382,7 +5381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1317688783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5390,17 +5389,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317688782}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9999202, y: 0.9999202, z: 0.9999202}
   m_Children: []
-  m_Father: {fileID: 649180038}
-  m_RootOrder: 6
+  m_Father: {fileID: 2078763127}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 316.56, y: -465}
-  m_SizeDelta: {x: 378.59998, y: 70.98999}
+  m_AnchoredPosition: {x: 323.52496, y: -49.73696}
+  m_SizeDelta: {x: 289.71, y: 74.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317688784
 MonoBehaviour:
@@ -5415,7 +5414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.24705884, g: 0.050980397, b: 0.011764707, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5429,13 +5428,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 48
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'XP:'
+  m_Text: 30/100
 --- !u!222 &1317688785
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6346,6 +6345,7 @@ MonoBehaviour:
   - {fileID: 3284511079545628172, guid: e438704cf780dcb429d821a48ab3ac0b, type: 3}
   - {fileID: 8706680373949731656, guid: f20c9228b81263c4a85df0381e7ed04e, type: 3}
   PlayerXP: {fileID: 2078763128}
+  XP: {fileID: 1317688784}
   playerLevel: 0
 --- !u!114 &1652924515 stripped
 MonoBehaviour:
@@ -8421,7 +8421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022682951642286773, guid: a41831ae59d12e841b2e47ce8ca7953c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8022682951642286773, guid: a41831ae59d12e841b2e47ce8ca7953c, type: 3}
       propertyPath: m_AnchorMax.x

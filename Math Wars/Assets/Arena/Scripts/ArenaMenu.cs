@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class ArenaMenu : MonoBehaviour
 {
 public string difficulty;
-[SerializeField]Text Wins;
 [SerializeField]Text Level;
 [SerializeField]Button confirm;
 [SerializeField]GameObject tutorialPopup;
@@ -18,6 +17,7 @@ public string difficulty;
 [SerializeField]Image tutorialImage;
 [SerializeField]GameObject tutorialBG;
 [SerializeField]Slider PlayerXP;
+public Text XP;
 
 public List<Sprite> tutorialImages = new List<Sprite>();
 public Image img;
@@ -25,7 +25,6 @@ public Image img;
 public Animator animate;
 
 public int tutorialCount;
-public int winCount;
 public int experience;
 public int playerLevel;
 public int firstLaunch;
@@ -44,10 +43,9 @@ void Start()
     }
     
     experience = PlayerPrefs.GetInt("XP");
-    winCount = PlayerPrefs.GetInt("wins");
     playerLevel = PlayerPrefs.GetInt("Level");
-    Wins.text = winCount.ToString();
     Level.text = playerLevel.ToString();
+    XP.text =  experience.ToString()+ "/100";        
     PlayerXP.value = experience;
     tutorialCount = 0;
 }

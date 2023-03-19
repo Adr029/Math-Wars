@@ -12,6 +12,8 @@ public class PlayerLevel : MonoBehaviour
     string sceneName;
     public List<GameObject> NewItems = new List<GameObject>();
     [SerializeField]Slider PlayerXP;
+    public Text XP;
+
 
     int requiredXP = 100;
 
@@ -25,6 +27,7 @@ public class PlayerLevel : MonoBehaviour
         PlayerPrefs.SetInt("Level", playerLevel);
         PlayerPrefs.SetInt("XP", experience);
         computeLevel();
+        XP.text = experience.ToString()+ "/100";        
         level.text =  playerLevel.ToString();
         PlayerXP.value = experience;
         
