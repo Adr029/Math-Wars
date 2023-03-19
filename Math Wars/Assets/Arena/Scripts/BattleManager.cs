@@ -998,7 +998,15 @@ void FixedUpdate()
 
   public void Back()
     {
-        StartCoroutine(FadeTown());
+        if (storyMode)
+        {
+                
+            StartCoroutine(FadeKingdom());
+        }
+        else
+        {
+            StartCoroutine(FadeTown());
+        }
     }
        public void ReturnStory()
     {
