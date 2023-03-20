@@ -17,6 +17,8 @@ public string difficulty;
 [SerializeField]Image tutorialImage;
 [SerializeField]GameObject tutorialBG;
 [SerializeField]Slider PlayerXP;
+[SerializeField]GameObject prevButton;
+[SerializeField]GameObject nextButton;
 public Text XP;
 
 public List<Sprite> tutorialImages = new List<Sprite>();
@@ -74,6 +76,8 @@ public void ShowTutorial()
     tutorialImage.sprite = tutorialImages[0];
     tutorialBG.SetActive(true);
     arenaMenu.blocksRaycasts = false;
+    prevButton.SetActive(false);
+    nextButton.SetActive(true);
 }
 public void CloseTutorial()
 {
@@ -92,42 +96,112 @@ public void NextTutorial()
      
         if (tutorialCount == 1)
         {
-            tutorialImage.sprite = tutorialImages[1];
+            tutorialImage.sprite = tutorialImages[1];            
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
         }
         else if (tutorialCount == 2)
         {
             tutorialImage.sprite = tutorialImages[2];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
         }
         else if (tutorialCount == 3)
         {
             tutorialImage.sprite = tutorialImages[3];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
         }
     
         else if (tutorialCount == 4)
         {
             tutorialImage.sprite = tutorialImages[4];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
         }
     
         else if (tutorialCount == 5)
         {
             tutorialImage.sprite = tutorialImages[5];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
         }
     
         else if (tutorialCount == 6)
         {
             tutorialImage.sprite = tutorialImages[6];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
         }
         else if (tutorialCount == 7)
         {
             tutorialImage.sprite = tutorialImages[7];
+            prevButton.SetActive(true);
+            nextButton.SetActive(false); 
         }
-    
-    if (tutorialCount == 8)
-    {
-        CloseTutorial(); 
-    }
+        
 
 }
+
+public void PrevTutorial()
+{
+    
+        tutorialCount = tutorialCount - 1;
+     
+        if (tutorialCount == 0)
+        {
+            tutorialImage.sprite = tutorialImages[0];            
+            prevButton.SetActive(false);
+            nextButton.SetActive(true);
+        }
+        else if (tutorialCount == 1)
+        {
+            tutorialImage.sprite = tutorialImages[1];            
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
+        }
+        else if (tutorialCount == 2)
+        {
+            tutorialImage.sprite = tutorialImages[2];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
+        }
+        else if (tutorialCount == 3)
+        {
+            tutorialImage.sprite = tutorialImages[3];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
+        }
+    
+        else if (tutorialCount == 4)
+        {
+            tutorialImage.sprite = tutorialImages[4];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
+        }
+    
+        else if (tutorialCount == 5)
+        {
+            tutorialImage.sprite = tutorialImages[5];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
+        }
+    
+        else if (tutorialCount == 6)
+        {
+            tutorialImage.sprite = tutorialImages[6];
+            prevButton.SetActive(true);
+            nextButton.SetActive(true);
+        }
+        else if (tutorialCount == 7)
+        {
+            tutorialImage.sprite = tutorialImages[7];
+            prevButton.SetActive(true);
+            nextButton.SetActive(false); 
+        }
+        
+}
+
    IEnumerator Fade()
     {
         animate.SetBool("Fade", true);
