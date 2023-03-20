@@ -41,4 +41,9 @@ public class Cutscenes : MonoBehaviour
 
     }
    }
+    public void SkipStory(){
+        SceneManager.LoadScene("Math Town");
+        PlayerPrefs.SetInt("firstPlaythrough", 1);
+    }
+
 }
