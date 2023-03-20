@@ -797,7 +797,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1079542560}
         m_TargetAssemblyTypeName: Cutscenes, Assembly-CSharp
-        m_MethodName: NextFrame
+        m_MethodName: SkipStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
