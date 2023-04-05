@@ -123,7 +123,7 @@ Timer();
 if (questions.correct)
     {
      questions.correctText.text = "";
-
+            audioclips.PlayPlayerAttack();
             player1.AttackAnimate();
             questions.correctText.text = "CORRECT";                      
             UI.statusScroll.SetActive(true);

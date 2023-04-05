@@ -21,6 +21,7 @@ public class NewArenaAudio : MonoBehaviour
 
         battle = BattleManagement.GetComponent<BattleNew>();    
         playerWeapon = battle.playerClone.GetComponent<PlayerUnit>().weaponSprite;
+        Debug.Log(playerWeapon);
     }
     void Update()
     {

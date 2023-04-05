@@ -605,7 +605,7 @@ void PlayerWin()
 
             
             case "Kingdom1":
-            experience += 20;
+            experience += 35;
             int kingdom1lvl = PlayerPrefs.GetInt("kingdom1Level", 1);
             if (int.Parse(selectedLevel) == kingdom1lvl)
             {
@@ -621,7 +621,7 @@ void PlayerWin()
         break;
 
             case "Kingdom2":
-            experience += 30;
+            experience += 40;
             int kingdom2lvl = PlayerPrefs.GetInt("kingdom2Level", 1);
             if (int.Parse(selectedLevel) == kingdom2lvl)
             {
@@ -638,7 +638,7 @@ void PlayerWin()
         break;
 
             case "Kingdom3":
-            experience += 40;
+            experience += 45;
             int kingdom3lvl = PlayerPrefs.GetInt("kingdom3Level", 1);
             if (int.Parse(selectedLevel) == kingdom3lvl)
             {
