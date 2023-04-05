@@ -11,6 +11,9 @@ public class Settings : MonoBehaviour
     [SerializeField] GameObject creditsPopUp;
     [SerializeField]GameObject helpPopUp;
     [SerializeField]GameObject settingsPopUp;
+    [SerializeField]GameObject AdventureBack;
+    [SerializeField]GameObject MathTownBack;
+    [SerializeField]GameObject ArenaBack;
     public List<Sprite> soundIcon = new List<Sprite>();
 [Header("Math Town Tutorial")]
 
@@ -136,44 +139,18 @@ public void ShowTutorialStory()
     
     
 }
-   public void NextTutorialMathTown()
+public void NextTutorialMathTown()
 {
     
-        MathTownTutorialCount = MathTownTutorialCount + 1;
-     
-        if (MathTownTutorialCount == 1)
-        {
-            MathTownHelpImage.sprite = MathTownHelpImages[1];
-        }
-        else if (MathTownTutorialCount == 2)
-        {
-            MathTownHelpImage.sprite = MathTownHelpImages[2];
-        }
-        else if (MathTownTutorialCount == 3)
-        {
-            MathTownHelpImage.sprite = MathTownHelpImages[3];
-        }
-        else if (MathTownTutorialCount == 4)
-        {
-            MathTownHelpImage.sprite = MathTownHelpImages[4];
-        }
-        else if (MathTownTutorialCount == 5)
-        {
-            MathTownHelpImage.sprite = MathTownHelpImages[5];
-        }
-        else if (MathTownTutorialCount == 6)
-        {
-            MathTownHelpImage.sprite = MathTownHelpImages[6];
-        }
-        else if (MathTownTutorialCount == 7)
-        {
-            MathTownHelpImage.sprite = MathTownHelpImages[7];
-        }
-     
-    
+    MathTownTutorialCount++;
+    MathTownBack.SetActive(true);    
     if (MathTownTutorialCount == 8)
     {
         CloseTutorial(); 
+    }
+    else
+    {
+        MathTownHelpImage.sprite = MathTownHelpImages[MathTownTutorialCount];     
     }
 
 }
@@ -181,41 +158,15 @@ public void ShowTutorialStory()
    public void NextTutorialArena()
 {
     
-        ArenaTutorialCount = ArenaTutorialCount + 1;
-     
-        if (ArenaTutorialCount == 1)
-        {
-            ArenaHelpImage.sprite = ArenaHelpImages[1];
-        }
-        else if (ArenaTutorialCount == 2)
-        {
-            ArenaHelpImage.sprite = ArenaHelpImages[2];
-        }
-        else if (ArenaTutorialCount == 3)
-        {
-            ArenaHelpImage.sprite = ArenaHelpImages[3];
-        }
-        else if (ArenaTutorialCount == 4)
-        {
-            ArenaHelpImage.sprite = ArenaHelpImages[4];
-        }
-        else if (ArenaTutorialCount == 5)
-        {
-            ArenaHelpImage.sprite = ArenaHelpImages[5];
-        }
-        else if (ArenaTutorialCount == 6)
-        {
-            ArenaHelpImage.sprite = ArenaHelpImages[6];
-        }
-        else if (ArenaTutorialCount == 7)
-        {
-            ArenaHelpImage.sprite = ArenaHelpImages[7];
-        }
-     
-   
+    ArenaTutorialCount++;
+    ArenaBack.SetActive(true);    
     if (ArenaTutorialCount == 8)
     {
         CloseTutorial();
+    }
+     else
+    {
+        ArenaHelpImage.sprite = ArenaHelpImages[ArenaTutorialCount];     
     }
 
 }
@@ -223,46 +174,53 @@ public void ShowTutorialStory()
    public void NextTutorialStory()
 {
     
-         StoryTutorialCount = StoryTutorialCount + 1;
-     
-        if (StoryTutorialCount == 1)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[1];
-        }
-        else if (StoryTutorialCount == 2)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[2];
-        }
-        else if (StoryTutorialCount == 3)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[3];
-        }
-        else if (StoryTutorialCount == 4)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[4];
-        }
-        else if (StoryTutorialCount == 5)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[5];
-        }
-        else if (StoryTutorialCount == 6)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[6];
-        }
-        else if (StoryTutorialCount == 7)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[7];
-        }
-        else if (StoryTutorialCount == 8)
-        {
-            StoryHelpImage.sprite = StoryHelpImages[8];
-        }
-     
-   
+    StoryTutorialCount++;
+    AdventureBack.SetActive(true);    
     if (StoryTutorialCount == 9)
     {
         CloseTutorial();
     }
+    else
+    {
+        StoryHelpImage.sprite = StoryHelpImages[StoryTutorialCount];     
+    }
+}
+
+public void BackTutorialMathTown()
+{
+    
+    MathTownTutorialCount--;
+    if (MathTownTutorialCount == 0)
+    {
+        MathTownBack.SetActive(false);    
+    }
+        MathTownHelpImage.sprite = MathTownHelpImages[MathTownTutorialCount];     
+}
+
+public void BackutorialArena()
+{
+    
+    ArenaTutorialCount--;
+    if (ArenaTutorialCount == 0)
+    {
+        ArenaBack.SetActive(false);    
+    }
+
+        ArenaHelpImage.sprite = ArenaHelpImages[ArenaTutorialCount];     
+
+
+}
+
+public void BackTutorialStory()
+{
+    
+    StoryTutorialCount--;
+    if (StoryTutorialCount == 0)
+    {
+        AdventureBack.SetActive(false);    
+    }
+
+        StoryHelpImage.sprite = StoryHelpImages[StoryTutorialCount];     
 
 }
 
@@ -272,8 +230,8 @@ public void CloseTutorial()
     StoryTutorial.SetActive(false);
     ArenaTutorial.SetActive(false);
     MathTownTutorial.SetActive(false);
+    helpPopUp.SetActive(false);    
     settingsPopUp.SetActive(true);    
-    helpPopUp.SetActive(true);    
 
 }
 }
