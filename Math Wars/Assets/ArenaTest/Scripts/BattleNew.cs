@@ -96,13 +96,13 @@ UI.ChooseAnswer();
     switch (topic)
     {
     case "Algebra":
-        questions.Algebra();
+        questions.Intermediate();
     break;
     case "Trigonometry":
-        questions.Trigonometry();
+        questions.Advance();
     break;
     case "Calculus":
-        questions.Calculus();
+        questions.Beginner();
     break;
     }
     rewardXP = Random.Range(5,11);
