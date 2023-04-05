@@ -206,6 +206,6 @@ public void PrevTutorial()
     {
         animate.SetBool("Fade", true);
         yield return new WaitUntil(() => img.color.a == 1);
-        SceneManager.LoadScene("Arena");
+        SceneManager.LoadScene("ArenaReworked");
     }
 }

@@ -15,6 +15,7 @@ public int CurrentHealth;
 [SerializeField] Animator fireballAnimate;
 public List<GameObject> effects = new List<GameObject>();
 public List<GameObject> deadFaces = new List<GameObject>();
+public List<GameObject> dmgFaces = new List<GameObject>();
 [SerializeField]SpriteResolver Head;
 [SerializeField]SpriteResolver Body;
 [SerializeField]SpriteResolver Weapon;
@@ -117,23 +118,23 @@ public void HealPlayer(int heal)
     
     public void DmgAnimate()
     {
-
+        dmgFaces[headSprite].SetActive(true);
         effects[4].SetActive(true);
     }
     public void TrigDmgAnimate()
     {
-
+        dmgFaces[headSprite].SetActive(true);
         effects[5].SetActive(true);
     }
     public void CalDmgAnimate()
     {
-
+        dmgFaces[headSprite].SetActive(true);
         effects[6].SetActive(true);
     }
     
     public void ResetDmg()
     {
-
+        dmgFaces[headSprite].SetActive(false);
         effects[4].SetActive(false);
         effects[5].SetActive(false);
         effects[6].SetActive(false);

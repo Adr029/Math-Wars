@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story Cutscenes.unity
     guid: 618807d5df3161249b766b1f36f5c99b
+  - enabled: 1
+    path: Assets/Scenes/ArenaReworked.unity
+    guid: 74ae92630b99daa4ca43c16037ce4e0c
   m_configObjects: {}

@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_Material: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -301,13 +301,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 300
-  m_EffectMaterial: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_EffectMaterial: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_EffectFactor: 1
   m_ColorFactor: 1
   m_BlurFactor: 0
   m_EffectMode: 0
   m_ColorMode: 0
-  m_BlurMode: 3
+  m_BlurMode: 1
   m_AdvancedBlur: 1
   m_ShadowBlur: 1
   m_ShadowStyle: 0
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_Material: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1091,13 +1091,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 300
-  m_EffectMaterial: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_EffectMaterial: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_EffectFactor: 1
   m_ColorFactor: 1
   m_BlurFactor: 0
   m_EffectMode: 0
   m_ColorMode: 0
-  m_BlurMode: 3
+  m_BlurMode: 1
   m_AdvancedBlur: 1
   m_ShadowBlur: 1
   m_ShadowStyle: 0
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_Material: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1485,13 +1485,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 300
-  m_EffectMaterial: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_EffectMaterial: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_EffectFactor: 1
   m_ColorFactor: 1
   m_BlurFactor: 0
   m_EffectMode: 0
   m_ColorMode: 0
-  m_BlurMode: 3
+  m_BlurMode: 1
   m_AdvancedBlur: 1
   m_ShadowBlur: 1
   m_ShadowStyle: 0
@@ -2621,7 +2621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_Material: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2678,13 +2678,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 300
-  m_EffectMaterial: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_EffectMaterial: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_EffectFactor: 1
   m_ColorFactor: 1
   m_BlurFactor: 0
   m_EffectMode: 0
   m_ColorMode: 0
-  m_BlurMode: 3
+  m_BlurMode: 1
   m_AdvancedBlur: 1
   m_ShadowBlur: 1
   m_ShadowStyle: 0
@@ -3457,7 +3457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_Material: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -3514,13 +3514,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 300
-  m_EffectMaterial: {fileID: 21541535114347366, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
+  m_EffectMaterial: {fileID: 21635119553697766, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_EffectFactor: 1
   m_ColorFactor: 1
   m_BlurFactor: 0
   m_EffectMode: 0
   m_ColorMode: 0
-  m_BlurMode: 3
+  m_BlurMode: 1
   m_AdvancedBlur: 1
   m_ShadowBlur: 1
   m_ShadowStyle: 0
