@@ -8,11 +8,11 @@ using UnityEngine.SceneManagement;
 public class BattleNew : MonoBehaviour
 {
 
-    public float timer;
-    public bool runTimer = false;
+    float timer;
+    bool runTimer = false;
     public int experience;
-    public int accumulatedXP = 0;
-    public string difficulty;
+    int accumulatedXP = 0;
+    string difficulty;
     public Image transition;
     public Animator animate;
     [SerializeField]GameObject player;
@@ -20,6 +20,7 @@ public class BattleNew : MonoBehaviour
     [SerializeField]GameObject QuestionManager;
     [SerializeField]GameObject Transition;
     [SerializeField]GameObject AudioManager;
+    [SerializeField]GameObject circleGroup;
     [SerializeField]Text TimerUI;
     [SerializeField]Slider TimerCircle;
     [SerializeField]Button ConfirmAttack;
@@ -35,11 +36,13 @@ public class BattleNew : MonoBehaviour
     UIManagement UI;
     QuestionManagerNew questions;
     NewArenaAudio audioclips;
-    int dice;
-    public int rewardXP;   
+    int rewardXP;   
     string topic;
     PlayerUnit player1;
     public int prefabIndex = 0;
+    int answerTarget;
+    int correctAnswers;
+    public List <GameObject> circles;
 
 //coroutine timers
 
@@ -57,14 +60,18 @@ void Start()
 {
     prefabIndex = 0;
     accumulatedXP = 0;
+    answerTarget = 0;
     audioclips = AudioManager.GetComponent<NewArenaAudio>();
     difficulty = PlayerPrefs.GetString("difficulty");
     experience = PlayerPrefs.GetInt("XP");
     Scene currentScene = SceneManager.GetActiveScene();
     StartCoroutine(SetupBattle());
+    RandomTarget();
+
 }
 IEnumerator SetupBattle()
 {
+    
     AccumulatedXP.text = "Accumulated XP: " + accumulatedXP;
     XPText.SetActive(false);
     player1 = playerClone.GetComponent<PlayerUnit>();
@@ -88,7 +95,7 @@ void PlayerTurn()
 
 public void AttackType(Button button)
 {
-
+circleGroup.SetActive(true);
 topic = button.name;
 UI.ChooseAnswer();
     Timer();
@@ -105,12 +112,20 @@ UI.ChooseAnswer();
         questions.Beginner();
     break;
     }
-    rewardXP = Random.Range(5,11);
     XPText.SetActive(true);
-    RewardXPText.text = "For "+rewardXP+" XP:";
-
+    
 }  
-
+public void RandomTarget()
+{
+    correctAnswers = 0;
+    circles[0].GetComponent<SpriteRenderer>().color = Color.white;
+    circles[1].GetComponent<SpriteRenderer>().color = Color.white;
+    circles[2].GetComponent<SpriteRenderer>().color = Color.white;
+    circles[3].GetComponent<SpriteRenderer>().color = Color.white;
+    rewardXP = Random.Range(5,11);
+    answerTarget = Random.Range(1,5);
+    RewardXPText.text = "For "+rewardXP+" XP, answer "+answerTarget+" questions correctly.";
+}
 public void CheckAnswerBtn()
 {
     StartCoroutine(CheckAnswer());
@@ -119,10 +134,29 @@ IEnumerator CheckAnswer()
 {
 runTimer = false;
 Timer();
-    UI.EnemyTurn();
+UI.EnemyTurn();
 if (questions.correct)
-    {
-     questions.correctText.text = "";
+        {
+            correctAnswers++;
+            switch (correctAnswers)
+            {
+                case 1: 
+                    circles[0].GetComponent<SpriteRenderer>().color = Color.green;
+                break;
+
+                case 2:
+                    circles[1].GetComponent<SpriteRenderer>().color = Color.green;
+                break;
+
+                case 3:
+                    circles[2].GetComponent<SpriteRenderer>().color = Color.green;
+                break;
+
+                case 4:
+                    circles[3].GetComponent<SpriteRenderer>().color = Color.green;
+                break;
+            }
+            questions.correctText.text = "";
             audioclips.PlayPlayerAttack();
             player1.AttackAnimate();
             questions.correctText.text = "CORRECT";                      
@@ -132,19 +166,21 @@ if (questions.correct)
              switch (topic)
             {
             case "Algebra":
-                accumulatedXP +=  rewardXP;
                 damageFX.SetActive(true);
             break;
             case "Trigonometry":
-                accumulatedXP += rewardXP;
                 trigdamageFX.SetActive(true);
             break;
             case "Calculus":
-                accumulatedXP += rewardXP;
                 caldamageFX.SetActive(true);
             break;
             
-        }
+            }
+            if (correctAnswers == answerTarget)
+            {
+                accumulatedXP += rewardXP;
+                RandomTarget();
+            }
         }
         
         else
