@@ -2366,7 +2366,7 @@ MonoBehaviour:
   m_Style: 1
   m_AdditionalShadows: []
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -2}
+  m_EffectDistance: {x: 5, y: -3}
   m_UseGraphicAlpha: 1
 --- !u!114 &475523348
 MonoBehaviour:
@@ -3671,7 +3671,7 @@ MonoBehaviour:
   m_Style: 1
   m_AdditionalShadows: []
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -2}
+  m_EffectDistance: {x: 5, y: -2}
   m_UseGraphicAlpha: 1
 --- !u!114 &953144655
 MonoBehaviour:
@@ -4255,7 +4255,7 @@ MonoBehaviour:
   m_Style: 1
   m_AdditionalShadows: []
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -2}
+  m_EffectDistance: {x: 5, y: -3}
   m_UseGraphicAlpha: 1
 --- !u!114 &1027457711
 MonoBehaviour:
@@ -6539,7 +6539,7 @@ MonoBehaviour:
   m_Style: 1
   m_AdditionalShadows: []
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -2}
+  m_EffectDistance: {x: 5, y: -3}
   m_UseGraphicAlpha: 1
 --- !u!114 &1537540359
 MonoBehaviour:
@@ -7178,7 +7178,7 @@ MonoBehaviour:
   m_Style: 1
   m_AdditionalShadows: []
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -2}
+  m_EffectDistance: {x: 5, y: -3}
   m_UseGraphicAlpha: 1
 --- !u!114 &1734206182
 MonoBehaviour:

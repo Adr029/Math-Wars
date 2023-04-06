@@ -61,7 +61,8 @@ public class BattleManager : MonoBehaviour
     QuestionManagement questions;
     ArenaAudio audioclips;
     int dice;
-    int healCount;
+    int healCount = 5;
+    int enemyhealCount = 5;
     string topic;
     EnemyUnit enemy1;
     PlayerUnit player1;
@@ -125,7 +126,6 @@ void Start()
         }
         ArmyLDefaultPos = new Vector3(-780, 160, 0);
         ArmyRDefaultPos = new Vector3(780, 160, 0);
-        healCount = int.Parse(selectedLevel);
     }
     else
     {
@@ -447,7 +447,7 @@ switch (playerchoice)
     
 IEnumerator EnemyTurn()
 {
-
+Debug.Log(enemyhealCount);
 runTimer = false;
 if (enemy1.CurrentHealth < 100)
     {
@@ -517,13 +517,17 @@ yield return delay1;
     UI.status.text = "ENEMY MISSED";
     UI.statusScroll.SetActive(true);  
 break;
+
 case 6:
+
+if (enemyhealCount != 0)
+{
 yield return delay1;
 UI.status.text = "ENEMY HEALED";
 UI.statusScroll.SetActive(true);
 audioclips.PlayEnemyHeal();
 enemy1.HealAnimate();
-
+enemyhealCount--;
     switch (chosenKingdom)
     {
     case "Kingdom1":        
@@ -536,9 +540,16 @@ enemy1.HealAnimate();
         enemy1.HealEnemy(Random.Range(30,35));
     break;  
     }
-break;
+}
+else
+{
+    yield return delay1;
+    UI.status.text = "ENEMY MISSED";
+    UI.statusScroll.SetActive(true);  
 }
 
+break;
+}
 
 
 StartCoroutine(SetupBattle());
@@ -573,7 +584,7 @@ IEnumerator EnemyCalculus()
         UI.statusScroll.SetActive(true); 
         yield return dmgDelay;
         player1.CalDmgAnimate();
-        player1.TakeDamage(Random.Range(19,23));
+        player1.TakeDamage(Random.Range(19,24));
         audioclips.PlayHurt();
         UpdateHealth();
 
@@ -581,7 +592,6 @@ IEnumerator EnemyCalculus()
 void PlayerLose()
 {
     UI.statusScroll.SetActive(false);
-
     StartCoroutine(ShowLose());
     runTimer = false;
     ReturnToMap.SetActive(true);
@@ -595,14 +605,11 @@ void PlayerWin()
     runTimer = false;
     winCount += 1;
     PlayerPrefs.SetInt("wins", winCount);
-    
-
-        ContinueButton.SetActive(false);
-        ReturnToMap.SetActive(true);
+    ContinueButton.SetActive(false);
+    ReturnToMap.SetActive(true);
       
         switch (chosenKingdom)
         {
-
             
             case "Kingdom1":
             experience += 35;
