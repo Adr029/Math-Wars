@@ -103,13 +103,46 @@ UI.ChooseAnswer();
     switch (topic)
     {
     case "Algebra":
-        questions.Intermediate();
+        switch (difficulty)
+        {
+        case "Easy":
+            questions.BeginnerAlge();
+        break;
+        case "Normal":
+            questions.IntermediateAlge();
+        break;
+        case "Hard":
+            questions.AdvanceAlge();
+        break;
+        }
     break;
     case "Trigonometry":
-        questions.Advance();
+        switch (difficulty)
+        {
+        case "Easy":
+            questions.BeginnerTrigo();
+        break;
+        case "Normal":
+            questions.IntermediateTrigo();
+        break;
+        case "Hard":
+            questions.AdvanceTrigo();
+        break;
+        }
     break;
     case "Calculus":
-        questions.Beginner();
+        switch (difficulty)
+        {
+        case "Easy":
+            questions.BeginnerCal();
+        break;
+        case "Normal":
+            questions.IntermediateCal();
+        break;
+        case "Hard":
+            questions.AdvanceCal();
+        break;
+        }
     break;
     }
     XPText.SetActive(true);
@@ -198,7 +231,6 @@ public void ActivateAttack()
 
 public void Timer()
 {
-
 
 switch (difficulty)
 {
