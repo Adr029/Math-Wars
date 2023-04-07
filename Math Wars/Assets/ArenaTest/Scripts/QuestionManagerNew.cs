@@ -43,7 +43,7 @@ public class QuestionManagerNew : MonoBehaviour
 public void BeginnerAlge()
 {
 
-dice = Random.Range(0,10);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -136,12 +136,103 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegAlgeAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegAlgeAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegAlgeAnswers[43];
+    answer = "A";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[47];
+    answer = "D";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[51];
+    answer = "A";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[55];
+    answer = "B";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[59];
+    answer = "C";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[63];
+    answer = "D";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[67];
+    answer = "A";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[71];
+    answer = "A";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[75];
+    answer = "A";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = BegAlgeQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegAlgeAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 public void BeginnerTrigo()
 {
 
-dice = Random.Range(0,10);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -234,12 +325,103 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[43];
+    answer = "D";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[47];
+    answer = "A";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[51];
+    answer = "D";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[55];
+    answer = "C";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[59];
+    answer = "C";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[63];
+    answer = "A";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[67];
+    answer = "D";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[71];
+    answer = "A";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[75];
+    answer = "C";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = BegTrigoQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegTrigoAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegTrigoAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 public void BeginnerCal()
 {
 
-dice = Random.Range(0,10);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -332,13 +514,104 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = BegCalQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[43];
+    answer = "C";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = BegCalQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[47];
+    answer = "A";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = BegCalQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegCalAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[51];
+    answer = "C";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = BegCalQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = BegCalAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[55];
+    answer = "B";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = BegCalQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[59];
+    answer = "D";
+break;
+
+case 115:
+    question.GetComponent<Image>().sprite = BegCalQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[63];
+    answer = "A";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = BegCalQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[67];
+    answer = "C";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = BegCalQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[71];
+    answer = "D";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = BegCalQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[75];
+    answer = "A";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = BegCalQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = BegCalAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 
 
 public void IntermediateAlge()
 {
-dice = Random.Range(0,10);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -431,11 +704,102 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[43];
+    answer = "A";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[47];
+    answer = "D";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[51];
+    answer = "A";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[55];
+    answer = "B";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[59];
+    answer = "C";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[63];
+    answer = "D";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[67];
+    answer = "A";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[71];
+    answer = "A";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[75];
+    answer = "A";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = InterAlgeQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterAlgeAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 public void IntermediateTrigo()
 {
-dice = Random.Range(0,10);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -528,11 +892,102 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[43];
+    answer = "D";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[47];
+    answer = "A";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[51];
+    answer = "D";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[55];
+    answer = "C";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[59];
+    answer = "C";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[63];
+    answer = "A";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[67];
+    answer = "D";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[71];
+    answer = "A";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[75];
+    answer = "C";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = InterTrigoQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterTrigoAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 public void IntermediateCal()
 {
-dice = Random.Range(0,10);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -625,13 +1080,104 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = InterCalQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[43];
+    answer = "C";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = InterCalQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[47];
+    answer = "A";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = InterCalQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[51];
+    answer = "C";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = InterCalQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[55];
+    answer = "B";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = InterCalQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[59];
+    answer = "D";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = InterCalQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[63];
+    answer = "A";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = InterCalQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[67];
+    answer = "C";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = InterCalQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[71];
+    answer = "D";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = InterCalQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[75];
+    answer = "A";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = InterCalQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = InterCalAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 
 
 public void AdvanceAlge()
 {
-dice = Random.Range(0,10);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -724,11 +1270,102 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[43];
+    answer = "A";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[47];
+    answer = "D";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[51];
+    answer = "A";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[55];
+    answer = "B";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[59];
+    answer = "C";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[63];
+    answer = "D";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[67];
+    answer = "A";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[71];
+    answer = "A";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[75];
+    answer = "A";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = AdvanAlgeQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanAlgeAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanAlgeAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 public void AdvanceTrigo()
 {
-dice = Random.Range(0,0);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -821,11 +1458,102 @@ case 9:
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[39];
     answer = "A";
 break;
+
+case 10:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[43];
+    answer = "D";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[47];
+    answer = "A";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[51];
+    answer = "D";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[55];
+    answer = "C";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[59];
+    answer = "C";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[63];
+    answer = "A";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[67];
+    answer = "D";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[71];
+    answer = "A";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[75];
+    answer = "C";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = AdvanTrigoQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite = AdvanTrigoAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanTrigoAnswers[79];
+    answer = "A";
+break;
+
 }
 }
 public void AdvanceCal()
 {
-dice = Random.Range(0,30);
+dice = Random.Range(0,20);
 
 switch (dice)
 {
@@ -916,6 +1644,96 @@ case 9:
     choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[37];
     choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[38];
     choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[39];
+    answer = "A";
+break;
+
+case 10:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[10];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[40];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[41];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[42];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[43];
+    answer = "C";
+break;
+
+case 11:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[11];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[44];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[45];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[46];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[47];
+    answer = "A";
+break;
+
+case 12:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[12];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[48];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[49];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[50];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[51];
+    answer = "C";
+break;
+
+case 13:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[13];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[52];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[53];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[54];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[55];
+    answer = "B";
+break;
+
+case 14:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[14];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[56];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[57];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[58];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[59];
+    answer = "D";
+break;
+
+case 15:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[15];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[60];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[61];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[62];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[63];
+    answer = "A";
+break;
+
+case 16:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[16];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[64];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[65];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[66];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[67];
+    answer = "C";
+break;
+
+case 17:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[17];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[68];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[69];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[70];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[71];
+    answer = "D";
+break;
+
+case 18:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[18];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[72];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[73];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[74];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[75];
+    answer = "A";
+break;
+
+case 19:
+    question.GetComponent<Image>().sprite = AdvanCalQuestions[19];
+    choiceA.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[76];
+    choiceB.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[77];
+    choiceC.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[78];
+    choiceD.transform.GetChild(1).GetComponent<Image>().sprite  = AdvanCalAnswers[79];
     answer = "A";
 break;
 }
