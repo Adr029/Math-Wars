@@ -198,9 +198,64 @@ public void RandomTarget()
     circles4[1].GetComponent<SpriteRenderer>().sprite = circleBlank;
     circles4[2].GetComponent<SpriteRenderer>().sprite = circleBlank;
     circles4[3].GetComponent<SpriteRenderer>().sprite = circleBlank;
-
-    rewardXP = Random.Range(5,11);
     answerTarget = Random.Range(1,5);
+    switch (difficulty)
+    {
+
+        case "Easy":
+        switch (answerTarget)
+        {
+            case 1:
+                rewardXP = Random.Range(4,6);
+            break;
+            case 2:
+                rewardXP = Random.Range(6,8);
+            break;
+            case 3:
+                rewardXP = Random.Range(8,10);
+            break;
+            case 4:
+                rewardXP = Random.Range(10,12);
+            break;
+         
+        }
+        break;
+        case "Normal":
+        switch (answerTarget)
+        {
+            case 1:
+                rewardXP = Random.Range(6,8);
+            break;
+            case 2:
+                rewardXP = Random.Range(8,10);
+            break;
+            case 3:
+                rewardXP = Random.Range(10,12);
+            break;
+            case 4:
+                rewardXP = Random.Range(12,14);
+            break;
+         
+        }
+        break;
+        case "Hard":
+        switch (answerTarget)
+        {
+            case 1:
+                rewardXP = Random.Range(8,10);
+            break;
+            case 2:
+                rewardXP = Random.Range(10,12);
+            break;
+            case 3:
+                rewardXP = Random.Range(12,14);
+            break;
+            case 4:
+                rewardXP = Random.Range(14,16);
+            break;
+         
+        }        break;
+    }
     
     circleGroup1.SetActive(false);
     circleGroup2.SetActive(false);
