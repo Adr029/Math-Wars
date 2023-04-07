@@ -18,8 +18,12 @@ public string kingdomName;
 [SerializeField]Image tutorialImage;
 [SerializeField]GameObject nextButton;
 [SerializeField]GameObject prevButton;
+[SerializeField]Button kingdom3;
+public List<GameObject> levelComplete = new List<GameObject>();
 public List<Sprite> tutorialImages = new List<Sprite>();
-
+int kingdom1Complete = 0;
+int kingdom2Complete = 0;
+int kingdom3Complete = 0;
 public int tutorialCount;
 public int firstLaunch;
 public Image img;
@@ -36,7 +40,27 @@ void Awake()
         ShowTutorial();
         PlayerPrefs.SetInt("firstLaunchStory", 1);
     }
-    
+    kingdom1Complete = PlayerPrefs.GetInt("kingdom1Complete");
+    kingdom2Complete = PlayerPrefs.GetInt("kingdom2Complete");
+    kingdom3Complete = PlayerPrefs.GetInt("kingdom3Complete");
+
+    if (kingdom1Complete == 1)
+    {
+        levelComplete[0].SetActive(true);
+    }
+    if (kingdom1Complete == 2)
+    {
+        levelComplete[1].SetActive(true);
+    }
+    if (kingdom1Complete == 3)
+    {
+        levelComplete[2].SetActive(true);
+    }
+
+    if (kingdom1Complete == 1 && kingdom2Complete == 1)
+    {
+        kingdom3.interactable = true;
+    }
 }
 
    public void Kingdom1()
