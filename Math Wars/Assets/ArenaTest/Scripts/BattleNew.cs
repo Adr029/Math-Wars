@@ -20,7 +20,10 @@ public class BattleNew : MonoBehaviour
     [SerializeField]GameObject QuestionManager;
     [SerializeField]GameObject Transition;
     [SerializeField]GameObject AudioManager;
-    [SerializeField]GameObject circleGroup;
+    [SerializeField]GameObject circleGroup4;
+    [SerializeField]GameObject circleGroup3;
+    [SerializeField]GameObject circleGroup2;
+    [SerializeField]GameObject circleGroup1;
     [SerializeField]Text TimerUI;
     [SerializeField]Slider TimerCircle;
     [SerializeField]Button ConfirmAttack;
@@ -42,7 +45,13 @@ public class BattleNew : MonoBehaviour
     public int prefabIndex = 0;
     int answerTarget;
     int correctAnswers;
-    public List <GameObject> circles;
+    public List <GameObject> circles4;
+    public List <GameObject> circles3;
+    public List <GameObject> circles2;
+    public List <GameObject> circles1;
+    public Sprite circleBlank;
+    public Sprite circleCorrect;
+    
 
 //coroutine timers
 
@@ -89,13 +98,38 @@ IEnumerator SetupBattle()
    
 void PlayerTurn()
 {
+    if (answerTarget == 1)
+    {
+        RewardXPText.text = "For  "+"<b>"+rewardXP+"</b>"+"  <b>XP</b>, answer  "+"<b>"+answerTarget+"</b>"+"  question correctly.";
+    }
+    else 
+    {
+        RewardXPText.text = "For  "+"<b>"+rewardXP+"</b>"+"  <b>XP</b>, answer  "+"<b>"+answerTarget+"</b>"+"  questions correctly.";
+    }
+    XPText.SetActive(true);
+    switch (answerTarget)
+        {
+            case 1:
+                circleGroup1.SetActive(true);
+            break;
+            case 2:
+                circleGroup2.SetActive(true);
+            break;
+            case 3:
+                circleGroup3.SetActive(true);
+            break;
+            case 4:
+                circleGroup4.SetActive(true); 
+            break;
+        }    
     ConfirmAttack.interactable = false;
     UI.SelectTopic();
+
 }
 
 public void AttackType(Button button)
 {
-circleGroup.SetActive(true);
+XPText.SetActive(false);
 topic = button.name;
 UI.ChooseAnswer();
     Timer();
@@ -145,19 +179,34 @@ UI.ChooseAnswer();
         }
     break;
     }
-    XPText.SetActive(true);
     
 }  
 public void RandomTarget()
 {
     correctAnswers = 0;
-    circles[0].GetComponent<SpriteRenderer>().color = Color.white;
-    circles[1].GetComponent<SpriteRenderer>().color = Color.white;
-    circles[2].GetComponent<SpriteRenderer>().color = Color.white;
-    circles[3].GetComponent<SpriteRenderer>().color = Color.white;
+
+    circles1[0].GetComponent<SpriteRenderer>().sprite = circleBlank;
+
+    circles2[0].GetComponent<SpriteRenderer>().sprite = circleBlank;
+    circles2[1].GetComponent<SpriteRenderer>().sprite = circleBlank;
+
+    circles3[0].GetComponent<SpriteRenderer>().sprite = circleBlank;
+    circles3[1].GetComponent<SpriteRenderer>().sprite = circleBlank;
+    circles3[2].GetComponent<SpriteRenderer>().sprite = circleBlank;
+
+    circles4[0].GetComponent<SpriteRenderer>().sprite = circleBlank;
+    circles4[1].GetComponent<SpriteRenderer>().sprite = circleBlank;
+    circles4[2].GetComponent<SpriteRenderer>().sprite = circleBlank;
+    circles4[3].GetComponent<SpriteRenderer>().sprite = circleBlank;
+
     rewardXP = Random.Range(5,11);
     answerTarget = Random.Range(1,5);
-    RewardXPText.text = "For "+rewardXP+" XP, answer "+answerTarget+" questions correctly.";
+    
+    circleGroup1.SetActive(false);
+    circleGroup2.SetActive(false);
+    circleGroup3.SetActive(false);
+    circleGroup4.SetActive(false);
+
 }
 public void CheckAnswerBtn()
 {
@@ -173,20 +222,26 @@ if (questions.correct)
             correctAnswers++;
             switch (correctAnswers)
             {
-                case 1: 
-                    circles[0].GetComponent<SpriteRenderer>().color = Color.green;
+                case 1:
+                    circles1[0].GetComponent<SpriteRenderer>().sprite = circleCorrect;
+                    circles2[0].GetComponent<SpriteRenderer>().sprite = circleCorrect;
+                    circles3[0].GetComponent<SpriteRenderer>().sprite = circleCorrect;
+                    circles4[0].GetComponent<SpriteRenderer>().sprite = circleCorrect;
                 break;
 
                 case 2:
-                    circles[1].GetComponent<SpriteRenderer>().color = Color.green;
+                    circles2[1].GetComponent<SpriteRenderer>().sprite = circleCorrect;
+                    circles3[1].GetComponent<SpriteRenderer>().sprite = circleCorrect;
+                    circles4[1].GetComponent<SpriteRenderer>().sprite = circleCorrect;
                 break;
 
                 case 3:
-                    circles[2].GetComponent<SpriteRenderer>().color = Color.green;
+                    circles3[2].GetComponent<SpriteRenderer>().sprite = circleCorrect;
+                    circles4[2].GetComponent<SpriteRenderer>().sprite = circleCorrect;
                 break;
 
                 case 4:
-                    circles[3].GetComponent<SpriteRenderer>().color = Color.green;
+                    circles4[3].GetComponent<SpriteRenderer>().sprite = circleCorrect;
                 break;
             }
             questions.correctText.text = "";
@@ -213,6 +268,7 @@ if (questions.correct)
             {
                 accumulatedXP += rewardXP;
                 RandomTarget();
+                
             }
         }
         
@@ -231,25 +287,7 @@ public void ActivateAttack()
 
 public void Timer()
 {
-
-switch (difficulty)
-{
-case "Easy":
-    TimerCircle.maxValue = 90f;
-    timer = 90f;
-break;
-
-case "Normal":
-    TimerCircle.maxValue = 60f;
     timer = 60f;
-break;
-
-case "Hard":
-    TimerCircle.maxValue = 30f;
-    timer = 30f;
-break;
-}
-
 }
 
 void FixedUpdate()
@@ -288,80 +326,5 @@ void FixedUpdate()
     }
 
       
-/*void AlgebraLevel5()
-    {
-        int dice2;
-        dice2 = Random.Range(1,5);
-        switch (dice2)
-        {
-            case 1:
-                questions.AlgebraLevel1();
-            break;
 
-            case 2:
-                questions.AlgebraLevel2();
-            break;
-
-            case 3:
-                questions.AlgebraLevel3();
-            break;
-
-            case 4:
-                questions.AlgebraLevel4();
-            break;
-  
-        }
-
-    }
-void TrigonometryLevel5()
-    {
-        int dice2;
-        dice2 = Random.Range(1,5);
-        switch (dice2)
-        {
-            case 1:
-                questions.TrigonometryLevel1();
-            break;
-
-            case 2:
-                questions.TrigonometryLevel2();
-            break;
-
-            case 3:
-                questions.TrigonometryLevel3();
-            break;
-
-            case 4:
-                questions.TrigonometryLevel4();
-            break;
-  
-        }
-
-    }
-void CalculusLevel5()
-    {
-        int dice2;
-        dice2 = Random.Range(1,5);
-        switch (dice2)
-        {
-            case 1:
-                questions.CalculusLevel1();
-            break;
-
-            case 2:
-                questions.CalculusLevel2();
-            break;
-
-            case 3:
-                questions.CalculusLevel3();
-            break;
-
-            case 4:
-                questions.CalculusLevel4();
-            break;
-  
-        }
-
-    }
-    */
 }
