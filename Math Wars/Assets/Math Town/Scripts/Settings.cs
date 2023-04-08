@@ -176,7 +176,7 @@ public void NextTutorialMathTown()
     
     StoryTutorialCount++;
     AdventureBack.SetActive(true);    
-    if (StoryTutorialCount == 9)
+    if (StoryTutorialCount == 10)
     {
         CloseTutorial();
     }

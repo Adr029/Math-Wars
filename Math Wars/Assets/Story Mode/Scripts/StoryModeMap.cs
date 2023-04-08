@@ -125,7 +125,7 @@ public void NextTutorial()
         prevButton.SetActive(true);
         nextButton.SetActive(true);
         //check actual count
-        if (tutorialCount == 9)
+        if (tutorialCount == 10)
         {
             CloseTutorial();
         }
