@@ -81,7 +81,7 @@ void Start()
 IEnumerator SetupBattle()
 {
     
-    AccumulatedXP.text = "Accumulated XP: " + accumulatedXP;
+    AccumulatedXP.text = ""+accumulatedXP;
     XPText.SetActive(false);
     player1 = playerClone.GetComponent<PlayerUnit>();
     UI = UIManager.GetComponent<UIManagement>();

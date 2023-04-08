@@ -2513,20 +2513,21 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 99130fbeb0796e7488e6fbbaa2cc8568, type: 3}
   - {fileID: 21300000, guid: 539a5cbbfbceefd48b24fa65222db4ca, type: 3}
   - {fileID: 21300000, guid: 9649ac9f61f14e241883c45e8f74dbec, type: 3}
-  - {fileID: 21300000, guid: 7d164b68b0375464cb2901f127ec9d78, type: 3}
+  - {fileID: 21300000, guid: f1fc7a03925177c41b3731f8008720f6, type: 3}
   - {fileID: 21300000, guid: cf7cb85925aa8b8419725e9b68bbbd39, type: 3}
   - {fileID: 21300000, guid: af22852113fc2b049b70180f97d6197a, type: 3}
   MathTownTutorial: {fileID: 1906351272}
   ArenaHelpImage: {fileID: 44756739}
   ArenaHelpImages:
-  - {fileID: 21300000, guid: 6187cb3e19365c542bc13c221a7679ef, type: 3}
-  - {fileID: 21300000, guid: c72f023cbd5160f46812b9b86f98b8f0, type: 3}
-  - {fileID: 21300000, guid: 03fb3750d66ba07419ec1ea74a2a49ef, type: 3}
-  - {fileID: 21300000, guid: 0f295bcf14c994843b9eb343e9ab91da, type: 3}
-  - {fileID: 21300000, guid: fdbe7e3d93a605947a509925dd57ecac, type: 3}
-  - {fileID: 21300000, guid: 8c8862e6d825d6d4a82e5be0e20d6fd3, type: 3}
-  - {fileID: 21300000, guid: 3330762d6046d1542b0ee109ce6d7e49, type: 3}
-  - {fileID: 21300000, guid: a852402e8200a6d48a1fa119a66e7f7e, type: 3}
+  - {fileID: 21300000, guid: 793fd6009c5b0f042a823d648cc11921, type: 3}
+  - {fileID: 21300000, guid: b054f0fd698533849b24738fc178bfad, type: 3}
+  - {fileID: 21300000, guid: 3a525bc3e3d186b488fb9560f34f2e97, type: 3}
+  - {fileID: 21300000, guid: 351b320dddb087341b1702cadf7815cb, type: 3}
+  - {fileID: 21300000, guid: 5f9119238ef995c46a27c73d695bf45d, type: 3}
+  - {fileID: 21300000, guid: 0c5eb29ea661aaa47909a11af7788f71, type: 3}
+  - {fileID: 21300000, guid: 4e97793c625877946ab9c135f39c648e, type: 3}
+  - {fileID: 21300000, guid: a83f096787fc8f649a6d2b8f9c0cdc04, type: 3}
+  - {fileID: 21300000, guid: 846a45470306f8e469da7c39d50e9bee, type: 3}
   ArenaTutorial: {fileID: 44756737}
   StoryHelpImage: {fileID: 1657279782}
   StoryHelpImages:
@@ -3361,7 +3362,7 @@ RectTransform:
   m_GameObject: {fileID: 707806792}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999202, y: 0.9999202, z: 0.9999202}
+  m_LocalScale: {x: 0.25062642, y: 0.25062642, z: 0.25062642}
   m_Children: []
   m_Father: {fileID: 2078763127}
   m_RootOrder: 5
@@ -3411,20 +3412,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 431e897add2123c47bcb222d0385c24a, type: 3}
-    m_FontSize: 48
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 48
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'XP
-
-'
+  m_Text: XP
 --- !u!222 &707806796
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5763,7 +5762,7 @@ RectTransform:
   m_GameObject: {fileID: 1317688782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999202, y: 0.9999202, z: 0.9999202}
+  m_LocalScale: {x: 0.24208067, y: 0.24208067, z: 0.24208067}
   m_Children: []
   m_Father: {fileID: 2078763127}
   m_RootOrder: 4
@@ -5795,16 +5794,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 431e897add2123c47bcb222d0385c24a, type: 3}
-    m_FontSize: 48
+    m_FontSize: 200
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 48
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 30/100
 --- !u!222 &1317688785
@@ -9112,14 +9111,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412103035291401342, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.41128
       objectReference: {fileID: 0}
     - target: {fileID: 412103035291401342, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.41128
       objectReference: {fileID: 0}
     - target: {fileID: 412103035291401342, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
       propertyPath: m_LocalScale.z
+      value: 0.41128
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401342, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401343, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401343, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401343, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412103035291401343, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8326802503477445976, guid: 09e9e51afaaa51d41ab6f9b37d53f022, type: 3}
