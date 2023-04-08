@@ -3034,14 +3034,15 @@ MonoBehaviour:
   nextButton: {fileID: 755768385}
   XP: {fileID: 241577664}
   tutorialImages:
-  - {fileID: 21300000, guid: 6187cb3e19365c542bc13c221a7679ef, type: 3}
-  - {fileID: 21300000, guid: c72f023cbd5160f46812b9b86f98b8f0, type: 3}
-  - {fileID: 21300000, guid: 03fb3750d66ba07419ec1ea74a2a49ef, type: 3}
-  - {fileID: 21300000, guid: 0f295bcf14c994843b9eb343e9ab91da, type: 3}
-  - {fileID: 21300000, guid: fdbe7e3d93a605947a509925dd57ecac, type: 3}
-  - {fileID: 21300000, guid: 8c8862e6d825d6d4a82e5be0e20d6fd3, type: 3}
-  - {fileID: 21300000, guid: 3330762d6046d1542b0ee109ce6d7e49, type: 3}
-  - {fileID: 21300000, guid: a852402e8200a6d48a1fa119a66e7f7e, type: 3}
+  - {fileID: 21300000, guid: 793fd6009c5b0f042a823d648cc11921, type: 3}
+  - {fileID: 21300000, guid: b054f0fd698533849b24738fc178bfad, type: 3}
+  - {fileID: 21300000, guid: 3a525bc3e3d186b488fb9560f34f2e97, type: 3}
+  - {fileID: 21300000, guid: 351b320dddb087341b1702cadf7815cb, type: 3}
+  - {fileID: 21300000, guid: 5f9119238ef995c46a27c73d695bf45d, type: 3}
+  - {fileID: 21300000, guid: 0c5eb29ea661aaa47909a11af7788f71, type: 3}
+  - {fileID: 21300000, guid: 4e97793c625877946ab9c135f39c648e, type: 3}
+  - {fileID: 21300000, guid: a83f096787fc8f649a6d2b8f9c0cdc04, type: 3}
+  - {fileID: 21300000, guid: 846a45470306f8e469da7c39d50e9bee, type: 3}
   img: {fileID: 274354269}
   animate: {fileID: 274354268}
   tutorialCount: 0

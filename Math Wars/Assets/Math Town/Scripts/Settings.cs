@@ -160,7 +160,7 @@ public void NextTutorialMathTown()
     
     ArenaTutorialCount++;
     ArenaBack.SetActive(true);    
-    if (ArenaTutorialCount == 8)
+    if (ArenaTutorialCount == 9)
     {
         CloseTutorial();
     }
