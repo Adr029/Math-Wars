@@ -62,9 +62,7 @@ public void Confirm()
 if (difficulty.Length != 0)
 {
     PlayerPrefs.SetString("difficulty", difficulty);
-    StartCoroutine(Fade());
-
-    
+    StartCoroutine(Fade()); 
 }
 }
 
@@ -93,14 +91,18 @@ public void NextTutorial()
     
      
     tutorialCount++;
-    tutorialImage.sprite = tutorialImages[tutorialCount];            
-    prevButton.SetActive(true);
-    nextButton.SetActive(true);
-        //check actual count
-    if (tutorialCount == 9)
+     if (tutorialCount == 9)
     {
         CloseTutorial();
     }
+    else
+    {
+        tutorialImage.sprite = tutorialImages[tutorialCount];            
+
+    }
+    prevButton.SetActive(true);
+    nextButton.SetActive(true);
+   
 
 }
 

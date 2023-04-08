@@ -18,6 +18,7 @@ public string kingdomName;
 [SerializeField]Image tutorialImage;
 [SerializeField]GameObject nextButton;
 [SerializeField]GameObject prevButton;
+[SerializeField]GameObject locked;
 [SerializeField]Button kingdom3;
 public List<GameObject> levelComplete = new List<GameObject>();
 public List<Sprite> tutorialImages = new List<Sprite>();
@@ -60,6 +61,7 @@ void Awake()
     if (kingdom1Complete == 1 && kingdom2Complete == 1)
     {
         kingdom3.interactable = true;
+        locked.SetActive(false);
     }
 }
 
@@ -121,15 +123,18 @@ public void NextTutorial()
 {
 
         tutorialCount++;
-        tutorialImage.sprite = tutorialImages[tutorialCount];            
-        prevButton.SetActive(true);
-        nextButton.SetActive(true);
-        //check actual count
         if (tutorialCount == 10)
         {
             CloseTutorial();
         }
-
+        else
+        {
+            tutorialImage.sprite = tutorialImages[tutorialCount];            
+        }
+        prevButton.SetActive(true);
+        nextButton.SetActive(true);
+        //check actual count
+       
 }
 
 public void PrevTutorial()

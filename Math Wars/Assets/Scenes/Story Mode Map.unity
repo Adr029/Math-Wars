@@ -875,6 +875,7 @@ MonoBehaviour:
   tutorialImage: {fileID: 939167212}
   nextButton: {fileID: 7702494931508063498}
   prevButton: {fileID: 742946387}
+  locked: {fileID: 0}
   kingdom3: {fileID: 0}
   levelComplete:
   - {fileID: 395135312}
