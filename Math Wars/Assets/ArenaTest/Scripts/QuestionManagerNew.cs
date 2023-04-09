@@ -8,11 +8,23 @@ public class QuestionManagerNew : MonoBehaviour
     public Button choiceB;
     public Button choiceC;
     public Button choiceD;
-    public int dice;
+    public int diceAlge = 0;
+    public int diceTrig = 0;
+    public int diceCal = 0;
+
     public string answer;
     public bool correct;
     public Text correctText;
     public Image question;
+
+[Header("Question Randomizer")]
+    public int[] questionNumberAlge;
+    public int[] questionNumberTrig;
+    public int[] questionNumberCal;
+    
+
+    public int questionChosen;
+
 
 // Arena Lists
 
@@ -39,13 +51,28 @@ public class QuestionManagerNew : MonoBehaviour
         public List<Sprite> AdvanTrigoAnswers = new List<Sprite>();
         public List<Sprite> AdvanCalQuestions = new List<Sprite>();
         public List<Sprite> AdvanCalAnswers = new List<Sprite>();
+void Start()
+{
+   Shuffle(questionNumberAlge);
+   Shuffle(questionNumberTrig);
+   Shuffle(questionNumberCal);
 
+}
 public void BeginnerAlge()
 {
 
-dice = Random.Range(0,20);
-
-switch (dice)
+questionChosen = questionNumberCal[diceAlge];
+    if (diceAlge == 19)
+    {
+        Shuffle(questionNumberAlge);
+        diceAlge = 0;
+    }
+    else
+    {
+        diceAlge++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = BegAlgeQuestions[0];
@@ -232,9 +259,18 @@ break;
 public void BeginnerTrigo()
 {
 
-dice = Random.Range(0,20);
-
-switch (dice)
+questionChosen = questionNumberCal[diceTrig];
+    if (diceTrig == 19)
+    {
+        Shuffle(questionNumberTrig);
+        diceTrig = 0;
+    }
+    else
+    {
+        diceTrig++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = BegTrigoQuestions[0];
@@ -421,9 +457,18 @@ break;
 public void BeginnerCal()
 {
 
-dice = Random.Range(0,20);
-
-switch (dice)
+    questionChosen = questionNumberCal[diceCal];
+    if (diceCal == 19)
+    {
+        Shuffle(questionNumberCal);
+        diceCal = 0;
+    }
+    else
+    {
+        diceCal++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = BegCalQuestions[0];
@@ -611,9 +656,18 @@ break;
 
 public void IntermediateAlge()
 {
-dice = Random.Range(0,20);
-
-switch (dice)
+questionChosen = questionNumberCal[diceAlge];
+    if (diceAlge == 19)
+    {
+        Shuffle(questionNumberAlge);
+        diceAlge = 0;
+    }
+    else
+    {
+        diceAlge++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = InterAlgeQuestions[0];
@@ -799,9 +853,18 @@ break;
 }
 public void IntermediateTrigo()
 {
-dice = Random.Range(0,20);
-
-switch (dice)
+questionChosen = questionNumberCal[diceTrig];
+    if (diceTrig == 19)
+    {
+        Shuffle(questionNumberTrig);
+        diceTrig = 0;
+    }
+    else
+    {
+        diceTrig++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = InterTrigoQuestions[0];
@@ -987,9 +1050,18 @@ break;
 }
 public void IntermediateCal()
 {
-dice = Random.Range(0,20);
-
-switch (dice)
+    questionChosen = questionNumberCal[diceCal];
+    if (diceCal == 19)
+    {
+        Shuffle(questionNumberCal);
+        diceCal = 0;
+    }
+    else
+    {
+        diceCal++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = InterCalQuestions[0];
@@ -1177,9 +1249,18 @@ break;
 
 public void AdvanceAlge()
 {
-dice = Random.Range(0,20);
-
-switch (dice)
+questionChosen = questionNumberCal[diceAlge];
+    if (diceAlge == 19)
+    {
+        Shuffle(questionNumberAlge);
+        diceAlge = 0;
+    }
+    else
+    {
+        diceAlge++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = AdvanAlgeQuestions[0];
@@ -1365,9 +1446,19 @@ break;
 }
 public void AdvanceTrigo()
 {
-dice = Random.Range(0,20);
 
-switch (dice)
+ questionChosen = questionNumberCal[diceTrig];
+    if (diceTrig == 19)
+    {
+        Shuffle(questionNumberTrig);
+        diceTrig = 0;
+    }
+    else
+    {
+        diceTrig++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = AdvanTrigoQuestions[0];
@@ -1553,9 +1644,18 @@ break;
 }
 public void AdvanceCal()
 {
-dice = Random.Range(0,20);
-
-switch (dice)
+    questionChosen = questionNumberCal[diceCal];
+    if (diceCal == 19)
+    {
+        Shuffle(questionNumberCal);
+        diceCal = 0;
+    }
+    else
+    {
+        diceCal++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = AdvanCalQuestions[0];
@@ -1739,8 +1839,20 @@ break;
 }
 }
 
+void Shuffle(int[] a)
+{
 
-// answer confirmation
+int index = 19;
+        while (index > -1)
+        {
+			int rnd = Random.Range(0,index);
+			int temp = a[index];
+			a[index] = a[rnd];
+			a[rnd] = temp;
+            index--;
+        }
+}
+
 public void AnswerA()
 {
     if (answer == "A")

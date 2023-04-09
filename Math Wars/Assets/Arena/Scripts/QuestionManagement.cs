@@ -15,7 +15,9 @@ public class QuestionManagement : MonoBehaviour
     public Image question;
 
 
-
+[Header("Question Randomizer")]
+    public int[] questionNumber;
+    public int questionChosen;
 // Story Mode Lists
 
 [Header("Level 1 Calculus")]
@@ -56,13 +58,25 @@ public class QuestionManagement : MonoBehaviour
 [Header("Level 4 Trigonometry")]
         public List<Sprite> Level4trigoquestions = new List<Sprite>();
         public List<Sprite> Level4trigoanswers = new List<Sprite>();
-
+void Start()
+{
+   Shuffle(questionNumber);
+}
 //Story Mode Questions 
 public void AlgebraLevel1()
 {
-dice = Random.Range(0,30);
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level1algequestions[0];
@@ -338,9 +352,18 @@ break;
 
 public void AlgebraLevel2()
 {
-dice = Random.Range(0,30);
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level2algequestions[0];
@@ -616,9 +639,18 @@ break;
 
 public void AlgebraLevel3()
 {
-dice = Random.Range(0,30);
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level3algequestions[0];
@@ -894,9 +926,18 @@ break;
 
 public void AlgebraLevel4()
 {
-dice = Random.Range(0,30);
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level4algequestions[0];
@@ -1174,10 +1215,18 @@ break;
 public void TrigonometryLevel1()
 
 {
-dice = Random.Range(0,30);
-
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level1trigoquestions[0];
@@ -1483,10 +1532,18 @@ break;
 public void TrigonometryLevel2()
 
 {
-dice = Random.Range(0,30);
-
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level2trigoquestions[0];
@@ -1791,10 +1848,18 @@ break;
 
 public void TrigonometryLevel3()
 {
-dice = Random.Range(0,30);
-
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level3trigoquestions[0];
@@ -2099,10 +2164,18 @@ break;
 
 public void TrigonometryLevel4()
 {
-dice = Random.Range(0,30);
-
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level4trigoquestions[0];
@@ -2409,12 +2482,18 @@ break;
 
 public void CalculusLevel1()
 {
-
-
-dice = Random.Range(0,30);
-
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level1calquestions[0];
@@ -2721,11 +2800,18 @@ public void CalculusLevel2()
 
 {
 
-
-dice = Random.Range(0,30);
-
-
-switch (dice)
+questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level2calquestions[0];
@@ -3030,12 +3116,18 @@ break;
 
 public void CalculusLevel3()
 {
-
-
-dice = Random.Range(0,30);
-
-
-switch (dice)
+ questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level3calquestions[0];
@@ -3340,12 +3432,18 @@ break;
 
 public void CalculusLevel4()
 {
-
-
-dice = Random.Range(0,30);
-
-
-switch (dice)
+ questionChosen = questionNumber[dice];
+    if (dice == 29)
+    {
+        Shuffle(questionNumber);
+        dice = 0;
+    }
+    else
+    {
+        dice++;
+    }
+    
+switch (questionChosen)
 {
 case 0:
     question.GetComponent<Image>().sprite = Level4calquestions[0];
@@ -3649,6 +3747,19 @@ break;
 }
 
 
+void Shuffle(int[] a)
+{
+
+int index = 29;
+        while (index > -1)
+        {
+			int rnd = Random.Range(0,index);
+			int temp = a[index];
+			a[index] = a[rnd];
+			a[rnd] = temp;
+            index--;
+        }
+}
 
 // answer confirmation
 public void AnswerA()
