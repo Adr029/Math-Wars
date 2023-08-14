@@ -22,7 +22,7 @@ Math Wars is a mobile game application intended to help students learn and pract
  ---
  ![adv battles](https://github.com/Adr029/Math-Wars/assets/117166540/d500b6a5-682d-48a3-9b9e-6b148d63d417)
  ---
- ![library](https://github.com/Adr029/Math-Wars/assets/117166540/146d4954-a911-462c-b815-651d07affae2) 
+ ![library](https://github.com/Adr029/Math-Wars/assets/117166540/7681c6aa-a0cf-462c-be93-161b443ecc55)
  ---
  ![cruck house](https://github.com/Adr029/Math-Wars/assets/117166540/e8ac6ffa-d7bc-4e7d-97eb-07a3993affe3)
 
