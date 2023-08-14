@@ -9,7 +9,7 @@ Math Wars is a mobile game application intended to help students learn and pract
 * Educational Resources
 * Non-Playable Character Enemy
 * Turn-based Combat
-* 
+
 ## Demonstration Video
 Watch how the application works:<br><br>
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/><br>
