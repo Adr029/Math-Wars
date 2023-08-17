@@ -36,6 +36,11 @@ Math Wars is a mobile game application intended to help students learn and pract
 * Non-Playable Character Enemy
 * Turn-based Combat
 
+## System Requirements
+<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white"/><br>
+
+Android 4.0 and above
+
 ## Demonstration Video
 Watch how the application works:<br><br>
 <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/><br>
